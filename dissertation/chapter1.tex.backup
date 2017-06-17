@@ -115,11 +115,11 @@
 				\rho\frac{\partial \vec{u}}{\partial t}+\rho\vec{u}\cdot\matr{\nabla}\vec{u}=-\matr{\nabla}p+\eta\matr{\nabla}^{2}\vec{u}+\sum_{i}\vec{f}_{i}.
 			\end{equation}
 			
-			Solving the Navier-Stokes equation yields the correct fluid velocity $\vec{u}$ at all points in the system. While it is a complex equation, in many systems it can be simplified and solved analytically.
+			Solving the Navier-Stokes equation yields the correct fluid velocity $\vec{u}$ at all points in the system. While it is a complex equation, in many systems it can be simplified and solved analytically. For instance, in microfluidic channels gravity is often insignificant compared to other inertial and pressure forces, and is often ignored. Additionally, in small channels and with relatively small velocities, the inertial/convective term $\ is often negligible and can be dropped.
 			
 		\subsection{Motion of ions in a solvent---Poisson-Nernst-Planck equation}
 		
-			While the Navier-Stokes equations of motion describe the motion of the fluid solvent, the Poisson-Nernst-Planck, or PNP equations describe the motion (flux) of ions in the solution. Ignoring magnetic fields, which are negligible in the projects discussed in thsi dissertation, the flux of ions is due to the superposition of diffusion, advection in the fluid solvent, and migration in electric fields (e.g.~ due to external voltage sources). Summing the individual contributions, the PNP equation for the flux of an ion species is
+			While the Navier-Stokes equations of motion describe the motion of the fluid solvent, the Poisson-Nernst-Planck, or PNP equations describe the motion (flux) of ions in the solution. The flux of ions is due to the superposition of diffusion, advection in the fluid solvent (known as `streaming' current), and migration in electric fields (e.g.~ due to external voltage sources). Summing the individual contributions, the PNP equation for the flux of an ion species is
 			
 			\begin{equation} \label{eq:pnp}
 				\vec{J_{i}}=-\left[D_{i}\matr{\nabla}c_{i}-\vec{u}c_{i}+\frac{D_{i}z_{i}e}{k_{B}T}c_{i}\matr{\nabla}\phi\right],
@@ -207,7 +207,44 @@
 			
 		\subsection{Surface conductance}
 		
-			Ignoring electrical double layer effects, the conductance of an ion channel is proportional to the ion concentration in the solution; doubling the ion concentration doubles the measured current. However, because the electrical double layer has a total concentration that is significantly different than the bulk concentration of ions, the conductance of a nanopore is a highly non-linear function of the bulk ion concentration. Consider first a nanopore with an electrical double layer very small compared to the pore radius; the conductance is related to the conductivity to the bulk solution. As we reduce the salt concentration, the Debye length increases according to $\lambda_{D}\propto c_{0}^{-1/2}$, and the conductance of the EDL becomes increasingly significant to the total conductance of the pore. Since the total concentration in the EDL $c_{+}+c_{-}>2c_{0}$,
+			Ignoring electrical double layer effects, the conductance of an ion channel is proportional to the ion concentration in the solution; doubling the ion concentration doubles the measured current. However, because the electrical double layer has a total concentration that is significantly different than the bulk concentration of ions, the conductance of a nanopore is a highly non-linear function of the bulk ion concentration. Consider first a nanopore with an electrical double layer very small compared to the pore radius; the conductance is related to the conductivity to the bulk solution. As we reduce the salt concentration, the Debye length increases according to $\lambda_{D}\propto c_{0}^{-1/2}$, and the conductance of the EDL becomes increasingly significant to the total conductance of the pore. Since the total concentration in the EDL $c_{+}+c_{-}>2c_{0}$, the relationship between ion concentration and conductance becomes sublinear; halving the ion concentration no longer yields half the ionic current, since there will still be a greater concentration of ions in the electrical double layer compared to in the bulk. As we lower the conductivity further, the EDL continues to expand until it fills the entire channel. At this point, no further reduction of the bulk concentration will reduce the current, since the channel will always be filled with exactly enough ions to screen the surface charge of the pore. This effect is known as ionic current saturation, since the current maintains fixed below a certain concentration value. Figure \ref{fig:nanoporeconductivity} shows an example of a plot of pore conductance versus ion concentration.
+			
+			The non-linearity in the conductance with ion concentration described above is due to a difference in the conductance values of the EDL, or `surface conductance' versus the conductance of the bulk solution. We can introduce a parameter that quantifies the relative contributions of surface conductance versus bulk conductance, the Dukhin number:
+			
+			\begin{equation} \label{dukhin}
+				\frac{2\left(1+3m/z^{2}\right)}{\kappa a}\left(\cosh\frac{zF\zeta}{2RT}-1\right),
+				m=\frac{2\epsilon k_{b}^{2}T^{2}}{3\eta e^{2}D}.
+			\end{equation}
+			
+			The second term in the top equation above is the contribution to surface conductance from electroosmosis, an effect described below.
+			
+			A simple model for the nanopore conductance $G$ for all electrolyte concentrations can be obtained by breaking down the total conductance into two terms, bulk conductance and surface conductance. Doing so, the total conductance $G$ takes on the formation
+			
+			\[ G=\left(\mu_{K^{+}}+\mu_{Cl^{-}}\right)n_{\textrm{KCl}}e\frac{R^{2}}{L}+2\mu_{K^{+}}\sigma_{s}\frac{R}{L}. \]
+			
+			Importantly, the equation reveals that even in the limit of 0 electrolyte concentration, there will still be a finite conductance $G$ due to the presence of screening ions in the pore that is fixed for every concentration.
+			
+		\subsection{Ion selectivity}
+			A phenomenon related to surface conductance is \textit{ion selectivity}. Since the EDL has a higher concentration of counterions rather than coions, the total flux of ions through the pore is slightly skewed towards counterions. The ion selectivity is defined as
+			
+			\begin{equation} \label{eq:selectivity}
+				S=\frac{|I_{+}-I_{-}|}{I}.
+			\end{equation}
+			
+		
+		\subsection{Ionic current rectification}
+			An ion channel is said to be rectifying if its conductance for one voltage polarity is greater than the opposite voltage polarity. The presence of an EDL alone cannot account for this, since the system has symmetry with respect to switching the electrodes, and therefore no rectification will occur. However, by introducing asymmetry into a system, along with having the pore be partially ion selective, we can create rectifying pores. There are many ways to create asymmetric nanopores, but two obvious solutions are geometry and surface charge pattern based.
+			
+			If the shape of a nanopore is asymmetric, for instance as in a cone, the ionic current will be rectified. A simple explanation for this is that at the tip-side of the pore (in the case of conical nanopores), there will be an excess of counterions in the vicinity of the entrance EDL, while the other side will more closely resemble the bulk. Because these ions are at the entrance of the pore, they will more easily enter the pore than when at the other side. The result is that for one voltage polarity the ionic current is greater than at the opposite polarity.
+			
+			By a similar principle, rectification caused my charge patterning asymmetry can also lead to rectification. By placing two charges of opposite polarity adjacent to one another inside the pore, for one voltage polarity a depletion zone is created in analogy with the depletion zone formed between the doping regions in a semiconductor diode. The ionic current is rectified, and because the diode junction so severely limits the ionic current under one voltage polarity, the device is said to be equivalent to an ionic diode.
+			
+			
+
+
+			
+			
+		
 			
 			
 		\subsection{Electroosmosis}

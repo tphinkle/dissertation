@@ -18,10 +18,7 @@
 \usepackage{graphicx}
 \usepackage{natbib}
 \usepackage{relsize}
-
-\usepackage{bibentry}    % Put full references in text
-\usepackage{etoolbox}    % This line and the next are absolutely necessary to get \bibentry{} command to work in figure caption.
-\robustify{\bibentry}
+\usepackage{bibentry}
 
 % Some other useful packages
 \usepackage{caption}
@@ -104,9 +101,6 @@
 
 % Include the different components of your thesis, in separate files.
 % Using \include allows you to set \includeonly above.
-
-\nobibliography*
-
 \include{chapter1}
 % ... and so on
 

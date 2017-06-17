@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.25)  15 JUN 2017 18:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.25)  16 JUN 2017 17:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -185,6 +185,13 @@ LaTeX Info: Redefining \cite on input line 694.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/natbib/bibentry.sty
+Package: bibentry 2007/10/30 1.5 (PWD)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count105
+)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
@@ -199,17 +206,17 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen130
 \caption@hangindent=\dimen131
 )
-\c@ContinuedFloat=\count105
+\c@ContinuedFloat=\count106
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
-\c@subfigure=\count106
-\c@subtable=\count107
+\c@subfigure=\count107
+\c@subtable=\count108
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@colwidth=\skip53
-\multirow@cntb=\count108
+\multirow@cntb=\count109
 \multirow@dima=\skip54
 \bigstrutjot=\dimen132
 )
@@ -220,7 +227,7 @@ Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
 \TX@old@col=\dimen135
 \TX@target=\dimen136
 \TX@delta=\dimen137
-\TX@cols=\count109
+\TX@cols=\count110
 \TX@ftn=\toks28
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/siunitx/siunitx.sty
@@ -237,24 +244,24 @@ L3 Module: l3tl 2016/08/19 v6692 L3 Token lists
 L3 Module: l3str 2016/08/19 v6692 L3 Strings
 L3 Module: l3seq 2016/08/19 v6685 L3 Sequences and stacks
 L3 Module: l3int 2016/09/07 v6700 L3 Integers
-\c_max_int=\count110
-\l_tmpa_int=\count111
-\l_tmpb_int=\count112
-\g_tmpa_int=\count113
-\g_tmpb_int=\count114
+\c_max_int=\count111
+\l_tmpa_int=\count112
+\l_tmpb_int=\count113
+\g_tmpa_int=\count114
+\g_tmpb_int=\count115
 L3 Module: l3quark 2016/08/19 v6685 L3 Quarks
 L3 Module: l3prg 2016/08/18 v6679 L3 Control structures
-\g__prg_map_int=\count115
+\g__prg_map_int=\count116
 L3 Module: l3clist 2016/08/19 v6685 L3 Comma separated lists
 L3 Module: l3token 2016/09/01 v6695 L3 Experimental token manipulation
 L3 Module: l3prop 2016/08/19 v6685 L3 Property lists
 L3 Module: l3msg 2016/08/19 v6691 L3 Messages
 L3 Module: l3file 2016/08/19 v6685 L3 File and I/O operations
-\l_iow_line_count_int=\count116
-\l__iow_target_count_int=\count117
-\l__iow_current_line_int=\count118
-\l__iow_current_word_int=\count119
-\l__iow_current_indentation_int=\count120
+\l_iow_line_count_int=\count117
+\l__iow_target_count_int=\count118
+\l__iow_current_line_int=\count119
+\l__iow_current_word_int=\count120
+\l__iow_current_indentation_int=\count121
 L3 Module: l3skip 2016/08/19 v6692 L3 Dimensions and skips
 \c_zero_dim=\dimen138
 \c_max_dim=\dimen139
@@ -275,17 +282,17 @@ L3 Module: l3skip 2016/08/19 v6692 L3 Dimensions and skips
 \g_tmpa_muskip=\muskip15
 \g_tmpb_muskip=\muskip16
 L3 Module: l3keys 2016/09/21 v6711 L3 Key-value interfaces
-\l_keys_choice_int=\count121
+\l_keys_choice_int=\count122
 L3 Module: l3fp 2016/11/21 v6761 L3 Floating points
-\c__fp_leading_shift_int=\count122
-\c__fp_middle_shift_int=\count123
-\c__fp_trailing_shift_int=\count124
-\c__fp_big_leading_shift_int=\count125
-\c__fp_big_middle_shift_int=\count126
-\c__fp_big_trailing_shift_int=\count127
-\c__fp_Bigg_leading_shift_int=\count128
-\c__fp_Bigg_middle_shift_int=\count129
-\c__fp_Bigg_trailing_shift_int=\count130
+\c__fp_leading_shift_int=\count123
+\c__fp_middle_shift_int=\count124
+\c__fp_trailing_shift_int=\count125
+\c__fp_big_leading_shift_int=\count126
+\c__fp_big_middle_shift_int=\count127
+\c__fp_big_trailing_shift_int=\count128
+\c__fp_Bigg_leading_shift_int=\count129
+\c__fp_Bigg_middle_shift_int=\count130
+\c__fp_Bigg_trailing_shift_int=\count131
 L3 Module: l3box 2016/08/19 v6685 L3 Experimental boxes
 \c_empty_box=\box28
 \l_tmpa_box=\box29
@@ -335,16 +342,16 @@ L3 Module: l3luatex 2016/08/18 v6679 L3 Experimental LuaTeX-specific functions
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
 File: l3pdfmode.def 2016/08/18 v6679 L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count131
+\l__driver_color_stack_int=\count132
 \l__driver_tmp_box=\box43
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2016/11/21 v6760 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count132
-\l__xparse_m_args_int=\count133
-\l__xparse_mandatory_args_int=\count134
-\l__xparse_processor_int=\count135
-\l__xparse_v_nesting_int=\count136
+\l__xparse_current_arg_int=\count133
+\l__xparse_m_args_int=\count134
+\l__xparse_mandatory_args_int=\count135
+\l__xparse_processor_int=\count136
+\l__xparse_v_nesting_int=\count137
 )
 Package: siunitx 2017/01/01 v2.7a A comprehensive (SI) units package
 
@@ -353,27 +360,27 @@ Package: l3keys2e 2016/11/21 v6760 LaTeX2e option processing using LaTeX3 keys
 )
 \l__siunitx_tmp_box=\box44
 \l__siunitx_tmp_dim=\dimen169
-\l__siunitx_tmp_int=\count137
-\l__siunitx_number_mantissa_length_int=\count138
-\l__siunitx_number_uncert_length_int=\count139
-\l__siunitx_round_int=\count140
-\l__siunitx_process_decimal_int=\count141
-\l__siunitx_process_uncertainty_int=\count142
-\l__siunitx_process_fixed_int=\count143
-\l__siunitx_process_integer_min_int=\count144
-\l__siunitx_process_precision_int=\count145
-\l__siunitx_group_min_int=\count146
+\l__siunitx_tmp_int=\count138
+\l__siunitx_number_mantissa_length_int=\count139
+\l__siunitx_number_uncert_length_int=\count140
+\l__siunitx_round_int=\count141
+\l__siunitx_process_decimal_int=\count142
+\l__siunitx_process_uncertainty_int=\count143
+\l__siunitx_process_fixed_int=\count144
+\l__siunitx_process_integer_min_int=\count145
+\l__siunitx_process_precision_int=\count146
+\l__siunitx_group_min_int=\count147
 \l__siunitx_angle_marker_box=\box45
 \l__siunitx_angle_unit_box=\box46
 \l__siunitx_angle_marker_dim=\dimen170
 \l__siunitx_angle_unit_dim=\dimen171
-\l__siunitx_unit_int=\count147
-\l__siunitx_unit_denominator_int=\count148
-\l__siunitx_unit_numerator_int=\count149
-\l__siunitx_unit_prefix_int=\count150
-\l__siunitx_unit_prefix_base_int=\count151
-\l__siunitx_unit_prefix_gram_int=\count152
-\l__siunitx_number_product_int=\count153
+\l__siunitx_unit_int=\count148
+\l__siunitx_unit_denominator_int=\count149
+\l__siunitx_unit_numerator_int=\count150
+\l__siunitx_unit_prefix_int=\count151
+\l__siunitx_unit_prefix_base_int=\count152
+\l__siunitx_unit_prefix_gram_int=\count153
+\l__siunitx_number_product_int=\count154
 \c__siunitx_one_fill_skip=\skip61
 \l__siunitx_table_unit_align_skip=\skip62
 \l__siunitx_table_exponent_dim=\dimen172
@@ -565,7 +572,6 @@ Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
 Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
 Package: xcolor-patch 2016/05/16 xcolor patch
 Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
@@ -577,13 +583,13 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen181
-\Hy@linkcounter=\count154
-\Hy@pagecounter=\count155
+\Hy@linkcounter=\count155
+\Hy@pagecounter=\count156
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2016/06/24 v6.83q Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count156
+\Hy@SavedSpaceFactor=\count157
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -596,7 +602,7 @@ Package hyperref Info: Plain pages OFF on input line 4501.
 Package hyperref Info: Backreferencing OFF on input line 4506.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4735.
-\c@Hy@tempcnt=\count157
+\c@Hy@tempcnt=\count158
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
@@ -604,7 +610,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5088.
 \XeTeXLinkMargin=\dimen182
-\Fld@menulength=\count158
+\Fld@menulength=\count159
 \Field@Width=\dimen183
 \Fld@charsize=\dimen184
 Package hyperref Info: Hyper figures OFF on input line 6342.
@@ -616,17 +622,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6367.
 Package hyperref Info: PDF/A mode OFF on input line 6372.
 LaTeX Info: Redefining \ref on input line 6412.
 LaTeX Info: Redefining \pageref on input line 6416.
-\Hy@abspage=\count159
-\c@Item=\count160
-\c@Hfootnote=\count161
+\Hy@abspage=\count160
+\c@Item=\count161
+\c@Hfootnote=\count162
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2016/06/24 v6.83q Hyperref driver for pdfTeX
-\Fld@listcount=\count162
-\c@bookmark@seq@number=\count163
+\Fld@listcount=\count163
+\c@bookmark@seq@number=\count164
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -635,27 +641,27 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip65
 )
-\c@theorem=\count164
-\c@definition=\count165
-\c@example=\count166
+\c@theorem=\count165
+\c@definition=\count166
+\c@example=\count167
 
 (./preliminaries.tex) (./dissertation.aux (./chapter1.aux) (./appendix.aux))
 \openout1 = `dissertation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -693,16 +699,16 @@ LaTeX Font Info:    ... okay on input line 96.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count167
+\scratchcounter=\count168
 \scratchdimen=\dimen185
 \scratchbox=\box51
-\nofMPsegments=\count168
-\nofMParguments=\count169
+\nofMPsegments=\count169
+\nofMParguments=\count170
 \everyMPshowfont=\toks29
-\MPscratchCnt=\count170
+\MPscratchCnt=\count171
 \MPscratchDim=\dimen186
-\MPnumerator=\count171
-\makeMPintoPDFobject=\count172
+\MPnumerator=\count172
+\makeMPintoPDFobject=\count173
 \everyMPtoPDFconversion=\toks30
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -733,46 +739,47 @@ Dictionary: translator-basic-dictionary, Language: English
 File: siunitx-abbreviations.cfg 2017/01/01 v2.7a siunitx: Abbreviated units
 )
 \AtBeginShipoutBox=\box52
-Package hyperref Info: Link coloring OFF on input line 96.
+Package hyperref Info: Link coloring OFF on input line 99.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count173
+\c@section@level=\count174
 )
-LaTeX Info: Redefining \ref on input line 96.
-LaTeX Info: Redefining \pageref on input line 96.
-LaTeX Info: Redefining \nameref on input line 96.
+LaTeX Info: Redefining \ref on input line 99.
+LaTeX Info: Redefining \pageref on input line 99.
+LaTeX Info: Redefining \nameref on input line 99.
 
 (./dissertation.out) (./dissertation.out)
 \@outlinefile=\write3
 \openout3 = `dissertation.out'.
 
-\c__siunitx_mathsf_int=\count174
-LaTeX Font Info:    Try loading font information for U+msa on input line 96.
+\c__siunitx_mathsf_int=\count175
+LaTeX Font Info:    Try loading font information for U+msa on input line 99.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 96.
+LaTeX Font Info:    Try loading font information for U+msb on input line 99.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-\c__siunitx_mathtt_int=\count175
+\c__siunitx_mathtt_int=\count176
  [1
 
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 99.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 102.
+
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 99.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 102.
  [1
 
 
@@ -818,24 +825,24 @@ face forces. \OT1/cmr/bx/n/12 milli-\OT1/cmr/m/n/12 : Caenorhab-
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 99--99
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--99
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--99
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
 
  []
 
 [8] [9
 
 
-]
+] (./dissertation.bbl)
 \openout2 = `chapter1.aux'.
 
  (./chapter1.tex
@@ -848,97 +855,82 @@ Chapter 1.
 ]
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
-(Font)              using `OT1/cmr/bx/n' instead on input line 14.
+(Font)              using `OT1/cmr/bx/n' instead on input line 13.
 
-
-LaTeX Warning: Reference `def:1' on page 2 undefined on input line 21.
-
-<../images/ch1/bio_synth_nanopores.png, id=205, 467.03966pt x 209.70833pt>
+<../images/ch1/bio_synth_nanopores.png, id=229, 467.03966pt x 209.70833pt>
 File: ../images/ch1/bio_synth_nanopores.png Graphic file (type png)
 
 <use ../images/ch1/bio_synth_nanopores.png>
 Package pdftex.def Info: ../images/ch1/bio_synth_nanopores.png used on input li
-ne 24.
+ne 23.
 (pdftex.def)             Requested size: 469.75502pt x 210.93016pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2] [3 <../images/ch1/bio_synth_nanopores.png>] [4] [5] [6] [7] [8] [9]
-[10] <../images/ch1/scales.png, id=247, 2882.77pt x 827.09pt>
+[10] <../images/ch1/scales.png, id=271, 2882.77pt x 827.09pt>
 File: ../images/ch1/scales.png Graphic file (type png)
 
 <use ../images/ch1/scales.png>
-Package pdftex.def Info: ../images/ch1/scales.png used on input line 69.
+Package pdftex.def Info: ../images/ch1/scales.png used on input line 68.
 (pdftex.def)             Requested size: 469.75502pt x 134.77283pt.
  [11 <../images/ch1/scales.png>] [12]
-Overfull \hbox (6.9695pt too wide) in paragraph at lines 89--89
+Overfull \hbox (6.9695pt too wide) in paragraph at lines 88--88
 []\OT1/cmr/bx/n/14.4 Equations of mo-tion for flu-idic systems---Navier--Stokes
  equa-
  []
 
-
-Package natbib Warning: Citation `Bocquet2012' on page 13 undefined on input li
-ne 91.
-
-[13] [14] [15]
-Overfull \hbox (1.60837pt too wide) in paragraph at lines 132--132
- []|\OT1/cmr/bx/n/12 Advective 
- []
-
-
-Overfull \hbox (1.72647pt too wide) in paragraph at lines 132--132
- []|\OT1/cmr/bx/n/12 Migration 
- []
-
-[16]
-
-Package caption Warning: \label without proper reference on input line 145.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:edl' on page 17 undefined on input line 143.
-
-<../images/ch1/edl.png, id=283, 1230.5975pt x 1254.6875pt>
+[13] [14] [15] [16] <../images/ch1/edl.png, id=308, 1230.5975pt x 1254.6875pt>
 File: ../images/ch1/edl.png Graphic file (type png)
 
 <use ../images/ch1/edl.png>
-Package pdftex.def Info: ../images/ch1/edl.png used on input line 146.
+Package pdftex.def Info: ../images/ch1/edl.png used on input line 143.
 (pdftex.def)             Requested size: 469.75502pt x 478.94958pt.
 
-
-Package caption Warning: \label without proper reference on input line 155.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:fractioninsideedl' on page 17 undefined on input 
-line 153.
-
-<../images/ch1/fractioninsideedl.png, id=285, 307.1475pt x 229.8186pt>
+<../images/ch1/fractioninsideedl.png, id=310, 307.1475pt x 229.8186pt>
 File: ../images/ch1/fractioninsideedl.png Graphic file (type png)
 
 <use ../images/ch1/fractioninsideedl.png>
 Package pdftex.def Info: ../images/ch1/fractioninsideedl.png used on input line
- 156.
+ 153.
 (pdftex.def)             Requested size: 307.14674pt x 229.81804pt.
  [17] [18 <../images/ch1/edl.png>]
 [19 <../images/ch1/fractioninsideedl.png>] [20] [21]
+<../images/ch1/Schoch2008_conductance.png, id=346, 501.875pt x 366.36874pt>
+File: ../images/ch1/Schoch2008_conductance.png Graphic file (type png)
 
-LaTeX Warning: Reference `fig:nanoporeconductivity' on page 22 undefined on inp
-ut line 210.
+<use ../images/ch1/Schoch2008_conductance.png>
+Package pdftex.def Info: ../images/ch1/Schoch2008_conductance.png used on input
+ line 214.
+(pdftex.def)             Requested size: 234.8775pt x 171.461pt.
+ [22 <../images/ch1/Schoch2008_conductance.png>] [23] [24]
+<../images/ch1/Vlassiouk2007_conicaldiode.png, id=365, 517.935pt x 200.75pt>
+File: ../images/ch1/Vlassiouk2007_conicaldiode.png Graphic file (type png)
 
-[22] [23] [24] [25]
-
-LaTeX Warning: Reference `pb' on page 26 undefined on input line 253.
-
-
-LaTeX Warning: Reference `hs' on page 26 undefined on input line 264.
-
-) [26] (./dissertation.bbl
-
-Package natbib Warning: Empty `thebibliography' environment on input line 3.
-
-) [27
+<use ../images/ch1/Vlassiouk2007_conicaldiode.png>
+Package pdftex.def Info: ../images/ch1/Vlassiouk2007_conicaldiode.png used on i
+nput line 255.
+(pdftex.def)             Requested size: 234.8775pt x 91.03813pt.
+pdfTeX warning (ext4): destination with the same identifier (name{cite.Vlassiou
+k2007}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.256 ...opyright 2007 American Chemical Society.}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{cite.Vlassiouk2007}) has been already used
+, duplicate ignored
+<to be read again> 
+                   \relax 
+l.256 ...opyright 2007 American Chemical Society.}
+                                                   [25 <../images/ch1/Vlassiouk
+2007_conicaldiode.png>] [26] [27]) [28] (./dissertation.bblpdfTeX warning (ext4
+): destination with the same identifier (name{cite.Vlassiouk2007}) has been alr
+eady used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.8 \bibitem{Vlassiouk2007}
+                           ) [29
 
 
 
@@ -947,45 +939,35 @@ Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
  (./appendix.tex
 Appendix A.
-
-LaTeX Warning: Reference `fig:quote' on page 28 undefined on input line 13.
-
-) [28
+) [30
 
 
 ]
 
-Package natbib Warning: There were undefined citations.
-
-
-Package caption Warning: Unused \captionsetup[figure] on input line 121.
+Package caption Warning: Unused \captionsetup[figure] on input line 127.
 See the caption package documentation for explanation.
 
 
-Package caption Warning: Unused \captionsetup[table] on input line 122.
+Package caption Warning: Unused \captionsetup[table] on input line 128.
 See the caption package documentation for explanation.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 127.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 127.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 133.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
 (./dissertation.aux (./chapter1.aux) (./appendix.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 127.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 127.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 133.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 133.
 Package rerunfilecheck Info: File `dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: E6EC7BF2836C3F7B1B0DD2C924BC24B1;1595.
+(rerunfilecheck)             Checksum: 48A78CAFCE584AF68F09D66BC58A6541;1747.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 127.
  ) 
 Here is how much of TeX's memory you used:
- 17845 strings out of 493013
- 340125 string characters out of 6133328
- 381099 words of memory out of 5000000
- 21121 multiletter control sequences out of 15000+600000
+ 18194 strings out of 493013
+ 344731 string characters out of 6133328
+ 389493 words of memory out of 5000000
+ 21451 multiletter control sequences out of 15000+600000
  14912 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,13n,52p,10383b,784s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1003,10 +985,10 @@ ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
 e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive
 /2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/
 2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on dissertation.pdf (38 pages, 2521353 bytes).
+Output written on dissertation.pdf (40 pages, 2584201 bytes).
 PDF statistics:
- 422 PDF objects out of 1000 (max. 8388607)
- 356 compressed objects within 4 object streams
- 81 named destinations out of 1000 (max. 500000)
- 205 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 467 PDF objects out of 1000 (max. 8388607)
+ 395 compressed objects within 4 object streams
+ 90 named destinations out of 1000 (max. 500000)
+ 231 words of extra memory for PDF output out of 10000 (max. 10000000)
 

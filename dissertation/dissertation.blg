@@ -5,46 +5,44 @@ A level-1 auxiliary file: chapter1.aux
 The style file: abbrv.bst
 A level-1 auxiliary file: appendix.aux
 Database file #1: ../../LaTeX/references/references.bib
-Warning--I didn't find a database entry for "Bocquet2012"
-You've used 0 entries,
+You've used 2 entries,
             2118 wiz_defined-function locations,
-            501 strings with 3792 characters,
-and the built_in function-call counts, 18 in all, are:
-= -- 0
-> -- 0
+            517 strings with 4048 characters,
+and the built_in function-call counts, 688 in all, are:
+= -- 68
+> -- 26
 < -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 7
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
++ -- 10
+- -- 8
+* -- 51
+:= -- 121
+add.period$ -- 7
+call.type$ -- 2
+change.case$ -- 10
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+cite$ -- 2
+duplicate$ -- 22
+empty$ -- 56
+format.name$ -- 8
+if$ -- 142
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 2
+missing$ -- 2
+newline$ -- 14
+num.names$ -- 4
+pop$ -- 5
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 8
 quote$ -- 0
-skip$ -- 1
+skip$ -- 16
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 58
+swap$ -- 2
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 8
 warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
-(There was 1 warning)
+while$ -- 6
+width$ -- 3
+write$ -- 26

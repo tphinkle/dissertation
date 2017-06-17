@@ -15,10 +15,13 @@
 \contentsline {subsection}{\numberline {1.2.3}Electrodes}{12}{subsection.1.2.3}
 \contentsline {subsection}{\numberline {1.2.4}Particles}{12}{subsection.1.2.4}
 \contentsline {subsection}{\numberline {1.2.5}Equations of motion for fluidic systems---Navier--Stokes equations}{13}{subsection.1.2.5}
-\contentsline {subsection}{\numberline {1.2.6}Motion of ions in a solvent---Poisson-Nernst-Planck equation}{15}{subsection.1.2.6}
+\contentsline {subsection}{\numberline {1.2.6}Motion of ions in a solvent---Poisson-Nernst-Planck equation}{16}{subsection.1.2.6}
 \contentsline {subsection}{\numberline {1.2.7}The diffuse layer---Poisson-Boltzmann equation}{17}{subsection.1.2.7}
 \contentsline {subsection}{\numberline {1.2.8}Surface conductance}{22}{subsection.1.2.8}
-\contentsline {subsection}{\numberline {1.2.9}Electroosmosis}{24}{subsection.1.2.9}
-\contentsline {chapter}{Bibliography}{27}{section*.13}
-\contentsline {chapter}{\numberline {A}Appendix Title}{28}{appendix.A}
-\contentsline {section}{\numberline {A.1}Lorem Ipsum}{28}{section.A.1}
+\contentsline {subsection}{\numberline {1.2.9}Ion selectivity}{24}{subsection.1.2.9}
+\contentsline {subsection}{\numberline {1.2.10}Ionic current rectification}{24}{subsection.1.2.10}
+\contentsline {subsection}{\numberline {1.2.11}Electroosmosis}{26}{subsection.1.2.11}
+\contentsline {chapter}{Bibliography}{1}{section*.8}
+\contentsline {chapter}{Bibliography}{29}{section*.15}
+\contentsline {chapter}{\numberline {A}Appendix Title}{30}{appendix.A}
+\contentsline {section}{\numberline {A.1}Lorem Ipsum}{30}{section.A.1}
