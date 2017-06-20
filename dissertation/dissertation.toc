@@ -1,9 +1,9 @@
 \raggedleft Page\\
-\contentsline {chapter}{LIST OF FIGURES}{iv}{section*.2}
-\contentsline {chapter}{LIST OF TABLES}{v}{section*.4}
-\contentsline {chapter}{ACKNOWLEDGMENTS}{vi}{section*.6}
-\contentsline {chapter}{CURRICULUM VITAE}{vii}{section*.7}
-\contentsline {chapter}{ABSTRACT OF THE DISSERTATION}{ix}{section*.8}
+\contentsline {chapter}{LIST OF FIGURES}{v}{section*.2}
+\contentsline {chapter}{LIST OF TABLES}{vii}{section*.4}
+\contentsline {chapter}{ACKNOWLEDGMENTS}{viii}{section*.6}
+\contentsline {chapter}{CURRICULUM VITAE}{ix}{section*.7}
+\contentsline {chapter}{ABSTRACT OF THE DISSERTATION}{xi}{section*.8}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Nanopores}{2}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Biological nanopores}{3}{subsection.1.1.1}
@@ -17,11 +17,22 @@
 \contentsline {subsection}{\numberline {1.2.5}Equations of motion for fluidic systems---Navier--Stokes equations}{13}{subsection.1.2.5}
 \contentsline {subsection}{\numberline {1.2.6}Motion of ions in a solvent---Poisson-Nernst-Planck equation}{16}{subsection.1.2.6}
 \contentsline {subsection}{\numberline {1.2.7}The diffuse layer---Poisson-Boltzmann equation}{17}{subsection.1.2.7}
-\contentsline {subsection}{\numberline {1.2.8}Surface conductance}{22}{subsection.1.2.8}
-\contentsline {subsection}{\numberline {1.2.9}Ion selectivity}{24}{subsection.1.2.9}
-\contentsline {subsection}{\numberline {1.2.10}Ionic current rectification}{24}{subsection.1.2.10}
-\contentsline {subsection}{\numberline {1.2.11}Electroosmosis}{26}{subsection.1.2.11}
+\contentsline {subsection}{\numberline {1.2.8}Electroosmosis}{23}{subsection.1.2.8}
+\contentsline {subsection}{\numberline {1.2.9}Surface conductance and conductance saturation}{26}{subsection.1.2.9}
+\contentsline {subsection}{\numberline {1.2.10}Ion selectivity}{28}{subsection.1.2.10}
+\contentsline {subsection}{\numberline {1.2.11}Ionic current rectification}{29}{subsection.1.2.11}
+\contentsline {subsubsection}{Particle electrophoresis}{30}{section*.17}
+\contentsline {subsubsection}{Particle electrophoresis + electroosmosis}{31}{section*.18}
 \contentsline {chapter}{Bibliography}{1}{section*.8}
-\contentsline {chapter}{Bibliography}{29}{section*.15}
-\contentsline {chapter}{\numberline {A}Appendix Title}{30}{appendix.A}
-\contentsline {section}{\numberline {A.1}Lorem Ipsum}{30}{section.A.1}
+\contentsline {chapter}{\numberline {2}Development and testing of a single carbon nanotube based pore}{32}{chapter.2}
+\contentsline {section}{\numberline {2.1}Background}{32}{section.2.1}
+\contentsline {chapter}{\numberline {3}Experimental study of ion conductance property of hybrid conductor-insulator nanopores}{34}{chapter.3}
+\contentsline {section}{\numberline {3.1}Background}{34}{section.3.1}
+\contentsline {section}{\numberline {3.2}Experimental setup}{37}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Silicon nitride}{37}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Gold deposition}{38}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Transmission electron microscope drilling}{38}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Pore conductance characterization}{39}{subsection.3.2.4}
+\contentsline {chapter}{Bibliography}{42}{section*.22}
+\contentsline {chapter}{\numberline {A}Appendix Title}{43}{appendix.A}
+\contentsline {section}{\numberline {A.1}Lorem Ipsum}{43}{section.A.1}

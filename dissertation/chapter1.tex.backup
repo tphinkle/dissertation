@@ -10,15 +10,14 @@
 		Unlike most physics jargon, the name nanopore is entirely self-explanatory. In fact, the following is a terse (but accurate) definition of a nanopore:
 
 
-		\begin{definition}
+		\begin{definition} \label{def:nanopore}
 			A nanopore is a hole on the order of $\SI{1}{nm}$ in size
-			\label{def:nanopore}
 		\end{definition}
 
 
 		As we will discover, this definition, while accurate, does not do justice to the field of nanopore research. 
 
-		Nanopores generally belong to two classes, biological and synthetic. Because nanopores can be found in biology, many scientists are interested in studying them in their own right, to better understand how biological systems function. On the other hand, nanopores, both biological and synthetic, can be used in a surprisingly large variety of applications, with the total count of such applications constantly increasing. In this section we will briefly discuss the types of biological nanopores and where they are found in nature, and then move on to describing different types of synthetic nanopores. Given the loose criteria required by \ref{def:1} for something to constitute a nanopore, listing off every type of either biological or synthetic nanopores would be impossible; instead, I seek to introduce the most relevant types, with an admitted bias towards the types of nanopores I am most familiar with and that I have worked with in my research. After discussing the various types of nanopores, I will give a summary of applications in which nanopores see use. Some of these applications, for instance resistive-pulse sensing, are a major part of this dissertation and will therefore be discussed in much greater detail later on, while others, such as DNA sequencing, are important enough to be mentioned but not discussed in significant detail later on. An extensive list of references, including those not explicitly referenced in this work, will be included should the reader wish to read more on a particular topic.
+		Nanopores generally belong to two classes, biological and synthetic. Because nanopores can be found in biology, many scientists are interested in studying them in their own right, to better understand how biological systems function. On the other hand, nanopores, both biological and synthetic, can be used in a surprisingly large variety of applications, with the total count of such applications constantly increasing. In this section we will briefly discuss the types of biological nanopores and where they are found in nature, and then move on to describing different types of synthetic nanopores. Given the loose criteria required by \ref{def:nanopore} for something to constitute a nanopore, listing off every type of either biological or synthetic nanopores would be impossible; instead, I seek to introduce the most relevant types, with an admitted bias towards the types of nanopores I am most familiar with and that I have worked with in my research. After discussing the various types of nanopores, I will give a summary of applications in which nanopores see use. Some of these applications, for instance resistive-pulse sensing, are a major part of this dissertation and will therefore be discussed in much greater detail later on, while others, such as DNA sequencing, are important enough to be mentioned but not discussed in significant detail later on. An extensive list of references, including those not explicitly referenced in this work, will be included should the reader wish to read more on a particular topic.
 
 		\begin{figure}[h]
 			\includegraphics[width=\textwidth]{bio_synth_nanopores.png}
@@ -88,7 +87,7 @@
 
 		\subsection{Equations of motion for fluidic systems---Navier--Stokes equations}
 		
-			One of the major actors in nanopores systems is the fluid solvent, which may remain at rest or, more commonly, move in response to forces present in the system. Because the motion of the solvent couples to the motion of other actors present in the system, understanding the physical laws governing the fluid medium is crucial. For systems large compared to the size of molecules, we make the approximation that the fluid is a continuous rather than discrete medium. In reality, we know that fluids are not continuous but ar emade up of discrete atoms and molecules, which may make this approximation seem limiting. However, the continuum approximation has been shown to accurately describe fluids all the way down to the scale of a single nanometer, and thus are valid in most systems of interest \cite{Bocquet2012}. Under the continuum approximation, the equations of motion of the fluid are described by the Navier-Stokes equation.
+			One of the major actors in nanopores systems is the fluid solvent, which may remain at rest or, more commonly, move in response to forces present in the system. Because the motion of the solvent couples to the motion of other actors present in the system, understanding the physical laws governing the fluid medium is crucial. For systems large compared to the size of molecules, we make the approximation that the fluid is a continuous rather than discrete medium. In reality, we know that fluids are not continuous but ar emade up of discrete atoms and molecules, which may make this approximation seem limiting. However, the continuum approximation has been shown to accurately describe fluids all the way down to the scale of a single nanometer, and thus are valid in most systems of interest \cite{Bocquet2010}. Under the continuum approximation, the equations of motion of the fluid are described by the Navier-Stokes equation.
 			
 			The Navier-Stokes equations are actually three coupled 2nd order non-linear partial differential equations that yield the fluid vector velocity $\vec{u}$. Despite the apparent complexity of the equations, they can be derived simply using Newton's 2nd law $\frac{d\vec{p}}{dt}=\vec{F}$ and conservation principles.
 			
@@ -100,7 +99,7 @@
 			
 			If we consider the quanity to be the max flux (the momentum density) $\phi=\rho \vec{u}$ and simplify the equation, we arrive at the Cauchy momentum equation:
 			
-			\begin{equation} \label{eq:cauchymomentum}
+			\begin{equation}  \label{eq:cauchymomentum}
 				\begin{split}
 					\rho\frac{\partial\vec{u}}{\partial t}+\rho\vec{u}\cdot\vec{\nabla}\vec{u} &= \vec{s} \\
 					\rho\frac{D\vec{u}}{Dt} &= \vec{s}.
@@ -115,47 +114,55 @@
 				\rho\frac{\partial \vec{u}}{\partial t}+\rho\vec{u}\cdot\matr{\nabla}\vec{u}=-\matr{\nabla}p+\eta\matr{\nabla}^{2}\vec{u}+\sum_{i}\vec{f}_{i}.
 			\end{equation}
 			
-			Solving the Navier-Stokes equation yields the correct fluid velocity $\vec{u}$ at all points in the system. While it is a complex equation, in many systems it can be simplified and solved analytically. For instance, in microfluidic channels gravity is often insignificant compared to other inertial and pressure forces, and is often ignored. Additionally, in small channels and with relatively small velocities, the inertial/convective term $\ is often negligible and can be dropped.
+			Solving the Navier-Stokes equation yields the correct fluid velocity $\vec{u}$ at all points in the system. While it is a complex equation, in many systems it can be simplified and solved analytically. For instance, in microfluidic channels gravity is often insignificant compared to other inertial and pressure forces, and is often ignored. Additionally, in small channels and with relatively small velocities, the inertial/convective term $\left(\vec{u}\cdot\nabla\right)\vec{u}$ is often negligible and can be dropped. To quantify this notion, we introduce a dimensionless parameter called the Reynolds number:
+			
+			\begin{equation} \label{eq:reynoldsnum}
+				Re=\frac{\rho u L}{\eta}.
+			\end{equation}
+			
+			$L$ in the above equation is the characteristic length scale of the flow, which in pores or channels is chosen to be the diameter by convention. The Reynolds number $Re$ is essentially a ratio of the strength of inertial/convective forces to inertial forces. For high Reynolds number, convective forces dominate and we expect turbulent and chaotic flow. At low Reynolds number, inertial forces dominate and fluid motion is laminar and smooth. The Reynolds number is useful for knowing which two regimes we are in, and can provide intuition about the behavior of our systems. In microfluidic systems, we are seldom in the turbulent regime, and are often at medium to low Reynolds numbers. Nanofluidic systems are almost certainly non-inertial for reasonable external pressures.
+			
+
 			
 		\subsection{Motion of ions in a solvent---Poisson-Nernst-Planck equation}
 		
 			While the Navier-Stokes equations of motion describe the motion of the fluid solvent, the Poisson-Nernst-Planck, or PNP equations describe the motion (flux) of ions in the solution. The flux of ions is due to the superposition of diffusion, advection in the fluid solvent (known as `streaming' current), and migration in electric fields (e.g.~ due to external voltage sources). Summing the individual contributions, the PNP equation for the flux of an ion species is
 			
 			\begin{equation} \label{eq:pnp}
-				\vec{J_{i}}=-\left[D_{i}\matr{\nabla}c_{i}-\vec{u}c_{i}+\frac{D_{i}z_{i}e}{k_{B}T}c_{i}\matr{\nabla}\phi\right],
+				\vec{J_{i}}=-\left[D_{i}\matr{\nabla}c_{i}-\vec{u}c_{i}+\frac{D_{i}z_{i}e}{k_{B}T}c_{i}\matr{\nabla}\phi\right],		
 			\end{equation}
 	
-			where $\vec{J_{i}}$ is the ion flux of species $i$, $D$ is the diffusion coefficient, $c$ is the ion concentration, $z$ is the ion valence, $e$ is the elementary charge, $k_{B}$ is the Boltzmann constant, $T$ is the temperature, nad $\phi$ is the electric potential. The first term in eq. \ref{eq:pnp} is the diffusion term, which essentially states that there is a flux of ions in the opposite direction of the gradient of the ion concentration. The second term is the advective term, which accounts for the ions moving with the fluid solvent. The final term is the electric migration term, which describes the motion of the ions in an electric field gradient. Equation \ref{eq:pnp} describes the total flux of an ion species, but it is informative to consider the relative magnitudes of the three terms for individual particles; for instance, it would be useful to know under common experimental conditions how diffusion, advection, and electrical migration rank in determining the motion of a particle. The following table is an attempt at performing such a ranking for different systems of interest.
+			where $\vec{J_{i}}$ is the ion flux of species $i$, $D$ is the diffusion coefficient, $c$ is the ion concentration, $z$ is the ion valence, $e$ is the elementary charge, $k_{B}$ is the Boltzmann constant, $T$ is the temperature, nad $\phi$ is the electric potential. The first term in eq. \ref{eq:pnp} is the diffusion term, which essentially states that there is a flux of ions in the opposite direction of the gradient of the ion concentration. The second term is the advective term, which accounts for the ions moving with the fluid solvent. The final term is the electric migration term, which describes the motion of the ions in an electric field gradient. 
 			
-			\begin{tabular}{| l | c | c | r |}
-				\hline
-				\textbf{System Description} & \multicolumn{1}{|p{2cm}|}{\centering \textbf{Diffusive velocity}} & \multicolumn{1}{|p{2cm}|}{\centering \textbf{Advective velocity}} & \multicolumn{1}{|p{2cm}|}{\centering \textbf{Migration velocity}} \\ \hline
-				Microfluidic, pressure driven, non-inertial & 2 & 3 \\ \hline
-				Microfluidic, pressure driven, inertial & 2 & 3 \\ \hline
-				Nanopore, electroosmosis, short pore & 5 & 6 \\ \hline
-				Nanopore, electroosmosis, long pore & 8 & 9 \\ \hline
-			\end{tabular}
+			
+			
 			
 		\subsection{The diffuse layer---Poisson-Boltzmann equation}
 			
 			The diffuse layer is of paramount importance in nanopore studies; without it, nanopores would simply act as passive conductors with no interesting conductance properties. When any type of material is submitted in solution, charges tend to appear at the surface. Some of these charges are due to specific adsorption or immobilization of ions or molecules onto the surface, which give the surface some charge. The other charge type which is usually more significant is due to the ionization of chemical groups native to the surface of the pore. The type of chemical group present on the pore depends on the material out of which the pore is made. For instance, polymer pores prepared via the track-etch technique are formed when an etchant solution cleaves the monomer units in half, exposing a carboxyl group, which is then deprotonated at basic solution pHs. On average there are approximately 1 of these surface groups per $\SI{4}{nm}^{2}$, yielding a net surface charge density of $0.25~\mathrm{e}/\mathrm{nm}^{2}$. In any case, the total charge that mobile ions `feel' in the solution is the sum of the adsorbed charges (Stern layer), plus the chemical groups attached to the surface, plus the immobilized ions within the slip layer. The electric potential immediately outside the Stern layer due to these superimposed charged sources is known as the $\zeta$ potential.
 			
-			Because the ion solution is conductive, mobile ions outside the Stern layer will redistribute themselves near the charged surface to counter or `screen' its $\zeta-$potential. This screening layer is known as the Debye layer, and is characterized by an enriched number of counterions (ions of opposite charge polarity to the wall) and a depleted number of coions. As we will see, the electrical double layer has a characteristic length scale known as the Debye length $\lambda_{D}$, which ranges from $0.1-10$ nm for most solution concentrations. Figure \ref{fig:edl} gives a view of the electrical double layer under the combined Gouy-Chapman and Stern models. 
 			
-			\begin{figure} \label{fig:edl}
+			
+			\begin{figure}
 				\includegraphics[width=\textwidth]{edl.png}
 				\caption{Scheme of the electrical double layer under the Gouy-Chapman and Stern model. There is an abundance of counterions near the pore surface and a reduced number of coions. At the bulk both ion species' concentrations are equal.}
+				
+				 \label{fig:edl}
 			\end{figure}
+			
+			Because the ion solution is conductive, mobile ions outside the Stern layer will redistribute themselves near the charged surface to counter or `screen' its $\zeta-$potential. This screening layer is known as the Debye layer, and is characterized by an enriched number of counterions (ions of opposite charge polarity to the wall) and a depleted number of coions. As we will see, the electrical double layer has a characteristic length scale known as the Debye length $\lambda_{D}$, which ranges from $0.1-10$ nm for most solution concentrations. Figure \ref{fig:edl} gives a view of the electrical double layer under the combined Gouy-Chapman and Stern models. 
 
 			
-			
+			\begin{figure}
+				\includegraphics{fractioninsideedl.png}
+				\caption{Plot of fraction of volume in a nanopore that is within the EDL versus pore diameter. The plot reveals a large super linear increase of total solution within the EDL as diameter decreases, starting at approximately $D\approx 10\lambda_{D}$.}
+				
+				\label{fig:fractioninsideedl}
+			\end{figure}
 			
 			Nanopore's interesting behavior emerges when a non-negligible amount of the total volume is within a distance of $\lambda_{D}$ of the pore wall. Assuming $\lambda_{D}=1$, figure \ref{fig:fractioninsideedl} shows the fractional area of pore contained within $\lambda_{D}$ of the pore wall as a function of the pore diameter $D$. 
 			
-			\begin{figure} \label{fig:fractioninsideedl}
-				\includegraphics{fractioninsideedl.png}
-				\caption{Plot of fraction of volume in a nanopore that is within the EDL versus pore diameter. The plot reveals a large super linear increase of total solution within the EDL as diameter decreases, starting at approximately $D\approx 10\lambda_{D}$.}
-			\end{figure}
+			
 			
 			For pores with diameter $D\gtrsim10\lambda_{D}$, the total volume within the electrical double layer is negligible; however, below approximately $10\lambda_{D}$ the total volume within the EDL quickly increases. This explains why the `nano' prefix in nanopore is important; as we approach the scale of the EDL, the structure of the solution very quickly changes, in a non-linear fashion, within the vicinity of a few nm of the pore wall.
 			
@@ -166,7 +173,7 @@
 			
 			
 			\begin{equation} \label{eq:boltzmann}
-				c_{i}=c_{0,i}\mathrm{e}^{-\frac{z_{i}e\phi}{k_{B}T}}.
+				c_{i}=c_{0,i}\mathrm{e}^{-\frac{z_{i}e\phi}{k_{B}T}}.				
 			\end{equation}
 			
 			The electric potential itself is given by the Poisson equation
@@ -197,54 +204,19 @@
 					\phi &= \phi_{0}\mathrm{e}^{-\frac{y}{\lambda_{D}}} \\
 					c_{i} &= c_{i,0}\mathrm{e}^{-\frac{z_{i}e\phi_{0}}{k_{B}T}\mathrm{e}^{-y/\lambda_{D}}} \\
 					\lambda_{D} &= \sqrt{\frac{\epsilon k_{B}T}{2c_{0}}}z,
-				\end{split}
+				\end{split}				
 			\end{equation}
+			
+			\begin{figure}
+				%\includegraphics[width=0.5\textwidth]{EDL_Charge_Distribution.png}
+				\caption{asdf}
+				\label{fig:EDLChargeDistribution}
+			\end{figure}
+
 			
 			where we introduced a new parameter, the Debye length $\lambda_{D}$. The solution to the 1-D lineared Poisson-Boltzmann equation reveals that the electrostatic potential exponentially approaches 0 from the wall, that the counterion species are enriched at the surface and diminish towards the bulk, and the coions are diminished at the surface, but recover their concentration towards the bulk. The Debye length is perhaps the most useful parameter in nanopore systems since it gives a characteristic length scale for the region within the pore wall that departs from its bulk, ordinary behavior. The Debye length increases with dilute ion concentrations and decreases as the ion concentration is increased, and is typically somewhere in the range of $0.1-10$ nm for common solution preparations. Note that although we discussed the electrical double layer here in the context of a pore surface, nearly every body immersed in solution will have some surface charge and therefore its own electrical double layer. The electrical double layers of free-bodies i.e.~particles are integral in explaining their motion in applied electrical fields, also known as electrophoresis. 
 			
 			The importance of the EDL in bestowing nanopores with their novel conductance properties cannot be overstated, and accordingly there are many phenomenon that nanopores that exhibit that are a direct consequence of the present of the EDL. In the next few sections we will review some of these phenomena.
-			
-			
-		\subsection{Surface conductance}
-		
-			Ignoring electrical double layer effects, the conductance of an ion channel is proportional to the ion concentration in the solution; doubling the ion concentration doubles the measured current. However, because the electrical double layer has a total concentration that is significantly different than the bulk concentration of ions, the conductance of a nanopore is a highly non-linear function of the bulk ion concentration. Consider first a nanopore with an electrical double layer very small compared to the pore radius; the conductance is related to the conductivity to the bulk solution. As we reduce the salt concentration, the Debye length increases according to $\lambda_{D}\propto c_{0}^{-1/2}$, and the conductance of the EDL becomes increasingly significant to the total conductance of the pore. Since the total concentration in the EDL $c_{+}+c_{-}>2c_{0}$, the relationship between ion concentration and conductance becomes sublinear; halving the ion concentration no longer yields half the ionic current, since there will still be a greater concentration of ions in the electrical double layer compared to in the bulk. As we lower the conductivity further, the EDL continues to expand until it fills the entire channel. At this point, no further reduction of the bulk concentration will reduce the current, since the channel will always be filled with exactly enough ions to screen the surface charge of the pore. This effect is known as ionic current saturation, since the current maintains fixed below a certain concentration value. Figure \ref{fig:nanoporeconductivity} shows an example of a plot of pore conductance versus ion concentration.
-			
-			The non-linearity in the conductance with ion concentration described above is due to a difference in the conductance values of the EDL, or `surface conductance' versus the conductance of the bulk solution. We can introduce a parameter that quantifies the relative contributions of surface conductance versus bulk conductance, the Dukhin number:
-			
-			\begin{equation} \label{dukhin}
-				\frac{2\left(1+3m/z^{2}\right)}{\kappa a}\left(\cosh\frac{zF\zeta}{2RT}-1\right),
-				m=\frac{2\epsilon k_{b}^{2}T^{2}}{3\eta e^{2}D}.
-			\end{equation}
-			
-			The second term in the top equation above is the contribution to surface conductance from electroosmosis, an effect described below.
-			
-			A simple model for the nanopore conductance $G$ for all electrolyte concentrations can be obtained by breaking down the total conductance into two terms, bulk conductance and surface conductance. Doing so, the total conductance $G$ takes on the formation
-			
-			\[ G=\left(\mu_{K^{+}}+\mu_{Cl^{-}}\right)n_{\textrm{KCl}}e\frac{R^{2}}{L}+2\mu_{K^{+}}\sigma_{s}\frac{R}{L}. \]
-			
-			Importantly, the equation reveals that even in the limit of 0 electrolyte concentration, there will still be a finite conductance $G$ due to the presence of screening ions in the pore that is fixed for every concentration.
-			
-		\subsection{Ion selectivity}
-			A phenomenon related to surface conductance is \textit{ion selectivity}. Since the EDL has a higher concentration of counterions rather than coions, the total flux of ions through the pore is slightly skewed towards counterions. The ion selectivity is defined as
-			
-			\begin{equation} \label{eq:selectivity}
-				S=\frac{|I_{+}-I_{-}|}{I}.
-			\end{equation}
-			
-		
-		\subsection{Ionic current rectification}
-			An ion channel is said to be rectifying if its conductance for one voltage polarity is greater than the opposite voltage polarity. The presence of an EDL alone cannot account for this, since the system has symmetry with respect to switching the electrodes, and therefore no rectification will occur. However, by introducing asymmetry into a system, along with having the pore be partially ion selective, we can create rectifying pores. There are many ways to create asymmetric nanopores, but two obvious solutions are geometry and surface charge pattern based.
-			
-			If the shape of a nanopore is asymmetric, for instance as in a cone, the ionic current will be rectified. A simple explanation for this is that at the tip-side of the pore (in the case of conical nanopores), there will be an excess of counterions in the vicinity of the entrance EDL, while the other side will more closely resemble the bulk. Because these ions are at the entrance of the pore, they will more easily enter the pore than when at the other side. The result is that for one voltage polarity the ionic current is greater than at the opposite polarity.
-			
-			By a similar principle, rectification caused my charge patterning asymmetry can also lead to rectification. By placing two charges of opposite polarity adjacent to one another inside the pore, for one voltage polarity a depletion zone is created in analogy with the depletion zone formed between the doping regions in a semiconductor diode. The ionic current is rectified, and because the diode junction so severely limits the ionic current under one voltage polarity, the device is said to be equivalent to an ionic diode.
-			
-			
-
-
-			
-			
-		
 			
 			
 		\subsection{Electroosmosis}
@@ -257,11 +229,11 @@
 			
 			\[ 0 = \eta\frac{\partial^{2}u}{\partial y^{2}}+\left[c_{+}\left(y\right)-c_{-}\left(y\right)\right]zeE_{ext}. \]
 			
-			The equation shows that there is a constant driving force which is proportional to the net charge in the solution (proportional to $c_{+}-c_{-}$) times the electric field $\vec{E}$. We identify this term with the electric force. The other term that balances the driving force is due to viscous forces between neighboring layers that have different $y-$ velocities $u$, i.e. due to velocity gradients perpendicular to the wall. In order to solve this equation, we can replace the charge density $\rho_{E}=ze\left(c_{+}-c_{-}\right)$ with the Laplacian of the scalar potential $\phi$, integrate twice, and apply the correct boundary conditions, that the velocity at the pore wall is 0 (the so-called `non-slip' boundary condition) and that the velocity gradients are 0 infinitely far from the wall.  Performing these steps, we find the fluid velocity equals 
+			The equation shows that there is a momentum flux source term from the electric field acting on the charged solution in the EDL, which is proportional to the net charge in the solution (proportional to $c_{+}-c_{-}$) times the electric field $\vec{E}$. The other term that balances the driving force is due to viscous forces between neighboring layers that have different $y-$ velocities $u$, i.e. due to velocity gradients perpendicular to the wall. In order to solve this equation, we can replace the charge density $\rho_{E}=ze\left(c_{+}-c_{-}\right)$ with the Laplacian of the scalar potential $\phi$, integrate twice, and apply the correct boundary conditions, that the velocity at the pore wall is 0 (the so-called `non-slip' boundary condition) and that the velocity gradients are 0 infinitely far from the wall.  Performing these steps, we find the fluid velocity equals 
 			
 			\[ u=\frac{\epsilon E_{ext}}{\eta}\left(\phi-\zeta\right), \]
 			
-			where $\phi_{0}$ is the electric potential immediately outside the surface charges on the pore wall. Interestingly, according to this equation the fluid velocity is proportional to the local electric potential in the screening layer, which is determined by solving the Poisson-Boltzmann equation (Eq. \ref{pb}). Under the Debye-H\u ckel approximation of small surface potentials, the fluid velocity is zero at the walls, and exponentially approaches its bulk value as distance from the wall increases. This type of fluid flow profile is known as `plug flow', since the velocity is approximately constant everywhere except in the thin EDL where there are sharp velocity gradients. Since the potential in the bulk is equal to $\phi=0$, we find the bulk velocity to be equal to 
+			where $\phi_{0}$ is the electric potential immediately outside the surface charges on the pore wall. Interestingly, according to this equation the fluid velocity is proportional to the local electric potential in the screening layer, which is determined by solving the Poisson-Boltzmann equation (Eq. \ref{eq:pb}). Under the Debye-H\u ckel approximation of small surface potentials, the fluid velocity is zero at the walls, and exponentially approaches its bulk value as distance from the wall increases. This type of fluid flow profile is known as `plug flow', since the velocity is approximately constant everywhere except in the thin EDL where there are sharp velocity gradients. Since the potential in the bulk is equal to $\phi=0$, we find the bulk velocity to be equal to 
 			
 			\begin{equation} \label{eq:hs}
 				\begin{split}
@@ -270,15 +242,97 @@
 				\end{split}
 			\end{equation}
 			
-			a result known as the Helmholtz-Smoluchowski equation. The parameter $\mu_{EO}\equiv-\frac{\epsilon\zeta}{\eta}$ introduced is known as the electroosmotic mobility, and is the proportionality constant between the applied electrical field and the resulting fluid velocity. Typical values of the mobility are $\mu_{EO}=10^{-8} \left[m^{2}/V s\right]$, which for an electric field of $\SI{1}{V/\mu m^{2}}$ yields a fluid velocity of approximately $\SI{1}{cm/s}$.
 			
-			It is possible to experimentally observe the fluid flow velocity, for instance by tracking the motion of small particles that move in the fluid flow, and therefore Eq. \ref{hs} provides a means for directly measuring the $\zeta-$potential.
+
+			
+			a result known as the Helmholtz-Smoluchowski equation. The parameter $\mu_{EO}\equiv-\frac{\epsilon\zeta}{\eta}$ introduced is known as the electroosmotic mobility, and is the proportionality constant between the applied electrical field and the resulting fluid velocity. Typical values of the mobility are $\mu_{EO}=10^{-8} \left[m^{2}/V s\right]$, which for an electric field of $\SI{1}{V/\mu m^{2}}$ yields a fluid velocity of approximately $\SI{1}{cm/s}$. 
+			
+			\begin{figure}
+				\includegraphics[width=.5\textwidth]{electroosmosis.png}
+				\caption{asdf}
+				\label{fig:electroosmosis}
+			\end{figure}
+			
+			Figure \ref{fig:electroosmosis} shows the fluid flow profile in a pore with a finite slip length $u_{\mathrm{slip}}$; however, it must be noted that in the vast majority of experimental systems, $u_{\mathrm{slip}}=0$.
+			
+			It is possible to experimentally observe the fluid flow velocity, for instance by tracking the motion of small particles that move in the fluid flow, and therefore Eq. \ref{eq:hs} provides a means for directly measuring the $\zeta-$potential.
+			
+		\subsection{Surface conductance and conductance saturation}
+		
+			\begin{figure} 
+				\includegraphics[width=0.5\textwidth]{Schoch2008_conductance}
+				\caption{Reprinted (abstract/excerpt/figure) with permission from [(FULL REFERENCE CITATION) as follows: Author's Names, APS Journal Title, Volume Number, Page Number and Year of Publication.] Copyright (YEAR) by the American Physical Society.}
+				\label{fig:Schoch2008conductance}
+			\end{figure}
+		
+			Ignoring electrical double layer effects, the conductance of an ion channel is proportional to the ion concentration in the solution; doubling the ion concentration exactly doubles the measured current. However, the presence of the electrical double layer breaks this perfect linear conductance relationship for two reasons. First, the integrated \textit{excess} ion count $\int_{0}^{EDL}=\left[\left(c_{+}+c_{-}\right)-2c_{0}\right]dy$ in the EDL layer is not guaranteed to be the same as the total ion concentration in the bulk; in fact, in most cases it is slightly higher, meaning the electrophoretic current in the EDL is slightly higher than in the bulk. Another important contribution to the measured current is the current from convection due to electroosmosis; because there is a net charge density in the fluid, electroosmosis will create a measurable ion current! In total, there are three terms that contribute to the total current measured in a channel, migration of ions in the bulk, migration of the integrated ion \textit{excess} in the EDL, and net convection of charge in the EDL due to electroosmosis. Without applying any equations, we can use what we learned about the EDL and some general logic to reason about what the current behavior should be in the limiting cases of very large ion concentration and very small ion concentration. The equation for the Debye-length is $\lambda_{D}\propto c_{0}^{-1/2}$; for very large ion concentration, the EDL should be negligible and therefore neither the effects of electroosmosis nor electrophoretic ion excess should be significant. At the other end of the scale, in the limit of nearly zero ions in the bulk we still must have charge neutrality in the pore, meaning a finite concentration of ions despite the bulk concentration being zero. In this case, the EDL fills the entire pore and the result is that the conductance is entirely due to the integrated excess and convective terms. This finite conductance at zero concentration is known as the \textit{saturation current}. Therefore, as we increase the length of the EDL we expect the conductance discrepancy, the difference in bulk conductance versus conductance due to the two surface effects, to increase. Consider a nanopore immersed in solution of two symmetric ions denoted $+$ and $-$ (symmetric means their mobilities, valencies, and bulk concentrations are equal) with electrophoretic mobility $\mu_{EP}$ and electroosmotic mobility $\mu_{EP}$. The following expression breaks down the total measured current into the three components described above:
+		
+			
+			\begin{equation} \label{eq:totalconductance}
+				\begin{split}
+					I &= I_{\mathrm{bulk}}+I_{\mathrm{excess}}+I_{\mathrm{EO}} \\
+					I &= \int 2c_{0}\mu_{EP}EezdA + \int\left[c_{+}\left(z\right)+c_{-}\left(z\right)-2c_{0}\right]\mu_{EP}EezdA + \int\left[c_{+}\left(z\right)-c_{-}\left(z\right)\right]u_{\mathrm{EO}}\left(z\right)ezdA.
+				\end{split}
+			\end{equation}
+			
+			Figure \ref{fig:Schoch2008conductance} shows a plot of the conductance versus solution concentration for a nanopore; the plot reveals a saturation at low solution concentration as expected from the preceding arguments. The saturation current is equal to the surface conductance term in the above equation.
+			
+		\subsection{Ion selectivity}
+			A phenomenon related to surface conductance is \textit{ion selectivity}. Since the EDL has a higher concentration of counterions rather than coions, the total flux of ions through the pore is slightly skewed towards counterions. The ion selectivity is defined as
+			
+			\begin{equation} \label{eq:selectivity}
+				S=\frac{|I_{+}-I_{-}|}{I}.				
+			\end{equation}
+			
+		
+		\subsection{Ionic current rectification}
+			An ion channel is said to be rectifying if its conductance for one voltage polarity is greater than the opposite voltage polarity. The presence of an EDL alone cannot account for this, since the system has symmetry with respect to switching the electrodes, and therefore no rectification will occur. However, by introducing asymmetry into a system, along with having the pore be partially ion selective, we can create rectifying pores. There are many ways to create asymmetric nanopores, but two obvious solutions are geometry and surface charge pattern based.
+			
+			If the shape of a nanopore is asymmetric, for instance as in a cone, the ionic current will be rectified. A simple explanation for this is that at the tip-side of the pore (in the case of conical nanopores), there will be an excess of counterions in the vicinity of the entrance EDL, while the other side will more closely resemble the bulk. Because these ions are at the entrance of the pore, they will more easily enter the pore than when at the other side. The result is that for one voltage polarity the ionic current is greater than at the opposite polarity.
+			
+			By similar reasoning, charge patterning asymmetry can also lead to rectification. By placing two charges of opposite polarity adjacent to one another inside the pore, for one voltage polarity a depletion zone is created in analogy with the depletion zone formed between the n- and p-doped regions in a semiconductor diode. The ionic current is rectified, and because the diode junction so severely limits the ionic current under one voltage polarity, the device is said to be equivalent to an ionic diode.\cite{Vlassiouk2007}
+			
+			\begin{figure}
+				\includegraphics[width=.5\textwidth]{Vlassiouk2007_conicaldiode}
+				\caption{\textbf{An ionic diode formed in a conical nanopore with bipolar surface charge patterning.} The region between negative and positive charges is the depletion zone, and provides a large resistance to ion flow through the pore for one voltage polarity. Reprinted with permission from \bibentry{Vlassiouk2007}. Copyright 2007 American Chemical Society.}
+				\label{fig:Vlassiouk2007conicaldiode}
+			\end{figure}
+			
+			Figure \ref{fig:Vlassiouk2007conicaldiode} shows a conical nanopore with a bipolar charge distribution. The combination of the geometrical and charge asymmetry gives the pore a very large rectification value, and the near-zero current for one polarity of voltage is enough to consider the pore a diode.
+
+			
+			
+
+
+			
+			
+		
+			
+			
+		
 			
 			
 
 			
 			
+		\subsubsection{Particle electrophoresis}
 			
+			Electrophoresis is the transport of a charged particle in the presence of an electric field. The effect of electrophoresis can be derived much in the way electroosmosis was derived, but instead of considering the fluid flow velocity at the surface of the particle to be zero, we set it equal to the electrophoretic velocity. For particles with thin electrical double layers (Debye-H\u ckel approximation) and laminar flow (Stoke's flow), the particle velocity is
+			
+			\begin{equation} \label{eq:electrophoresis}
+				\begin{split}
+					\vec{u} &= \frac{\epsilon\vec{E}_{0}}{\eta}\phi_{0} \\
+					\vec{u} &= \mu_{\mathrm{EP}}=\frac{\epsilon\phi_{0}}{\eta}.
+				\end{split}
+			\end{equation}
+			
+			In equation \ref{eq:electrophoresis}, we've again introduced a proportionality factor between the applied electric field $E_{0}$ and the induced velocity $\vec{u}$; this factor is known as the electrophoretic mobility. However, these equations are derived under the assumption that the applied electric field does not perturb the distribution of ions in the electrical double layer, which is only true for small surface potentials. If this assumption is invalid, additional effects related to the redistribution of ions must be taken into account; the net effect is a retarding force on the particle that slows its velocity.
+			
+			Electrophoresis is an important effect in many applications involving particles. One useful application is that particle electrophoresis through a nanopore can be used to measure the zeta potential of a particle, related to its surface chemistry and chemical adsorption. An electric field is applied across a nanopore which is immersed in electrolyte solution containing ions and charged particles. Particles travel through the pore under electrophoresis, and the dwell time can be recorded using resistive pulse sensing or optical techniques. If the geometry of the pore is known, the dwell time can be related with the particle velocity, and the electric field strength can be determined as well. In this case, equation \ref{eq:electrophoresis} can be solved for the surface potential $\phi_{0}$, which is the same as its zeta-potential.
+			
+		\subsubsection{Particle translocation}
+			Transport of particles is in general a superposition of electrophoretic and electroosmotic effects. Combining the two, the 
+
 
 			
 

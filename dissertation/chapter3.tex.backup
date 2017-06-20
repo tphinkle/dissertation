@@ -1,0 +1,81 @@
+\graphicspath{{../images/ch3/}}	% Image directory
+
+
+\chapter{Experimental study of ion conductance property of hybrid conductor-insulator nanopores}
+
+	
+
+	\section{Background}
+	
+		In the introduction of this thesis we discussed the electrical double layer (EDL) which is a screening layer of ions that forms in the proximity of a charged surface. The vast majority of pores studied are non-conductive insulators, and their surface charge properties come from the functionalization of chemical groups at their surface. For instance, the base of the pore studied in this section is Si3N4 (silicon nitride), whose native silane chemistry means there are exposed alcohols at hte surface that are either negative or neutral depending on pH. However, charge on a surface can arise \textit{via} other means. When a metal is exposed to an electric field, electrons in the metal rapidly redistribute themselves on the surface to cancel the external applied field. If we assume the metal was originally overall neutral, the charge pattern will consist of an abundance of negatively-charged electrons at one end and an abundance of positively-charged holes at the other. A natural question is whether these \textit{induced} charges have associated EDLs in the same way that static charges do.
+		
+		Previous studies suggest they do. For instance, Squires \textit{et al.} and Pascall \textit{et al.} performed experiments with applied external electric fields on various metal surfaces and discovered that electroosmotic flow occurred. They reasoned that electroosmosis was a result of polarization of charges according to the model discussed above \cite{Squires2004, Pascall2010}. However, these types of induced-charges have been seldom discussed in hte context of nanopore transport, especially in the context of an realizable experimental platform. In order to understand the effect of induced charges on nanopore transport, we considered a hybrid metal-insulator pore created by evaporating a thin layer of gold onto the pore surface. If the pore was only the insulator, its IV curve would be symmetrical due to the lack of any symmetry breaking in the system. The addition of the metallic layer breaks this symmetry, and we expect to see ionic current rectification in the pore (see chapter 1.) However, ionic current rectification alone is insufficient for proving that induced surface charges contribute to the pore's conductance; this is because essentially \textit{any} symmetry breaking in a pore, including a difference in static surface charges between two regions, a difference in geometrical shape between two regions, \textit{or} induced surface charges, will lead to ionic current rectification.
+		
+		\begin{figure}
+			\includegraphics[width=0.5\textwidth]{SiN-Gold_Model.png}
+			\caption{\textbf{Model for the induced-charge and EDL charges in the hybrid conductor-insulator nanopore.} \textbf{Left:} Negative bias applied to gold side. \textbf{Right:} Positive bias applied to gold side. For the positive bias, a depletion zone forms at the junction between the gold and SiN, which is expected to severely limit the conductance. For the negative bias, no depletion zone forms and therefore the conductance is expected to be unhindered. The double conical geometry reflects the expected geometry of SiN pores drilled \textit{via} a transmission electron microscope electron beam.}
+			\label{fig:SiNGoldModel}
+		\end{figure}
+
+		
+		In order to provide evidence that induced charges directly contributed to a pore's conductance properties in this system, we need to devise a model for the manner of the induced rectification properties, and to check if the model accurately describes experimental data. Figure \ref{fig:SiNGoldModel} is a scheme of the induced-charge model, which is effectively explained by the surface charges present. First, the insulating part of the pore has an approximately uniform surface charge due to ionization of the chemical groups on its surface. On the gold, the charge patterning depends on the applied voltage. When a negative bias is applied on the gold side of the pore, electrons are repelled from the electrode while holes are attracked. The charge pattern in the pore from top to bottom is then $+--$. On the other hand, when a positive bias is applied on the gold-side of the pore, holes flee to the inside of the pore while electrons are drawn towards the electron. Therefore, from the positive electrode to the negative electrode the surface charge pattern is $-+-$ (right hand side of figure \ref{fig:SiNGoldModel}. The primary difference in the charge pattern as it relates to the influence on the nanopore between the two voltage polarity cases is the charge juntion at the conductor-insulator interface; in the latter case (positive voltage applied on the metallic side), the $+-$ junction indicates the presence of a bipolar junction that leads to a depletion zone in the EDL, as discussed in the section on ionic current rectification in chapter 1. This depletion zone is characterized by having a very large resistance, and therefore limits the total current through the pore. For the opposite polarity, the depletion zone is not present and therefore we do not expect any significant limiting of the current.
+		
+		This model, known as the induced-charge model for hybrid conductor-insulator nanopores, was tested experimentally in this work.
+		
+	\section{Experimental setup}
+		
+		In order to test the induced-charge model, we devised a platform consisting of thin nanopores in silicon nitride (SiN) with gold (Au) deposited on top. The crucial elements of this setup consisted of the silicon nitride (SiN) membrane, evaporated gold (Au) layer, transmission electron microscope drilling of the pore, and the current-voltage characterization measurements.
+		
+		\subsection{Silicon nitride}
+			
+			Silicon nitride was used as the substrate through which to drill the nanopore. The effects of polarization of the gold should be apparent in truly nano-scale systems, so it was important to choose a material through which a small pore could be fabricated. As of the writing of this thesis, silicon nitride (chemical formula $\mathrm{Si_{3}N_{4}}$) is a popular choice for creating small nanopores given its mechanical stability and well-understood surface chemistry. The method of pore formation, TEM drilling (discussed below) can enable pores ranging from $1-20$ nm in diameter, and is capable of drilling through substrate lengths of up to $100$ nm. It is predicted that pores with very low aspect ratios, i.e.~short pores, will have severely diminished rectification propeties. In order to ensure large rectification, the solution must be subjected to a sufficient length of EDL. In order to strike a compromise between TEM's capabilities and the undesirable low-aspect ratio effects, a substrate thickness of $\SI{50}{nm}$ was chosen. The silicon nitride substrate is commonly used in TEM microscopy, and therefore is available from commercial vendors. The substates were ordered from the SPI company. The substrate itself is grown onto a thicker layer of silicon, through which a window is drilled on the backside to expose the silicon nitride. The final result is a $\SI{50}{nm}$ thick layer of SiN supported by a silicon chip. After pore fabrication, silanol groups native to the pore surface act as surface charges if immersed in solution with pH beyond their pKa value of 
+			
+		\subsection{Gold deposition}
+			
+			Although the model of induced-charge rectification described above is independent of the type of conductor used, we chose to use gold (Au) because of its mechanical stability after deposition and its resistance to corrosion and oxidation, which could create a surface chemistry effect that could potentially obscure the relationship with the induced surface charges. With the conductor's material chosen, we think about the desired deposition thickness. In the model of induced-charge rectification described above, it is necessary to have a bipolar junction far enough inside the pore that a depletion layer can form. For this reason, we aimed to deposit a $\SI{30}{nm}$ layer of gold onto the surface of the SiN. There are a number of means of depositing metals onto surfaces, but given the thinness of the desired layer we chose to deposit \textit{via} an e-beam evaporation. During e-beam evaporation, a chunk of metal is pumped down in vaccuum and bombarded with high-energy electrons. The combination of low-pressure and large temperature caused by the bombardment with the electrons causes individual metal atoms to evaporate from the surface of the chunk along straight-line or ray paths. The atoms then hit the surface of the substrate, which is suspended above it, and stick. Although Au \textit{can} be deposited directly onto the surface of SiN, a thin layer ($\SI{3}{nm}$) of chromium (Cr) was first evaporated, which facilitates adhesion of the Au.
+			
+		\subsection{Transmission electron microscope drilling}
+		
+			\begin{figure}
+				\includegraphics[width=0.5\textwidth]{sinpore.png}
+				\caption{\textbf{A $\sim\SI{15}{nm}$ SiN pore drilled \textit{via} TEM.}}
+				\label{fig:sinpore}
+			\end{figure}
+
+		
+			The transmission electron microscope (TEM) is a super resolution imaging technique that is typically used to image objects below the optical diffraction limit of $\SI{200}{nm}$. However, if the electron beam is sufficiently energized and focused, the electron beam can act as a drill for forming nanopores instead of for imaging. This technique was used to drill pores through the SiN-Au hybrid device described in the above two steps. A highly focused beam in the TEM's scanning (S) mode is applied to the surface. The energetic electrons strike the surface and eject atoms, while simultaneously the entire structure melts. The final result is a pore with the same thickness as the substrate, and with a double conical geometry which is a result of the simultaneous ballastic ejection and melting. Because the drilling is performed inside the TEM, the resulting pore can also be immediately imaged. Figure \ref{fig:sinpore} shows an example of a $\sim\SI{15}{nm}$ TEM-drilled pore.
+			
+		\subsection{Pore conductance characterization}
+		
+			\begin{figure}
+				\includegraphics[width=\textwidth]{siniv.png}
+				\caption{\textbf{A current-voltage time series alongside the current-voltage curve produced from it.} \textbf{Left}: Current-voltage time series. Each continuous line corresponds to one voltage setting; once a voltage value is set, the current does not significantly vary. \textbf{Right}: Traditional pore I-V curve. The asymmetry in the current with respect to voltage (present in both signals) is the hallmark indicator of ionic current rectification.}
+				\label{fig:siniv}
+			\end{figure}
+
+		
+			In order to test the induced-charge model, we measured the current-voltage (IV) response of each of the fabricated nanopores in various concentrations of KCl salt solution, including $10, 100,$ and $1000$ mM. However, due to the small sizes of the pore and the low surface charge density of the silanols on the SiN surface, the interior of the pore is difficult to wet, meaning any vapor present inside the pore can be stable and difficult to remove. If this is the case, ions cannot pass through. Often times these vapor phases are quasi-stable, meaning the pore may spontaneously wet and dewet. In order to reduce these hydrophobic effects, we use an even 50/50 mixture of water and ethanol solvent; the combination of both solvents promotes wetting of the pore. In principle, during IV measurements one needs only to sweep the voltage along the desired range, stopping to record the current at each voltage value. Usually one delays $\sim\SI{1}{second}$ after changing the voltage before a current measurement is made to allow for the system to equilibrate, e.g. due to system capacitance charging/discharging. However, in systems in which the system conductance can stochastically change, e.g.~due to spontaneous wetting/dewetting transitions, it is advantageous to record a time-series of the current voltage sweeps rather than measure single data points. If a transition occurs, it can be observed in the time series of the signal and appropriately dealt with afterwards. The protocol for measuring IV curves is then to apply a fixed voltage, record the current for a fixed amount of time, and repeat for all of the desired voltages. Then, an IV curve is produced by averaging the current time-series for a fixed interval of time (averaging is performed to smooth over the small amount of noise in the signal).  Figure \ref{fig:siniv} shows an example current-voltage time series and the IV curve produced from it for one of the pores used in the study. On the left is a current-voltage time series plot that shows the current value time series for different voltage settings, while the right hand side of the figure shows a traditional I-V curve of the pore.  
+			
+			
+			
+			
+		
+			
+		
+			
+	
+		
+		
+		
+		
+	
+
+	
+
+
+
+
+%%% Local Variables: ***
+%%% mode: latex ***
+%%% TeX-master: "thesis.tex" ***
+%%% End: ***

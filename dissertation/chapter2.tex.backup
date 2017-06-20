@@ -1,0 +1,20 @@
+\graphicspath{{../images/ch2/}}	% Image directory
+
+
+\chapter{Development and testing of a single carbon nanotube based pore}
+
+	
+
+	\section{Background}
+	
+		This chapter describes my research performed on measuring the ion, water, and particle transport properties of single carbon nanotubes. A carbon nanotube (CNT) is a cylindrically-shaped monolayer of carbon atoms, and because of its shape it can effectively act as a nanopore.  When used as nanopores, CNTs are thought to exhibit behavior that is significantly different than traditional nanopores, including large fluxes of water, large fluxes of some ion species, steric rejection of other ion species, ultra-high proton mobilities, and an unusual sub-linear power law in the conductance-concentration relationship. These effects are poorly understood, and since it was discovered that they could be used as single nanopores many labs around the world have worked on understanding them. Besides being poorly understood, there is even a lack of consensus in the field about whether some of these properties are even real! The objective of this experiment was to test a new CNT platform that could help point the field in the right direction; by observing transport phenomena in our CNT platform, hopefully we nudged the field in the direction of a concensus.
+
+	
+
+
+
+
+%%% Local Variables: ***
+%%% mode: latex ***
+%%% TeX-master: "thesis.tex" ***
+%%% End: ***

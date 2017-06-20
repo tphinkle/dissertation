@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.25)  16 JUN 2017 17:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.25)  19 JUN 2017 17:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -645,23 +645,24 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \c@definition=\count166
 \c@example=\count167
 
-(./preliminaries.tex) (./dissertation.aux (./chapter1.aux) (./appendix.aux))
+(./preliminaries.tex) (./dissertation.aux (./chapter1.aux) (./chapter2.aux)
+(./chapter3.aux) (./appendix.aux))
 \openout1 = `dissertation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -739,7 +740,7 @@ Dictionary: translator-basic-dictionary, Language: English
 File: siunitx-abbreviations.cfg 2017/01/01 v2.7a siunitx: Abbreviated units
 )
 \AtBeginShipoutBox=\box52
-Package hyperref Info: Link coloring OFF on input line 99.
+Package hyperref Info: Link coloring OFF on input line 100.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -748,21 +749,21 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count174
 )
-LaTeX Info: Redefining \ref on input line 99.
-LaTeX Info: Redefining \pageref on input line 99.
-LaTeX Info: Redefining \nameref on input line 99.
+LaTeX Info: Redefining \ref on input line 100.
+LaTeX Info: Redefining \pageref on input line 100.
+LaTeX Info: Redefining \nameref on input line 100.
 
 (./dissertation.out) (./dissertation.out)
 \@outlinefile=\write3
 \openout3 = `dissertation.out'.
 
 \c__siunitx_mathsf_int=\count175
-LaTeX Font Info:    Try loading font information for U+msa on input line 99.
+LaTeX Font Info:    Try loading font information for U+msa on input line 100.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 99.
+LaTeX Font Info:    Try loading font information for U+msb on input line 100.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -772,28 +773,28 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 102.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 103.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 102.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
  [1
 
 
 ] [2
 
 ]
-(./dissertation.toc)
+(./dissertation.toc [3
+
+
+])
 \tf@toc=\write4
 \openout4 = `dissertation.toc'.
 
- [3
-
-
-] (./dissertation.lof
+ [4] (./dissertation.lof
 Overfull \hbox (0.10664pt too wide) in paragraph at lines 3--3
  [][] [][]\OT1/cmr/m/n/12 Two types of nanopores. \OT1/cmr/bx/n/12 Left: \OT1/c
 mr/m/n/12 Alpha-hemolysin, a bi-o-log-i-cal type of nanopore 
@@ -805,41 +806,47 @@ Overfull \hbox (1.53723pt too wide) in paragraph at lines 4--4
 face forces. \OT1/cmr/bx/n/12 milli-\OT1/cmr/m/n/12 : Caenorhab- 
  []
 
+[5
+
+
+]
+Overfull \hbox (20.2706pt too wide) in paragraph at lines 13--13
+ [][] [][]\OT1/cmr/bx/n/12 Model for the induced-charge and EDL charges in the 
+hy-brid conductor- 
+ []
+
 )
 \tf@lof=\write5
 \openout5 = `dissertation.lof'.
 
- [4
-
-
-] (./dissertation.lot)
+ [6] (./dissertation.lot)
 \tf@lot=\write6
 \openout6 = `dissertation.lot'.
 
- [5
+ [7
 
 
-] [6
+] [8
 
-] [7
+] [9
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 102--102
+Underfull \hbox (badness 10000) in paragraph at lines 103--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--102
+Underfull \hbox (badness 10000) in paragraph at lines 103--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--102
+Underfull \hbox (badness 10000) in paragraph at lines 103--103
 
  []
 
-[8] [9
+[10] [11
 
 
 ] (./dissertation.bbl)
@@ -857,7 +864,7 @@ Chapter 1.
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 (Font)              using `OT1/cmr/bx/n' instead on input line 13.
 
-<../images/ch1/bio_synth_nanopores.png, id=229, 467.03966pt x 209.70833pt>
+<../images/ch1/bio_synth_nanopores.png, id=324, 467.03966pt x 209.70833pt>
 File: ../images/ch1/bio_synth_nanopores.png Graphic file (type png)
 
 <use ../images/ch1/bio_synth_nanopores.png>
@@ -869,7 +876,7 @@ ne 23.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2] [3 <../images/ch1/bio_synth_nanopores.png>] [4] [5] [6] [7] [8] [9]
-[10] <../images/ch1/scales.png, id=271, 2882.77pt x 827.09pt>
+[10] <../images/ch1/scales.png, id=365, 2882.77pt x 827.09pt>
 File: ../images/ch1/scales.png Graphic file (type png)
 
 <use ../images/ch1/scales.png>
@@ -881,56 +888,131 @@ Overfull \hbox (6.9695pt too wide) in paragraph at lines 88--88
  equa-
  []
 
-[13] [14] [15] [16] <../images/ch1/edl.png, id=308, 1230.5975pt x 1254.6875pt>
+[13] [14] [15] [16] <../images/ch1/edl.png, id=400, 1230.5975pt x 1254.6875pt>
 File: ../images/ch1/edl.png Graphic file (type png)
 
 <use ../images/ch1/edl.png>
-Package pdftex.def Info: ../images/ch1/edl.png used on input line 143.
+Package pdftex.def Info: ../images/ch1/edl.png used on input line 147.
 (pdftex.def)             Requested size: 469.75502pt x 478.94958pt.
 
-<../images/ch1/fractioninsideedl.png, id=310, 307.1475pt x 229.8186pt>
+<../images/ch1/fractioninsideedl.png, id=402, 307.1475pt x 229.8186pt>
 File: ../images/ch1/fractioninsideedl.png Graphic file (type png)
 
 <use ../images/ch1/fractioninsideedl.png>
 Package pdftex.def Info: ../images/ch1/fractioninsideedl.png used on input line
- 153.
+ 157.
 (pdftex.def)             Requested size: 307.14674pt x 229.81804pt.
  [17] [18 <../images/ch1/edl.png>]
-[19 <../images/ch1/fractioninsideedl.png>] [20] [21]
-<../images/ch1/Schoch2008_conductance.png, id=346, 501.875pt x 366.36874pt>
+[19 <../images/ch1/fractioninsideedl.png>] [20]
+<../images/ch1/EDL_Charge_Distribution.png, id=431, 614.295pt x 460.3599pt>
+File: ../images/ch1/EDL_Charge_Distribution.png Graphic file (type png)
+
+<use ../images/ch1/EDL_Charge_Distribution.png>
+Package pdftex.def Info: ../images/ch1/EDL_Charge_Distribution.png used on inpu
+t line 211.
+(pdftex.def)             Requested size: 469.75502pt x 352.0407pt.
+ [21] [22 <../images/ch1/EDL_Charge_Distribution.png>] [23] [24]
+<../images/ch1/electroosmosis.png, id=454, 495.8525pt x 376.40625pt>
+File: ../images/ch1/electroosmosis.png Graphic file (type png)
+
+<use ../images/ch1/electroosmosis.png>
+Package pdftex.def Info: ../images/ch1/electroosmosis.png used on input line 25
+1.
+(pdftex.def)             Requested size: 234.8775pt x 178.29514pt.
+ [25]
+<../images/ch1/Schoch2008_conductance.png, id=463, 501.875pt x 366.36874pt>
 File: ../images/ch1/Schoch2008_conductance.png Graphic file (type png)
 
 <use ../images/ch1/Schoch2008_conductance.png>
 Package pdftex.def Info: ../images/ch1/Schoch2008_conductance.png used on input
- line 214.
+ line 263.
 (pdftex.def)             Requested size: 234.8775pt x 171.461pt.
- [22 <../images/ch1/Schoch2008_conductance.png>] [23] [24]
-<../images/ch1/Vlassiouk2007_conicaldiode.png, id=365, 517.935pt x 200.75pt>
+ [26 <../images/ch1/electroosmosis.png>] [27 <../images/ch1/Schoch2008_conducta
+nce.png>]
+Overfull \hbox (14.01234pt too wide) detected at line 276
+ $[][]$  
+ []
+
+[28]
+<../images/ch1/Vlassiouk2007_conicaldiode.png, id=482, 517.935pt x 200.75pt>
 File: ../images/ch1/Vlassiouk2007_conicaldiode.png Graphic file (type png)
 
 <use ../images/ch1/Vlassiouk2007_conicaldiode.png>
 Package pdftex.def Info: ../images/ch1/Vlassiouk2007_conicaldiode.png used on i
-nput line 255.
+nput line 296.
 (pdftex.def)             Requested size: 234.8775pt x 91.03813pt.
 pdfTeX warning (ext4): destination with the same identifier (name{cite.Vlassiou
 k2007}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.256 ...opyright 2007 American Chemical Society.}
+l.297 ...opyright 2007 American Chemical Society.}
                                                   pdfTeX warning (ext4): destin
 ation with the same identifier (name{cite.Vlassiouk2007}) has been already used
 , duplicate ignored
 <to be read again> 
                    \relax 
-l.256 ...opyright 2007 American Chemical Society.}
-                                                   [25 <../images/ch1/Vlassiouk
-2007_conicaldiode.png>] [26] [27]) [28] (./dissertation.bblpdfTeX warning (ext4
-): destination with the same identifier (name{cite.Vlassiouk2007}) has been alr
-eady used, duplicate ignored
+l.297 ...opyright 2007 American Chemical Society.}
+                                                   [29] [30 <../images/ch1/Vlas
+siouk2007_conicaldiode.png>]) [31]
+\openout2 = `chapter2.aux'.
+
+ (./chapter2.tex
+Chapter 2.
+[32
+
+
+
+]) [33]
+\openout2 = `chapter3.aux'.
+
+ (./chapter3.tex
+Chapter 3.
+[34
+
+
+
+] <../images/ch3/SiN-Gold_Model.png, id=518, 2487.2925pt x 1920.17375pt>
+File: ../images/ch3/SiN-Gold_Model.png Graphic file (type png)
+
+<use ../images/ch3/SiN-Gold_Model.png>
+Package pdftex.def Info: ../images/ch3/SiN-Gold_Model.png used on input line 15
+.
+(pdftex.def)             Requested size: 234.8775pt x 181.30502pt.
+ [35] [36 <../images/ch3/SiN-Gold_Model.png>] [37] <../images/ch3/sinpore.png, 
+id=537, 479.7925pt x 479.7925pt>
+File: ../images/ch3/sinpore.png Graphic file (type png)
+
+<use ../images/ch3/sinpore.png>
+Package pdftex.def Info: ../images/ch3/sinpore.png used on input line 40.
+(pdftex.def)             Requested size: 234.8775pt x 234.88074pt.
+ [38]
+<../images/ch3/siniv.png, id=544, 2118.91624pt x 660.4675pt>
+File: ../images/ch3/siniv.png Graphic file (type png)
+
+<use ../images/ch3/siniv.png>
+Package pdftex.def Info: ../images/ch3/siniv.png used on input line 51.
+(pdftex.def)             Requested size: 469.75502pt x 146.42194pt.
+ [39 <../images/ch3/sinpore.png>] [40 <../images/ch3/siniv.png>]) [41] (./disse
+rtation.bblpdfTeX warning (ext4): destination with the same identifier (name{ci
+te.Qiu2015}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.8 \bibitem{Vlassiouk2007}
-                           ) [29
+l.14 \bibitem{Qiu2015}
+                      
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+pdfTeX warning (ext4): destination with the same identifier (name{cite.Vlassiou
+k2007}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.26 \bibitem{Vlassiouk2007}
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{cite.Yang2016}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.32 \bibitem{Yang2016}
+                       ) [42
 
 
 
@@ -939,56 +1021,58 @@ l.8 \bibitem{Vlassiouk2007}
 
  (./appendix.tex
 Appendix A.
-) [30
+) [43
 
 
 ]
 
-Package caption Warning: Unused \captionsetup[figure] on input line 127.
+Package caption Warning: Unused \captionsetup[figure] on input line 130.
 See the caption package documentation for explanation.
 
 
-Package caption Warning: Unused \captionsetup[table] on input line 128.
+Package caption Warning: Unused \captionsetup[table] on input line 131.
 See the caption package documentation for explanation.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 133.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
-(./dissertation.aux (./chapter1.aux) (./appendix.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 133.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 133.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 136.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 136.
+(./dissertation.aux (./chapter1.aux) (./chapter2.aux) (./chapter3.aux)
+(./appendix.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 136.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 136.
 Package rerunfilecheck Info: File `dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: 48A78CAFCE584AF68F09D66BC58A6541;1747.
+(rerunfilecheck)             Checksum: 0A1E86D2BD51197F101C958F1559CB2B;2493.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 18194 strings out of 493013
- 344731 string characters out of 6133328
- 389493 words of memory out of 5000000
- 21451 multiletter control sequences out of 15000+600000
- 14912 words of font info for 56 fonts, out of 8000000 for 9000
+ 18307 strings out of 493013
+ 346703 string characters out of 6133328
+ 398017 words of memory out of 5000000
+ 21506 multiletter control sequences out of 15000+600000
+ 15271 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,13n,52p,10383b,784s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,13n,52p,10383b,787s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive
-/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/
-2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on dissertation.pdf (40 pages, 2584201 bytes).
+></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
+b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on dissertation.pdf (55 pages, 3521816 bytes).
 PDF statistics:
- 467 PDF objects out of 1000 (max. 8388607)
- 395 compressed objects within 4 object streams
- 90 named destinations out of 1000 (max. 500000)
- 231 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 650 PDF objects out of 1000 (max. 8388607)
+ 550 compressed objects within 6 object streams
+ 127 named destinations out of 1000 (max. 500000)
+ 328 words of extra memory for PDF output out of 10000 (max. 10000000)
 
