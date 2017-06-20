@@ -33,6 +33,8 @@
 \contentsline {subsection}{\numberline {3.2.2}Gold deposition}{38}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Transmission electron microscope drilling}{38}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Pore conductance characterization}{39}{subsection.3.2.4}
-\contentsline {chapter}{Bibliography}{42}{section*.22}
-\contentsline {chapter}{\numberline {A}Appendix Title}{43}{appendix.A}
-\contentsline {section}{\numberline {A.1}Lorem Ipsum}{43}{section.A.1}
+\contentsline {section}{\numberline {3.3}Experimental results}{41}{section.3.3}
+\contentsline {section}{\numberline {3.4}Modelling results}{44}{section.3.4}
+\contentsline {chapter}{Bibliography}{45}{section*.25}
+\contentsline {chapter}{\numberline {A}Appendix Title}{46}{appendix.A}
+\contentsline {section}{\numberline {A.1}Lorem Ipsum}{46}{section.A.1}
