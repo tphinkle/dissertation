@@ -1,0 +1,247 @@
+% Presets
+\setbeamertemplate{itemize/enumerate body begin}{\footnotesize}
+\setbeamertemplate{itemize/enumerate subbody begin}{\footnotesize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Create background image
+{\setbeamertemplate{sidebar right}{\llap{\includegraphics[width=\paperwidth,height=\paperheight]{title_image.png}}}
+\begin{frame}[c]
+ \begin{center}
+  
+
+  
+  % Title
+  \Huge{
+	\textcolor{gray0}{Resistive-pulse sensing at the micro- and nanoscale}
+  }
+  
+  
+  % Name --- Institution
+  \vspace{.25in}
+  {\Large 
+	\textcolor{gray1}{Preston Hinkle} \hspace{.5in} \includegraphics[height=1em]{uci_wordmark.png}
+  }
+  
+  
+  % Talk location
+  \vspace{.5in}
+  {\small
+	\textit{\today}
+  }
+  
+  
+  
+ \end{center}
+
+\end{frame}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Outline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Outline}
+ 
+	\begin{columns}[t]
+		\begin{column}[T]{2.25in}
+		
+			\setbeamercovered{transparent}
+			\begin{itemize}
+				\item\only<1>{\textcolor{porestatsblack}{Resistive pulse sensing background}}\only<2,3>{\textcolor{ucigray0}{Resistive pulse sensing background}}
+				\item\only<2>{\textcolor{porestatsblack}{Mesoscale resistive pulse sensing}}\only<1,3>{\textcolor{ucigray0}{Mesoscale resistive pulse sensing}}
+					
+					\begin{itemize}
+						\item\only<2>{\textcolor{porestatsblack}{Resistive pulse sensing of rods}}\only<1,3>{\textcolor{ucigray0}{Resistive pulse sensing of rods}}
+					\end{itemize}
+					
+					
+					
+					
+				\item\only<3>{\textcolor{porestatsblack}{Microscale resistive pulse sensing}}\only<1,2>{\textcolor{ucigray0}{Microscale resistive pulse sensing}}
+				
+					\begin{itemize}
+						\item\only<3>{\textcolor{porestatsblack}{Simultaneous imaging and resistive pulse studies}}\only<1,2>{\textcolor{ucigray0}{Simultaneous imaging and resistive pulse studies}}
+						\item\only<3>{\textcolor{porestatsblack}{Cancer cell deformability cytometry}}\only<1,2>{\textcolor{ucigray0}{Cancer cell deformability cytometry}}
+					\end{itemize}
+					
+					
+				
+			\end{itemize}
+			\setbeamercovered{invisible}
+			
+		\end{column}
+		
+		
+		\begin{column}[T]{2.25in}
+	
+		
+			% Siwy 1
+			\onslide<1>{
+				\begin{picture}(0,0)(0,0)
+					\put(50,-25)
+					{\includegraphics[width=1.25in]{dummygraphic}}
+				\end{picture}
+			}
+
+			
+			% Siwy 2
+			\onslide<1>{
+				\begin{picture}(0,0)(0,0)
+					\put(10,-107)
+					{\includegraphics[width=1.25in]{dummygraphic}}
+				\end{picture}
+			}
+			
+			% Siwy 3
+			\onslide<1>{
+				\begin{picture}(0,0)(0,0)
+					\put(50,-150)
+					{\includegraphics[width=1.25in]{dummygraphic}}
+				\end{picture}
+			}
+			
+			% RP 1
+			\onslide<2>{
+				\begin{picture}(0,0)(0,0)
+					\put(10,-50)
+					{\includegraphics[width=1.5in]{dummygraphic}}
+				\end{picture}
+			}
+			
+			% RP 2
+			\onslide<2>{
+				\begin{picture}(0,0)(0,0)
+					\put(10,-105)
+					{\includegraphics[width=1.5in]{dummygraphic}}
+				\end{picture}
+			}
+			
+			
+		\end{column}
+		
+	\end{columns}
+
+	
+	
+	
+	
+	
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resistive pulse background title slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{}
+	\begin{center}
+		\textbf{Resistive pulse sensing background}
+	\end{center}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resistive pulse background---description
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Resistive pulse sensing---description}
+	
+	\begin{columns}[t]
+		\begin{column}[T]{2.75in}
+	
+			\begin{itemize}
+				\item Resistive pulse sensing (RP) is a method for single particle detection and characterization
+				\item Works at any scale (nano, micro, milli, etc.)
+				\item A diverse range of applications: red blood cell counting, virus detection, protein conformational change detection, and DNA sequencing
+			\end{itemize}
+	
+		\end{column}
+		
+		\begin{column}[T]{1.75in}
+			\includegraphics[width=1.75in]{coulter_patent_drawing.png}
+		\end{column}
+		
+	\end{columns}
+
+	
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resistive pulse background---how does it work?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Resistive pulse sensing---how does it work?}
+
+	\begin{tiny}
+		\begin{itemize}
+		
+			\item Particles are suspended in a conductive solution, which is injected into a pore/channel system
+			\item An external voltage is applied across the channel, which induces an ionic current---the channel acts as an Ohmic resistor with governing equation $V=IR$, where $V$ is the applied voltage, $I$ the measured current, and $R$ the electrical resistance of the channel
+			\item When a particle enters the channel its resistance changes, yielding a transient change in the measured ionic current
+			\item By studying the properties of the current pulse, particle properties such as size, concentration, charge, and shape may be elucidated
+		\end{itemize}
+	\end{tiny}
+	
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resistive pulse background---the actors at play
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Resistive pulse sensing---the actors at play}
+	\begin{enumerate}
+		\item Particles of interest (\textbf{\textcolor{positivegreen}{transport mechanisms}}, \textbf{\textcolor{electricyellow}{electrostatic boundary conditions}})
+		\item The channel itself (surface chemistry and \textbf{\textcolor{electricyellow}{electrostatic boundary conditions}})
+		\item Electrolyte solution (\textbf{\textcolor{waterblue}{solvent, ion transport}})
+		\item Electrodes (electrochemical ion-electron current transduction, \textbf{\textcolor{electricyellow}{voltage source}})
+	\end{enumerate}
+	
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resistive pulse background---particle transport
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resistive pulse background---ion transport
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Resistive pulse sensing---ion transport}
+	\begin{itemize}
+		\item In general, ion transport is driven by a combination of passive and active forces:
+		\item \textbf{Passive:} Diffusion, convection
+		\item \textbf{Active:} Electric migration
+		\item \vec{v_{i}}=
+	\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resistive pulse background---passive transport
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[c]{Passive ion transport}
+	\begin{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resistive pulse background---ion transport
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -89,7 +89,38 @@
 		
 		On the other hand, figure \ref{fig:sinau0} shows two IV curves collected for a single nanopore approximately $\SI{9}{nm}$ in diameter. The IV curves taken in KF show significant rectification, with a ratio of approximately $R=0.5$ for the $\SI{100}{mM}$ concentration and $R=0.7$ for the $\SI{500}{mM}$ KF concentration. The increase in rectification $R$ towards $R=1$ with increasing salt concentration is consistent with the decrease in thickness of the EDL. In the model we developed for the induced-charge rectification, a depletion region is expected to form in the interior of the pore. Typically pores that have depletion zones experience much greater rectifications due to the `off-state' voltage polarity having nearly zero conductance. While this pore's rectification is not small enough (e.g.~not close to zero) to describe it as an ionic diode, the rectification direction is nevertheless consistent with the proposed model. We note that this direction of rectification is inconsistent with models having only static charges on the SiN and Au, barring the case where the $Au$ has positive charges adsorbed onto its surface, which is unexpected for the ion species used in this study.
 		
-		In order to understand the effect of a static charge superimposed on top of the induced-charge, we next performed experiments in KCl in addition to KF. Figure \ref{fig:sinau1} shows a $\SI{12}{nm}$ pore with IV curves measured in $\SI{500}{mM}$ concentration of both types of salts. Note that both salts give the same type of rectification as in the previous example. This result is not entirely unexpected, as the presence of adsorbed chloride will bring the two charges in the depletion zone closer together in magnitude, while still maintaining rectification.
+		In order to understand the effect of a static charge superimposed on top of the induced-charge, we next performed experiments in KCl in addition to KF. Figure \ref{fig:sinau1} shows a $\SI{12}{nm}$ pore with IV curves measured in $\SI{500}{mM}$ concentration of both types of salts. Note that both salts give the same type of rectification as in the previous example. This result is not entirely unexpected, as the presence of adsorbed chloride will bring the two charges in the depletion zone closer together in magnitude, while still maintaining a finite, albeit reduced rectification. If the $Cl^{-}$ ions adsorbed to the surface of the gold to the extent that they dominated both the induced-charge on the gold and the surface charge on the SiN, then it is possible the rectification direction could even flip direction such that $R>1$. However, we did not observe such an effect.
+		
+	\section{Modelling results}
+		
+		In order to provide an additional line of evidence pointing to induced-charge based ion current rectification found in experiments, we performed finite-element analysis simulations using the COMSOL Multiphysics software package. The models were designed to emulate the experimental set up, e.g.~the channel geometries and salt concentrations used were similar. However, rather than try to reproduce the double conical geometry expected for TEM drilled pores, we worked with a cylindrical geometry which greatly facilitated convergence of the solutions with the very minor penalty of not adhering exactly to the experimental conditions. Because the cone angle is expected to be shallow and because the COMSOL results are meant to be interpreted semi-quantitatively, and are primarily used to draw conclusions about the rectification direction and mechanism, replicating the exact geometry of the pore was deemed unneccessary. Details of the COMSOL simulation can be found in the appendix.
+		
+		\begin{figure}
+			\includegraphics[width=\textwidth]{comsol_model}
+			\caption{\textbf{COMSOL simulations.}}
+			\label{fig:comsolmodel}
+		\end{figure}
+		
+		\begin{figure}
+			\includegraphics[width=\textwidth]{comsol1}
+			\caption{\textbf{COMSOL simulations.}}
+			\label{fig:comsol1}
+		\end{figure}
+		
+		\begin{figure}
+			\includegraphics[width=\textwidth]{comsol2}
+			\caption{\textbf{COMSOL simulations.}}
+			\label{fig:comsol2}
+		\end{figure}
+		
+		The results of the simulations are found in figures \ref{fig:comsol1} and \ref{fig:comsol2}. We simulated IV curves for the model device and calculated the average concentrations of the cations, anions, and combinations at various axial positions inside the pore, and used these calculations to calculate the width of the depletion zone that forms for positive voltages. Figure \ref{fig:comsol1} shows IV curves of the simulated pore at various concentrations. Notice htat at low concentrations the pore rectifies in the negative direction i.e. $R=|I_{-}/I_{+}|>1$ and the rectification ratio $R$ decreases with increasing electrolyte concentration, both results are consistent with the experimental data. Figure \ref{fig:comsol2} shows the average concentrations of $C_{K}$, $C_{Cl}$, $C_K+C_Cl$ and $C_K-C_Cl$ at various axial positions. The concentrations of $C_{K}$ and $C_{Cl}$ along the length of the gold surface are consistent with the polarization model of gold: when a positive potential is applied on the side of the metal, electrons are drawn to the entrance of the pore, inducing formation of an EDL more positive than at the opposite terminal, and the opposite occurs for the opposite voltage. Along the length of the SiN far from the junction, the concentration of potassium is enhanced due to the negative charge of the surface, and fluoride is reduced. In the plot of $C_{K}+C_{Cl}$ which reflects the total ion concentration (bottom center), at positive voltages there is a drop in the concentration in the vicinity of the junction. In this region the total concentration is far below its bulk value, while elsewhere it is much closer to the bulk. This severely reduced charge density reflects the formation of the depletion zone, the zone created when ions near the diode junction are pulled apart. The resistivity $\rho\propto \left(C_{K}+C_{Cl}\right)^{-1}$, so the depletion zone has a very large resistance and therefore limits the current through the pore as a whole. Depletion zone regions like the one that appears in the simulation severeliy limit current, which can be seen in the near 0 slope of the current for positive voltages in the IV curve. The current is limited by the depletion zone, and we identify this type of pore as a diode. The bottom-left plot of figure \ref{fig:comsol2} shows the width of the depletion zone as a function of voltage. The depletion zone was defined as the width along the pore axis such that the total ion concentration is below half of the total ion concentration (in this case, below $\SI{100}{mM}$, since $C_{K}=\SI{100}{mM}$ and $C_{Cl}=\SI{100}{mM}$. While increasing the voltage increases the current, the depletion zone is also widened with increasing voltage, resulting in a net sub-linear relationship between voltage and current at positive voltages.
+		
+		The COMSOL results show that the model of induced-charge based electrical double layers is possible, and that the magnitude of the effect is enough to greatly influence the pore. Furthermore, the results show that the model system results in rectification ratio $R>1$, in the same direction of the experiments' IV curves.
+		
+	\section{Conclusion \& Future Work}
+		
+		In this work, we presented strong evidence that the induced surface charges on a conductor due to polarization in an electric field can significantly contribute to a nanopore's ionic conductance. 
+		
 		
 		
 			

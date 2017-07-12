@@ -16,4 +16,11 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces \textbf {IV curves taken of bare SiN pores}. The symmetry in the IV curve reveals no inherent rectification of the TEM drilled pores.\relax }}{41}{figure.caption.22}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces \textbf {IV curves taken of Au-SiN pore in $\SI {100}{mM}$ and $\SI {500}{mM}$ KF.} The symmetry in the IV curve reveals no inherent rectification of the TEM drilled pores. The ion rectification ratio $R$ is lower in the higher concentration solution, as is expected from basic considerations of EDL thickness.\relax }}{42}{figure.caption.23}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces \textbf {IV curves taken of Au-SiN pore in $\SI {500}{mM}$ KCl and KF.} The rectification ratio $R$ is lower in the KCl solution than in the KF solution, which is expected due to the additional contribution of the static charge from adsorbed $\mathrm {Cl^{-}}$ ions on the gold surface.\relax }}{43}{figure.caption.24}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces \textbf {COMSOL simulations.}\relax }}{45}{figure.caption.25}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces \textbf {COMSOL simulations.}\relax }}{46}{figure.caption.26}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces \textbf {COMSOL simulations.}\relax }}{46}{figure.caption.27}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces adsf\relax }}{52}{figure.caption.28}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \textbf {Scanning electron microscope images of metal replica of track-etched PET pores.} The pores were filled with metal and the polymer was completely etched a way, leaving a metal structure that is the inverse of the pore. The metal was imaged in a scanning electron microscope. The images reveal the irregular shapes of the PET pore surfaces.\relax }}{53}{figure.caption.29}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \textbf {Transmission electron microscope images of polystyrene beads and silica nanorods.} While the polystyrene beads are nearly perfectly spherical, the silica nanorods are approximately `bullet shaped'. For the purposes of this work, we approximated their shapes as ellipsoids in order to apply equation \ref {eq:dIellipsoid}.\relax }}{54}{figure.caption.30}
 \addvspace {10\p@ }

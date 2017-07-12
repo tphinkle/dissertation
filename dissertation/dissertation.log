@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.25)  20 JUN 2017 00:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.25)  11 JUL 2017 17:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -646,7 +646,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \c@example=\count167
 
 (./preliminaries.tex) (./dissertation.aux (./chapter1.aux) (./chapter2.aux)
-(./chapter3.aux) (./appendix.aux))
+(./chapter3.aux) (./chapter4.aux) (./appendix.aux))
 \openout1 = `dissertation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
@@ -815,20 +815,26 @@ Overfull \hbox (20.2706pt too wide) in paragraph at lines 13--13
 hy-brid conductor- 
  []
 
-)
+
+Overfull \hbox (0.9026pt too wide) in paragraph at lines 23--23
+ [][] [][]\OT1/cmr/bx/n/12 Scanning elec-tron mi-cro-scope im-ages of metal rep
+lica of track-etched 
+ []
+
+[6])
 \tf@lof=\write5
 \openout5 = `dissertation.lof'.
 
- [6] (./dissertation.lot)
+ [7] (./dissertation.lot)
 \tf@lot=\write6
 \openout6 = `dissertation.lot'.
 
- [7
+ [8
 
-
-] [8
 
 ] [9
+
+] [10
 
 
 ]
@@ -846,7 +852,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--103
 
  []
 
-[10] [11
+[11] [12
 
 
 ] (./dissertation.bbl)
@@ -864,7 +870,7 @@ Chapter 1.
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 (Font)              using `OT1/cmr/bx/n' instead on input line 13.
 
-<../images/ch1/bio_synth_nanopores.png, id=347, 467.03966pt x 209.70833pt>
+<../images/ch1/bio_synth_nanopores.png, id=386, 467.03966pt x 209.70833pt>
 File: ../images/ch1/bio_synth_nanopores.png Graphic file (type png)
 
 <use ../images/ch1/bio_synth_nanopores.png>
@@ -876,7 +882,7 @@ ne 23.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2] [3 <../images/ch1/bio_synth_nanopores.png>] [4] [5] [6] [7] [8] [9]
-[10] <../images/ch1/scales.png, id=388, 2882.77pt x 827.09pt>
+[10] <../images/ch1/scales.png, id=427, 2882.77pt x 827.09pt>
 File: ../images/ch1/scales.png Graphic file (type png)
 
 <use ../images/ch1/scales.png>
@@ -888,14 +894,14 @@ Overfull \hbox (6.9695pt too wide) in paragraph at lines 88--88
  equa-
  []
 
-[13] [14] [15] [16] <../images/ch1/edl.png, id=424, 1230.5975pt x 1254.6875pt>
+[13] [14] [15] [16] <../images/ch1/edl.png, id=463, 1230.5975pt x 1254.6875pt>
 File: ../images/ch1/edl.png Graphic file (type png)
 
 <use ../images/ch1/edl.png>
 Package pdftex.def Info: ../images/ch1/edl.png used on input line 147.
 (pdftex.def)             Requested size: 469.75502pt x 478.94958pt.
 
-<../images/ch1/fractioninsideedl.png, id=426, 307.1475pt x 229.8186pt>
+<../images/ch1/fractioninsideedl.png, id=465, 307.1475pt x 229.8186pt>
 File: ../images/ch1/fractioninsideedl.png Graphic file (type png)
 
 <use ../images/ch1/fractioninsideedl.png>
@@ -904,7 +910,7 @@ Package pdftex.def Info: ../images/ch1/fractioninsideedl.png used on input line
 (pdftex.def)             Requested size: 307.14674pt x 229.81804pt.
  [17] [18 <../images/ch1/edl.png>]
 [19 <../images/ch1/fractioninsideedl.png>] [20]
-<../images/ch1/EDL_Charge_Distribution.png, id=454, 614.295pt x 460.3599pt>
+<../images/ch1/EDL_Charge_Distribution.png, id=493, 614.295pt x 460.3599pt>
 File: ../images/ch1/EDL_Charge_Distribution.png Graphic file (type png)
 
 <use ../images/ch1/EDL_Charge_Distribution.png>
@@ -912,7 +918,7 @@ Package pdftex.def Info: ../images/ch1/EDL_Charge_Distribution.png used on inpu
 t line 211.
 (pdftex.def)             Requested size: 469.75502pt x 352.0407pt.
  [21] [22 <../images/ch1/EDL_Charge_Distribution.png>] [23] [24]
-<../images/ch1/electroosmosis.png, id=477, 495.8525pt x 376.40625pt>
+<../images/ch1/electroosmosis.png, id=517, 495.8525pt x 376.40625pt>
 File: ../images/ch1/electroosmosis.png Graphic file (type png)
 
 <use ../images/ch1/electroosmosis.png>
@@ -920,7 +926,7 @@ Package pdftex.def Info: ../images/ch1/electroosmosis.png used on input line 25
 1.
 (pdftex.def)             Requested size: 234.8775pt x 178.29514pt.
  [25]
-<../images/ch1/Schoch2008_conductance.png, id=486, 501.875pt x 366.36874pt>
+<../images/ch1/Schoch2008_conductance.png, id=525, 501.875pt x 366.36874pt>
 File: ../images/ch1/Schoch2008_conductance.png Graphic file (type png)
 
 <use ../images/ch1/Schoch2008_conductance.png>
@@ -934,7 +940,7 @@ Overfull \hbox (14.01234pt too wide) detected at line 276
  []
 
 [28]
-<../images/ch1/Vlassiouk2007_conicaldiode.png, id=505, 517.935pt x 200.75pt>
+<../images/ch1/Vlassiouk2007_conicaldiode.png, id=544, 517.935pt x 200.75pt>
 File: ../images/ch1/Vlassiouk2007_conicaldiode.png Graphic file (type png)
 
 <use ../images/ch1/Vlassiouk2007_conicaldiode.png>
@@ -971,7 +977,7 @@ Chapter 3.
 
 
 
-] <../images/ch3/SiN-Gold_Model.png, id=541, 2487.2925pt x 1920.17375pt>
+] <../images/ch3/SiN-Gold_Model.png, id=581, 2487.2925pt x 1920.17375pt>
 File: ../images/ch3/SiN-Gold_Model.png Graphic file (type png)
 
 <use ../images/ch3/SiN-Gold_Model.png>
@@ -979,44 +985,151 @@ Package pdftex.def Info: ../images/ch3/SiN-Gold_Model.png used on input line 15
 .
 (pdftex.def)             Requested size: 234.8775pt x 181.30502pt.
  [35] [36 <../images/ch3/SiN-Gold_Model.png>] [37] <../images/ch3/sinpore.png, 
-id=561, 479.7925pt x 479.7925pt>
+id=600, 479.7925pt x 479.7925pt>
 File: ../images/ch3/sinpore.png Graphic file (type png)
 
 <use ../images/ch3/sinpore.png>
 Package pdftex.def Info: ../images/ch3/sinpore.png used on input line 40.
 (pdftex.def)             Requested size: 234.8775pt x 234.88074pt.
  [38]
-<../images/ch3/siniv.png, id=567, 2118.91624pt x 660.4675pt>
+<../images/ch3/siniv.png, id=606, 2118.91624pt x 660.4675pt>
 File: ../images/ch3/siniv.png Graphic file (type png)
 
 <use ../images/ch3/siniv.png>
 Package pdftex.def Info: ../images/ch3/siniv.png used on input line 51.
 (pdftex.def)             Requested size: 469.75502pt x 146.42194pt.
  [39 <../images/ch3/sinpore.png>] [40 <../images/ch3/siniv.png>] <../images/ch3
-/sinsymm.png, id=579, 694.595pt x 258.9675pt>
+/sinsymm.png, id=618, 694.595pt x 258.9675pt>
 File: ../images/ch3/sinsymm.png Graphic file (type png)
 
 <use ../images/ch3/sinsymm.png>
 Package pdftex.def Info: ../images/ch3/sinsymm.png used on input line 69.
 (pdftex.def)             Requested size: 469.75502pt x 175.14719pt.
 
-<../images/ch3/sinau0.png, id=580, 549.05125pt x 400.49625pt>
+<../images/ch3/sinau0.png, id=619, 549.05125pt x 400.49625pt>
 File: ../images/ch3/sinau0.png Graphic file (type png)
 
 <use ../images/ch3/sinau0.png>
 Package pdftex.def Info: ../images/ch3/sinau0.png used on input line 75.
 (pdftex.def)             Requested size: 469.75502pt x 342.66618pt.
 
-<../images/ch3/sinau1.png, id=581, 736.7525pt x 411.5375pt>
+<../images/ch3/sinau1.png, id=620, 736.7525pt x 411.5375pt>
 File: ../images/ch3/sinau1.png Graphic file (type png)
 
 <use ../images/ch3/sinau1.png>
 Package pdftex.def Info: ../images/ch3/sinau1.png used on input line 81.
 (pdftex.def)             Requested size: 469.75502pt x 262.39722pt.
  [41 <../images/ch3/sinsymm.png>] [42 <../images/ch3/sinau0.png>] [43 <../image
-s/ch3/sinau1.png>]) [44] (./dissertation.bblpdfTeX warning (ext4): destination 
-with the same identifier (name{cite.Qiu2015}) has been already used, duplicate 
-ignored
+s/ch3/sinau1.png>]
+<../images/ch3/comsol_model.png, id=640, 725.71124pt x 714.67pt>
+File: ../images/ch3/comsol_model.png Graphic file (type png)
+
+<use ../images/ch3/comsol_model.png>
+Package pdftex.def Info: ../images/ch3/comsol_model.png used on input line 99.
+(pdftex.def)             Requested size: 469.75502pt x 462.62161pt.
+
+<../images/ch3/comsol1.pdf, id=641, 1189.91843pt x 532.988pt>
+File: ../images/ch3/comsol1.pdf Graphic file (type pdf)
+
+<use ../images/ch3/comsol1.pdf>
+Package pdftex.def Info: ../images/ch3/comsol1.pdf used on input line 105.
+(pdftex.def)             Requested size: 469.75502pt x 210.41002pt.
+
+<../images/ch3/comsol2.png, id=642, 473.1276pt x 292.4526pt>
+File: ../images/ch3/comsol2.png Graphic file (type png)
+
+<use ../images/ch3/comsol2.png>
+Package pdftex.def Info: ../images/ch3/comsol2.png used on input line 111.
+(pdftex.def)             Requested size: 469.75502pt x 290.3679pt.
+ [44] [45 <../images/ch3/comsol_model.png>]
+[46 <../images/ch3/comsol1.pdf> <../images/ch3/comsol2.png>] [47] [48])
+[49]
+\openout2 = `chapter4.aux'.
+
+ (./chapter4.tex
+Chapter 4.
+[50
+
+
+
+]
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.19 		\end{equation}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.19 		\end{equation}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.19 		\end{equation}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+LaTeX Warning: Reference `fig:dIellipsoid' on page 51 undefined on input line 2
+1.
+
+<../images/ch4/dIellipsoid.png, id=724, 711.65875pt x 578.16pt>
+File: ../images/ch4/dIellipsoid.png Graphic file (type png)
+
+<use ../images/ch4/dIellipsoid.png>
+Package pdftex.def Info: ../images/ch4/dIellipsoid.png used on input line 24.
+(pdftex.def)             Requested size: 234.8775pt x 190.81104pt.
+
+
+LaTeX Warning: Reference `eq:dIellipsoid' on page 51 undefined on input line 35
+.
+
+[51] [52 <../images/ch4/dIellipsoid.png>]
+<../images/ch4/PET.png, id=738, 448.67625pt x 448.67625pt>
+File: ../images/ch4/PET.png Graphic file (type png)
+
+<use ../images/ch4/PET.png>
+Package pdftex.def Info: ../images/ch4/PET.png used on input line 51.
+(pdftex.def)             Requested size: 234.8775pt x 234.87393pt.
+
+<../images/ch4/particles.png, id=739, 1642.135pt x 564.1075pt>
+File: ../images/ch4/particles.png Graphic file (type png)
+
+<use ../images/ch4/particles.png>
+Package pdftex.def Info: ../images/ch4/particles.png used on input line 57.
+(pdftex.def)             Requested size: 469.75502pt x 161.36623pt.
+
+
+LaTeX Warning: Reference `eq:dIellipsoid' on page 53 undefined on input line 58
+.
+
+
+LaTeX Warning: Reference `eq:dIellipsoid' on page 53 undefined on input line 58
+.
+
+
+LaTeX Warning: Reference `fig:PET' on page 53 undefined on input line 64.
+
+[53 <../images/ch4/PET.png>]) [54 <../images/ch4/particles.png>] [55]
+(./dissertation.bblpdfTeX warning (ext4): destination with the same identifier 
+(name{cite.Qiu2015}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.14 \bibitem{Qiu2015}
@@ -1034,7 +1147,7 @@ entifier (name{cite.Yang2016}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.32 \bibitem{Yang2016}
-                       ) [45
+                       ) [56
 
 
 
@@ -1043,58 +1156,76 @@ l.32 \bibitem{Yang2016}
 
  (./appendix.tex
 Appendix A.
-) [46
+) [57
 
 
 ]
 
-Package caption Warning: Unused \captionsetup[figure] on input line 130.
+Package caption Warning: Unused \captionsetup[figure] on input line 131.
 See the caption package documentation for explanation.
 
 
-Package caption Warning: Unused \captionsetup[table] on input line 131.
+Package caption Warning: Unused \captionsetup[table] on input line 132.
 See the caption package documentation for explanation.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 136.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 136.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 137.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 137.
 (./dissertation.aux (./chapter1.aux) (./chapter2.aux) (./chapter3.aux)
-(./appendix.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 136.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 136.
-Package rerunfilecheck Info: File `dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: A44F5FD59A5C02FF5176786E6988808B;2624.
+(./chapter4.aux) (./appendix.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 137.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 137.
 
+
+Package rerunfilecheck Warning: File `dissertation.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `dissertation.out':
+(rerunfilecheck)             Before: 76E87D8FD8F2A651360B5602CA4D8C5A;2911
+(rerunfilecheck)             After:  059D93C2FA332236947E746234A81627;2966.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 18335 strings out of 493013
- 347240 string characters out of 6133328
- 400125 words of memory out of 5000000
- 21523 multiletter control sequences out of 15000+600000
+ 18414 strings out of 493013
+ 348628 string characters out of 6133328
+ 404302 words of memory out of 5000000
+ 21561 multiletter control sequences out of 15000+600000
  15271 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,13n,53p,10383b,787s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
-b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loc
-al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
-texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texli
-ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive
-/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on dissertation.pdf (58 pages, 3797871 bytes).
+pdfTeX warning (dest): name{section*.30} has been referenced but does not exi
+st, replaced by a fixed one
+
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb>
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/20
+16/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2016/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on dissertation.pdf (70 pages, 5951484 bytes).
 PDF statistics:
- 695 PDF objects out of 1000 (max. 8388607)
- 586 compressed objects within 6 object streams
- 135 named destinations out of 1000 (max. 500000)
- 359 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 855 PDF objects out of 1000 (max. 8388607)
+ 707 compressed objects within 8 object streams
+ 162 named destinations out of 1000 (max. 500000)
+ 421 words of extra memory for PDF output out of 10000 (max. 10000000)
 
