@@ -38,8 +38,8 @@
 \contentsline {section}{\numberline {3.5}Conclusion \& Future Work}{48}{section.3.5}
 \contentsline {chapter}{\numberline {4}Resistive pulse studies of aspherical mesoparticles}{50}{chapter.4}
 \contentsline {section}{\numberline {4.1}Background \& Theory}{50}{section.4.1}
-\contentsline {section}{\numberline {4.2}Experiment}{54}{section.4.2}
-\contentsline {section}{\numberline {4.3}Analysis}{55}{section.4.3}
-\contentsline {chapter}{Bibliography}{56}{section*.31}
-\contentsline {chapter}{\numberline {A}Appendix Title}{57}{appendix.A}
-\contentsline {section}{\numberline {A.1}Lorem Ipsum}{57}{section.A.1}
+\contentsline {section}{\numberline {4.2}Experiment}{53}{section.4.2}
+\contentsline {section}{\numberline {4.3}Analysis \& Discussion}{55}{section.4.3}
+\contentsline {chapter}{Bibliography}{60}{section*.33}
+\contentsline {chapter}{\numberline {A}Appendix Title}{61}{appendix.A}
+\contentsline {section}{\numberline {A.1}Lorem Ipsum}{61}{section.A.1}

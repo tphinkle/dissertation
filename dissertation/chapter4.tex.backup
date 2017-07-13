@@ -14,14 +14,16 @@
 		
 		Equation \ref{eq:dI} is useful for relating the change in current---or resistance---to the diameter of spherical particles. However, it is very often the case that particles of interest are not spherical. For instance, many biomolecules such as viruses and proteins are poorly approximated as spheres, and are more rod-like in shape. In this case, the resistive pulse amplitude of on-axis translocations through a cylindrical pore is given by 
 		
-		\begin{equation}{\label{eq:dIellipsoid}
-			\frac{\Delta R}{R_{0}}=\left[f_{\perp}+\left(f_{\parallel}-f_{\perp}\cos^{2}\alpha]right]\frac{v}{V},
+		\begin{equation}\label{eq:dIellipsoid}
+			\frac{\Delta R}{R_{0}}=\left[f_{\perp}+\left(f_{\parallel}-f_{\perp}\cos^{2}\alpha\right)\right]\frac{v}{V},
 		\end{equation}
 
 		where $f_{\perp}$ and $f_{\parallel}$ are so called `shape-factors', that depend on the particle's major and minor axis lengths, $\alpha$ is the orientation of the particle with $\alpha=0$ being axially aligned, and $v$ and $V$ are the volume of the particle and of the pore, respectively. Figure \ref{fig:dIellipsoid} shows a plot of the relative $\Delta I/I_{p}$ for various ellipsoids of the same volume but different axial lengths.
 		
 		\begin{figure}
-			\includegraphics[width=0.5\textwidth]{}
+			\includegraphics[width=0.5\textwidth]{dIellipsoid}
+			\caption{adsf}
+			\label{fig:dIellipsoid}
 		\end{figure}
 
 		
@@ -46,9 +48,13 @@
 	\section{Experiment}
 	    
 		\begin{figure}
-			\includegraphics[width=0.5\textwidth]{PET}
-			\caption{\textbf{Scanning electron microscope images of metal replica of track-etched PET pores.} The pores were filled with metal and the polymer was completely etched a way, leaving a metal structure that is the inverse of the pore. The metal was imaged in a scanning electron microscope. The images reveal the irregular shapes of the PET pore surfaces.}
-
+			\hfill
+			\includegraphics[height=0.35\textwidth]{PC}
+			\hfill
+			\includegraphics[height=0.35\textwidth]{PET}
+			\hfill
+			\caption{\textbf{Scanning electron microscope images of metal replica of track-etched PC (left) and PET (right) pores.} The pores were filled with metal and the polymer was completely etched a way, leaving a metal structure that is the inverse image of the pore. The metal was imaged in a scanning electron microscope. While the PC pores are nearly perfectly cylindrical in shape, the PET pores are characterized by rough inhomogenities across their entire surface, punctuated with large local bumps. The large bumps in the images of the metal replicas correspond to equally large cavitities in the PET pore.}
+			\label{fig:PCPET}
 		\end{figure}
 		
 		\begin{figure}
@@ -59,12 +65,44 @@
 
 
 	    
-		In order to test the principle described above, we performed resistive pulse experiments with single mesopores ranging from $800-\SI{1000}{nm}$ in diameter. The material used was polyethylene terephthalate (PET), a polymer which is known to have highly irregularly shaped interiors when pores are prepared \textit{via} the track-etch technique, as shown in figure \ref{fig:PET}. For the particles, $\SI{410}{nm}$ in diameter polystyrene beads (`spheres') were used as the tracer particle, and rods of length $\SI{590}{nm}$, diameter $\SI{210}{nm}$ (`short rods') and $\SI{1920}{nm}$, diameter $\SI{240}{nm}$ (`long rods') were used to test the length measurement protocol; the particles are shown in figure \ref{fig:particles}. Particles were suspended in $\SI{100}{mM}$ KCl solution with $0.5\%$ Tween 80, a surfactant which prevents particle aggregation. The solution was then injected into both sides of a conductivity cell, and a voltage was applied across the pore. The resulting ionic current was sampled at $\SI{10}{kHz}$ and recorded. The polystyrene spheres used had a larger $\zeta-\mathrm{potential}$ than the pore, and therefore they translocated through the pore electrophoretically. On the other hand, the rods had a lower magnitude $\zeta-\mathrm{potential}$ than the pore, and therefore travelled through the pore under electroosmotic convective forces. 
+		In order to test the principle described above, we performed resistive pulse experiments with single mesopores ranging from $800-\SI{1000}{nm}$ in diameter. The materials used were polyethylene terephthalate (PET), a polymer which is known to have highly irregularly shaped interiors when pores are prepared \textit{via} the track-etch technique, and polycarbonate (PC), another polymer but with no axial inhomogeneities which will act as a control for the method. Figure \ref{fig:PCPET} shows images of both of these types of pores. For the particles, $\SI{280}{nm}$ and $\SI{410}{nm}$ in diameter polystyrene beads (`spheres') were used as the tracer particle, and rods of length $\SI{590}{nm}$, diameter $\SI{210}{nm}$ (`short rods') and $\SI{1920}{nm}$, diameter $\SI{240}{nm}$ (`long rods') were used to test the length measurement protocol; the particles are shown in figure \ref{fig:particles}. Particles were suspended in $\SI{100}{mM}$ KCl solution with $0.5\%$ Tween 80, a surfactant which prevents particle aggregation. The solution was then injected into both sides of a conductivity cell, and a voltage was applied across the pore. The resulting ionic current was sampled at $\SI{10}{kHz}$ and recorded. The polystyrene spheres used had a larger $\zeta-\mathrm{potential}$ than the pore, and therefore they translocated through the pore electrophoretically. On the other hand, the rods had a lower magnitude $\zeta-\mathrm{potential}$ than the pore, and therefore travelled through the pore under electroosmotic convective forces. 
 		
 	
-	\section{Analysis}
-		Events were extracted from the current time series and studied separately.
+	\section{Analysis \& Discussion}
+	
+	
+		\begin{figure}
+			\includegraphics[width=0.5\textwidth]{PCPETevents}
+			\caption{\textbf{Resistive pulse events through PC (left) and PET (right) pores.} As expected, the PET events are highly irregular and reflect the interior irregularities of the PET pore itself. On the other hand, the PC pores show no such irregularity. The events show that PC pores have large resistances at the beginning and end, reflecting the narrow, `pinched' diameters at the openings of the pores.}
+			\label{fig:PCPETevents}
+		\end{figure}
 
+	
+	
+		Events were extracted from the current time series and studied separately; figure \ref{fig:PCPETevents} shows two events, one from a PC pore and one from a PET pore that are representative of the translocations through each type of pore. In the initial analysis, we looked at the average $\Delta I/I_{p}$ of the beads and rods and compared with the theoretical predictions of Eqs. \ref{eq:dI} and \ref{eq:dIellipsoid}. Figure \ref{fig:dIexp} shows the results for two pores, one $\SI{770}{nm}$ and another $\SI{1200}{nm}$ in diameter. For the two spheres studied, the measured $\Delta I/I_{p}$ was very close to the theoretical prediction (Eq. \ref{eq:dI}). The theoretical predictions were also very close to the measured values for the long rods. However, for both pores the theoretical prediction of the resistive pulse amplitude $\Delta I/I_{p}$ is far off for the short rods: the data shows a nearly 100\% discrepancy, i.e.~ the measured $\Delta I/I_{p}$ is nearly twice its expected value. This significant of a discrepancy is highly unusual, and one of the goals in the paper was to determine its cause. The discrepancy is made even stranger by the fact that the short and long rods are made of the same material, so any material contribution to the discrepancy e.g.~due to large $\zeta-\mathrm{potentials}$ is unlikely. Instead, we hypothesize that this discrepancy is due to their rotational dynamics. Equation \ref{eq:dIellipsoid} predicts that a prolate spheroid (like the rods) will have a larger $\Delta I/I_{p}$ when they are oriented with an off-axis component, but only considers static positioning. A very large rotational speed of the rods could couple to the measured $\Delta I/I_{p}$ amplitude in ways not captured by the equation, for instance by stirring the local solution in such a manner to reduce the local ion mobility. Furthermore, this hypothesis is consistent with the non-observance of the increased $\Delta I/I_{p}$ for the long rods, since at their length of $\sim\SI{1920}{nm}$ they are too large to rotate in even the larger of the two pores ($\SI{1200}{nm}$ in diameter). In any case, the net result is a measured volume for these particles that is approximately $2\times$ larger than their actual volume, which was confirmed with a combination of transmission electron microscopy images and dynamic light scattering. 
+		
+		The question, however, is how such a large rotation could occur. To answer this question, forces that cause rotation must be considered. In terms of translation (transport), the contributing forces are convection due to electroosmosis, and electrophoresis, as well as passive transport due to diffusion. Similarly, these forces could also contribute to rotational motion of the particles. The estimated rotational diffusion contribution of these rod particles is estimated as $13$ and $\SI{0.8}{rad/s}$ for the short and long rods, respectively. In order for fluid motion to cause rotation, it is necessary to have a non-constant fluid velocity profile on the pore's length. However, because the fluid velocity is due to electroosmosis there will be a nearly constant fluid velocity profile in the pore, which is unlikely to cause significant rotation. On the other hand, the rough undulations in the pore could create axial variations in the electric field; such variations could also lead to a net torque on the particle that causes rotation. In order to estimate the potential magnitude of the rotational velocities of the rods, we considered a simple model where the pore's diameter discontinuously changes from $\SI{1000}{nm}$ to $\SI{1100}{nm}$, a reasonable approximation for the geometries present in our system based on the images of the pores (see Fig. \ref{fig:PET}). Under this model, we calculate the electric field amplitude to differ by a factor of $1.2$ between the two regions. Using the rotational diffusion coefficient of the rods and integrating the electric field differences along the length of the pore, we calculate the angular rotation rate $\omega$ to be $\omega\sim10^{4}$ rad/s. Due to the preceding arguments, it is clear that the largest contribution to the rotation of the rods is from the electric forces. We believe that such a large rotation could make the rods behave as if they are much larger particles.
+		
+		\begin{figure}
+			\includegraphics[width=.5\textwidth]{PETevents}
+			\caption{\textbf{Resistive pulse events of a $\SI{410}{nm}$ diameter sphere (red), and $\SI{590}{nm}$ (blue) and $\SI{1920}{nm}$ (green) in length rods.} The top row shows a cartoon scheme of the pore with the particles inside its interior. The bottom resistive pulse event in each column corresponds to the raw recorded data; events above this are smoothed \textit{via} the moving average transformation. The bottom left figure shows the raw events on the same scale.}
+			\label{fig:PETevents}
+		\end{figure}
+
+		
+		Figure \ref{fig:PETevents} shows example recorded events for the three types of particles used in this study. A $\SI{410}{nm}$ sphere translocation is shown on the left column in red. Notice the roughness in the event; this roughness has been shown to correspond to the interior irregularities in the pore. Local $\Delta I/I_{p}\left(t\right)$ are large at relatively constricted points, and small at larger cavitated points. The green event in the right column corresponds to the raw resistive pulse signal of a long rod. Notice the difference in structure of the two events; the long rod's event shows some structure, but is missing many of the local minima and maxima that are present in the signal of the short rod. This observation is in agreement with our previous arguments for the smoothing of the pore interior that takes place for long particles. Without making any quantitative arguments, we are able to conclude that the particle corresponding to the green event is longer than the particle corresponding to the red event. In between those two extremes are the short rods in red. The short rods at length $\SI{590}{nm}$ are slightly longer than the spheres which have diameter $\SI{410}{nm}$, but due to their rotation it is not entirely obvious whether they should image the pore with the same resolution as the spheres. Looking at hte results, the signals of the short rod and sphere are much more similar than the long rod and the sphere, but some local structure is still unresolved for the short rods. 
+		
+		In order to test the hypothesis that long particles behave as a moving average of shorter particles, we calculated moving averages of the spheres and the short rods. The time over which the moving average was calculated corresponded to the duration in time over which the particle travelled a distance equal to the length of the longer particle with which it is being compared. We determined the average velocity of a particle from the total translocation distance (the known length of the pore, $L'=L-D$) and the translocation duration measured from the RP signal, $\Delta T$. The velocity is then $v=L'/\Delta t$. The moving average window then has length (in time) of $\Delta t=v/l$, which corresponds to a window of $N=f\times\Delta t$ data points in length. The transformation then from the raw signal $I_{i}$ to the averaged signal $I'_{i}$ is
+		
+		
+		\begin{equation}
+			I'_{i}=\frac{1}{N}\sum_{j=-N/2}^{N/2}I_{j}.
+			\label{eq:movingavg}
+		\end{equation}
+		
+		This moving average process was performed on the spheres and on the short rods. The red signal in the middle column corresponds to the moving average of the spheres over the length of the short rods, and the red signal in the right column corresponds to the moving average of the spheres over the length of the long rods. Finally, the moving average of the short rods over the length of the long rods is the blue signal in the right column. Qualitatively, we see that the moving average process, which is physically motivated by the equations for the resistance of small particles in series, recovers the appearance of the signals of longer particles. 
+		
+	
 	
 		
 		
