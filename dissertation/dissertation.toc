@@ -1,9 +1,9 @@
 \raggedleft Page\\
 \contentsline {chapter}{LIST OF FIGURES}{v}{section*.2}
-\contentsline {chapter}{LIST OF TABLES}{viii}{section*.4}
-\contentsline {chapter}{ACKNOWLEDGMENTS}{ix}{section*.6}
-\contentsline {chapter}{CURRICULUM VITAE}{x}{section*.7}
-\contentsline {chapter}{ABSTRACT OF THE DISSERTATION}{xii}{section*.8}
+\contentsline {chapter}{LIST OF TABLES}{ix}{section*.4}
+\contentsline {chapter}{ACKNOWLEDGMENTS}{x}{section*.6}
+\contentsline {chapter}{CURRICULUM VITAE}{xi}{section*.7}
+\contentsline {chapter}{ABSTRACT OF THE DISSERTATION}{xiii}{section*.8}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Nanopores}{2}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Biological nanopores}{3}{subsection.1.1.1}
@@ -38,9 +38,10 @@
 \contentsline {section}{\numberline {3.5}Conclusion \& Future Work}{48}{section.3.5}
 \contentsline {chapter}{\numberline {4}Resistive pulse studies of aspherical mesoparticles}{50}{chapter.4}
 \contentsline {section}{\numberline {4.1}Background \& Theory}{50}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Dynamic time warping}{54}{subsection.4.1.1}
-\contentsline {section}{\numberline {4.2}Experiment}{54}{section.4.2}
-\contentsline {section}{\numberline {4.3}Analysis \& Discussion}{57}{section.4.3}
-\contentsline {chapter}{Bibliography}{62}{section*.35}
-\contentsline {chapter}{\numberline {A}Appendix Title}{63}{appendix.A}
-\contentsline {section}{\numberline {A.1}Lorem Ipsum}{63}{section.A.1}
+\contentsline {subsection}{\numberline {4.1.1}Dynamic time warping}{55}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}Experiment}{57}{section.4.2}
+\contentsline {section}{\numberline {4.3}Analysis \& Discussion}{59}{section.4.3}
+\contentsline {section}{\numberline {4.4}Conclusions}{65}{section.4.4}
+\contentsline {chapter}{Bibliography}{68}{section*.39}
+\contentsline {chapter}{\numberline {A}Appendix Title}{69}{appendix.A}
+\contentsline {section}{\numberline {A.1}Lorem Ipsum}{69}{section.A.1}

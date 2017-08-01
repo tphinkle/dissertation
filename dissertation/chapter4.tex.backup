@@ -48,17 +48,51 @@
 		
 		Oppositely, if we consider a pore whose length extends along a significant amount of the pore's axis, it may be occupying several such regions at a time. Instead of a single particle, we may consider the particle to be composed of many smaller segments of particles in series, and therefore the resistance values of each segment are additive. Therefore, the signals of longer particles can be seen as the convolution of the signal of an infinitesimally small particle over the long particle's length. 
 		
-		This fact can be used to devise an experiment that can measure the length of long particles. First, we drive a suspension of small `tracer' spheres through a pore with rough interior, whose diameter is smaller than the characteristic length of the irregularities in the pore. These particles will `map' the interior geometry of the pore as explained above, with resistive pulse shape given by equation \ref{eq:dIlocal}. Then, we repeat the experiment with long particles for which we wish to know the length. Then we perform a convolution or moving average of the signals of the tracer particles for a variety of lengths; finally, a similarity measure is calculated between every pair of convoluted-raw signals for the tracer particle and the long particle, and the length with the greatest similarity measure is chosen as the correct length of the particle.
+		This fact can be used to devise an experiment that can measure the length of long particles. First, we drive a suspension of small `tracer' spheres through a pore with rough interior, whose diameter is smaller than the characteristic length of the irregularities in the pore. These particles will `map' the interior geometry of the pore as explained above, with resistive pulse shape given by equation \ref{eq:dIlocal}. Then, we repeat the experiment with long particles for which we wish to know the length. Then we perform a convolution or moving average transformation of the signals of the tracer particles for a variety of lengths, given by the following equations:
+		
+		\begin{equation}\label{eq:movingaverage}
+			I_{i}\rightarrow I_{i}^{l'}=\frac{1}{N}\Sigma_{j=i-\frac{N}{2}}^{j=i+\frac{N}{2}}I_{j}, \mathrm{and} \\
+			N=\frac{fl'}{v},
+		\end{equation}
+		
+		where N is the total number of points in the moving average, $I_{i}$ is the $i$th current measurement in the signal of the unprocessed short particle, $I_{i}^{l'}$ is the transformed data point for a moving average over length $l'$, $f$ is the sampling frequency of the current acquisition instrument, and $v$ is the \textit{average} velocity of the particle during its translocation through the pore. However, equation \ref{eq:movingaverage} slightly oversamples particle positions in the middle of the moving average compared to particle positions at the very ends, along a distance equal to half the length of the small particle. For this reason, the moving average estimate of the correct transformation slightly overestimates the length of long particles. However, when $l\ll l'$, i.e. the tracer particle's displacement length is much less than the longer rod's displacement length, the effect is negligibly small. 
+
+		
+		After computing the moving averages of the tracer particles over an array of lengths, a similarity measure is calculated between every pair of convoluted-raw signals for the tracer particle and the long particle, and the length with the greatest similarity measure is chosen as the correct length of the particle.
 		
 		Probably the simplest similarity measure of two time-series is the point-wise summed Euclidean distance between the two signals given by the following formula:
 		
-		$$ C\left(S, S'\right)=\Sigma_{i=0}^{N-1}\left(S_{i}-S'_{i}\right). $$
+		\begin{equation}\label{eq:euclideandistance}
+			C\left(S, S'\right)=\Sigma_{i=0}^{N-1}\left(S_{i}-S'_{i}\right).
+		\end{equation}
+		
+		\begin{figure}
+			\includegraphics[width=\textwidth]{eucliddtw}
+			\caption{\textbf{Comparison of standard Euclidean distance metric (left) and distance metric as determined by dynamic time warping (right).} Notice that the Euclidean distance does not take into account small displacements of the two signals in time, despite their obvious similarity. On the other hand, dynamic time warping is able to account for small mismatches in time by finding the connections between points that minimizes the total cost.}
+			\label{fig:eucliddtw}
+		\end{figure}
+
 		
 		However, the problem with this similarity measure is it is not robust against small variations in the phases of the two signals, i.e. if the two signals evolve in time noisily such that they are not instantaneously exactly in phase. For instance, Fig. \ref{fig:eucliddtw}A shows two resistive pulse time-series taken during an experiment and overlapped exactly in time, with lines connecting the points that would be summed in the Euclidean distance metric\cite{Keogh2005}. Notice that the two sequences are very similar, but due to a non-perfect alignment of identical features in time, the aligned Euclidean distance metric will greatly penalize the similarity of the two signals. One method of measuring the similarity of two time-series that accounts for time offsets is dynamic time warping.
 		
 		\subsection{Dynamic time warping}
 		
-			Figure \ref{fig:eucliddtw}B shows two time-series signals that have been aligned after Dynamic time warping.
+			Figure \ref{fig:eucliddtw}B shows two time-series signals that have been aligned after dynamic time warping. The image shows that the algorithm is capable of matching points that are not perfectly aligned in time, but that reflect the actual progression of the two signals in synchronization. The algorithm works as follows.
+			
+			\begin{figure}
+				\includegraphics[width=\textwidth]{distancecost}
+				\caption{\textbf{Distance (left) and cost matrices (right) of two resistive pulse signals as determined by dynamic time warping.} The element $\left(i,j\right)$ in the distance matrix represents the Euclidean distance between the two signals, $\left(S_{i}-S'_{j}\right)^{2}$. Every element in the cost matrix represents the summed Euclidean distance along the minimum path that arrives at that point. Therefore, the point at the lower right-most point in the distance matrix is the summed cost to completely connect the two signals. The path that yields the cost of that element in the matrix is represented by the yellow dashed line.}
+				\label{fig:distancecost}
+			\end{figure}
+
+			
+			First, a matrix $D_{i,j}$ of the point-wise Euclidean distance between all two points in the two signals is created, as shown in Fig. \ref{fig:distancecost} (left). For instance, point $D_{3,4}$ is the Euclidean distance between point $3$ and $4$ in signals $S$ and $S'$, respectively. The objective is to traverse through the distance matrix along the path that minimizes the total accumulated distance, or the cost $C$, subject to certain kinematic constraints, described below. Each step in the trajectory is defined by the indices from the two respective signals $\left(i,j\right)$. The non-warped Euclidean distance metric given by Eq. \ref{eq:euclideandistance} would correspond to a straight diagonal trajectory through the matrix, e.g. no warping at all. Although there are several formulations of dynamic time warping, the original method only allows for three types of motion such that $\left(i,j\right)\rightarrow\left(i+1,j\right)$ (progressive vertical motion), $\left(i,j\right)\rightarrow\left(i+1,j+1\right)$ (progressive diagonal motion), or $\left(i,j+1\right)$ (progressive horizontal motion). Regressive motion, which would correspond to taking a step backwards in the path back towards the upper left cell in the matrix, is forbidden. The key to dynamic time warping is the means by which we determine the optimal path that minimizes the total accumulated distance. The problem is combinatorically large and scales like $2^{\sqrt NN'}$, where $N, N'$ are the number of data points in each of the two signals. Due to this scaling, random searching of paths through the matrix is not a feasible means of determining the optimum path for large $NN'$. As the name implies, dynamic time warping implies a dynamic computational algorithm for determining the minimum path, described as follows. First, we must recognize that, due to the rules for stepping through the matrix, the minimum path to arrive at point $\left(i,j\right)$ must pass through one of points $\left(i-1,j\right)$, $\left(i-1,j-1\right)$, or $\left(i,j-1\right)$. Therefore, the cost $C$ of point $\left(i,j\right)$ is given by
+			
+			\begin{equation}\label{eq:dtwcost}
+			C_{i,j}=D_{i,j}+\mathrm{min}\left[C_{i-1,j}, C_{i-1,j-1}, C_{i,j-1}\right].
+			\end{equation}
+			
+			With this in mind, we can build up the complete cost matrix $C_{i,j}$ by starting from the top-left corner $C_{0,0}$ and propagating through the matrix with Eq. \ref{eq:dtwcost}. We repeat this process until we arrive at point $C_{N-1,N'-1}$, which is the minimum cost of a complete matching up of the two signals. At this point we have arrived at the answer we seeked in the beginning, the total distance metric between the two signals. However, it is often informative to calculate the actual trajectory that the dynamic time warping algorithm has determined, so as to verify that the point matching system is meaningful. In order to do so, we traverse through the matrix starting at point $\left(N-1,N'-1\right)$ in reverse, according to the same kinematic rules (but in reverse). At each step, we move to the nearest adjacent point with the minimum distance. This algorithm is guaranteed to return us to the starting point $\left(0,0\right)$ along the complete minimum path between start and finish. This trajectory is shown by the yellow dashed lines in figure \ref{fig:distancecost}, and the pointwise connections are shown in the right hand side of figure \ref{fig:eucliddtw}.
 		
 	\section{Experiment}
 	    
@@ -80,7 +114,7 @@
 
 
 	    
-		In order to test the principle described above, we performed resistive pulse experiments with single mesopores ranging from $800-\SI{1000}{nm}$ in diameter. The materials used were polyethylene terephthalate (PET), a polymer which is known to have highly irregularly shaped interiors when pores are prepared \textit{via} the track-etch technique, and polycarbonate (PC), another polymer but with no axial inhomogeneities which will act as a control for the method. Figure \ref{fig:PCPET} shows images of both of these types of pores. For the particles, $\SI{280}{nm}$ and $\SI{410}{nm}$ in diameter polystyrene beads (`spheres') were used as the tracer particle, and rods of length $\SI{590}{nm}$, diameter $\SI{210}{nm}$ (`short rods') and $\SI{1920}{nm}$, diameter $\SI{240}{nm}$ (`long rods') were used to test the length measurement protocol; the particles are shown in figure \ref{fig:particles}. Particles were suspended in $\SI{100}{mM}$ KCl solution with $0.5\%$ Tween 80, a surfactant which prevents particle aggregation. The solution was then injected into both sides of a conductivity cell, and a voltage was applied across the pore. The resulting ionic current was sampled at $\SI{10}{kHz}$ and recorded. The polystyrene spheres used had a larger $\zeta-\mathrm{potential}$ than the pore, and therefore they translocated through the pore electrophoretically. On the other hand, the rods had a lower magnitude $\zeta-\mathrm{potential}$ than the pore, and therefore travelled through the pore under electroosmotic convective forces. 
+		In order to test the method described above for determining the lengths of particles, we performed resistive pulse experiments with single mesopores ranging from $800-\SI{1000}{nm}$ in diameter. The materials used were polyethylene terephthalate (PET), a polymer which is known to have highly irregularly shaped interiors when pores are prepared \textit{via} the track-etch technique, and polycarbonate (PC), another polymer but with no axial inhomogeneities which will act as a control for the method. Figure \ref{fig:PCPET} shows images of both of these types of pores. For the particles, $\SI{280}{nm}$ and $\SI{410}{nm}$ in diameter polystyrene beads (`spheres') were used as the tracer particle, and rods of length $\SI{590}{nm}$, diameter $\SI{210}{nm}$ (`short rods') and $\SI{1920}{nm}$, diameter $\SI{240}{nm}$ (`long rods') were used to test the length measurement protocol; the particles are shown in figure \ref{fig:particles}. Particles were suspended in $\SI{100}{mM}$ KCl solution with $0.5\%$ Tween 80, a surfactant which prevents particle aggregation. The solution was then injected into both sides of a conductivity cell, and a voltage was applied across the pore. The resulting ionic current was sampled at $\SI{10}{kHz}$ and recorded. The polystyrene spheres used had a larger $\zeta-\mathrm{potential}$ than the pore, and therefore they translocated through the pore electrophoretically. On the other hand, the rods had a lower magnitude $\zeta-\mathrm{potential}$ than the pore, and therefore travelled through the pore under electroosmotic convective forces. 
 		
 	
 	\section{Analysis \& Discussion}
@@ -105,7 +139,7 @@
 		\end{figure}
 
 		
-		Figure \ref{fig:PETevents} shows example recorded events for the three types of particles used in this study. A $\SI{410}{nm}$ sphere translocation is shown on the left column in red. Notice the roughness in the event; this roughness has been shown to correspond to the interior irregularities in the pore. Local $\Delta I/I_{p}\left(t\right)$ are large at relatively constricted points, and small at larger cavitated points. The green event in the right column corresponds to the raw resistive pulse signal of a long rod. Notice the difference in structure of the two events; the long rod's event shows some structure, but is missing many of the local minima and maxima that are present in the signal of the short rod. This observation is in agreement with our previous arguments for the smoothing of the pore interior that takes place for long particles. Without making any quantitative arguments, we are able to conclude that the particle corresponding to the green event is longer than the particle corresponding to the red event. In between those two extremes are the short rods in red. The short rods at length $\SI{590}{nm}$ are slightly longer than the spheres which have diameter $\SI{410}{nm}$, but due to their rotation it is not entirely obvious whether they should image the pore with the same resolution as the spheres. Looking at hte results, the signals of the short rod and sphere are much more similar than the long rod and the sphere, but some local structure is still unresolved for the short rods. 
+		Figure \ref{fig:PETevents} shows example recorded events for the three types of particles used in this study. A $\SI{410}{nm}$ sphere translocation is shown on the left column in red. Notice the roughness in the event; this roughness has been shown to correspond to the interior irregularities in the pore. Local $\Delta I/I_{p}\left(t\right)$ are large at relatively constricted points, and small at larger cavitated points. The green event in the right column corresponds to the raw resistive pulse signal of a long rod. Notice the difference in structure of the two events; the long rod's event shows some structure, but is missing many of the local minima and maxima that are present in the signal of the short rod. This observation is in agreement with our previous arguments for the smoothing of the pore interior that takes place for long particles. Without making any quantitative arguments, we are able to conclude that the particle corresponding to the green event is longer than the particle corresponding to the red event. In between those two extremes are the short rods in red. The short rods at length $\SI{590}{nm}$ are slightly longer than the spheres which have diameter $\SI{410}{nm}$, but due to their rotation it is not entirely obvious whether they should image the pore with the same resolution as the spheres. Looking at the results, the signals of the short rod and sphere are much more similar than the long rod and the sphere, but some local structure is still unresolved for the short rods. 
 		
 		In order to test the hypothesis that long particles behave as a moving average of shorter particles, we calculated moving averages of the spheres and the short rods. The time over which the moving average was calculated corresponded to the duration in time over which the particle travelled a distance equal to the length of the longer particle with which it is being compared. We determined the average velocity of a particle from the total translocation distance (the known length of the pore, $L'=L-D$) and the translocation duration measured from the RP signal, $\Delta T$. The velocity is then $v=L'/\Delta t$. The moving average window then has length (in time) of $\Delta t=v/l$, which corresponds to a window of $N=f\times\Delta t$ data points in length. The transformation then from the raw signal $I_{i}$ to the averaged signal $I'_{i}$ is
 		
@@ -116,6 +150,36 @@
 		
 		This moving average process was performed on the spheres and on the short rods. The red signal in the middle column corresponds to the moving average of the spheres over the length of the short rods, and the red signal in the right column corresponds to the moving average of the spheres over the length of the long rods. Finally, the moving average of the short rods over the length of the long rods is the blue signal in the right column. Qualitatively, we see that the moving average process, which is physically motivated by the equations for the resistance of small particles in series, recovers the appearance of the signals of longer particles. 
 		
+		\begin{figure}
+			\includegraphics[width=0.5\textwidth]{longevent.png}
+			\caption{\textbf{Resistive pulse signal of a single long rod passing through a PET pore.} The variation in the amplitude of the current signals that the pore has an inhomogeneous interior shape.}
+			\label{fig:longevent}
+		\end{figure}
+
+		
+		\begin{figure}
+			\includegraphics[width=0.5\textwidth]{experimentaldtwfits.png}
+			\caption{\textbf{Resistive pulse signal of a single short rod passing through a PET pore alongside many instances of the moving average transformation performed on the signal for different length intervals.} As the length interval is increased, the finer structure of the resistive pulse signal is smoothed over. For the greatest length measured, many of the features prominent in the raw signal have disappeared..}
+			\label{fig:experimentaldtwfits}
+		\end{figure}
+		
+		
+		\begin{figure}
+			\includegraphics[width=0.5\textwidth]{experimentaldtwfit.png}
+			\caption{\textbf{Raw resistive pulse signal of a single long rod matched with the signal of a short rod that has been transformed via the moving average process.} The aligned points were determined by the dynamic time warping algorithm, and the particular transformation shown was the one that minimized the difference between the two signals, also determined by the dynamic time warping algorithm.}
+			\label{fig:experimentaldtwfit}
+		\end{figure}
+		
+		
+		In order to measure the lengths of the long rods, we performed the dynamic time warping technique described in the preceding section. Figure \ref{fig:longevent} shows a single instance of a long rod passing through a PET pore. Figure \ref{fig:experimentaldtwfits} shows a shorter rod particle averaged over many different length intervals. As the short rod is averaged over a greater length interval, it continuously transforms into a shape that bears a stronger resemblance to the signal of the long rods. Of all the fits calculated in Fig. \ref{fig:experimentaldtwfits}, the correct length is determined by the fit with the smallest cost as determined by dynamic time warping. An example resistive pulse signal of a long rod and a shorter rod that has been transformed \textit{via} the moving average equation is shown in Fig. \ref{fig:experimentaldtwfit}.
+		
+		
+		\begin{figure}
+			\includegraphics[width=0.5\textwidth]{dtwfit.png}
+			\caption{\textbf{Histogram of particle length as determined by dynamic time warping along with the actual distribution of sizes determined by electron microscopy imaging.} A normal distribution is fit to the histogram of particle lengths as determined by dynamic time warping and shown to be in good agreement with the expected distribution.}
+			\label{fig:dtwfit}
+		\end{figure}
+
 	
 	
 		
