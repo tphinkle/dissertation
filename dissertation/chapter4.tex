@@ -42,13 +42,39 @@
 
 		
 		\begin{equation}\label{eq:theoreticalmovingaverage}
-			\Delta R=\Delta R'=\int_{z=z'}^{z=z'+l}R\left(z\right)=\int_{z=z'}^{z=z'+l}\frac{4\rho d^{3}}{\pi D^{4}}\left[1-0.8\left(\frac{d}{D}\right)^{3}\right]^{-1}
+			\Delta R=\Delta R'=\int_{z=z'}^{z=z'+l}\frac{d\Delta R\left(z\right)}{dz}\,dz=\int_{z=z'}^{z=z'+l}\frac{4\rho d^{3}}{\pi D^{4}\left(z\right)}\left[1-0.8\left(\frac{d}{D\left(z\right)}\right)^{3}\right]^{-1}\,dz
 		\end{equation}
 
 		
 		Oppositely, if we consider a pore whose length extends along a significant amount of the pore's axis, it may be occupying several such regions at a time. Instead of a single particle, we may consider the particle to be composed of many smaller segments of particles in series, and therefore the resistance values of each segment are additive. Therefore, the signals of longer particles can be seen as the convolution of the signal of an infinitesimally small particle over the long particle's length. 
 		
-		This fact can be used to devise an experiment that can measure the length of long particles. First, we drive a suspension of small `tracer' spheres through a pore with rough interior, whose diameter is smaller than the characteristic length of the irregularities in the pore. These particles will `map' the interior geometry of the pore as explained above, with resistive pulse shape given by equation \ref{eq:dIlocal}. Then, we repeat the experiment with long particles for which we wish to know the length. Then we perform a convolution or moving average of the signals of the tracer particles for a variety of lengths; finally, a similarity measure is calculated between every pair of convoluted-raw signals for the tracer particle and the long particle, and the length with the greatest similarity measure is chosen as the correct length of the particle. 
+		This fact can be used to devise an experiment that can measure the length of long particles. First, we drive a suspension of small `tracer' spheres through a pore with rough interior, whose diameter is smaller than the characteristic length of the irregularities in the pore. These particles will `map' the interior geometry of the pore as explained above, with resistive pulse shape given by equation \ref{eq:dIlocal}. Then, we repeat the experiment with long particles for which we wish to know the length. Then we perform a convolution or moving average of the signals of the tracer particles for a variety of lengths; finally, a similarity measure is calculated between every pair of convoluted-raw signals for the tracer particle and the long particle, and the length with the greatest similarity measure is chosen as the correct length of the particle.
+		
+		Probably the simplest similarity measure of two time-series is the point-wise summed Euclidean distance between the two signals given by the following formula:
+		
+		$$ C\left(S, S'\right)=\Sigma_{i=0}^{N-1}\left(S_{i}-S'_{i}\right). $$
+		
+		\begin{figure}
+			\includegraphics[width=\textwidth]{eucliddtw}
+			\caption{\textbf{Comparison of standard Euclidean distance metric (left) and distance metric as determined by dynamic time warping (right).} Notice that the Euclidean distance does not take into account small displacements of the two signals in time, despite their obvious similarity. On the other hand, dynamic time warping is able to account for small mismatches in time by finding the connections between points that minimizes the total cost.}
+			\label{fig:eucliddtw}
+		\end{figure}
+
+		
+		However, the problem with this similarity measure is it is not robust against small variations in the phases of the two signals, i.e. if the two signals evolve in time noisily such that they are not instantaneously exactly in phase. For instance, Fig. \ref{fig:eucliddtw}A shows two resistive pulse time-series taken during an experiment and overlapped exactly in time, with lines connecting the points that would be summed in the Euclidean distance metric\cite{Keogh2005}. Notice that the two sequences are very similar, but due to a non-perfect alignment of identical features in time, the aligned Euclidean distance metric will greatly penalize the similarity of the two signals. One method of measuring the similarity of two time-series that accounts for time offsets is dynamic time warping.
+		
+		\subsection{Dynamic time warping}
+		
+			Figure \ref{fig:eucliddtw}B shows two time-series signals that have been aligned after dynamic time warping. The image shows that the algorithm is capable of matching points that are not perfectly aligned in time, but that reflect the actual progression of the two signals in synchronization. The algorithm works as follows.
+			
+			\begin{figure}
+				\includegraphics[width=\textwidth]{distancecost}
+				\caption{\textbf{Distance (left) and cost matrices (right) of two resistive pulse signals as determined by dynamic time warping.} The element $\left(i,j\right)$ in the distance matrix represents the Euclidean distance between the two signals, $\left(S_{i}-S'_{j}\right)^{2}$. Every element in the cost matrix represents the summed Euclidean distance along the minimum path that arrives at that point. Therefore, the point at the lower right-most point in the distance matrix is the summed cost to completely connect the two signals. The path that yields the cost of that element in the matrix is represented by the yellow dashed line.}
+				\label{fig:distancecost}
+			\end{figure}
+
+			
+			First, a matrix of the point-wise Euclidean distance between all two points in the two signals is created, as shown in figure \ref{fig:distancecost}. 
 		
 	\section{Experiment}
 	    

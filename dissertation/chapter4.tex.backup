@@ -41,9 +41,24 @@
 		\end{equation}
 
 		
-		Oppositely, if we consider a pore whose length extends along a significant amount of the pore's axis, it may be occupying several such regions at a time. Instead of a single particle, we may consider the particle to be composed of many smaller segments of particles in series, and therefore the resistsance values of each segment are additive. Therefore, the signals of longer particles can be seen as the convolution of the signal of an infinitesimally small particle over the long particle's length. 
+		\begin{equation}\label{eq:theoreticalmovingaverage}
+			\Delta R=\Delta R'=\int_{z=z'}^{z=z'+l}\frac{d\Delta R\left(z\right)}{dz}\,dz=\int_{z=z'}^{z=z'+l}\frac{4\rho d^{3}}{\pi D^{4}\left(z\right)}\left[1-0.8\left(\frac{d}{D\left(z\right)}\right)^{3}\right]^{-1}\,dz
+		\end{equation}
+
 		
-		This fact can be used to devise an experiment that can measure the length of long particles. First, we drive a suspension of small `tracer' spheres through a pore with rough interior, whose diameter is smaller than the characteristic length of the irregularities in the pore. These particles will `map' the interior geometry of the pore as explained above, with resistive pulse shape given by equation \ref{eq:dIlocal}. Then, we repeat the experiment with long particles for which we wish to know the length. Then we perform a convolution or moving average of the signals of the tracer particles for a variety of lengths; finally, a similarity measure is calculated between every pair of convoluted-raw signals for the tracer particle and the long particle, and the length with the greatest similarity measure is chosen as the correct length of the particle. 
+		Oppositely, if we consider a pore whose length extends along a significant amount of the pore's axis, it may be occupying several such regions at a time. Instead of a single particle, we may consider the particle to be composed of many smaller segments of particles in series, and therefore the resistance values of each segment are additive. Therefore, the signals of longer particles can be seen as the convolution of the signal of an infinitesimally small particle over the long particle's length. 
+		
+		This fact can be used to devise an experiment that can measure the length of long particles. First, we drive a suspension of small `tracer' spheres through a pore with rough interior, whose diameter is smaller than the characteristic length of the irregularities in the pore. These particles will `map' the interior geometry of the pore as explained above, with resistive pulse shape given by equation \ref{eq:dIlocal}. Then, we repeat the experiment with long particles for which we wish to know the length. Then we perform a convolution or moving average of the signals of the tracer particles for a variety of lengths; finally, a similarity measure is calculated between every pair of convoluted-raw signals for the tracer particle and the long particle, and the length with the greatest similarity measure is chosen as the correct length of the particle.
+		
+		Probably the simplest similarity measure of two time-series is the point-wise summed Euclidean distance between the two signals given by the following formula:
+		
+		$$ C\left(S, S'\right)=\Sigma_{i=0}^{N-1}\left(S_{i}-S'_{i}\right). $$
+		
+		However, the problem with this similarity measure is it is not robust against small variations in the phases of the two signals, i.e. if the two signals evolve in time noisily such that they are not instantaneously exactly in phase. For instance, Fig. \ref{fig:eucliddtw}A shows two resistive pulse time-series taken during an experiment and overlapped exactly in time, with lines connecting the points that would be summed in the Euclidean distance metric\cite{Keogh2005}. Notice that the two sequences are very similar, but due to a non-perfect alignment of identical features in time, the aligned Euclidean distance metric will greatly penalize the similarity of the two signals. One method of measuring the similarity of two time-series that accounts for time offsets is dynamic time warping.
+		
+		\subsection{Dynamic time warping}
+		
+			Figure \ref{fig:eucliddtw}B shows two time-series signals that have been aligned after Dynamic time warping.
 		
 	\section{Experiment}
 	    
@@ -95,9 +110,8 @@
 		In order to test the hypothesis that long particles behave as a moving average of shorter particles, we calculated moving averages of the spheres and the short rods. The time over which the moving average was calculated corresponded to the duration in time over which the particle travelled a distance equal to the length of the longer particle with which it is being compared. We determined the average velocity of a particle from the total translocation distance (the known length of the pore, $L'=L-D$) and the translocation duration measured from the RP signal, $\Delta T$. The velocity is then $v=L'/\Delta t$. The moving average window then has length (in time) of $\Delta t=v/l$, which corresponds to a window of $N=f\times\Delta t$ data points in length. The transformation then from the raw signal $I_{i}$ to the averaged signal $I'_{i}$ is
 		
 		
-		\begin{equation}
+		\begin{equation} \label{eq:movingavg}
 			I'_{i}=\frac{1}{N}\sum_{j=-N/2}^{N/2}I_{j}.
-			\label{eq:movingavg}
 		\end{equation}
 		
 		This moving average process was performed on the spheres and on the short rods. The red signal in the middle column corresponds to the moving average of the spheres over the length of the short rods, and the red signal in the right column corresponds to the moving average of the spheres over the length of the long rods. Finally, the moving average of the short rods over the length of the long rods is the blue signal in the right column. Qualitatively, we see that the moving average process, which is physically motivated by the equations for the resistance of small particles in series, recovers the appearance of the signals of longer particles. 
