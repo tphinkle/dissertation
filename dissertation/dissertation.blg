@@ -5,47 +5,52 @@ A level-1 auxiliary file: chapter1.aux
 A level-1 auxiliary file: chapter2.aux
 A level-1 auxiliary file: chapter3.aux
 A level-1 auxiliary file: chapter4.aux
+A level-1 auxiliary file: chapter5.aux
 The style file: abbrv.bst
 A level-1 auxiliary file: appendix.aux
 Database file #1: ../../LaTeX/references/references.bib
-You've used 7 entries,
+Warning--I didn't find a database entry for "Gosset2012"
+Warning--I didn't find a database entry for "Lin2017"
+Warning--I didn't find a database entry for "DiCarlo2017"
+You've used 8 entries,
             2118 wiz_defined-function locations,
-            563 strings with 5126 characters,
-and the built_in function-call counts, 2741 in all, are:
-= -- 262
-> -- 151
+            580 strings with 5360 characters,
+and the built_in function-call counts, 3028 in all, are:
+= -- 291
+> -- 158
 < -- 0
-+ -- 59
-- -- 52
-* -- 233
-:= -- 472
-add.period$ -- 23
-call.type$ -- 7
-change.case$ -- 47
++ -- 62
+- -- 54
+* -- 254
+:= -- 520
+add.period$ -- 26
+call.type$ -- 8
+change.case$ -- 51
 chr.to.int$ -- 0
-cite$ -- 7
-duplicate$ -- 77
-empty$ -- 195
-format.name$ -- 52
-if$ -- 552
+cite$ -- 8
+duplicate$ -- 88
+empty$ -- 222
+format.name$ -- 54
+if$ -- 613
 int.to.chr$ -- 0
-int.to.str$ -- 7
-missing$ -- 7
-newline$ -- 40
-num.names$ -- 14
-pop$ -- 31
+int.to.str$ -- 8
+missing$ -- 8
+newline$ -- 45
+num.names$ -- 16
+pop$ -- 33
 preamble$ -- 1
-purify$ -- 40
+purify$ -- 43
 quote$ -- 0
-skip$ -- 54
+skip$ -- 61
 stack$ -- 0
-substring$ -- 210
-swap$ -- 7
+substring$ -- 236
+swap$ -- 8
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 28
+type$ -- 32
 warning$ -- 0
-while$ -- 22
-width$ -- 8
-write$ -- 83
+while$ -- 25
+width$ -- 9
+write$ -- 94
+(There were 3 warnings)
