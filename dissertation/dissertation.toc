@@ -42,6 +42,8 @@
 \contentsline {section}{\numberline {4.2}Experiment}{57}{section.4.2}
 \contentsline {section}{\numberline {4.3}Analysis \& Discussion}{59}{section.4.3}
 \contentsline {section}{\numberline {4.4}Conclusions}{65}{section.4.4}
-\contentsline {chapter}{Bibliography}{68}{section*.39}
-\contentsline {chapter}{\numberline {A}Appendix Title}{69}{appendix.A}
-\contentsline {section}{\numberline {A.1}Lorem Ipsum}{69}{section.A.1}
+\contentsline {chapter}{\numberline {5}Resistive pulse studies of cancer cell deformability}{68}{chapter.5}
+\contentsline {section}{\numberline {5.1}Background \& Theory}{68}{section.5.1}
+\contentsline {chapter}{Bibliography}{72}{section*.39}
+\contentsline {chapter}{\numberline {A}Appendix Title}{73}{appendix.A}
+\contentsline {section}{\numberline {A.1}Lorem Ipsum}{73}{section.A.1}

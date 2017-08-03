@@ -32,3 +32,4 @@
 \contentsline {figure}{\numberline {4.10}{\ignorespaces \textbf {Raw resistive pulse signal of a single long rod matched with the signal of a short rod that has been transformed via the moving average process.} The aligned points were determined by the dynamic time warping algorithm, and the particular transformation shown was the one that minimized the difference between the two signals, also determined by the dynamic time warping algorithm.\relax }}{64}{figure.caption.37}
 \contentsline {figure}{\numberline {4.11}{\ignorespaces \textbf {Histogram of particle length as determined by dynamic time warping along with the actual distribution of sizes determined by electron microscopy imaging.} A normal distribution is fit to the histogram of particle lengths as determined by dynamic time warping and shown to be in good agreement with the expected distribution.\relax }}{65}{figure.caption.38}
 \addvspace {10\p@ }
+\addvspace {10\p@ }
