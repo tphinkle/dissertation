@@ -46,6 +46,8 @@
 \contentsline {section}{\numberline {5.1}Background \& Theory}{68}{section.5.1}
 \contentsline {section}{\numberline {5.2}Experiment and data analysis}{74}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Experiment and instrumentation control}{75}{subsection.5.2.1}
-\contentsline {chapter}{Bibliography}{79}{section*.41}
-\contentsline {chapter}{\numberline {A}Appendix Title}{80}{appendix.A}
-\contentsline {section}{\numberline {A.1}Lorem Ipsum}{80}{section.A.1}
+\contentsline {subsection}{\numberline {5.2.2}Data analysis}{80}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Results \& Discussion}{82}{section.5.3}
+\contentsline {chapter}{Bibliography}{84}{section*.43}
+\contentsline {chapter}{\numberline {A}Appendix Title}{85}{appendix.A}
+\contentsline {section}{\numberline {A.1}Lorem Ipsum}{85}{section.A.1}
