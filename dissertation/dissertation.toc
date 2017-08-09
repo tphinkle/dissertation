@@ -1,9 +1,9 @@
 \raggedleft Page\\
 \contentsline {chapter}{LIST OF FIGURES}{v}{section*.2}
-\contentsline {chapter}{LIST OF TABLES}{ix}{section*.4}
-\contentsline {chapter}{ACKNOWLEDGMENTS}{x}{section*.6}
-\contentsline {chapter}{CURRICULUM VITAE}{xi}{section*.7}
-\contentsline {chapter}{ABSTRACT OF THE DISSERTATION}{xiii}{section*.8}
+\contentsline {chapter}{LIST OF TABLES}{x}{section*.4}
+\contentsline {chapter}{ACKNOWLEDGMENTS}{xi}{section*.6}
+\contentsline {chapter}{CURRICULUM VITAE}{xii}{section*.7}
+\contentsline {chapter}{ABSTRACT OF THE DISSERTATION}{xiv}{section*.8}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Nanopores}{2}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Biological nanopores}{3}{subsection.1.1.1}
@@ -46,8 +46,14 @@
 \contentsline {section}{\numberline {5.1}Background \& Theory}{68}{section.5.1}
 \contentsline {section}{\numberline {5.2}Experiment and data analysis}{74}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Experiment and instrumentation control}{75}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Data analysis}{80}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}Results \& Discussion}{82}{section.5.3}
-\contentsline {chapter}{Bibliography}{84}{section*.43}
-\contentsline {chapter}{\numberline {A}Appendix Title}{85}{appendix.A}
-\contentsline {section}{\numberline {A.1}Lorem Ipsum}{85}{section.A.1}
+\contentsline {subsection}{\numberline {5.2.2}Data analysis}{79}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Results \& Discussion}{83}{section.5.3}
+\contentsline {chapter}{\numberline {6}Hybrid resistive-pulse optical detections in microfluidic systems}{84}{chapter.6}
+\contentsline {section}{\numberline {6.1}Background \& Theory}{84}{section.6.1}
+\contentsline {section}{\numberline {6.2}Experimental hardware and software}{87}{section.6.2}
+\contentsline {section}{\numberline {6.3}Data analysis software}{90}{section.6.3}
+\contentsline {section}{\numberline {6.4}Results \& Discussion}{92}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Data analysis explanation}{92}{subsection.6.4.1}
+\contentsline {chapter}{Bibliography}{96}{section*.48}
+\contentsline {chapter}{\numberline {A}Appendix Title}{97}{appendix.A}
+\contentsline {section}{\numberline {A.1}Lorem Ipsum}{97}{section.A.1}

@@ -6,6 +6,7 @@ A level-1 auxiliary file: chapter2.aux
 A level-1 auxiliary file: chapter3.aux
 A level-1 auxiliary file: chapter4.aux
 A level-1 auxiliary file: chapter5.aux
+A level-1 auxiliary file: chapter6.aux
 The style file: abbrv.bst
 A level-1 auxiliary file: appendix.aux
 Database file #1: ../../LaTeX/references/references.bib
@@ -14,7 +15,7 @@ Warning--I didn't find a database entry for "Lin2017"
 Warning--I didn't find a database entry for "DiCarlo2017"
 You've used 8 entries,
             2118 wiz_defined-function locations,
-            580 strings with 5360 characters,
+            581 strings with 5372 characters,
 and the built_in function-call counts, 3028 in all, are:
 = -- 291
 > -- 158

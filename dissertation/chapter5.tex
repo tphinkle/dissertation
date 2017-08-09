@@ -22,7 +22,7 @@
 		
 		While it is apparent that resistive pulse is computationally cheaper than imaging analysis, it is most important to demonstrate that deformability can actually be measured via RP sensing. In chapter 4 of this dissertation, we discussed the equations for the resistive pulse amplitudes of ellipsoidal objects. For cells that are spheroidal in their unloaded state, ellipsoids are reasonable geometries to expect for the deformation shape in the loaded state, at least as an approximation. If we consider a straight ion conducting channel with an ellipsoidal particle inside it, the aspect ratio and orientation of the particle greatly affects the ionic resistance of the system. Under the assumption that the particles take on ellipsoidal geometries, the shapes will be described as being prolate, oblate, or spherical with respect to the channel's axis. Oblate geometries correspond to a flattening along the channel's axis, and prolate geometries are an extension along the channel's axis. The difference in the measured resistive pulse amplitude of these particles is given by the following equation:
 		
-		\begin{equation} \label{eq:ellipsoiddI}
+		\begin{equation}\label{eq:ellipsoiddI}
 			\frac{\Delta I}{I_{p}}=f_{\parallel}\frac{v}{V},
 		\end{equation}
 		
@@ -49,7 +49,7 @@
 			The entities involved in the experiments include the microfluidic channels, the cells and the suspension media that holds them, a syringe pump to drive the suspension through the systems, a microscope and high-speed camera used to take the images, the data acquisition card (DAQ) that acquires the RP signal, a central control computer used to run the experiments,  and various other miscellaneous pieces of equipment. A more in-depth description of these components and the roles they play in the experiment is as follows.
 			
 			\begin{figure}
-				\includegraphics{celllines.jpg}
+				\includegraphics[width=\textwidth]{celllines.jpg}
 				\caption{\textbf{Confocal images of 293-T (left) and HCT-116 (right) cells.} Scale bars are $\SI{50}{\mu m}$ long.}
 				\label{fig:celllines}
 			\end{figure}
@@ -118,6 +118,13 @@
 			
 	
 	\section{Results \& Discussion}
+	
+		\begin{figure}
+			\includegraphics[width=0.5\textwidth]{ellipses.png}
+			\caption{\textbf{Ellipse fits for a 293-T cell passing through a $15-30-15 \mu\mathrm{m}$ channel at various positions.} Notice that in the narrow portions of the channel the particle assumes a prolate (axially-elongated) shape, while in the central cavity it assumes an oblate (laterally-elongated) shape, in agreement with the motif presented in Fig. \ref{fig:deformationmotif}}.
+			\label{fig:ellipses}
+		\end{figure}
+
 	
 		The most important question to be answered in the experiments is whether the cells actually deform according to the model proposed. In order to answer this question, we examined specific events to look at their change in aspect ratio as they pass through the channel. Many events consistently show a deformation pattern that subscribes to the model, as shown in Fig. \ref{fig:ellipses}. On the other hand, there were many events that showed modest to little deformation. However, this result is not unreasonable; our model does not suggest that all cells must deform, and indeed there may be cells that are quite resilient to deformations, or cases where the hydrodynamic forces were insufficient to generate significant deformation. However, we never observe a trend opposite to the deformation mode posited, i.e. an oblate-to-prolate transition rather than a prolate-to-oblate transition. This observation suggests that, while the magnitude of the effect may be low in some cases, the effect still occurs.
 
