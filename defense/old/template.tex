@@ -1,0 +1,83 @@
+%% `prestonh' beamer theme 2017: Main file for compiling
+%% Create presentation in `presentation.tex'.
+%$ Compile this file. 
+%%
+%% Color style file for the `prestonh' beamer theme
+%% Copyright 2017 Preston Hinkle
+%% This file may be distributed and/or modified
+%% 	1. under the LaTeX Project Public License and/or
+%% 	2. under the GNU Public License.
+
+\documentclass[12 pt]{beamer}
+\usetheme[
+	bullet=circle,		% Other option: square
+	bigpagenumber,		% circled page number on lower right
+	topline=true,			% colored bar at the top of the frame 
+	shadow=false,			% Shading for beamer blocks
+	watermark=watermark.png,
+	]{prestonh}
+
+
+
+%%%%%%%%%%
+% FONTS %
+%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Usual LaTeX Packages %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{mathrsfs}							% For Weinberg-esque letters
+\usepackage{cancel}							% For "SUSY-breaking" symbol
+\usepackage{slashed}							% for slashed characters in math mode
+\usepackage{bbm}             						% for \mathbbm{1} (unit matrix)
+\usepackage{amsthm}							% For theorem environment
+\usepackage{multirow}							% For multi row cells in table
+\usepackage{arydshln} 							% For dashed lines in arrays and tables
+\usepackage[absolute, overlay]{textpos}		% For absolute positioning of text and pictures
+\usepackage{siunitx}
+\usepackage{animate}                                                    % For gifs, need adobe acrobat
+\usepackage{multimedia}                                                 % For mp4, works on linux with Ocular pdf viewer
+
+\usetikzlibrary{decorations.pathreplacing,calc}
+
+
+
+\graphicspath{{images/}}	% Image directory
+
+
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{mindmap,trees}	% For mind map
+% http://www.texample.net/tikz/examples/computer-science-mindmap/
+
+
+
+\newcommand{\comment}[1]{\textcolor{comment}{\footnotesize{#1}\normalsize}} % comment mild
+\newcommand{\Comment}[1]{\textcolor{Comment}{\footnotesize{#1}\normalsize}} % comment bold
+\newcommand{\COMMENT}[1]{\textcolor{COMMENT}{\footnotesize{#1}\normalsize}} % comment crazy bold
+\newcommand{\Alert}[1]{\textcolor{Alert}{#1}} % louder alert
+\newcommand{\ALERT}[1]{\textcolor{ALERT}{#1}} % loudest alert
+
+
+
+\author[Preston Hinkle\quad {thinkle@uci.edu}]{Preston Hinkle}
+\title[Resistive-pulse sensing for microscale applications
+]{Resistive-pulse sensing for microscale applications
+}
+\institute{University of California, Irvine}
+\date{\today}
+
+
+
+\begin{document}
+
+	\include{presentation}
+
+\end{document}
+

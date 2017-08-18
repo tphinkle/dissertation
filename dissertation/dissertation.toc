@@ -1,9 +1,9 @@
 \raggedleft Page\\
 \contentsline {chapter}{LIST OF FIGURES}{v}{section*.2}
-\contentsline {chapter}{LIST OF TABLES}{x}{section*.4}
-\contentsline {chapter}{ACKNOWLEDGMENTS}{xi}{section*.6}
-\contentsline {chapter}{CURRICULUM VITAE}{xii}{section*.7}
-\contentsline {chapter}{ABSTRACT OF THE DISSERTATION}{xiv}{section*.8}
+\contentsline {chapter}{LIST OF TABLES}{xi}{section*.4}
+\contentsline {chapter}{ACKNOWLEDGMENTS}{xii}{section*.6}
+\contentsline {chapter}{CURRICULUM VITAE}{xiii}{section*.7}
+\contentsline {chapter}{ABSTRACT OF THE DISSERTATION}{xv}{section*.8}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Nanopores}{2}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Biological nanopores}{3}{subsection.1.1.1}
@@ -54,6 +54,11 @@
 \contentsline {section}{\numberline {6.3}Data analysis software}{90}{section.6.3}
 \contentsline {section}{\numberline {6.4}Results \& Discussion}{92}{section.6.4}
 \contentsline {subsection}{\numberline {6.4.1}Data analysis explanation}{92}{subsection.6.4.1}
-\contentsline {chapter}{Bibliography}{96}{section*.48}
-\contentsline {chapter}{\numberline {A}Appendix Title}{97}{appendix.A}
-\contentsline {section}{\numberline {A.1}Lorem Ipsum}{97}{section.A.1}
+\contentsline {subsection}{\numberline {6.4.2}Straight channels}{96}{subsection.6.4.2}
+\contentsline {subsubsection}{Position of maximum RP amplitude in the channel}{96}{section*.50}
+\contentsline {subsubsection}{Dependence of resistive pulse amplitude on lateral displacement}{99}{section*.52}
+\contentsline {subsection}{\numberline {6.4.3}Channels with a central cavity}{103}{subsection.6.4.3}
+\contentsline {subsubsection}{Resistive pulse amplitude in the wide and narrow portions of the channels}{104}{section*.57}
+\contentsline {chapter}{Bibliography}{108}{section*.60}
+\contentsline {chapter}{\numberline {A}Appendix Title}{109}{appendix.A}
+\contentsline {section}{\numberline {A.1}Lorem Ipsum}{109}{section.A.1}

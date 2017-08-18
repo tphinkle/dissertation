@@ -3,6 +3,8 @@
 \setbeamertemplate{itemize/enumerate subbody begin}{\footnotesize}
 
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Title page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -55,21 +57,13 @@
 		
 			\setbeamercovered{transparent}
 			\begin{itemize}
-				\item\only<1>{\textcolor{porestatsblack}{Resistive pulse sensing background}}\only<2,3>{\textcolor{ucigray0}{Resistive pulse sensing background}}
-				\item\only<2>{\textcolor{porestatsblack}{Mesoscale resistive pulse sensing}}\only<1,3>{\textcolor{ucigray0}{Mesoscale resistive pulse sensing}}
-					
-					\begin{itemize}
-						\item\only<2>{\textcolor{porestatsblack}{Resistive pulse sensing of rods}}\only<1,3>{\textcolor{ucigray0}{Resistive pulse sensing of rods}}
-					\end{itemize}
-					
-					
-					
-					
-				\item\only<3>{\textcolor{porestatsblack}{Microscale resistive pulse sensing}}\only<1,2>{\textcolor{ucigray0}{Microscale resistive pulse sensing}}
+				\item\only<1>{\textcolor{porestatsblack}{Resistive pulse sensing background}}\only<2,3,4>{\textcolor{ucigray0}{Resistive pulse sensing background}}
+				\item\only<2>{\textcolor{porestatsblack}{Resistive pulse sensing of high-aspect ratio particles}}\only<1,3,4>{\textcolor{ucigray0}{Resistive pulse sensing of high-aspect ratio particles}}	
+				\item\only<3,4>{\textcolor{porestatsblack}{Microscale resistive pulse sensing}}\only<1,2>{\textcolor{ucigray0}{Microscale resistive pulse sensing}}
 				
 					\begin{itemize}
-						\item\only<3>{\textcolor{porestatsblack}{Simultaneous imaging and resistive pulse studies}}\only<1,2>{\textcolor{ucigray0}{Simultaneous imaging and resistive pulse studies}}
-						\item\only<3>{\textcolor{porestatsblack}{Cancer cell deformability cytometry}}\only<1,2>{\textcolor{ucigray0}{Cancer cell deformability cytometry}}
+						\item\only<3>{\textcolor{porestatsblack}{Simultaneous imaging and resistive pulse studies}}\only<1,2,4>{\textcolor{ucigray0}{Simultaneous imaging and resistive pulse studies}}
+						\item\only<4>{\textcolor{porestatsblack}{Cancer cell deformability cytometry}}\only<1,2,3>{\textcolor{ucigray0}{Cancer cell deformability cytometry}}
 					\end{itemize}
 					
 					
@@ -83,46 +77,49 @@
 		\begin{column}[T]{2.25in}
 	
 		
-			% Siwy 1
+			% RP Background 1
 			\onslide<1>{
 				\begin{picture}(0,0)(0,0)
-					\put(50,-25)
-					{\includegraphics[width=1.25in]{dummygraphic}}
+					\put(0,-180)
+					{\includegraphics[width=2in]{coulter_patent_drawing}}
 				\end{picture}
 			}
 
-			
-			% Siwy 2
-			\onslide<1>{
-				\begin{picture}(0,0)(0,0)
-					\put(10,-107)
-					{\includegraphics[width=1.25in]{dummygraphic}}
-				\end{picture}
-			}
-			
-			% Siwy 3
-			\onslide<1>{
-				\begin{picture}(0,0)(0,0)
-					\put(50,-150)
-					{\includegraphics[width=1.25in]{dummygraphic}}
-				\end{picture}
-			}
-			
-			% RP 1
+		
+			% Rods 1
 			\onslide<2>{
 				\begin{picture}(0,0)(0,0)
-					\put(10,-50)
-					{\includegraphics[width=1.5in]{dummygraphic}}
+					\put(10,-30)
+					{\includegraphics[width=1.25in]{shortrods}}
 				\end{picture}
 			}
 			
-			% RP 2
+			% Rods 2
 			\onslide<2>{
 				\begin{picture}(0,0)(0,0)
-					\put(10,-105)
-					{\includegraphics[width=1.5in]{dummygraphic}}
+					\put(50,-125)
+					{\includegraphics[width=1.25in]{longrods}}
 				\end{picture}
 			}
+			
+			
+			% RPIM 1
+			\onslide<3>{
+				\begin{picture}(0,0)(0,0)
+					\put(0, -65)
+					{\includegraphics[width=2.25in]{resistancemap}}
+				\end{picture}
+			}
+			
+			% Cells
+			\onslide<4>{
+				\begin{picture}(0,0)(0,0)
+					\put(0, -75)
+					{\includegraphics[width=2.25in]{cells}}
+				\end{picture}
+			}
+
+
 			
 			
 		\end{column}
@@ -163,7 +160,7 @@
 			\begin{itemize}
 				\item Resistive pulse sensing (RP) is a method for single particle detection and characterization
 				\item Works at any scale (nano, micro, milli, etc.)
-				\item A diverse range of applications: red blood cell counting, virus detection, protein conformational change detection, and DNA sequencing
+				\item A diverse range of applications: red blood cell counting (several $\SI{}{\mu m}$, virus detection ($10-\SI{100}{\mu m}$, and DNA sequencing ($\sim\SI{1}{nm}$), among others
 			\end{itemize}
 	
 		\end{column}
@@ -186,15 +183,37 @@
 
 \begin{frame}[c]{Resistive pulse sensing---how does it work?}
 
-	\begin{tiny}
-		\begin{itemize}
+	\begin{columns}[t]
+		\begin{column}[T]{2.75in}
+	      
+	
+
+			\begin{tiny}
+				\begin{itemize}
+				
+					\item A nanopore immersed in electrolyte solution acts as an ionic resistor
+					\item Current-Voltage relationship follows Ohm's law $V=IR$
+					\item When a particle enters the channel its resistance changes, yielding a pulse in the measured ionic current
+					\item Pulse properties yield information on size, shape, charge, and concentration of particle
+				\end{itemize}
+			\end{tiny}
+			
+		\end{column}
 		
-			\item Particles are suspended in a conductive solution, which is injected into a pore/channel system
-			\item An external voltage is applied across the channel, which induces an ionic current---the channel acts as an Ohmic resistor with governing equation $V=IR$, where $V$ is the applied voltage, $I$ the measured current, and $R$ the electrical resistance of the channel
-			\item When a particle enters the channel its resistance changes, yielding a transient change in the measured ionic current
-			\item By studying the properties of the current pulse, particle properties such as size, concentration, charge, and shape may be elucidated
-		\end{itemize}
-	\end{tiny}
+		\begin{column}[T]{1.75in}
+			{\centering
+				\vspace{.5cm}
+				\includegraphics[width=1.5in]{singletrajectory} \\
+				\vspace{.75cm}
+				\includegraphics[width=1.5in]{singlerp} \\
+				\par
+			}
+			
+		\end{column}
+
+	
+	
+	\end{columns}
 	
 \end{frame}
 
@@ -202,46 +221,284 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Resistive pulse background---the actors at play
+% Resistive pulse background---system components
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{frame}[c]{Resistive pulse sensing---the actors at play}
-	\begin{enumerate}
-		\item Particles of interest (\textbf{\textcolor{positivegreen}{transport mechanisms}}, \textbf{\textcolor{electricyellow}{electrostatic boundary conditions}})
-		\item The channel itself (surface chemistry and \textbf{\textcolor{electricyellow}{electrostatic boundary conditions}})
-		\item Electrolyte solution (\textbf{\textcolor{waterblue}{solvent, ion transport}})
-		\item Electrodes (electrochemical ion-electron current transduction, \textbf{\textcolor{electricyellow}{voltage source}})
-	\end{enumerate}
+\begin{frame}[c]{Resistive pulse sensing---system components}
+	%\begin{picture}(0,0)(0,0)
+		%\put(90,-125){\includegraphics[width=7cm]{photo/conductivitycell.png}}
+		%\put(100,0){\includegraphics[width=2cm]{photo/electrodes.png}}
+		%\put(10,-20){\includegraphics[width=2cm]{photo/membrane.png}}
+		%\put(30,-80){\includegraphics[width=2cm]{photo/solution.png}}
+	%\end{picture}
+% 	{\centering 
+% 		\vspace{0.35cm}
+% 		\includegraphics[width=9cm]{photo/conductivitycell.png}
+% 		\newline
+% 		\vspace{.35cm}
+% 		\includegraphics[width=1.5cm]{photo/solution.png}
+% 		\hspace{1cm}
+% 		\includegraphics[width=2cm]{photo/membrane.png}
+% 		\hspace{1cm}
+% 		\includegraphics[width=1.5cm]{photo/electrodes.png}
+% 		\hspace{1cm}
+% 		\par
+% 	}
+
+
+	\begin{columns}[t]
+		\begin{column}[T]{\paperwidth/5}
+			{\centering
+				\includegraphics[height=2.25cm]{photo/conductivitycell.png} \\
+				{\footnotesize Conductivity cell}
+				\par
+			}
+		\end{column}
+		
+		
+		\begin{column}[T]{\paperwidth/5}
+			{\centering
+				\includegraphics[height=2.25cm]{photo/membrane.png} \\
+				{\footnotesize Pore membrane}
+				\par
+			}
+		\end{column}
+		
+		
+		
+		\begin{column}[T]{\paperwidth/5}
+			{\centering
+				\includegraphics[height=2.25cm]{photo/solution.png} \\
+				{\footnotesize Electrolyte}
+				\par
+			}
+		\end{column}
+
+		
+		
+
+		
+		\begin{column}[T]{\paperwidth/5}
+			{\centering
+				\includegraphics[height=2.25cm]{psbeads} \\
+				{\footnotesize Particles}
+				\par
+			}
+		\end{column}
+
+	\end{columns}
 	
+	\vspace{1cm}
+	
+	\begin{columns}[t]
+		\begin{column}[T]{\paperwidth/5}
+			{\centering
+				\includegraphics[height=2.25cm]{photo/electrodes.png} \\
+				{\footnotesize Ag-AgCl electrodes}
+				\par
+			}
+		\end{column}
+		
+		
+		\begin{column}[T]{.6\paperwidth}
+			{\centering
+				\includegraphics[height=2.25cm]{photo/axon200b} \\
+				Voltage amplifier + current recorder
+				\par
+			}
+		\end{column}
+	
+
+	\end{columns}
+
+
+
+
+% 	
+% 
+% 
+% 	\begin{center}
+% 		\begin{figure}
+% 		\includegraphics[height=2.25cm]{photo/conductivitycell.png}
+% 		\caption{asdf}
+% 		\end{figure}
+% 		\hspace{.35cm}
+%  		\includegraphics[height=2.25cm]{photo/solution.png}
+%  		\hspace{.35cm}
+%  		\includegraphics[height=2.25cm]{photo/membrane.png}
+%  		\hspace{.35cm}
+%  		\includegraphics[height=2.25cm]{photo/electrodes.png}
+%  		\hspace{.35cm}
+% 	\end{center}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Resistive pulse background---particle transport
+% Resistive pulse background---electrostatic boundary conditions
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Resistive pulse sensing}
+	{\centering
+		\includegraphics[width=0.9\paperwidth]{comsol/voltage.png}
+		\par
+	}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resistive pulse background---electrostatic boundary conditions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Resistive pulse sensing---electrostatic boundary conditions}
+	{\centering
+		\includegraphics[width=0.9\paperwidth]{comsol/voltage.png}
+		\par
+	}
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Resistive pulse background---ion transport
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tikzset{cross/.style={cross out, draw=black, minimum size=2*(#1-\pgflinewidth), inner sep=0pt, outer sep=0pt},
+%default radius will be 1pt. 
+cross/.default={1pt}}
+
 
 
 \begin{frame}[c]{Resistive pulse sensing---ion transport}
 	\begin{itemize}
-		\item In general, ion transport is driven by a combination of passive and active forces:
-		\item \textbf{Passive:} Diffusion, convection
-		\item \textbf{Active:} Electric migration
-		\item \vec{v_{i}}=
+		\item Ion transport is driven by \textbf{diffusion}, \textbf{convection}, and \textbf{electric migration}
+		\item \underline{Diffusion}: Average flow of ions from high to low concentration
+		\item \underline{Convection}: Ions move with the fluid/solvent
+		\item \underline{Electrical migration}: Ions move in electric field
 	\end{itemize}
+	\only<1>{
+		$$ \vec{J}_{i}=\underbrace{z_{i}eD_{i}\nabla c_{i}}_{\mathrm{diffusion}}+\overbrace{z_{i}ec_{i}\vec{u}}^{\mathrm{convection}}+\underbrace{z_{i}ec_{i}\mu_{i}\vec{E}}_{\mathrm{migration}} $$
+	}
+	\only<2>{
+		$$ \vec{J}_{i}=\underbrace{\xcancel{z_{i}eD_{i}\nabla c_{i}}}_{\mathrm{diffusion}}+\overbrace{\xcancel{z_{i}ec_{i}\vec{u}}}^{\mathrm{convection}}+\underbrace{z_{i}ec_{i}\mu_{i}\vec{E}}_{\mathrm{migration}} $$
+	}
+	
+	$$ I=\sum_{i}\iint_{S}\vec{J_{i}}\cdot \hat{n}dS $$
+	
+	% xs over two terms in equation
+	\onslide<2>{
+		\begin{tikzpicture}[]
+			\draw(300,25) node[cross=10pt,red] {};
+			\draw(1,0) node[cross=10pt,red] {};
+		\end{tikzpicture}
+	}
+
 \end{frame}
 
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Resistive pulse background---passive transport
+% Rods title slide
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[c]{Passive ion transport}
+
+
+\begin{frame}[c]{}
+	\begin{center}
+		\textbf{Resistive pulse sensing of high-aspect ratio particles}
+	\end{center}
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Rods motivation slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{High-aspect ratio resistive pulse sensing---motivation}
 	\begin{itemize}
+		\item Aspherical particles are ubiquitous in biology---e.g., viruses, bacteria 
+		\item RP sensing allows volume determination
+		\item Can we extend RP to measure length?
+		\item How would we do so?
+	\end{itemize}
+	{\centering
+		\includegraphics[height=3cm]{ecoli}
+		\hspace{1cm}
+		\includegraphics[height=3cm]{tobaccomosaicvirus}
+		\par
+	}
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Length convolution explanation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Resistive pulse in non-constant width pores}
+	\begin{itemize}
+		\item Change in resistance of pore is approximately
+	\end{itemize}
+	$$ \Delta R\left(z'\right)=\frac{\rho}{\pi}\int_{z=z'}^{z=z'+l_{p}}\frac{dz}{r_{P}^{2}\left(z\right)-s_{p}^{2}\left(z\right)} $$
+	\begin{itemize}
+		\item RP amplitude is a function of the pore geometry \textbf{local to the particle's position}
+		\item Particles map the interior of the pore during translocation with their RP signal!
+	\end{itemize}
+	
+	{\centering
+		\includegraphics[width=2in]{particlesreveal.png} \\
+		\par \\
+	}
+	
+	
+	
 \end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Resistive pulse background---ion transport
+% Length convolution explanation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Resistive pulse in non-constant width pores}
+	\begin{itemize}
+		\item Most resistive pulse experiments are performed with channels with smooth interiors
+		\item What about channels with rough or non-constant width interiors?
+		\item Resistive pulses can be seen as a map of the pore interior for pores with non-constant radius
+		\item In regions of low diameter, the pulse is deeper; in large diameter regions, the pulse is shallow
+		\item Particles shorter than the length scale of diameter variation accurately map the pore interiors
+		\item Particles longer than the length scale of diameter variation create RP signals that can be seen as a convolution of the pore's interior shape
+	\end{itemize}
+	
+	{\centering
+		\includegraphics[height=0.75in]{rod_convolution.png}
+		\hspace{.1in}
+		\includegraphics[height=0.75in]{rod_simulated.png}
+		\par
+	}
+	
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Length measurement experimental platform
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Length measurement experimental platform}
+	\begin{itemize}
+		\item Resistive pulses can be seen as a map of the pore interior for pores with non-constant radius
+		\item In regions of low diameter, the pulse is deeper; in large diameter regions, the pulse is shallow
+		\item Particles shorter than the length scale of diameter variation accurately map the pore interiors
+		\item Particles longer than the length scale of diameter variation create RP signals that can be seen as a convolution of the pore's interior shape
+	\end{itemize}
+	
+	\begin{equation}
+		\begin{split}
+			 \Delta R = R_{p}-R_{0} &= \rho\int_{z=0}^{z=l_{P}}\frac{dz}{A\left(z\right)}-\rho\int_{z=0}^{z=l_{P}}\frac{dz}{A'\left(z\right)} \\ 
+			 &= \rho\int_{z=z'-l_{p}/2}^{z=z'+l_{p}/2}\frac{1}{\pi\left[r_{P}^{2}\left(z\right)-r_{p}^{2}\left(z\right)\right]}-\frac{1}{\pi r_{P}^{2}\left(z\right)}
+		\end{split}
+	\end{equation}
+
+\end{frame}
