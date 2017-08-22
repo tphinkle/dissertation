@@ -1,9 +1,9 @@
 \raggedleft Page\\
-\contentsline {chapter}{LIST OF FIGURES}{v}{section*.2}
-\contentsline {chapter}{LIST OF TABLES}{xi}{section*.4}
-\contentsline {chapter}{ACKNOWLEDGMENTS}{xii}{section*.6}
-\contentsline {chapter}{CURRICULUM VITAE}{xiii}{section*.7}
-\contentsline {chapter}{ABSTRACT OF THE DISSERTATION}{xv}{section*.8}
+\contentsline {chapter}{LIST OF FIGURES}{vi}{section*.2}
+\contentsline {chapter}{LIST OF TABLES}{xii}{section*.4}
+\contentsline {chapter}{ACKNOWLEDGMENTS}{xiii}{section*.6}
+\contentsline {chapter}{CURRICULUM VITAE}{xiv}{section*.7}
+\contentsline {chapter}{ABSTRACT OF THE DISSERTATION}{xvi}{section*.8}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Nanopores}{2}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Biological nanopores}{3}{subsection.1.1.1}
@@ -42,23 +42,32 @@
 \contentsline {section}{\numberline {4.2}Experiment}{57}{section.4.2}
 \contentsline {section}{\numberline {4.3}Analysis \& Discussion}{59}{section.4.3}
 \contentsline {section}{\numberline {4.4}Conclusions}{65}{section.4.4}
-\contentsline {chapter}{\numberline {5}Resistive pulse studies of cancer cell deformability}{68}{chapter.5}
+\contentsline {chapter}{\numberline {5}Hybrid resistive-pulse optical detections in microfluidic systems}{68}{chapter.5}
 \contentsline {section}{\numberline {5.1}Background \& Theory}{68}{section.5.1}
-\contentsline {section}{\numberline {5.2}Experiment and data analysis}{74}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Experiment and instrumentation control}{75}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Data analysis}{79}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}Results \& Discussion}{83}{section.5.3}
-\contentsline {chapter}{\numberline {6}Hybrid resistive-pulse optical detections in microfluidic systems}{84}{chapter.6}
-\contentsline {section}{\numberline {6.1}Background \& Theory}{84}{section.6.1}
-\contentsline {section}{\numberline {6.2}Experimental hardware and software}{87}{section.6.2}
-\contentsline {section}{\numberline {6.3}Data analysis software}{90}{section.6.3}
-\contentsline {section}{\numberline {6.4}Results \& Discussion}{92}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Data analysis explanation}{92}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Straight channels}{96}{subsection.6.4.2}
-\contentsline {subsubsection}{Position of maximum RP amplitude in the channel}{96}{section*.50}
-\contentsline {subsubsection}{Dependence of resistive pulse amplitude on lateral displacement}{99}{section*.52}
-\contentsline {subsection}{\numberline {6.4.3}Channels with a central cavity}{103}{subsection.6.4.3}
-\contentsline {subsubsection}{Resistive pulse amplitude in the wide and narrow portions of the channels}{104}{section*.57}
-\contentsline {chapter}{Bibliography}{108}{section*.60}
-\contentsline {chapter}{\numberline {A}Appendix Title}{109}{appendix.A}
-\contentsline {section}{\numberline {A.1}Lorem Ipsum}{109}{section.A.1}
+\contentsline {section}{\numberline {5.2}Experimental hardware and software}{71}{section.5.2}
+\contentsline {section}{\numberline {5.3}Data analysis software}{74}{section.5.3}
+\contentsline {section}{\numberline {5.4}Results \& Discussion}{76}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Data analysis explanation}{76}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Straight channels}{80}{subsection.5.4.2}
+\contentsline {subsubsection}{Position of maximum RP amplitude in the channel}{80}{section*.45}
+\contentsline {subsubsection}{Dependence of resistive pulse amplitude on lateral displacement}{83}{section*.47}
+\contentsline {subsection}{\numberline {5.4.3}Channels with a central cavity}{87}{subsection.5.4.3}
+\contentsline {subsubsection}{Resistive pulse amplitude in the wide and narrow portions of the channels}{88}{section*.52}
+\contentsline {subsubsection}{Dependence of resistive pulse amplitude on lateral displacement in narrow and wide (cavity) regions}{91}{section*.55}
+\contentsline {section}{\numberline {5.5}Conclusion}{95}{section.5.5}
+\contentsline {chapter}{\numberline {6}Resistive pulse studies of cancer cell deformability}{97}{chapter.6}
+\contentsline {section}{\numberline {6.1}Background \& Theory}{97}{section.6.1}
+\contentsline {section}{\numberline {6.2}Experiment and data analysis}{103}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Experiment and instrumentation control}{104}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Data analysis}{108}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Results \& Discussion}{112}{section.6.3}
+\contentsline {chapter}{\numberline {7}Conclusion}{113}{chapter.7}
+\contentsline {section}{\numberline {7.1}Introduction}{114}{section.7.1}
+\contentsline {section}{\numberline {7.2}Ion conductance of nanopores}{114}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Ion conductance of single carbon nanotubes}{114}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Ion conductance of hybrid insulating-conducting nanopores}{116}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}Resistive pulse studies of mesoscale rods}{117}{subsection.7.2.3}
+\contentsline {subsection}{\numberline {7.2.4}Hybrid resistive pulse-optical platform}{118}{subsection.7.2.4}
+\contentsline {chapter}{Bibliography}{119}{section*.63}
+\contentsline {chapter}{\numberline {A}Appendix Title}{120}{appendix.A}
+\contentsline {section}{\numberline {A.1}Lorem Ipsum}{120}{section.A.1}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.25)  18 AUG 2017 16:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.25)  21 AUG 2017 21:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -683,7 +683,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 
 (./preliminaries.tex) (./dissertation.aux (./chapter1.aux) (./chapter2.aux)
 (./chapter3.aux) (./chapter4.aux) (./chapter5.aux) (./chapter6.aux)
-(./appendix.aux))
+(./chapter7.aux) (./appendix.aux))
 \openout1 = `dissertation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
@@ -811,11 +811,11 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (./dissertation.toc [3
 
 
-])
+] [4])
 \tf@toc=\write4
 \openout4 = `dissertation.toc'.
 
- [4] (./dissertation.lof
+ [5] (./dissertation.lof
 Overfull \hbox (0.10664pt too wide) in paragraph at lines 3--3
  [][] [][]\OT1/cmr/m/n/12 Two types of nanopores. \OT1/cmr/bx/n/12 Left: \OT1/c
 mr/m/n/12 Alpha-hemolysin, a bi-o-log-i-cal type of nanopore 
@@ -827,7 +827,7 @@ Overfull \hbox (1.53723pt too wide) in paragraph at lines 4--4
 face forces. \OT1/cmr/bx/n/12 milli-\OT1/cmr/m/n/12 : Caenorhab- 
  []
 
-[5
+[6
 
 
 ]
@@ -836,31 +836,31 @@ Overfull \hbox (20.2706pt too wide) in paragraph at lines 13--13
 hy-brid conductor- 
  []
 
-[6]
+[7]
 Overfull \hbox (0.9026pt too wide) in paragraph at lines 26--26
  [][] [][]\OT1/cmr/bx/n/12 Scanning elec-tron mi-cro-scope im-ages of metal rep
 lica of track-etched 
  []
 
-[7]
+[8] [9] [10]
 
-LaTeX Warning: Reference `fig:deformationmotif' on page viii undefined on input
- line 38.
+LaTeX Warning: Reference `fig:deformationmotif' on page xi undefined on input l
+ine 54.
 
-[8])
+)
 \tf@lof=\write5
 \openout5 = `dissertation.lof'.
 
- [9] [10] (./dissertation.lot)
+ [11] (./dissertation.lot)
 \tf@lot=\write6
 \openout6 = `dissertation.lot'.
 
- [11
+ [12
 
-
-] [12
 
 ] [13
+
+] [14
 
 
 ]
@@ -878,7 +878,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--105
 
  []
 
-[14] [15
+[15] [16
 
 
 ] (./dissertation.bbl)
@@ -896,7 +896,7 @@ Chapter 1.
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 (Font)              using `OT1/cmr/bx/n' instead on input line 15.
 
-<../images/ch1/bio_synth_nanopores.png, id=647, 467.03966pt x 209.70833pt>
+<../images/ch1/bio_synth_nanopores.png, id=702, 467.03966pt x 209.70833pt>
 File: ../images/ch1/bio_synth_nanopores.png Graphic file (type png)
 
 <use ../images/ch1/bio_synth_nanopores.png>
@@ -908,7 +908,7 @@ ne 25.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2] [3 <../images/ch1/bio_synth_nanopores.png>] [4] [5] [6] [7] [8] [9]
-[10] <../images/ch1/scales.png, id=689, 2882.77pt x 827.09pt>
+[10] <../images/ch1/scales.png, id=745, 2882.77pt x 827.09pt>
 File: ../images/ch1/scales.png Graphic file (type png)
 
 <use ../images/ch1/scales.png>
@@ -920,14 +920,14 @@ Overfull \hbox (6.9695pt too wide) in paragraph at lines 90--90
  equa-
  []
 
-[13] [14] [15] [16] <../images/ch1/edl.png, id=724, 1230.5975pt x 1254.6875pt>
+[13] [14] [15] [16] <../images/ch1/edl.png, id=779, 1230.5975pt x 1254.6875pt>
 File: ../images/ch1/edl.png Graphic file (type png)
 
 <use ../images/ch1/edl.png>
 Package pdftex.def Info: ../images/ch1/edl.png used on input line 149.
 (pdftex.def)             Requested size: 469.75502pt x 478.94958pt.
 
-<../images/ch1/fractioninsideedl.png, id=726, 307.1475pt x 229.8186pt>
+<../images/ch1/fractioninsideedl.png, id=781, 307.1475pt x 229.8186pt>
 File: ../images/ch1/fractioninsideedl.png Graphic file (type png)
 
 <use ../images/ch1/fractioninsideedl.png>
@@ -936,7 +936,7 @@ Package pdftex.def Info: ../images/ch1/fractioninsideedl.png used on input line
 (pdftex.def)             Requested size: 307.14674pt x 229.81804pt.
  [17] [18 <../images/ch1/edl.png>]
 [19 <../images/ch1/fractioninsideedl.png>] [20]
-<../images/ch1/EDL_Charge_Distribution.png, id=753, 614.295pt x 460.3599pt>
+<../images/ch1/EDL_Charge_Distribution.png, id=809, 614.295pt x 460.3599pt>
 File: ../images/ch1/EDL_Charge_Distribution.png Graphic file (type png)
 
 <use ../images/ch1/EDL_Charge_Distribution.png>
@@ -944,7 +944,7 @@ Package pdftex.def Info: ../images/ch1/EDL_Charge_Distribution.png used on inpu
 t line 213.
 (pdftex.def)             Requested size: 469.75502pt x 352.0407pt.
  [21] [22 <../images/ch1/EDL_Charge_Distribution.png>] [23] [24]
-<../images/ch1/electroosmosis.png, id=777, 495.8525pt x 376.40625pt>
+<../images/ch1/electroosmosis.png, id=832, 495.8525pt x 376.40625pt>
 File: ../images/ch1/electroosmosis.png Graphic file (type png)
 
 <use ../images/ch1/electroosmosis.png>
@@ -952,7 +952,7 @@ Package pdftex.def Info: ../images/ch1/electroosmosis.png used on input line 25
 3.
 (pdftex.def)             Requested size: 234.8775pt x 178.29514pt.
  [25]
-<../images/ch1/Schoch2008_conductance.png, id=785, 501.875pt x 366.36874pt>
+<../images/ch1/Schoch2008_conductance.png, id=840, 501.875pt x 366.36874pt>
 File: ../images/ch1/Schoch2008_conductance.png Graphic file (type png)
 
 <use ../images/ch1/Schoch2008_conductance.png>
@@ -966,7 +966,7 @@ Overfull \hbox (14.01234pt too wide) detected at line 278
  []
 
 [28]
-<../images/ch1/Vlassiouk2007_conicaldiode.png, id=805, 517.935pt x 200.75pt>
+<../images/ch1/Vlassiouk2007_conicaldiode.png, id=861, 517.935pt x 200.75pt>
 File: ../images/ch1/Vlassiouk2007_conicaldiode.png Graphic file (type png)
 
 <use ../images/ch1/Vlassiouk2007_conicaldiode.png>
@@ -1003,7 +1003,7 @@ Chapter 3.
 
 
 
-] <../images/ch3/SiN-Gold_Model.png, id=842, 2487.2925pt x 1920.17375pt>
+] <../images/ch3/SiN-Gold_Model.png, id=897, 2487.2925pt x 1920.17375pt>
 File: ../images/ch3/SiN-Gold_Model.png Graphic file (type png)
 
 <use ../images/ch3/SiN-Gold_Model.png>
@@ -1011,35 +1011,35 @@ Package pdftex.def Info: ../images/ch3/SiN-Gold_Model.png used on input line 15
 .
 (pdftex.def)             Requested size: 234.8775pt x 181.30502pt.
  [35] [36 <../images/ch3/SiN-Gold_Model.png>] [37] <../images/ch3/sinpore.png, 
-id=860, 479.7925pt x 479.7925pt>
+id=915, 479.7925pt x 479.7925pt>
 File: ../images/ch3/sinpore.png Graphic file (type png)
 
 <use ../images/ch3/sinpore.png>
 Package pdftex.def Info: ../images/ch3/sinpore.png used on input line 40.
 (pdftex.def)             Requested size: 234.8775pt x 234.88074pt.
  [38]
-<../images/ch3/siniv.png, id=866, 2118.91624pt x 660.4675pt>
+<../images/ch3/siniv.png, id=922, 2118.91624pt x 660.4675pt>
 File: ../images/ch3/siniv.png Graphic file (type png)
 
 <use ../images/ch3/siniv.png>
 Package pdftex.def Info: ../images/ch3/siniv.png used on input line 51.
 (pdftex.def)             Requested size: 469.75502pt x 146.42194pt.
  [39 <../images/ch3/sinpore.png>] [40 <../images/ch3/siniv.png>] <../images/ch3
-/sinsymm.png, id=879, 694.595pt x 258.9675pt>
+/sinsymm.png, id=934, 694.595pt x 258.9675pt>
 File: ../images/ch3/sinsymm.png Graphic file (type png)
 
 <use ../images/ch3/sinsymm.png>
 Package pdftex.def Info: ../images/ch3/sinsymm.png used on input line 69.
 (pdftex.def)             Requested size: 469.75502pt x 175.14719pt.
 
-<../images/ch3/sinau0.png, id=880, 549.05125pt x 400.49625pt>
+<../images/ch3/sinau0.png, id=935, 549.05125pt x 400.49625pt>
 File: ../images/ch3/sinau0.png Graphic file (type png)
 
 <use ../images/ch3/sinau0.png>
 Package pdftex.def Info: ../images/ch3/sinau0.png used on input line 75.
 (pdftex.def)             Requested size: 469.75502pt x 342.66618pt.
 
-<../images/ch3/sinau1.png, id=881, 736.7525pt x 411.5375pt>
+<../images/ch3/sinau1.png, id=936, 736.7525pt x 411.5375pt>
 File: ../images/ch3/sinau1.png Graphic file (type png)
 
 <use ../images/ch3/sinau1.png>
@@ -1047,21 +1047,21 @@ Package pdftex.def Info: ../images/ch3/sinau1.png used on input line 81.
 (pdftex.def)             Requested size: 469.75502pt x 262.39722pt.
  [41 <../images/ch3/sinsymm.png>] [42 <../images/ch3/sinau0.png>] [43 <../image
 s/ch3/sinau1.png>]
-<../images/ch3/comsol_model.png, id=900, 725.71124pt x 714.67pt>
+<../images/ch3/comsol_model.png, id=955, 725.71124pt x 714.67pt>
 File: ../images/ch3/comsol_model.png Graphic file (type png)
 
 <use ../images/ch3/comsol_model.png>
 Package pdftex.def Info: ../images/ch3/comsol_model.png used on input line 99.
 (pdftex.def)             Requested size: 469.75502pt x 462.62161pt.
 
-<../images/ch3/comsol1.pdf, id=901, 1189.91843pt x 532.988pt>
+<../images/ch3/comsol1.pdf, id=956, 1189.91843pt x 532.988pt>
 File: ../images/ch3/comsol1.pdf Graphic file (type pdf)
 
 <use ../images/ch3/comsol1.pdf>
 Package pdftex.def Info: ../images/ch3/comsol1.pdf used on input line 105.
 (pdftex.def)             Requested size: 469.75502pt x 210.41002pt.
 
-<../images/ch3/comsol2.png, id=902, 473.1276pt x 292.4526pt>
+<../images/ch3/comsol2.png, id=957, 473.1276pt x 292.4526pt>
 File: ../images/ch3/comsol2.png Graphic file (type png)
 
 <use ../images/ch3/comsol2.png>
@@ -1078,42 +1078,42 @@ Chapter 4.
 
 
 
-] <../images/ch4/dIellipsoid.png, id=985, 711.65875pt x 578.16pt>
+] <../images/ch4/dIellipsoid.png, id=1041, 711.65875pt x 578.16pt>
 File: ../images/ch4/dIellipsoid.png Graphic file (type png)
 
 <use ../images/ch4/dIellipsoid.png>
 Package pdftex.def Info: ../images/ch4/dIellipsoid.png used on input line 24.
 (pdftex.def)             Requested size: 234.8775pt x 190.81104pt.
  [51] [52 <../images/ch4/dIellipsoid.png>]
-[53] <../images/ch4/eucliddtw.png, id=1007, 932.48375pt x 136.51pt>
+[53] <../images/ch4/eucliddtw.png, id=1062, 932.48375pt x 136.51pt>
 File: ../images/ch4/eucliddtw.png Graphic file (type png)
 
 <use ../images/ch4/eucliddtw.png>
 Package pdftex.def Info: ../images/ch4/eucliddtw.png used on input line 70.
 (pdftex.def)             Requested size: 469.75502pt x 68.76932pt.
  [54 <../images/ch4/eucliddtw.png>]
-<../images/ch4/distancecost.png, id=1018, 1284.8pt x 810.02625pt>
+<../images/ch4/distancecost.png, id=1073, 1284.8pt x 810.02625pt>
 File: ../images/ch4/distancecost.png Graphic file (type png)
 
 <use ../images/ch4/distancecost.png>
 Package pdftex.def Info: ../images/ch4/distancecost.png used on input line 83.
 (pdftex.def)             Requested size: 469.75502pt x 296.1577pt.
  [55 <../images/ch4/distancecost.png>]
-[56] <../images/ch4/PC.png, id=1034, 534.99875pt x 413.545pt>
+[56] <../images/ch4/PC.png, id=1090, 534.99875pt x 413.545pt>
 File: ../images/ch4/PC.png Graphic file (type png)
 
 <use ../images/ch4/PC.png>
 Package pdftex.def Info: ../images/ch4/PC.png used on input line 101.
 (pdftex.def)             Requested size: 212.70589pt x 164.41711pt.
 
-<../images/ch4/PET.png, id=1035, 448.67625pt x 341.275pt>
+<../images/ch4/PET.png, id=1091, 448.67625pt x 341.275pt>
 File: ../images/ch4/PET.png Graphic file (type png)
 
 <use ../images/ch4/PET.png>
 Package pdftex.def Info: ../images/ch4/PET.png used on input line 103.
 (pdftex.def)             Requested size: 216.16316pt x 164.41711pt.
 
-<../images/ch4/particles.png, id=1036, 1642.135pt x 564.1075pt>
+<../images/ch4/particles.png, id=1092, 1642.135pt x 564.1075pt>
 File: ../images/ch4/particles.png Graphic file (type png)
 
 <use ../images/ch4/particles.png>
@@ -1121,7 +1121,7 @@ Package pdftex.def Info: ../images/ch4/particles.png used on input line 110.
 (pdftex.def)             Requested size: 469.75502pt x 161.36623pt.
  [57] [58 <../images/ch4/PC.png> <../images/ch4/PET.png> <../images/ch4/particl
 es.png>]
-<../images/ch4/PCPETevents.png, id=1053, 731.73375pt x 255.95625pt>
+<../images/ch4/PCPETevents.png, id=1109, 731.73375pt x 255.95625pt>
 File: ../images/ch4/PCPETevents.png Graphic file (type png)
 
 <use ../images/ch4/PCPETevents.png>
@@ -1135,21 +1135,21 @@ LaTeX Warning: Reference `fig:dIexp' on page 59 undefined on input line 131.
 
 LaTeX Warning: Reference `fig:PET' on page 60 undefined on input line 133.
 
-[60] <../images/ch4/PETevents.png, id=1068, 1154.3125pt x 903.375pt>
+[60] <../images/ch4/PETevents.png, id=1124, 1154.3125pt x 903.375pt>
 File: ../images/ch4/PETevents.png Graphic file (type png)
 
 <use ../images/ch4/PETevents.png>
 Package pdftex.def Info: ../images/ch4/PETevents.png used on input line 136.
 (pdftex.def)             Requested size: 234.8775pt x 183.81464pt.
  [61 <../images/ch4/PETevents.png>] [62]
-<../images/ch4/longevent.png, id=1080, 335.2525pt x 308.15125pt>
+<../images/ch4/longevent.png, id=1137, 335.2525pt x 308.15125pt>
 File: ../images/ch4/longevent.png Graphic file (type png)
 
 <use ../images/ch4/longevent.png>
 Package pdftex.def Info: ../images/ch4/longevent.png used on input line 154.
 (pdftex.def)             Requested size: 234.8775pt x 215.88777pt.
 
-<../images/ch4/experimentaldtwfits.png, id=1081, 476.78125pt x 499.8675pt>
+<../images/ch4/experimentaldtwfits.png, id=1138, 476.78125pt x 499.8675pt>
 File: ../images/ch4/experimentaldtwfits.png Graphic file (type png)
 
 <use ../images/ch4/experimentaldtwfits.png>
@@ -1157,7 +1157,7 @@ Package pdftex.def Info: ../images/ch4/experimentaldtwfits.png used on input li
 ne 161.
 (pdftex.def)             Requested size: 234.8775pt x 246.25674pt.
 
-<../images/ch4/experimentaldtwfit.png, id=1082, 615.29875pt x 593.21625pt>
+<../images/ch4/experimentaldtwfit.png, id=1139, 615.29875pt x 593.21625pt>
 File: ../images/ch4/experimentaldtwfit.png Graphic file (type png)
 
 <use ../images/ch4/experimentaldtwfit.png>
@@ -1166,7 +1166,7 @@ e 168.
 (pdftex.def)             Requested size: 234.8775pt x 226.44736pt.
  [63 <../images/ch4/longevent.png>]
 [64 <../images/ch4/experimentaldtwfits.png> <../images/ch4/experimentaldtwfit.p
-ng>] <../images/ch4/dtwfit.png, id=1101, 1006.76125pt x 940.51375pt>
+ng>] <../images/ch4/dtwfit.png, id=1156, 1006.76125pt x 940.51375pt>
 File: ../images/ch4/dtwfit.png Graphic file (type png)
 
 <use ../images/ch4/dtwfit.png>
@@ -1178,110 +1178,18 @@ Package pdftex.def Info: ../images/ch4/dtwfit.png used on input line 178.
 
 (./chapter5.tex
 Chapter 5.
-
-Package natbib Warning: Citation `Gosset2012' on page 68 undefined on input lin
-e 11.
-
 [68
 
 
 
-]
-
-Package natbib Warning: Citation `Lin2017' on page 69 undefined on input line 1
-3.
-
-[69]
-
-Package natbib Warning: Citation `DiCarlo2017' on page 70 undefined on input li
-ne 19.
-
-[70] [71] <../images/ch5/dIellipsoid.png, id=1134, 684.5575pt x 536.0025pt>
-File: ../images/ch5/dIellipsoid.png Graphic file (type png)
-
-<use ../images/ch5/dIellipsoid.png>
-Package pdftex.def Info: ../images/ch5/dIellipsoid.png used on input line 32.
-(pdftex.def)             Requested size: 234.8775pt x 183.90689pt.
- [72 <../images/ch5/dIellipsoid.png>]
-
-LaTeX Warning: Reference `fig:channelscheme' on page 73 undefined on input line
- 39.
-
-
-LaTeX Warning: Reference `fig:channelscheme' on page 73 undefined on input line
- 41.
-
-
-LaTeX Warning: Reference `fig:aspectmotif' on page 73 undefined on input line 4
-1.
-
-
-LaTeX Warning: Reference `fig:RPmotif' on page 73 undefined on input line 41.
-
-
-LaTeX Warning: Reference `fig:RPmotif' on page 73 undefined on input line 41.
-
-[73] [74] <../images/ch5/celllines.jpg, id=1151, 1396.21625pt x 806.01125pt>
-File: ../images/ch5/celllines.jpg Graphic file (type jpg)
-
-<use ../images/ch5/celllines.jpg>
-Package pdftex.def Info: ../images/ch5/celllines.jpg used on input line 52.
-(pdftex.def)             Requested size: 469.75502pt x 271.17459pt.
- [75 <../images/ch5/celllines.jpg>]
-Overfull \hbox (158.53748pt too wide) in paragraph at lines 62--83
- [] 
- []
-
-[76]
-
-LaTeX Warning: Reference `fig:hardwarescheme' on page 77 undefined on input lin
-e 93.
-
-[77] [78] [79]
-<../images/ch5/ellipsefittingprotocol.png, id=1177, 2532.46124pt x 1547.7825pt>
-File: ../images/ch5/ellipsefittingprotocol.png Graphic file (type png)
-<use ../images/ch5/ellipsefittingprotocol.png>
-Package pdftex.def Info: ../images/ch5/ellipsefittingprotocol.png used on input
- line 109.
-(pdftex.def)             Requested size: 469.75502pt x 287.09103pt.
-
-
-LaTeX Warning: Reference `fig:deformationmotif' on page 80 undefined on input l
-ine 116.
-
-[80] [81 <../images/ch5/ellipsefittingprotocol.png>]
-<../images/ch5/ellipses.png, id=1191, 650.43pt x 650.43pt>
-File: ../images/ch5/ellipses.png Graphic file (type png)
-
-<use ../images/ch5/ellipses.png>
-Package pdftex.def Info: ../images/ch5/ellipses.png used on input line 123.
-(pdftex.def)             Requested size: 234.8775pt x 234.87912pt.
-
-
-LaTeX Warning: Reference `fig:deformationmotif' on page 82 undefined on input l
-ine 124.
-
-
-LaTeX Warning: Reference `fig:deformationmotif' on page 82 undefined on input l
-ine 124.
-
-[82 <../images/ch5/ellipses.png>]) [83]
-\openout2 = `chapter6.aux'.
-
- (./chapter6.tex
-Chapter 6.
-[84
-
-
-
-] [85] [86] <../images/ch6/hardware.jpg, id=1221, 253.1859pt x 191.5155pt>
+] [69] [70] <../images/ch6/hardware.jpg, id=1189, 253.1859pt x 191.5155pt>
 File: ../images/ch6/hardware.jpg Graphic file (type jpg)
 
 <use ../images/ch6/hardware.jpg>
 Package pdftex.def Info: ../images/ch6/hardware.jpg used on input line 40.
 (pdftex.def)             Requested size: 469.75502pt x 355.37349pt.
- [87] [88 <../images/ch6/hardware.jpg>]
-<../images/ch6/cellcontroller.png, id=1232, 1377.145pt x 804.00375pt>
+ [71] [72 <../images/ch6/hardware.jpg>]
+<../images/ch6/cellcontroller.png, id=1199, 1377.145pt x 804.00375pt>
 File: ../images/ch6/cellcontroller.png Graphic file (type png)
 
 <use ../images/ch6/cellcontroller.png>
@@ -1294,34 +1202,34 @@ Overfull \hbox (51.23021pt too wide) in paragraph at lines 55--56
 ttps://github.com/tphinkle/cell[]controller.
  []
 
-[89 <../images/ch6/cellcontroller.png (PNG copy)>]
-<../images/ch6/porestats.png, id=1239, 1226.5825pt x 777.90625pt>
+[73 <../images/ch6/cellcontroller.png (PNG copy)>]
+<../images/ch6/porestats.png, id=1206, 1226.5825pt x 777.90625pt>
 File: ../images/ch6/porestats.png Graphic file (type png)
 
 <use ../images/ch6/porestats.png>
 Package pdftex.def Info: ../images/ch6/porestats.png used on input line 62.
 (pdftex.def)             Requested size: 469.75502pt x 297.92207pt.
- [90] [91 <../images/ch6/porestats.png>]
-[92] <../images/ch6/trajectories.pdf, id=1254, 241.90375pt x 131.49126pt>
+ [74] [75 <../images/ch6/porestats.png>]
+[76] <../images/ch6/trajectories.pdf, id=1222, 241.90375pt x 131.49126pt>
 File: ../images/ch6/trajectories.pdf Graphic file (type pdf)
 
 <use ../images/ch6/trajectories.pdf>
 Package pdftex.def Info: ../images/ch6/trajectories.pdf used on input line 77.
 (pdftex.def)             Requested size: 469.75502pt x 255.3736pt.
- [93 <../images/ch6/trajectories.pdf>]
-<../images/ch6/rpimsync.png, id=1279, 520.5849pt x 364.2408pt>
+ [77 <../images/ch6/trajectories.pdf>]
+<../images/ch6/rpimsync.png, id=1247, 520.5849pt x 364.2408pt>
 File: ../images/ch6/rpimsync.png Graphic file (type png)
 
 <use ../images/ch6/rpimsync.png>
 Package pdftex.def Info: ../images/ch6/rpimsync.png used on input line 87.
 (pdftex.def)             Requested size: 469.75502pt x 328.68628pt.
- [94] [95 <../images/ch6/rpimsync.png>]
+ [78] [79 <../images/ch6/rpimsync.png>]
 
-LaTeX Warning: Reference `fig:resistancemaps' on page 96 undefined on input lin
+LaTeX Warning: Reference `fig:resistancemaps' on page 80 undefined on input lin
 e 99.
 
 
-<../images/ch6/resistancemaps_straight.png, id=1290, 978.65625pt x 680.5425pt>
+<../images/ch6/resistancemaps_straight.png, id=1258, 978.65625pt x 680.5425pt>
 File: ../images/ch6/resistancemaps_straight.png Graphic file (type png)
 
 <use ../images/ch6/resistancemaps_straight.png>
@@ -1330,19 +1238,19 @@ t line 105.
 (pdftex.def)             Requested size: 469.75502pt x 326.66707pt.
 
 
-LaTeX Warning: Reference `fig:resistancemaps_straight' on page 96 undefined on 
+LaTeX Warning: Reference `fig:resistancemaps_straight' on page 80 undefined on 
 input line 110.
 
 
-<../images/ch6/channelentrancestraight.pdf, id=1292, 520.94624pt x 292.09125pt>
+<../images/ch6/channelentrancestraight.pdf, id=1260, 520.94624pt x 292.09125pt>
 File: ../images/ch6/channelentrancestraight.pdf Graphic file (type pdf)
 <use ../images/ch6/channelentrancestraight.pdf>
 Package pdftex.def Info: ../images/ch6/channelentrancestraight.pdf used on inpu
 t line 116.
 (pdftex.def)             Requested size: 469.75502pt x 263.39223pt.
- [96] [97 <../images/ch6/resistancemaps_straight.png>] [98 <../images/ch6/chann
+ [80] [81 <../images/ch6/resistancemaps_straight.png>] [82 <../images/ch6/chann
 elentrancestraight.pdf>]
-[99] <../images/ch6/simulated_dV.png, id=1366, 289.08pt x 216.81pt>
+[83] <../images/ch6/simulated_dV.png, id=1334, 289.08pt x 216.81pt>
 File: ../images/ch6/simulated_dV.png Graphic file (type png)
 
 <use ../images/ch6/simulated_dV.png>
@@ -1350,22 +1258,24 @@ Package pdftex.def Info: ../images/ch6/simulated_dV.png used on input line 136.
 
 (pdftex.def)             Requested size: 234.8775pt x 176.15768pt.
 
-<../images/ch6/dIdt.pdf, id=1369, 237.88875pt x 490.83376pt>
-File: ../images/ch6/dIdt.pdf Graphic file (type pdf)
+<../images/ch6/dIdtstraight.pdf, id=1337, 237.88875pt x 490.83376pt>
+File: ../images/ch6/dIdtstraight.pdf Graphic file (type pdf)
 
-<use ../images/ch6/dIdt.pdf>
-Package pdftex.def Info: ../images/ch6/dIdt.pdf used on input line 147.
+<use ../images/ch6/dIdtstraight.pdf>
+Package pdftex.def Info: ../images/ch6/dIdtstraight.pdf used on input line 147.
+
 (pdftex.def)             Requested size: 234.8775pt x 484.64621pt.
 
-<../images/ch6/dtdIy.pdf, id=1372, 253.94875pt x 380.42125pt>
-File: ../images/ch6/dtdIy.pdf Graphic file (type pdf)
+<../images/ch6/dtdIystraight.pdf, id=1340, 253.94875pt x 380.42125pt>
+File: ../images/ch6/dtdIystraight.pdf Graphic file (type pdf)
 
-<use ../images/ch6/dtdIy.pdf>
-Package pdftex.def Info: ../images/ch6/dtdIy.pdf used on input line 156.
+<use ../images/ch6/dtdIystraight.pdf>
+Package pdftex.def Info: ../images/ch6/dtdIystraight.pdf used on input line 156
+.
 (pdftex.def)             Requested size: 352.31625pt x 527.79718pt.
- [100 <../images/ch6/simulated_dV.png>] [101 <../images/ch6/dIdt.pdf>] [102 <..
-/images/ch6/dtdIy.pdf>]
-<../images/ch6/resistancemaps_cavity.png, id=1509, 978.65625pt x 376.40625pt>
+ [84 <../images/ch6/simulated_dV.png>]
+[85 <../images/ch6/dIdtstraight.pdf>] [86 <../images/ch6/dtdIystraight.pdf>]
+<../images/ch6/resistancemaps_cavity.png, id=1477, 978.65625pt x 376.40625pt>
 File: ../images/ch6/resistancemaps_cavity.png Graphic file (type png)
 
 <use ../images/ch6/resistancemaps_cavity.png>
@@ -1374,20 +1284,20 @@ line 168.
 (pdftex.def)             Requested size: 469.75502pt x 180.67868pt.
 
 
-LaTeX Warning: Reference `fig:resistancemaps_cavity' on page 103 undefined on i
-nput line 173.
+LaTeX Warning: Reference `fig:resistancemaps_cavity' on page 87 undefined on in
+put line 173.
 
-[103]
-<../images/ch6/channelentrancecavity.pdf, id=1517, 520.94624pt x 292.09125pt>
+[87]
+<../images/ch6/channelentrancecavity.pdf, id=1485, 520.94624pt x 292.09125pt>
 File: ../images/ch6/channelentrancecavity.pdf Graphic file (type pdf)
 
 <use ../images/ch6/channelentrancecavity.pdf>
 Package pdftex.def Info: ../images/ch6/channelentrancecavity.pdf used on input 
 line 179.
 (pdftex.def)             Requested size: 469.75502pt x 263.39223pt.
- [104 <../images/ch6/resistancemaps_cavity.png>] [105 <../images/ch6/channelent
-rancecavity.pdf>]
-<../images/ch6/amplituderatios.pdf, id=1587, 253.94875pt x 380.42125pt>
+ [88 <../images/ch6/resistancemaps_cavity.png>] [89 <../images/ch6/channelentra
+ncecavity.pdf>]
+<../images/ch6/amplituderatios.pdf, id=1555, 253.94875pt x 380.42125pt>
 File: ../images/ch6/amplituderatios.pdf Graphic file (type pdf)
 
 <use ../images/ch6/amplituderatios.pdf>
@@ -1396,12 +1306,136 @@ Package pdftex.def Info: ../images/ch6/amplituderatios.pdf used on input line 2
 (pdftex.def)             Requested size: 234.8775pt x 351.86671pt.
 
 
-LaTeX Warning: Reference `fig:currentratio' on page 106 undefined on input line
- 214.
+LaTeX Warning: Reference `fig:currentratio' on page 90 undefined on input line 
+214.
 
-[106 <../images/ch6/amplituderatios.pdf>]) [107] (./dissertation.bblpdfTeX warn
-ing (ext4): destination with the same identifier (name{cite.Qiu2015}) has been 
-already used, duplicate ignored
+[90 <../images/ch6/amplituderatios.pdf>]
+<../images/ch6/dIdtcavity.pdf, id=1625, 253.94875pt x 243.91125pt>
+File: ../images/ch6/dIdtcavity.pdf Graphic file (type pdf)
+
+<use ../images/ch6/dIdtcavity.pdf>
+Package pdftex.def Info: ../images/ch6/dIdtcavity.pdf used on input line 219.
+(pdftex.def)             Requested size: 469.75502pt x 451.2064pt.
+ [91] [92 <../images/ch6/dIdtcavity.pdf>]
+<../images/ch6/dtdIycavity.pdf, id=1696, 508.90125pt x 316.18124pt>
+File: ../images/ch6/dtdIycavity.pdf Graphic file (type pdf)
+
+<use ../images/ch6/dtdIycavity.pdf>
+Package pdftex.def Info: ../images/ch6/dtdIycavity.pdf used on input line 230.
+(pdftex.def)             Requested size: 469.75502pt x 291.86964pt.
+
+
+LaTeX Warning: Reference `fig:dIdtycavity' on page 93 undefined on input line 2
+36.
+
+
+LaTeX Warning: Reference `fig:dIdtystraight' on page 93 undefined on input line
+ 236.
+
+[93 <../images/ch6/dtdIycavity.pdf>] [94] [95]) [96]
+\openout2 = `chapter6.aux'.
+
+ (./chapter6.tex
+Chapter 6.
+
+Package natbib Warning: Citation `Gosset2012' on page 97 undefined on input lin
+e 11.
+
+[97
+
+
+
+]
+
+Package natbib Warning: Citation `Lin2017' on page 98 undefined on input line 1
+3.
+
+[98]
+
+Package natbib Warning: Citation `DiCarlo2017' on page 99 undefined on input li
+ne 19.
+
+[99] [100] <../images/ch5/dIellipsoid.png, id=1791, 684.5575pt x 536.0025pt>
+File: ../images/ch5/dIellipsoid.png Graphic file (type png)
+
+<use ../images/ch5/dIellipsoid.png>
+Package pdftex.def Info: ../images/ch5/dIellipsoid.png used on input line 32.
+(pdftex.def)             Requested size: 234.8775pt x 183.90689pt.
+ [101 <../images/ch5/dIellipsoid.png>]
+
+LaTeX Warning: Reference `fig:channelscheme' on page 102 undefined on input lin
+e 39.
+
+
+LaTeX Warning: Reference `fig:channelscheme' on page 102 undefined on input lin
+e 41.
+
+
+LaTeX Warning: Reference `fig:aspectmotif' on page 102 undefined on input line 
+41.
+
+
+LaTeX Warning: Reference `fig:RPmotif' on page 102 undefined on input line 41.
+
+
+LaTeX Warning: Reference `fig:RPmotif' on page 102 undefined on input line 41.
+
+[102] [103] <../images/ch5/celllines.jpg, id=1808, 1396.21625pt x 806.01125pt>
+File: ../images/ch5/celllines.jpg Graphic file (type jpg)
+
+<use ../images/ch5/celllines.jpg>
+Package pdftex.def Info: ../images/ch5/celllines.jpg used on input line 52.
+(pdftex.def)             Requested size: 469.75502pt x 271.17459pt.
+ [104 <../images/ch5/celllines.jpg>]
+Overfull \hbox (158.53748pt too wide) in paragraph at lines 62--83
+ [] 
+ []
+
+[105]
+
+LaTeX Warning: Reference `fig:hardwarescheme' on page 106 undefined on input li
+ne 93.
+
+[106] [107] [108]
+<../images/ch5/ellipsefittingprotocol.png, id=1835, 2532.46124pt x 1547.7825pt>
+File: ../images/ch5/ellipsefittingprotocol.png Graphic file (type png)
+<use ../images/ch5/ellipsefittingprotocol.png>
+Package pdftex.def Info: ../images/ch5/ellipsefittingprotocol.png used on input
+ line 109.
+(pdftex.def)             Requested size: 469.75502pt x 287.09103pt.
+
+
+LaTeX Warning: Reference `fig:deformationmotif' on page 109 undefined on input 
+line 116.
+
+[109] [110 <../images/ch5/ellipsefittingprotocol.png>]
+<../images/ch5/ellipses.png, id=1849, 650.43pt x 650.43pt>
+File: ../images/ch5/ellipses.png Graphic file (type png)
+
+<use ../images/ch5/ellipses.png>
+Package pdftex.def Info: ../images/ch5/ellipses.png used on input line 123.
+(pdftex.def)             Requested size: 234.8775pt x 234.87912pt.
+
+
+LaTeX Warning: Reference `fig:deformationmotif' on page 111 undefined on input 
+line 124.
+
+
+LaTeX Warning: Reference `fig:deformationmotif' on page 111 undefined on input 
+line 124.
+
+[111 <../images/ch5/ellipses.png>]) [112]
+\openout2 = `chapter7.aux'.
+
+ (./chapter7.tex
+Chapter 7.
+[113
+
+
+
+] [114] [115] [116] [117]) [118] (./dissertation.bblpdfTeX warning (ext4): dest
+ination with the same identifier (name{cite.Qiu2015}) has been already used, du
+plicate ignored
 <to be read again> 
                    \relax 
 l.36 \bibitem{Qiu2015}
@@ -1422,7 +1456,7 @@ entifier (name{cite.Yang2016}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.59 \bibitem{Yang2016}
-                       ) [108
+                       ) [119
 
 
 
@@ -1431,7 +1465,7 @@ l.59 \bibitem{Yang2016}
 
  (./appendix.tex
 Appendix A.
-) [109
+) [120
 
 
 ]
@@ -1439,21 +1473,22 @@ Appendix A.
 Package natbib Warning: There were undefined citations.
 
 
-Package caption Warning: Unused \captionsetup[figure] on input line 135.
+Package caption Warning: Unused \captionsetup[figure] on input line 136.
 See the caption package documentation for explanation.
 
 
-Package caption Warning: Unused \captionsetup[table] on input line 136.
+Package caption Warning: Unused \captionsetup[table] on input line 137.
 See the caption package documentation for explanation.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 142.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
 (./dissertation.aux (./chapter1.aux) (./chapter2.aux) (./chapter3.aux)
-(./chapter4.aux) (./chapter5.aux) (./chapter6.aux) (./appendix.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 141.
+(./chapter4.aux) (./chapter5.aux) (./chapter6.aux) (./chapter7.aux)
+(./appendix.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 142.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 142.
 Package rerunfilecheck Info: File `dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: 0E9BD7AB62EDAB1022734406B10586C1;4199.
+(rerunfilecheck)             Checksum: 07525F620BA9145C86C1EB5387C7B84C;4831.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1463,10 +1498,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 18791 strings out of 493013
- 356670 string characters out of 6133328
- 432507 words of memory out of 5000000
- 21764 multiletter control sequences out of 15000+600000
+ 18845 strings out of 493013
+ 357606 string characters out of 6133328
+ 435238 words of memory out of 5000000
+ 21786 multiletter control sequences out of 15000+600000
  15271 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,14n,53p,10383b,787s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1488,10 +1523,10 @@ e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2016/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2016/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on dissertation.pdf (125 pages, 12833056 bytes).
+Output written on dissertation.pdf (137 pages, 13539545 bytes).
 PDF statistics:
- 1784 PDF objects out of 2073 (max. 8388607)
- 1279 compressed objects within 13 object streams
- 277 named destinations out of 1000 (max. 500000)
- 687 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2013 PDF objects out of 2073 (max. 8388607)
+ 1392 compressed objects within 14 object streams
+ 300 named destinations out of 1000 (max. 500000)
+ 761 words of extra memory for PDF output out of 10000 (max. 10000000)
 

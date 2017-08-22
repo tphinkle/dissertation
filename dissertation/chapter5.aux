@@ -1,31 +1,60 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
-\citation{Fulwyler1965}
-\citation{Gosset2012}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Resistive pulse studies of cancer cell deformability}{68}{chapter.5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Hybrid resistive-pulse optical detections in microfluidic systems}{68}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap:cell}{{5}{68}{Resistive pulse studies of cancer cell deformability}{chapter.5}{}}
+\newlabel{chap:rpim}{{5}{68}{Hybrid resistive-pulse optical detections in microfluidic systems}{chapter.5}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.1}Background \& Theory}{68}{section.5.1}}
-\citation{Lin2017}
-\citation{DiCarlo2017}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces \textbf  {Resistive pulse amplitude $\Delta I/I_{p}$ for equal volume spheroidal objects relative to a sphere.} The polar axis of the particle is aligned with the channel's axis, so that oblate geometries correspond to motion along the channel axis. The values come from equation \ref  {eq:ellipsoiddI} when the correct shape factor $f_{\parallel }$ is applied.\relax }}{72}{figure.caption.39}}
-\newlabel{eq:ellipsoiddI}{{5.1}{72}{Background \& Theory}{equation.5.1.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Experiment and data analysis}{74}{section.5.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces \textbf  {Confocal images of 293-T (left) and HCT-116 (right) cells.} Scale bars are $\SI {50}{\mu m}$ long.\relax }}{75}{figure.caption.40}}
-\newlabel{fig:celllines}{{5.2}{75}{\textbf {Confocal images of 293-T (left) and HCT-116 (right) cells.} Scale bars are $\SI {50}{\mu m}$ long.\relax }{figure.caption.40}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Experiment and instrumentation control}{75}{subsection.5.2.1}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Class Mark List\relax }}{76}{table.caption.41}}
-\newlabel{tab:devicefab}{{5.1}{76}{Class Mark List\relax }{table.caption.41}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Data analysis}{79}{subsection.5.2.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces \textbf  {Example ellipse fitting protocol for a single detection within a single event.} The left column of each row shows the current image transformation. The central column shows the raw frame with the pixels shaded green with intensity according to the intensity of the pixels in the transformed image. The right column shows pixel intensity in the processed image. \textbf  {1: } Raw image. \textbf  {2:} Image is cropped in the vicinity of the particle. \textbf  {3:} Template image is subtracted off. \textbf  {4:} Pixel intensity is rescaled. \textbf  {5:} Laplacian derivative. \textbf  {6:} Pixel intensity thresholding. Notice the histogram becomes binary distributed. \textbf  {7:} Morphological closing of image. \textbf  {8:} Image is dilated and subtracted from undilated image, leaving a thin shell around the border of the cell. \textbf  {9:} Ellipse is fit to the cell's border.\relax }}{81}{figure.caption.42}}
-\newlabel{fig:ellipsefittingprotocol}{{5.3}{81}{\textbf {Example ellipse fitting protocol for a single detection within a single event.} The left column of each row shows the current image transformation. The central column shows the raw frame with the pixels shaded green with intensity according to the intensity of the pixels in the transformed image. The right column shows pixel intensity in the processed image. \textbf {1: } Raw image. \textbf {2:} Image is cropped in the vicinity of the particle. \textbf {3:} Template image is subtracted off. \textbf {4:} Pixel intensity is rescaled. \textbf {5:} Laplacian derivative. \textbf {6:} Pixel intensity thresholding. Notice the histogram becomes binary distributed. \textbf {7:} Morphological closing of image. \textbf {8:} Image is dilated and subtracted from undilated image, leaving a thin shell around the border of the cell. \textbf {9:} Ellipse is fit to the cell's border.\relax }{figure.caption.42}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces \textbf  {Ellipse fits for a 293-T cell passing through a $15-30-15 \mu \mathrm  {m}$ channel at various positions.} Notice that in the narrow portions of the channel the particle assumes a prolate (axially-elongated) shape, while in the central cavity it assumes an oblate (laterally-elongated) shape, in agreement with the motif presented in Fig. \ref  {fig:deformationmotif}\relax }}{82}{figure.caption.43}}
-\newlabel{fig:ellipses}{{5.4}{82}{\textbf {Ellipse fits for a 293-T cell passing through a $15-30-15 \mu \mathrm {m}$ channel at various positions.} Notice that in the narrow portions of the channel the particle assumes a prolate (axially-elongated) shape, while in the central cavity it assumes an oblate (laterally-elongated) shape, in agreement with the motif presented in Fig. \ref {fig:deformationmotif}\relax }{figure.caption.43}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Results \& Discussion}{83}{section.5.3}}
+\newlabel{eq:resistance}{{5.1}{69}{Background \& Theory}{equation.5.1.1}{}}
+\newlabel{eq:spherecylinderRP}{{5.2}{69}{Background \& Theory}{equation.5.1.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Experimental hardware and software}{71}{section.5.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces \textbf  {Hardware set up for the hybrid RP-IM experiments.}\relax }}{72}{figure.caption.39}}
+\newlabel{fig:hardware}{{5.1}{72}{\textbf {Hardware set up for the hybrid RP-IM experiments.}\relax }{figure.caption.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces \textbf  {\textit  {cell\_controller}, a GUI program written in C++ and the Qt Framework}. The program controls the instruments used to run the experiment.\relax }}{73}{figure.caption.40}}
+\newlabel{fig:cellcontroller}{{5.2}{73}{\textbf {\textit {cell\_controller}, a GUI program written in C++ and the Qt Framework}. The program controls the instruments used to run the experiment.\relax }{figure.caption.40}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Data analysis software}{74}{section.5.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces \textit  {Screen capture of the GUI component of the \textit  {pore\_stats} software library.} The program enables fast and accurate extraction of RP events from the baseline data. The main panel shows the raw time-series data (zoomed out), with events that were detected with the program highlighted in blue. The bottom left plot shows a single event that has been targeted by the user. The bottom right plot shows a scatterplot of the current and duration for all events detected, and shows how bulk events can be rejected by selecting a region of the scatter plot. The bottom right buttons and fields are used to change the search parameters, to begin the search, filter data, and enable various other functionalities.\relax }}{75}{figure.caption.41}}
+\newlabel{fig:porestats}{{5.3}{75}{\textit {Screen capture of the GUI component of the \textit {pore\_stats} software library.} The program enables fast and accurate extraction of RP events from the baseline data. The main panel shows the raw time-series data (zoomed out), with events that were detected with the program highlighted in blue. The bottom left plot shows a single event that has been targeted by the user. The bottom right plot shows a scatterplot of the current and duration for all events detected, and shows how bulk events can be rejected by selecting a region of the scatter plot. The bottom right buttons and fields are used to change the search parameters, to begin the search, filter data, and enable various other functionalities.\relax }{figure.caption.41}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Results \& Discussion}{76}{section.5.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Data analysis explanation}{76}{subsection.5.4.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces \textbf  {Images of some of the channels used in this study with trajectory lines overlaid.} Each line corresponds to the passage of a single particle through the channel, tracked using image detection techniques. The channels fall into two categories, channels that are complete straight and channels which have central cavities.\relax }}{77}{figure.caption.42}}
+\newlabel{fig:trajectories}{{5.4}{77}{\textbf {Images of some of the channels used in this study with trajectory lines overlaid.} Each line corresponds to the passage of a single particle through the channel, tracked using image detection techniques. The channels fall into two categories, channels that are complete straight and channels which have central cavities.\relax }{figure.caption.42}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces \textbf  {Event matching protocol for the RP and IM signals.} \textbf  {a}.\relax }}{79}{figure.caption.43}}
+\newlabel{fig:rpimsync}{{5.5}{79}{\textbf {Event matching protocol for the RP and IM signals.} \textbf {a}.\relax }{figure.caption.43}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Straight channels}{80}{subsection.5.4.2}}
+\@writefile{toc}{\contentsline {subsubsection}{Position of maximum RP amplitude in the channel}{80}{section*.45}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces \textbf  {Resistance maps of the straight channels used in this study.} The resistance maps show that the resistance is most concentrated in the micro constriction, and that the resistance is small elsewhere. A region of finite resistance exists between the micro constriction and the reservoir leading up to the channel. This region is known as the channel's access resistance.\relax }}{81}{figure.caption.44}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces \textbf  {Plot of $\Delta I/I_{p}$ vs axial-position $x_{c}$ for polystyrene beads passing through the PDMS channels.} The plots reveal that the current does not reach its maximal value until the particle is well inside the channel.\relax }}{82}{figure.caption.46}}
+\newlabel{fig:channelentrancestraight}{{5.7}{82}{\textbf {Plot of $\Delta I/I_{p}$ vs axial-position $x_{c}$ for polystyrene beads passing through the PDMS channels.} The plots reveal that the current does not reach its maximal value until the particle is well inside the channel.\relax }{figure.caption.46}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Dependence of resistive pulse amplitude on lateral displacement}{83}{section*.47}}
+\newlabel{eq:berge}{{5.3}{83}{Dependence of resistive pulse amplitude on lateral displacement}{equation.5.4.3}{}}
+\citation{Berge1990}
+\citation{Smythe1972}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces \textbf  {Plot of the measured voltage (similar to current) of simulated particle translocations through a pore, with off-axis contribution according to the results of Berge \emph  {et al.} (Eq. \ref  {eq:berge}).} The plot reveals the effects of off-axis translocation, namely that the distribution of measured $\Delta V$ shifts towards greater values and broadens.\relax }}{84}{figure.caption.48}}
+\newlabel{fig:simulateddV}{{5.8}{84}{\textbf {Plot of the measured voltage (similar to current) of simulated particle translocations through a pore, with off-axis contribution according to the results of Berge \emph {et al.} (Eq. \ref {eq:berge}).} The plot reveals the effects of off-axis translocation, namely that the distribution of measured $\Delta V$ shifts towards greater values and broadens.\relax }{figure.caption.48}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces \textbf  {Scatter plot of translocation duration $\Delta t$ versus event amplitude $\Delta I/I_{p}$ for the four straight channels studied, with straight line fits.} The fits reveal the positive correlation between translocation time and off-axis position, as observed by Berge \emph  {et al.}.\relax }}{85}{figure.caption.49}}
+\newlabel{fig:dIdtstraight}{{5.9}{85}{\textbf {Scatter plot of translocation duration $\Delta t$ versus event amplitude $\Delta I/I_{p}$ for the four straight channels studied, with straight line fits.} The fits reveal the positive correlation between translocation time and off-axis position, as observed by Berge \emph {et al.}.\relax }{figure.caption.49}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces \textbf  {Translocation duration $\Delta t$ and RP amplitude $\Delta I/I_{p}$ versus lateral position $y_{c}$ for four straight channels.}\relax }}{86}{figure.caption.50}}
+\newlabel{fig:dtdIy}{{5.10}{86}{\textbf {Translocation duration $\Delta t$ and RP amplitude $\Delta I/I_{p}$ versus lateral position $y_{c}$ for four straight channels.}\relax }{figure.caption.50}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Channels with a central cavity}{87}{subsection.5.4.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces \textbf  {Resistance maps of channels having a central cavity.} The resistance maps show that the resistance is most concentrated in the narrow portions of the channel, and less-so in the central cavities (as expected from $R=\rho \DOTSI \intop \ilimits@ dz/A\left (z\right )$).\relax }}{88}{figure.caption.51}}
+\@writefile{toc}{\contentsline {subsubsection}{Resistive pulse amplitude in the wide and narrow portions of the channels}{88}{section*.52}}
+\citation{Deblois1977}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Resistive pulse amplitude $\Delta I/I_{p}$ versus axial position $x_{c}$ (a) and versus time $t$ (c). The camera image (\textbf  {b}) shows several stills of particle positions aligned with the instantaneous resistive pulse value in the plot above (\textbf  {a}).\relax }}{89}{figure.caption.53}}
+\newlabel{fig:channelentrancecavity}{{5.12}{89}{Resistive pulse amplitude $\Delta I/I_{p}$ versus axial position $x_{c}$ (a) and versus time $t$ (c). The camera image (\textbf {b}) shows several stills of particle positions aligned with the instantaneous resistive pulse value in the plot above (\textbf {a}).\relax }{figure.caption.53}{}}
+\newlabel{eq:dRlocal}{{5.4}{89}{Resistive pulse amplitude in the wide and narrow portions of the channels}{equation.5.4.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces \textbf  {Histograms of the ratios of the pulse amplitude $\Delta I/I_{p}$ in the narrow portion of the channel and in the central cavity for the two types of cavitated channels studied.} The dashed lines indicate the theoretical values predicted by Eq. \ref  {eq:currentratio}. In both cases, the theoretical predictions closely match the experimentally obtained results.\relax }}{90}{figure.caption.54}}
+\newlabel{fig:amplituderatios}{{5.13}{90}{\textbf {Histograms of the ratios of the pulse amplitude $\Delta I/I_{p}$ in the narrow portion of the channel and in the central cavity for the two types of cavitated channels studied.} The dashed lines indicate the theoretical values predicted by Eq. \ref {eq:currentratio}. In both cases, the theoretical predictions closely match the experimentally obtained results.\relax }{figure.caption.54}{}}
+\newlabel{eq:currentratio}{{5.5}{90}{Resistive pulse amplitude in the wide and narrow portions of the channels}{equation.5.4.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Dependence of resistive pulse amplitude on lateral displacement in narrow and wide (cavity) regions}{91}{section*.55}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces \textbf  {Pulse amplitude $\Delta I/I_{p}$ in the narrow portion and central cavity versus translocation time $\Delta t$ for particles passing through the cavitated channels.} The plots reveal a positive correlation between translocation time and pulse amplitude in the narrow portion of the channel, but a negative correlation between translocation time and the pulse amplitude measured in the central cavity.\relax }}{92}{figure.caption.56}}
+\newlabel{fig:dIdtcavity}{{5.14}{92}{\textbf {Pulse amplitude $\Delta I/I_{p}$ in the narrow portion and central cavity versus translocation time $\Delta t$ for particles passing through the cavitated channels.} The plots reveal a positive correlation between translocation time and pulse amplitude in the narrow portion of the channel, but a negative correlation between translocation time and the pulse amplitude measured in the central cavity.\relax }{figure.caption.56}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.15}{\ignorespaces \textbf  {Translocation duration, pulse amplitude in the narrow constriction, and pulse amplitude in the central cavity versus off-axis position for the two channels with central cavities studed in this work.}\relax }}{93}{figure.caption.57}}
+\newlabel{fig:dtdIycavity}{{5.15}{93}{\textbf {Translocation duration, pulse amplitude in the narrow constriction, and pulse amplitude in the central cavity versus off-axis position for the two channels with central cavities studed in this work.}\relax }{figure.caption.57}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Conclusion}{95}{section.5.5}}
 \@setckpt{chapter5}{
-\setcounter{page}{84}
-\setcounter{equation}{1}
+\setcounter{page}{97}
+\setcounter{equation}{5}
 \setcounter{enumi}{0}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
@@ -34,13 +63,13 @@
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
 \setcounter{chapter}{5}
-\setcounter{section}{3}
+\setcounter{section}{5}
 \setcounter{subsection}{0}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{4}
-\setcounter{table}{1}
+\setcounter{figure}{15}
+\setcounter{table}{0}
 \setcounter{parentequation}{0}
 \setcounter{NAT@ctr}{11}
 \setcounter{ContinuedFloat}{0}
@@ -48,7 +77,7 @@
 \setcounter{subtable}{0}
 \setcounter{Item}{0}
 \setcounter{Hfootnote}{0}
-\setcounter{bookmark@seq@number}{46}
+\setcounter{bookmark@seq@number}{49}
 \setcounter{theorem}{0}
 \setcounter{definition}{0}
 \setcounter{example}{0}

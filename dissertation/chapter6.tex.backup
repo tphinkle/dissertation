@@ -144,16 +144,16 @@
 
 				
 				\begin{figure}
-					\includegraphics[width=.5\textwidth]{dIdt.pdf}
+					\includegraphics[width=.5\textwidth]{dIdtstraight.pdf}
 					\caption{\textbf{Scatter plot of translocation duration $\Delta t$ versus event amplitude $\Delta I/I_{p}$ for the four straight channels studied, with straight line fits.} The fits reveal the positive correlation between translocation time and off-axis position, as observed by Berge \emph{et al.}.}
-					\label{fig:dIdt}
+					\label{fig:dIdtstraight}
 				\end{figure}
 
 				
-				Although the effect was well-established by the authors, it was only indirectly inferred from the data. Using the hybrid RP-IM approach, we can directly measure the effect of off-axis translocations in RP experiments. Before directly showing the relationship, we first confirmed that we observed the exact same relationship observed by Berge \emph{et al}, namely a positive correlation between translocation time and pulse amplitude. This relationship is shown in Fig. \ref{fig:dIdt}. The scatter data were fit with straight lines, and reveal that not only does the event amplitude increase with increasing translocation time, but that this effect decreases with increasing channel width in accordance with Eq. \ref{eq:berge}.
+				Although the effect was well-established by the authors, it was only indirectly inferred from the data. Using the hybrid RP-IM approach, we can directly measure the effect of off-axis translocations in RP experiments. Before directly showing the relationship, we first confirmed that we observed the exact same relationship observed by Berge \emph{et al}, namely a positive correlation between translocation time and pulse amplitude. This relationship is shown in Fig. \ref{fig:dIdtstraight}. The scatter data were fit with straight lines, and reveal that not only does the event amplitude increase with increasing translocation time, but that this effect decreases with increasing channel width in accordance with Eq. \ref{eq:berge}.
 				
 				\begin{figure}
-					\includegraphics[width=.75\textwidth]{dtdIy.pdf}
+					\includegraphics[width=.75\textwidth]{dtdIystraight.pdf}
 					\caption{\textbf{Translocation duration $\Delta t$ and RP amplitude $\Delta I/I_{p}$ versus lateral position $y_{c}$ for four straight channels.}}
 					\label{fig:dtdIy}
 				\end{figure}
@@ -215,10 +215,32 @@
 			
 		\subsubsection{Dependence of resistive pulse amplitude on lateral displacement in narrow and wide (cavity) regions}
 		    
+			\begin{figure}
+				\includegraphics[width=\textwidth]{dIdtcavity.pdf}
+				\caption{\textbf{Pulse amplitude $\Delta I/I_{p}$ in the narrow portion and central cavity versus translocation time $\Delta t$ for particles passing through the cavitated channels.} The plots reveal a positive correlation between translocation time and pulse amplitude in the narrow portion of the channel, but a negative correlation between translocation time and the pulse amplitude measured in the central cavity.}
+				\label{fig:dIdtcavity}
+			\end{figure}
+
+		    
+		    
+		    
+			In the previous section on straight channels, we looked at the dependence of lateral displacement on the measured current amplitude $\Delta I/I_{p}$. In this section, we would like to explore the same relationship but this time for two regions, the narrow constriction and the central cavity. Retracing our footsteps from the previous section, Fig. \ref{fig:dIdtcavity} shows the resistive pulse amplitudes $\Delta I/I_{p}$ versus translocation time $\Delta t$ for particles passing through the channels, but this time including both the pulse amplitude in the central cavity in addition to its value in the narrow constrictions. Interestingly, while the positive correlation observed previously is still observed, we observe a negative correlation between translocation time and pulse amplitude for particles in the cavity. This result suggests that events with longer translocation times, presumably still those translocating close to the walls, will have larger pulse amplitudes in the narrow constriction but smaller pulse amplitudes in the cavities compared to on-axis translocating particles.
 			
+			\begin{figure}
+				\includegraphics[width=\textwidth]{dtdIycavity.pdf}
+				\caption{\textbf{Translocation duration, pulse amplitude in the narrow constriction, and pulse amplitude in the central cavity versus off-axis position for the two channels with central cavities studed in this work.}}
+				\label{fig:dtdIycavity}
+			\end{figure}
 
 			
+			In order to directly confirm the connection between off-axis position $y_{c}$ and pulse amplitude $\Delta I/I_{p}$, we measured the two values instanteously and plotted the results. Figure \ref{fig:dIdtycavity} is analagous to Fig. \ref{fig:dIdtystraight}, but includes positions when the particle is in the narrow portion of the channel and when it occupies the central cavity. Starting with the left column of the figure, we see that particles that translocated near the wall of the cavity had longer translocation times, in accordance with our expectations from Poiseuille flow profiles. In the case of particles having a central cavity, the fluid flow profiles are undoubtedly more complex than a simple Poiseuille flow; however, we expect that the general trend of a central maximum in the fluid velocity and zero fluid velocity at the channel walls will still hold due to basic considerations about non-slip conditions and viscous coupling between laminar sheaths within the fluid. The next column shows the relationship between amplitude and lateral position in the narrow part of the channel. Not surprisingly, the plots show an increase in the current amplitude when particles translocate closer to the walls, in accordance with our findings for completely straight channels. Finally, in the third column we plot current pulse amplitude versus off-axis position while the particle occupies the central cavity. First, notice that the spread in $y_{c}$ is greater than in the cavity. This greater spread reflects the fact that particles translocating close to the wall follow the contours of the channel, and can swing into the cavity during their translocation, having greater off-axis positions than is possible in the narrow portion. The plot reveals a striking difference between the off-axis effect in the narrow and in the wide portions. Instead of increasing the current amplitude, off-axis translocation greatly decreases the current amplitude in the cavity. Furthermore, the decrease in the current amplitude is upwards of $40\%$, a much greater difference than the maximum of $\sim10\%$ observed for the excess of the current amplitude due to off axis translocation in the narrow portion of the channel. This result has great implications for any resistive pulse studies using channels with cavities and or channels with varying widths. To give specific examples, polyethylene terephthalate pores (discussed in \ref{chap:rods}) have natural undulations in their interior diameter that can have cavity-like features. In the next chapter we discuss how the microfluidic channels discussed here may be used with resistive pulse to measure the deformability of cells; in this case, the off-axis translocation effect will be especially significant.
+
 			
+		
+	\section{Conclusion}
+		In this chapter we introduced a hybrid resistive-pulse optical measurement detection platform. The platform may be used to enhance the characterization of single particles by providing new information (features) of their passage. Perhaps most importantly, the platform can be used to validate resistive pulse measurements, which are prone to distortion by effects relating to geometry and position that cannot be verified through the resistive pulse signal alone. Therefore, we suggest the greatest use of this hybrid measurement system will be in validating the measurements of specific resistive pulse platforms.
+		
+		However, we must point out that the experiments conducted here are necessarily at the microscale, since, as discussed earlier, optical imaging is only possible above the diffraction limit of $\SI{200}{nm}$. Furthermore, we argued earlier that resistive pulse experiments are most widely employed to study particles below the optical diffraction limit. Therefore, at first glance it appears that the results presented here are of no use to resistive pulse experiments. However, the positional effects that distort RP measurements are size independent. To understand why, note that the size effects all originate due to the distortion of the electric field along the boundaries present in the system. In the mean field approximation, the electric field lines are scale invariant--they only depend on the particular geometry of the system. As a concrete example, a $\SI{10}{\mu nm}$ sphere inside a $\SI{20}{\mu m}$ cylindrical channel will experience the same positional effects as a $\SI{10}{nm}$ sphere inside a $\SI{20}{nm}$ cylindrical channel. That is, the overall \textit{scale} of the physics involved does not matter, only the relative sizes of the entities imposing the electrostatic boundary conditions in the problem. Therefore, we expect that the effects studied in this paper generalize down to the sub-micro scale and beyond. However, we can only claim the physics pertaining to the electrostatics of the problem generalize down to the nanoscale. 
 		
 		
 		
