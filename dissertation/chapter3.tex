@@ -1,138 +1,192 @@
-\graphicspath{{../images/ch3/}}	% Image directory
+\graphicspath{{../images/ch4/}}	% Image directory
 
 
-\chapter{Experimental study of ion conductance property of hybrid conductor-insulator nanopores}
-\label{chap:sin}
+\chapter{Resistive pulse studies of aspherical mesoparticles}
+\label{chap:rods}
 	
 
-	\section{Background}
-	
-		In the introduction of this thesis we discussed the electrical double layer (EDL) which is a screening layer of ions that forms in the proximity of a charged surface. The vast majority of pores studied are non-conductive insulators, and their surface charge properties come from the functionalization of chemical groups at their surface. For instance, the base of the pore studied in this section is $\mathrm{Si{3}N_{4}}$ (silicon nitride), whose native silane chemistry means there are exposed alcohols at the surface that are either negative or neutral depending on pH. However, charge on a surface can arise \textit{via} other means. When a metal is exposed to an electric field, electrons in the metal rapidly redistribute themselves on the surface to cancel the external applied field. If we assume the metal was originally overall neutral, the charge pattern will consist of an abundance of negatively-charged electrons at one end and an abundance of positively-charged holes at the other. A natural question is whether these \textit{induced} charges have associated EDLs in the same way that static charges do.
+	\section{Background \& Theory}
+		In the introduction of this dissertation we introduced and explained the theory behind resistive pulse sensing, a particle characterization technique that works by monitoring the change in conductance of a nanopore as small particles pass through it. Probably the most important application of RP sensing is in measuring the sizes of particles. An analytic model was devised by DeBlois \emph{et al.} to relate the size of a particle to its resistive pulse amplitude. The solution is essentially an electrostatics boundary-value problem: given an insulating particle inside a pore and a known externally applied voltage, calculate the electric field distribution inside the pore, and from the electric field distribution calculate the pore's expected resistance with the particle inside it. When this calculation is performed for spherical particles travelling along the axis of long cylindrical pores, the change in resistance or current is found to be
 		
-		Previous studies suggest they do. For instance, Squires \textit{et al.} and Pascall \textit{et al.} performed experiments with applied external electric fields on various metal surfaces and discovered that electroosmotic flow occurred. They reasoned that electroosmosis was a result of polarization of charges according to the model discussed above \cite{Squires2004, Pascall2010}. However, these types of induced-charges have been seldom discussed in hte context of nanopore transport, especially in the context of an realizable experimental platform. In order to understand the effect of induced charges on nanopore transport, we considered a hybrid metal-insulator pore created by evaporating a thin layer of gold onto the pore surface. If the pore was only the insulator, its IV curve would be symmetrical due to the lack of any symmetry breaking in the system. The addition of the metallic layer breaks this symmetry, and we expect to see ionic current rectification in the pore (see chapter 1.) However, ionic current rectification alone is insufficient for proving that induced surface charges contribute to the pore's conductance; this is because essentially \textit{any} symmetry breaking in a pore, including a difference in static surface charges between two regions, a difference in geometrical shape between two regions, \textit{or} induced surface charges, will lead to ionic current rectification.
+		\begin{equation}\label{eq:dI}
+			\frac{\Delta R}{R_{0}}=\frac{\Delta I}{I_{p}}=\frac{4\rho D^{3}}{\pi d^{4}}\left[1-0.8\left(\frac{d}{D}\right)^{3}\right].
+		\end{equation}
+		
+		Equation \ref{eq:dI} is useful for relating the change in current---or resistance---to the diameter of spherical particles. However, it is very often the case that particles of interest are not spherical. For instance, many biomolecules such as viruses and proteins are poorly approximated as spheres, and are more rod-like in shape. In this case, the resistive pulse amplitude of on-axis translocations through a cylindrical pore is given by 
+		
+		\begin{equation}\label{eq:dIellipsoid}
+			\frac{\Delta R}{R_{0}}=\left[f_{\perp}+\left(f_{\parallel}-f_{\perp}\cos^{2}\alpha\right)\right]\frac{v}{V},
+		\end{equation}
+
+		where $f_{\perp}$ and $f_{\parallel}$ are so called `shape-factors', that depend on the particle's major and minor axis lengths, $\alpha$ is the orientation of the particle with $\alpha=0$ being axially aligned, and $v$ and $V$ are the volume of the particle and of the pore, respectively. Figure \ref{fig:dIellipsoid} shows a plot of the relative $\Delta I/I_{p}$ for various ellipsoids of the same volume but different axial lengths.
 		
 		\begin{figure}
-			\includegraphics[width=0.5\textwidth]{SiN-Gold_Model.png}
-			\caption{\textbf{Model for the induced-charge and EDL charges in the hybrid conductor-insulator nanopore.} \textbf{Left:} Negative bias applied to gold side. \textbf{Right:} Positive bias applied to gold side. For the positive bias, a depletion zone forms at the junction between the gold and SiN, which is expected to severely limit the conductance. For the negative bias, no depletion zone forms and therefore the conductance is expected to be unhindered. The double conical geometry reflects the expected geometry of SiN pores drilled \textit{via} a transmission electron microscope electron beam.}
-			\label{fig:SiNGoldModel}
+			\includegraphics[width=0.5\textwidth]{dIellipsoid}
+			\caption{adsf}
+			\label{fig:dIellipsoid}
 		\end{figure}
 
 		
-		In order to provide evidence that induced charges directly contributed to a pore's conductance properties in this system, we need to devise a model for the manner of the induced rectification properties, and to check if the model accurately describes experimental data. Figure \ref{fig:SiNGoldModel} is a scheme of the induced-charge model, which is effectively explained by the surface charges present. First, the insulating part of the pore has an approximately uniform surface charge due to ionization of the chemical groups on its surface. On the gold, the charge patterning depends on the applied voltage. When a negative bias is applied on the gold side of the pore, electrons are repelled from the electrode while holes are attracted. The charge pattern in the solution from top to bottom is then $-++$. On the other hand, when a positive bias is applied on the gold-side of the pore, holes flee to the inside of the pore while electrons are drawn towards the electron. Therefore, from the positive electrode to the negative electrode the surface charge pattern is $+-+$ (right hand side of figure \ref{fig:SiNGoldModel}. The primary difference in the charge pattern as it relates to the influence on the nanopore between the two voltage polarity cases is the charge juntion at the conductor-insulator interface; in the latter case (positive voltage applied on the metallic side), the $+-$ junction indicates the presence of a bipolar junction that leads to a depletion zone in the EDL, as discussed in the section on ionic current rectification in chapter 1. This depletion zone is characterized by having a very large resistance, and therefore limits the total current through the pore. For the opposite polarity, the depletion zone is not present and therefore we do not expect any significant limiting of the current.
 		
-		This model, known as the induced-charge model for hybrid conductor-insulator nanopores, was tested experimentally in this work.
 		
-	\section{Experimental setup}
 		
-		In order to test the induced-charge model, we devised a platform consisting of thin nanopores in silicon nitride (SiN) with gold (Au) deposited on top. The crucial elements of this setup consisted of the silicon nitride (SiN) membrane, evaporated gold (Au) layer, transmission electron microscope drilling of the pore, and the current-voltage characterization measurements.
 		
-		\subsection{Silicon nitride}
+		
+		While equation \ref{eq:dIellipsoid} is useful for determining the volume of spheroidal particles from their resistive pulse amplitudes, it would be useful to devise a method for measuring the length of particles in addition to measuring their volumes as an additional physical marker for their identification in a sample.
+		
+		Consider a pore with a rough, non-uniform interior. Due to the irregular interior, the channel cross sections will have a range of resistance values; for instance, a large cavity in the channel will have a smaller resistance than a more narrow constriction. If a very small particle travels through the pore, its resistive pulse time-series is determined by the interior topology of the pore. For instance, when it happens to occupy a narrower region of the pore, the resistance in tha tregion is larger relative to the rest of the pore, and therefore the particle  will also block a relatively larger portion of the current. In this way, the particle is able to resolve the interior features of the pore. In such cases, the instantaneous resistive pulse amplitude is given by 
+		
+		\begin{equation}\label{eq:dIlocal}
+			\Delta R=R_{p}-R_{0}=\frac{4\rho d^{3}}{\pi D^{4}}\left[1-0.8\left(\frac{d}{D}\right)^{3}\right]^{-1}.
+		\end{equation}
+
+		
+		\begin{equation}\label{eq:theoreticalmovingaverage}
+			\Delta R=\Delta R'=\int_{z=z'}^{z=z'+l}\frac{d\Delta R\left(z\right)}{dz}\,dz=\int_{z=z'}^{z=z'+l}\frac{4\rho d^{3}}{\pi D^{4}\left(z\right)}\left[1-0.8\left(\frac{d}{D\left(z\right)}\right)^{3}\right]^{-1}\,dz
+		\end{equation}
+
+		
+		Oppositely, if we consider a pore whose length extends along a significant amount of the pore's axis, it may be occupying several such regions at a time. Instead of a single particle, we may consider the particle to be composed of many smaller segments of particles in series, and therefore the resistance values of each segment are additive. Therefore, the signals of longer particles can be seen as the convolution of the signal of an infinitesimally small particle over the long particle's length. 
+		
+		This fact can be used to devise an experiment that can measure the length of long particles. First, we drive a suspension of small `tracer' spheres through a pore with rough interior, whose diameter is smaller than the characteristic length of the irregularities in the pore. These particles will `map' the interior geometry of the pore as explained above, with resistive pulse shape given by equation \ref{eq:dIlocal}. Then, we repeat the experiment with long particles for which we wish to know the length. Then we perform a convolution or moving average transformation of the signals of the tracer particles for a variety of lengths, given by the following equations:
+		
+		\begin{equation}\label{eq:movingaverage}
+			I_{i}\rightarrow I_{i}^{l'}=\frac{1}{N}\Sigma_{j=i-\frac{N}{2}}^{j=i+\frac{N}{2}}I_{j}, \mathrm{and} \\
+			N=\frac{fl'}{v},
+		\end{equation}
+		
+		where N is the total number of points in the moving average, $I_{i}$ is the $i$th current measurement in the signal of the unprocessed short particle, $I_{i}^{l'}$ is the transformed data point for a moving average over length $l'$, $f$ is the sampling frequency of the current acquisition instrument, and $v$ is the \textit{average} velocity of the particle during its translocation through the pore. However, equation \ref{eq:movingaverage} slightly oversamples particle positions in the middle of the moving average compared to particle positions at the very ends, along a distance equal to half the length of the small particle. For this reason, the moving average estimate of the correct transformation slightly overestimates the length of long particles. However, when $l\ll l'$, i.e. the tracer particle's displacement length is much less than the longer rod's displacement length, the effect is negligibly small. 
+
+		
+		After computing the moving averages of the tracer particles over an array of lengths, a similarity measure is calculated between every pair of convoluted-raw signals for the tracer particle and the long particle, and the length with the greatest similarity measure is chosen as the correct length of the particle.
+		
+		Probably the simplest similarity measure of two time-series is the point-wise summed Euclidean distance between the two signals given by the following formula:
+		
+		\begin{equation}\label{eq:euclideandistance}
+			C\left(S, S'\right)=\Sigma_{i=0}^{N-1}\left(S_{i}-S'_{i}\right).
+		\end{equation}
+		
+		\begin{figure}
+			\includegraphics[width=\textwidth]{eucliddtw}
+			\caption{\textbf{Comparison of standard Euclidean distance metric (left) and distance metric as determined by dynamic time warping (right).} Notice that the Euclidean distance does not take into account small displacements of the two signals in time, despite their obvious similarity. On the other hand, dynamic time warping is able to account for small mismatches in time by finding the connections between points that minimizes the total cost.}
+			\label{fig:eucliddtw}
+		\end{figure}
+
+		
+		However, the problem with this similarity measure is it is not robust against small variations in the phases of the two signals, i.e. if the two signals evolve in time noisily such that they are not instantaneously exactly in phase. For instance, Fig. \ref{fig:eucliddtw}A shows two resistive pulse time-series taken during an experiment and overlapped exactly in time, with lines connecting the points that would be summed in the Euclidean distance metric\cite{Keogh2005}. Notice that the two sequences are very similar, but due to a non-perfect alignment of identical features in time, the aligned Euclidean distance metric will greatly penalize the similarity of the two signals. One method of measuring the similarity of two time-series that accounts for time offsets is dynamic time warping.
+		
+		\subsection{Dynamic time warping}
+		
+			Figure \ref{fig:eucliddtw}B shows two time-series signals that have been aligned after dynamic time warping. The image shows that the algorithm is capable of matching points that are not perfectly aligned in time, but that reflect the actual progression of the two signals in synchronization. The algorithm works as follows.
 			
-			Silicon nitride was used as the substrate through which to drill the nanopore. The effects of polarization of the gold should be apparent in truly nano-scale systems, so it was important to choose a material through which a small pore could be fabricated. As of the writing of this thesis, silicon nitride (chemical formula $\mathrm{Si_{3}N_{4}}$) is a popular choice for creating small nanopores given its mechanical stability and well-understood surface chemistry. The method of pore formation, TEM drilling (discussed below) can enable pores ranging from $1-20$ nm in diameter, and is capable of drilling through substrate lengths of up to $100$ nm. It is predicted that pores with very low aspect ratios, i.e.~short pores, will have severely diminished rectification propeties. In order to ensure large rectification, the solution must be subjected to a sufficient length of EDL. In order to strike a compromise between TEM's capabilities and the undesirable low-aspect ratio effects, a substrate thickness of $\SI{50}{nm}$ was chosen. The silicon nitride substrate is commonly used in TEM microscopy, and therefore is available from commercial vendors. The substates were ordered from the SPI company. The substrate itself is grown onto a thicker layer of silicon, through which a window is drilled on the backside to expose the silicon nitride. The final result is a $\SI{50}{nm}$ thick layer of SiN supported by a silicon chip. After pore fabrication, silanol groups native to the pore surface act as surface charges if immersed in solution with pH beyond their pKa value of 
-			
-		\subsection{Gold deposition}
-			
-			Although the model of induced-charge rectification described above is independent of the type of conductor used, we chose to use gold (Au) because of its mechanical stability after deposition and its resistance to corrosion and oxidation, which could create a surface chemistry effect that could potentially obscure the relationship with the induced surface charges. With the conductor's material chosen, we think about the desired deposition thickness. In the model of induced-charge rectification described above, it is necessary to have a bipolar junction far enough inside the pore that a depletion layer can form. For this reason, we aimed to deposit a $\SI{30}{nm}$ layer of gold onto the surface of the SiN. There are a number of means of depositing metals onto surfaces, but given the thinness of the desired layer we chose to deposit \textit{via} an e-beam evaporation. During e-beam evaporation, a chunk of metal is pumped down in vaccuum and bombarded with high-energy electrons. The combination of low-pressure and large temperature caused by the bombardment with the electrons causes individual metal atoms to evaporate from the surface of the chunk along straight-line or ray paths. The atoms then hit the surface of the substrate, which is suspended above it, and stick. Although Au \textit{can} be deposited directly onto the surface of SiN, a thin layer ($\SI{3}{nm}$) of chromium (Cr) was first evaporated, which facilitates adhesion of the Au.
-			
-		\subsection{Transmission electron microscope drilling}
-		
 			\begin{figure}
-				\includegraphics[width=0.5\textwidth]{sinpore.png}
-				\caption{\textbf{A $\sim\SI{15}{nm}$ SiN pore drilled \textit{via} TEM.}}
-				\label{fig:sinpore}
+				\includegraphics[width=\textwidth]{distancecost}
+				\caption{\textbf{Distance (left) and cost matrices (right) of two resistive pulse signals as determined by dynamic time warping.} The element $\left(i,j\right)$ in the distance matrix represents the Euclidean distance between the two signals, $\left(S_{i}-S'_{j}\right)^{2}$. Every element in the cost matrix represents the summed Euclidean distance along the minimum path that arrives at that point. Therefore, the point at the lower right-most point in the distance matrix is the summed cost to completely connect the two signals. The path that yields the cost of that element in the matrix is represented by the yellow dashed line.}
+				\label{fig:distancecost}
 			\end{figure}
 
-		
-			The transmission electron microscope (TEM) is a super resolution imaging technique that is typically used to image objects below the optical diffraction limit of $\SI{200}{nm}$. However, if the electron beam is sufficiently energized and focused, the electron beam can act as a drill for forming nanopores instead of for imaging. This technique was used to drill pores through the SiN-Au hybrid device described in the above two steps. A highly focused beam in the TEM's scanning (S) mode is applied to the surface. The energetic electrons strike the surface and eject atoms, while simultaneously the entire structure melts. The final result is a pore with the same thickness as the substrate, and with a double conical geometry which is a result of the simultaneous ballastic ejection and melting. Because the drilling is performed inside the TEM, the resulting pore can also be immediately imaged. Figure \ref{fig:sinpore} shows an example of a $\sim\SI{15}{nm}$ TEM-drilled pore.
 			
-		\subsection{Pore conductance characterization}
+			First, a matrix $D_{i,j}$ of the point-wise Euclidean distance between all two points in the two signals is created, as shown in Fig. \ref{fig:distancecost} (left). For instance, point $D_{3,4}$ is the Euclidean distance between point $3$ and $4$ in signals $S$ and $S'$, respectively. The objective is to traverse through the distance matrix along the path that minimizes the total accumulated distance, or the cost $C$, subject to certain kinematic constraints, described below. Each step in the trajectory is defined by the indices from the two respective signals $\left(i,j\right)$. The non-warped Euclidean distance metric given by Eq. \ref{eq:euclideandistance} would correspond to a straight diagonal trajectory through the matrix, e.g. no warping at all. Although there are several formulations of dynamic time warping, the original method only allows for three types of motion such that $\left(i,j\right)\rightarrow\left(i+1,j\right)$ (progressive vertical motion), $\left(i,j\right)\rightarrow\left(i+1,j+1\right)$ (progressive diagonal motion), or $\left(i,j+1\right)$ (progressive horizontal motion). Regressive motion, which would correspond to taking a step backwards in the path back towards the upper left cell in the matrix, is forbidden. The key to dynamic time warping is the means by which we determine the optimal path that minimizes the total accumulated distance. The problem is combinatorically large and scales like $2^{\sqrt NN'}$, where $N, N'$ are the number of data points in each of the two signals. Due to this scaling, random searching of paths through the matrix is not a feasible means of determining the optimum path for large $NN'$. As the name implies, dynamic time warping implies a dynamic computational algorithm for determining the minimum path, described as follows. First, we must recognize that, due to the rules for stepping through the matrix, the minimum path to arrive at point $\left(i,j\right)$ must pass through one of points $\left(i-1,j\right)$, $\left(i-1,j-1\right)$, or $\left(i,j-1\right)$. Therefore, the cost $C$ of point $\left(i,j\right)$ is given by
+			
+			\begin{equation}\label{eq:dtwcost}
+			C_{i,j}=D_{i,j}+\mathrm{min}\left[C_{i-1,j}, C_{i-1,j-1}, C_{i,j-1}\right].
+			\end{equation}
+			
+			With this in mind, we can build up the complete cost matrix $C_{i,j}$ by starting from the top-left corner $C_{0,0}$ and propagating through the matrix with Eq. \ref{eq:dtwcost}. We repeat this process until we arrive at point $C_{N-1,N'-1}$, which is the minimum cost of a complete matching up of the two signals. At this point we have arrived at the answer we seeked in the beginning, the total distance metric between the two signals. However, it is often informative to calculate the actual trajectory that the dynamic time warping algorithm has determined, so as to verify that the point matching system is meaningful. In order to do so, we traverse through the matrix starting at point $\left(N-1,N'-1\right)$ in reverse, according to the same kinematic rules (but in reverse). At each step, we move to the nearest adjacent point with the minimum distance. This algorithm is guaranteed to return us to the starting point $\left(0,0\right)$ along the complete minimum path between start and finish. This trajectory is shown by the yellow dashed lines in figure \ref{fig:distancecost}, and the pointwise connections are shown in the right hand side of figure \ref{fig:eucliddtw}.
 		
-			\begin{figure}
-				\includegraphics[width=\textwidth]{siniv.png}
-				\caption{\textbf{A current-voltage time series alongside the current-voltage curve produced from it.} \textbf{Left}: Current-voltage time series. Each continuous line corresponds to one voltage setting; once a voltage value is set, the current does not significantly vary. \textbf{Right}: Traditional pore I-V curve. The asymmetry in the current with respect to voltage (present in both signals) is the hallmark indicator of ionic current rectification.}
-				\label{fig:siniv}
-			\end{figure}
+	\section{Experiment}
+	    
+		\begin{figure}
+			\hfill
+			\includegraphics[height=0.35\textwidth]{PC}
+			\hfill
+			\includegraphics[height=0.35\textwidth]{PET}
+			\hfill
+			\caption{\textbf{Scanning electron microscope images of metal replica of track-etched PC (left) and PET (right) pores.} The pores were filled with metal and the polymer was completely etched a way, leaving a metal structure that is the inverse image of the pore. The metal was imaged in a scanning electron microscope. While the PC pores are nearly perfectly cylindrical in shape, the PET pores are characterized by rough inhomogenities across their entire surface, punctuated with large local bumps. The large bumps in the images of the metal replicas correspond to equally large cavitities in the PET pore.}
+			\label{fig:PCPET}
+		\end{figure}
+		
+		\begin{figure}
+			\includegraphics[width=1\textwidth]{particles}
+			\caption{\textbf{Transmission electron microscope images of polystyrene beads and silica nanorods.} While the polystyrene beads are nearly perfectly spherical, the silica nanorods are approximately `bullet shaped'. For the purposes of this work, we approximated their shapes as ellipsoids in order to apply equation \ref{eq:dIellipsoid}.}
+			\label{fig:particles}
+		\end{figure}
 
+
+	    
+		In order to test the method described above for determining the lengths of particles, we performed resistive pulse experiments with single mesopores ranging from $800-\SI{1000}{nm}$ in diameter. The materials used were polyethylene terephthalate (PET), a polymer which is known to have highly irregularly shaped interiors when pores are prepared \textit{via} the track-etch technique, and polycarbonate (PC), another polymer but with no axial inhomogeneities which will act as a control for the method. Figure \ref{fig:PCPET} shows images of both of these types of pores. For the particles, $\SI{280}{nm}$ and $\SI{410}{nm}$ in diameter polystyrene beads (`spheres') were used as the tracer particle, and rods of length $\SI{590}{nm}$, diameter $\SI{210}{nm}$ (`short rods') and $\SI{1920}{nm}$, diameter $\SI{240}{nm}$ (`long rods') were used to test the length measurement protocol; the particles are shown in figure \ref{fig:particles}. Particles were suspended in $\SI{100}{mM}$ KCl solution with $0.5\%$ Tween 80, a surfactant which prevents particle aggregation. The solution was then injected into both sides of a conductivity cell, and a voltage was applied across the pore. The resulting ionic current was sampled at $\SI{10}{kHz}$ and recorded. The polystyrene spheres used had a larger $\zeta-\mathrm{potential}$ than the pore, and therefore they translocated through the pore electrophoretically. On the other hand, the rods had a lower magnitude $\zeta-\mathrm{potential}$ than the pore, and therefore travelled through the pore under electroosmotic convective forces. 
 		
-			In order to test the induced-charge model, we measured the current-voltage (IV) response of each of the fabricated nanopores in $100$ and $500$ mM KF and KCl salt solutions. The total surface charge of a pore `felt' by the ions in the solution is given by a combination of the ionized chemical groups on its surface and any chemical species that are adsorbed to the surface. Cl is known to adsorb to the surface of gold, and so we expect that the gold in KCl solutions will have net charge given by the adsorbed chloride ions and the induced-charges. For this reason, measurements were performed primarily with KF solution. However, it was predicted that adsorption of chloride on the Au surface would diminish the effects of the induced-charge, and this model was tested by performing measurements with KCl on chips that had already been measured in KF, to see if their conductance behavior changed according to this prescription. 
-			
-			Due to the small sizes of the pore and the low surface charge density of the silanols on the SiN surface, the interior of the pore is difficult to wet, meaning any vapor present inside the pore can be stable and difficult to remove. If this is the case, ions cannot pass through. Often times these vapor phases are quasi-stableand the pore will spontaneously wet and dewet. In order to reduce these hydrophobic effects, we use an even 50/50 mixture of water and ethanol solvent; the combination of both solvents promotes wetting of the pore. 
-			
-			In principle, during IV measurements one needs only to sweep the voltage along the desired range, stopping to record the current at each voltage value. Usually one delays $\sim\SI{1}{second}$ after changing the voltage before a current measurement is made to allow for the system to equilibrate, e.g.~due to system capacitance charging/discharging. However, in systems in which the system conductance can stochastically change, e.g.~due to spontaneous wetting/dewetting transitions, it is advantageous to record a time series of the current voltage sweeps rather than measure single data points. If a transition occurs, it can be observed in the time series of the signal and appropriately dealt with afterwards. The protocol for measuring IV curves is then to apply a fixed voltage, record the current for a fixed amount of time, and repeat for all of the desired voltages. Then, an IV curve is produced by averaging the current time-series for a fixed interval of time (averaging is performed to smooth over the small amount of noise in the signal). In this study, voltages were applied for a total of $\SI{20}{s}$ and the current values in the last $\SI{0.5}{s}$ were averaged to create the current measurement value. Figure \ref{fig:siniv} shows an example current-voltage time series and the IV curve produced from it for one of the pores used in the study measured in KF solution. On the left is a current-voltage time series plot that shows the current value time series for different voltage settings, while the right hand side of the figure shows a traditional I-V curve of the pore.  
-			
-			
-	\section{Experimental results}
 	
-		A number of conductor-insulator pores were tested, along with plain SiN pores to test of the pores intrinsically rectify the current (e.g.~due to a geometrical asymmetry).
-		
-		\begin{figure}
-			\includegraphics[width=\textwidth]{sinsymm}
-			\caption{\textbf{IV curves taken of bare SiN pores}. The symmetry in the IV curve reveals no inherent rectification of the TEM drilled pores.}
-			\label{fig:sinsymm}
-		\end{figure}
-		
-		\begin{figure}
-			\includegraphics[width=\textwidth]{sinau0}
-			\caption{\textbf{IV curves taken of Au-SiN pore in $\SI{100}{mM}$ and $\SI{500}{mM}$ KF.} The symmetry in the IV curve reveals no inherent rectification of the TEM drilled pores. The ion rectification ratio $R$ is lower in the higher concentration solution, as is expected from basic considerations of EDL thickness.}
-			\label{fig:sinau0}
-		\end{figure}
-		
-		\begin{figure}
-			\includegraphics[width=\textwidth]{sinau1}
-			\caption{\textbf{IV curves taken of Au-SiN pore in $\SI{500}{mM}$ KCl and KF.} The rectification ratio $R$ is lower in the KCl solution than in the KF solution, which is expected due to the additional contribution of the static charge from adsorbed $\mathrm{Cl^{-}}$ ions on the gold surface.}
-			\label{fig:sinau1}
-		\end{figure}
-
-
-		
-		Figure \ref{fig:sinsymm} shows two IV curves gathered for the SiN-only (insulator pore only). The plot shows approximately symmetric IV curves, indicating a symmetric nanopore. 
-		
-		On the other hand, figure \ref{fig:sinau0} shows two IV curves collected for a single nanopore approximately $\SI{9}{nm}$ in diameter. The IV curves taken in KF show significant rectification, with a ratio of approximately $R=0.5$ for the $\SI{100}{mM}$ concentration and $R=0.7$ for the $\SI{500}{mM}$ KF concentration. The increase in rectification $R$ towards $R=1$ with increasing salt concentration is consistent with the decrease in thickness of the EDL. In the model we developed for the induced-charge rectification, a depletion region is expected to form in the interior of the pore. Typically pores that have depletion zones experience much greater rectifications due to the `off-state' voltage polarity having nearly zero conductance. While this pore's rectification is not small enough (e.g.~not close to zero) to describe it as an ionic diode, the rectification direction is nevertheless consistent with the proposed model. We note that this direction of rectification is inconsistent with models having only static charges on the SiN and Au, barring the case where the $Au$ has positive charges adsorbed onto its surface, which is unexpected for the ion species used in this study.
-		
-		In order to understand the effect of a static charge superimposed on top of the induced-charge, we next performed experiments in KCl in addition to KF. Figure \ref{fig:sinau1} shows a $\SI{12}{nm}$ pore with IV curves measured in $\SI{500}{mM}$ concentration of both types of salts. Note that both salts give the same type of rectification as in the previous example. This result is not entirely unexpected, as the presence of adsorbed chloride will bring the two charges in the depletion zone closer together in magnitude, while still maintaining a finite, albeit reduced rectification. If the $Cl^{-}$ ions adsorbed to the surface of the gold to the extent that they dominated both the induced-charge on the gold and the surface charge on the SiN, then it is possible the rectification direction could even flip direction such that $R>1$. However, we did not observe such an effect.
-		
-	\section{Modelling results}
-		
-		In order to provide an additional line of evidence pointing to induced-charge based ion current rectification found in experiments, we performed finite-element analysis simulations using the COMSOL Multiphysics software package. The models were designed to emulate the experimental set up, e.g.~the channel geometries and salt concentrations used were similar. However, rather than try to reproduce the double conical geometry expected for TEM drilled pores, we worked with a cylindrical geometry which greatly facilitated convergence of the solutions with the very minor penalty of not adhering exactly to the experimental conditions. Because the cone angle is expected to be shallow and because the COMSOL results are meant to be interpreted semi-quantitatively, and are primarily used to draw conclusions about the rectification direction and mechanism, replicating the exact geometry of the pore was deemed unneccessary. Details of the COMSOL simulation can be found in the appendix.
-		
-		\begin{figure}
-			\includegraphics[width=\textwidth]{comsol_model}
-			\caption{\textbf{COMSOL simulations.}}
-			\label{fig:comsolmodel}
-		\end{figure}
-		
-		\begin{figure}
-			\includegraphics[width=\textwidth]{comsol1}
-			\caption{\textbf{COMSOL simulations.}}
-			\label{fig:comsol1}
-		\end{figure}
-		
-		\begin{figure}
-			\includegraphics[width=\textwidth]{comsol2}
-			\caption{\textbf{COMSOL simulations.}}
-			\label{fig:comsol2}
-		\end{figure}
-		
-		The results of the simulations are found in figures \ref{fig:comsol1} and \ref{fig:comsol2}. We simulated IV curves for the model device and calculated the average concentrations of the cations, anions, and combinations at various axial positions inside the pore, and used these calculations to calculate the width of the depletion zone that forms for positive voltages. Figure \ref{fig:comsol1} shows IV curves of the simulated pore at various concentrations. Notice htat at low concentrations the pore rectifies in the negative direction i.e. $R=|I_{-}/I_{+}|>1$ and the rectification ratio $R$ decreases with increasing electrolyte concentration, both results are consistent with the experimental data. Figure \ref{fig:comsol2} shows the average concentrations of $C_{K}$, $C_{Cl}$, $C_K+C_Cl$ and $C_K-C_Cl$ at various axial positions. The concentrations of $C_{K}$ and $C_{Cl}$ along the length of the gold surface are consistent with the polarization model of gold: when a positive potential is applied on the side of the metal, electrons are drawn to the entrance of the pore, inducing formation of an EDL more positive than at the opposite terminal, and the opposite occurs for the opposite voltage. Along the length of the SiN far from the junction, the concentration of potassium is enhanced due to the negative charge of the surface, and fluoride is reduced. In the plot of $C_{K}+C_{Cl}$ which reflects the total ion concentration (bottom center), at positive voltages there is a drop in the concentration in the vicinity of the junction. In this region the total concentration is far below its bulk value, while elsewhere it is much closer to the bulk. This severely reduced charge density reflects the formation of the depletion zone, the zone created when ions near the diode junction are pulled apart. The resistivity $\rho\propto \left(C_{K}+C_{Cl}\right)^{-1}$, so the depletion zone has a very large resistance and therefore limits the current through the pore as a whole. Depletion zone regions like the one that appears in the simulation severeliy limit current, which can be seen in the near 0 slope of the current for positive voltages in the IV curve. The current is limited by the depletion zone, and we identify this type of pore as a diode. The bottom-left plot of figure \ref{fig:comsol2} shows the width of the depletion zone as a function of voltage. The depletion zone was defined as the width along the pore axis such that the total ion concentration is below half of the total ion concentration (in this case, below $\SI{100}{mM}$, since $C_{K}=\SI{100}{mM}$ and $C_{Cl}=\SI{100}{mM}$. While increasing the voltage increases the current, the depletion zone is also widened with increasing voltage, resulting in a net sub-linear relationship between voltage and current at positive voltages.
-		
-		The COMSOL results show that the model of induced-charge based electrical double layers is possible, and that the magnitude of the effect is enough to greatly influence the pore. Furthermore, the results show that the model system results in rectification ratio $R>1$, in the same direction of the experiments' IV curves.
-		
-	\section{Conclusion \& Future Work}
-		
-		The work presented in this chapter demonstrates the capabilities of conducting layers in affecting the ionic conductance properties of nanopore systems. We demonstrated, to our knowledge, the first instance of a conducting layer that actively modulates the current in a nanopore by depositing a thin layer of gold on top of a TEM-drilled SiN pore. In our model for our device, a dynamically induced charge acts in concert with the native, static ionized silane groups native to the SiN surface to create a diode-like rectification behavior. This type of rectification and its direction cannot be explained with static charges alone, and therefore we conclude that the induced charges on the gold layer were significant in contributing towards the total rectification of the device. Furthermore, numerical simulations using COMSOL multiphysics provided another line of evidence that the induced-charges contributed to the device's conductance. In the simulations, for the `off-state' of the device at positive voltages there was a clear depletion zone in the channel, in agreement with our a priori expectations based on the physics of the device. 
-		
-		The ability to fabricate single nanopores with novel ion conductance properties is crucial in fabricating integrated ionic circuit devices. These non-trivial conductance properties are usually achieved \textit{via} chemical modification or \textit{via} or modification with biomolecules such as DNA. However, this work has revealed another potential way of creating diode-like nanopores with the addition of permanent embedded metallic layers. 
-		
-		
-		
-			
-			
-		
-			
-		
-			
+	\section{Analysis \& Discussion}
 	
+	
+		\begin{figure}
+			\includegraphics[width=0.5\textwidth]{PCPETevents}
+			\caption{\textbf{Resistive pulse events through PC (left) and PET (right) pores.} As expected, the PET events are highly irregular and reflect the interior irregularities of the PET pore itself. On the other hand, the PC pores show no such irregularity. The events show that PC pores have large resistances at the beginning and end, reflecting the narrow, `pinched' diameters at the openings of the pores.}
+			\label{fig:PCPETevents}
+		\end{figure}
+
+	
+	
+		Events were extracted from the current time series and studied separately; figure \ref{fig:PCPETevents} shows two events, one from a PC pore and one from a PET pore that are representative of the translocations through each type of pore. In the initial analysis, we looked at the average $\Delta I/I_{p}$ of the beads and rods and compared with the theoretical predictions of Eqs. \ref{eq:dI} and \ref{eq:dIellipsoid}. Figure \ref{fig:dIexp} shows the results for two pores, one $\SI{770}{nm}$ and another $\SI{1200}{nm}$ in diameter. For the two spheres studied, the measured $\Delta I/I_{p}$ was very close to the theoretical prediction (Eq. \ref{eq:dI}). The theoretical predictions were also very close to the measured values for the long rods. However, for both pores the theoretical prediction of the resistive pulse amplitude $\Delta I/I_{p}$ is far off for the short rods: the data shows a nearly 100\% discrepancy, i.e.~ the measured $\Delta I/I_{p}$ is nearly twice its expected value. This significant of a discrepancy is highly unusual, and one of the goals in the paper was to determine its cause. The discrepancy is made even stranger by the fact that the short and long rods are made of the same material, so any material contribution to the discrepancy e.g.~due to large $\zeta-\mathrm{potentials}$ is unlikely. Instead, we hypothesize that this discrepancy is due to their rotational dynamics. Equation \ref{eq:dIellipsoid} predicts that a prolate spheroid (like the rods) will have a larger $\Delta I/I_{p}$ when they are oriented with an off-axis component, but only considers static positioning. A very large rotational speed of the rods could couple to the measured $\Delta I/I_{p}$ amplitude in ways not captured by the equation, for instance by stirring the local solution in such a manner to reduce the local ion mobility. Furthermore, this hypothesis is consistent with the non-observance of the increased $\Delta I/I_{p}$ for the long rods, since at their length of $\sim\SI{1920}{nm}$ they are too large to rotate in even the larger of the two pores ($\SI{1200}{nm}$ in diameter). In any case, the net result is a measured volume for these particles that is approximately $2\times$ larger than their actual volume, which was confirmed with a combination of transmission electron microscopy images and dynamic light scattering. 
 		
+		The question, however, is how such a large rotation could occur. To answer this question, forces that cause rotation must be considered. In terms of translation (transport), the contributing forces are convection due to electroosmosis, and electrophoresis, as well as passive transport due to diffusion. Similarly, these forces could also contribute to rotational motion of the particles. The estimated rotational diffusion contribution of these rod particles is estimated as $13$ and $\SI{0.8}{rad/s}$ for the short and long rods, respectively. In order for fluid motion to cause rotation, it is necessary to have a non-constant fluid velocity profile on the pore's length. However, because the fluid velocity is due to electroosmosis there will be a nearly constant fluid velocity profile in the pore, which is unlikely to cause significant rotation. On the other hand, the rough undulations in the pore could create axial variations in the electric field; such variations could also lead to a net torque on the particle that causes rotation. In order to estimate the potential magnitude of the rotational velocities of the rods, we considered a simple model where the pore's diameter discontinuously changes from $\SI{1000}{nm}$ to $\SI{1100}{nm}$, a reasonable approximation for the geometries present in our system based on the images of the pores (see Fig. \ref{fig:PET}). Under this model, we calculate the electric field amplitude to differ by a factor of $1.2$ between the two regions. Using the rotational diffusion coefficient of the rods and integrating the electric field differences along the length of the pore, we calculate the angular rotation rate $\omega$ to be $\omega\sim10^{4}$ rad/s. Due to the preceding arguments, it is clear that the largest contribution to the rotation of the rods is from the electric forces. We believe that such a large rotation could make the rods behave as if they are much larger particles.
+		
+		\begin{figure}
+			\includegraphics[width=.5\textwidth]{PETevents}
+			\caption{\textbf{Resistive pulse events of a $\SI{410}{nm}$ diameter sphere (red), and $\SI{590}{nm}$ (blue) and $\SI{1920}{nm}$ (green) in length rods.} The top row shows a cartoon scheme of the pore with the particles inside its interior. The bottom resistive pulse event in each column corresponds to the raw recorded data; events above this are smoothed \textit{via} the moving average transformation. The bottom left figure shows the raw events on the same scale.}
+			\label{fig:PETevents}
+		\end{figure}
+
+		
+		Figure \ref{fig:PETevents} shows example recorded events for the three types of particles used in this study. A $\SI{410}{nm}$ sphere translocation is shown on the left column in red. Notice the roughness in the event; this roughness has been shown to correspond to the interior irregularities in the pore. Local $\Delta I/I_{p}\left(t\right)$ are large at relatively constricted points, and small at larger cavitated points. The green event in the right column corresponds to the raw resistive pulse signal of a long rod. Notice the difference in structure of the two events; the long rod's event shows some structure, but is missing many of the local minima and maxima that are present in the signal of the short rod. This observation is in agreement with our previous arguments for the smoothing of the pore interior that takes place for long particles. Without making any quantitative arguments, we are able to conclude that the particle corresponding to the green event is longer than the particle corresponding to the red event. In between those two extremes are the short rods in red. The short rods at length $\SI{590}{nm}$ are slightly longer than the spheres which have diameter $\SI{410}{nm}$, but due to their rotation it is not entirely obvious whether they should image the pore with the same resolution as the spheres. Looking at the results, the signals of the short rod and sphere are much more similar than the long rod and the sphere, but some local structure is still unresolved for the short rods. 
+		
+		In order to test the hypothesis that long particles behave as a moving average of shorter particles, we calculated moving averages of the spheres and the short rods. The time over which the moving average was calculated corresponded to the duration in time over which the particle travelled a distance equal to the length of the longer particle with which it is being compared. We determined the average velocity of a particle from the total translocation distance (the known length of the pore, $L'=L-D$) and the translocation duration measured from the RP signal, $\Delta T$. The velocity is then $v=L'/\Delta t$. The moving average window then has length (in time) of $\Delta t=v/l$, which corresponds to a window of $N=f\times\Delta t$ data points in length. The transformation then from the raw signal $I_{i}$ to the averaged signal $I'_{i}$ is
+		
+		
+		\begin{equation} \label{eq:movingavg}
+			I'_{i}=\frac{1}{N}\sum_{j=-N/2}^{N/2}I_{j}.
+		\end{equation}
+		
+		This moving average process was performed on the spheres and on the short rods. The red signal in the middle column corresponds to the moving average of the spheres over the length of the short rods, and the red signal in the right column corresponds to the moving average of the spheres over the length of the long rods. Finally, the moving average of the short rods over the length of the long rods is the blue signal in the right column. Qualitatively, we see that the moving average process, which is physically motivated by the equations for the resistance of small particles in series, recovers the appearance of the signals of longer particles. 
+		
+		\begin{figure}
+			\includegraphics[width=0.5\textwidth]{longevent.png}
+			\caption{\textbf{Resistive pulse signal of a single long rod passing through a PET pore.} The variation in the amplitude of the current signals that the pore has an inhomogeneous interior shape.}
+			\label{fig:longevent}
+		\end{figure}
+
+		
+		\begin{figure}
+			\includegraphics[width=0.5\textwidth]{experimentaldtwfits.png}
+			\caption{\textbf{Resistive pulse signal of a single short rod passing through a PET pore alongside many instances of the moving average transformation performed on the signal for different length intervals.} As the length interval is increased, the finer structure of the resistive pulse signal is smoothed over. For the greatest length measured, many of the features prominent in the raw signal have disappeared..}
+			\label{fig:experimentaldtwfits}
+		\end{figure}
+		
+		
+		\begin{figure}
+			\includegraphics[width=0.5\textwidth]{experimentaldtwfit.png}
+			\caption{\textbf{Raw resistive pulse signal of a single long rod matched with the signal of a short rod that has been transformed via the moving average process.} The aligned points were determined by the dynamic time warping algorithm, and the particular transformation shown was the one that minimized the difference between the two signals, also determined by the dynamic time warping algorithm.}
+			\label{fig:experimentaldtwfit}
+		\end{figure}
+		
+		
+		In order to measure the lengths of the long rods, we performed the dynamic time warping technique described in the preceding section. Figure \ref{fig:longevent} shows a single instance of a long rod passing through a PET pore. Figure \ref{fig:experimentaldtwfits} shows a shorter rod particle averaged over many different length intervals. As the short rod is averaged over a greater length interval, it continuously transforms into a shape that bears a stronger resemblance to the signal of the long rods. Of all the fits calculated in Fig. \ref{fig:experimentaldtwfits}, the correct length is determined by the fit with the smallest cost as determined by dynamic time warping. An example resistive pulse signal of a long rod and a shorter rod that has been transformed \textit{via} the moving average equation is shown in Fig. \ref{fig:experimentaldtwfit}. Finally, after performing the moving average and dynamic time warping minimization approach described above, we were able to determine the expected lengths of the long rods according to this algorithm. Figure \ref{fig:dtwfit} shows a plot of histograms of the lengths as determined by this approach, alongside a Gaussian fit to the histogram, and a Gaussian distribution that shows the actual distribution of hte lengths of the long particles as determined by electron microscopy images. The figure reveals that, in this case, the dynamic time warping algorithm is able to successfully recover the real distribution of the known lengths relatively accurately.
+		
+		
+		\begin{figure}
+			\includegraphics[width=0.5\textwidth]{dtwfit.png}
+			\caption{\textbf{Histogram of particle length as determined by dynamic time warping along with the actual distribution of sizes determined by electron microscopy imaging.} A normal distribution is fit to the histogram of particle lengths as determined by dynamic time warping and shown to be in good agreement with the expected distribution.}
+			\label{fig:dtwfit}
+		\end{figure}
+		
+	\section{Conclusions}
+		In summary, we presented resistive pulse experiments performed with spherical and non-spherical particles in two types of pores, those with smooth interiors (PC) and rough interiors (PET). We devised a protocol for measuring the lengths of long particles by taking advantage of the rough interiors of PET pores, which reflect in the measured resistive pulse signals of all the particles. Longer particles displace a greater distance along the pore's length, and therefore their signals are a more smoothed version of the signals of shorter particles. This smoothing attribute can be recovered by taking the moving averages of shorter particles. By performing moving averages for many different particle lengths and measuring the similarity between the raw signal of the long particles with each of the transformed signals of the shorter particles, we were able to determine the length distribution of the long particles used in experiments. Dynamic time warping was used as a means of effectively comparing the similarity of the signals of the two particles. While the general premise of the `smoothing' of the resistive pulse signals by long particles compared to short particles is convincingly established, more research must be performed on the hybrid moving average-dynamic time warping method. The protocol was only tested for a small number of pores and only two types of particles, short and long rods. In the future, an ideal experiment could be performed with small spherical beads and rods of various unknown lengths. The experiments and analysis would be performed in a blind fashion, and only after the analysis is complete would the true length distribution of the long rods be revealed. If the length measurement protocol survives this blind study, it would prove to be a very effective means of determining the lengths of small particles.
+		
+		Additionally, a likely unrelated phenomena was discovered where short, aspherical particles created far greater (up to 2x) resistive pulse amplitudes than predicted by the well-established classical equations. The exact reason for this effect is still unclear, however we laid out arguments that explain rotational dynamics as a likely culprit. We reasoned from our studies that an extremely rapid rate of rotation could effectively increase the radius of the particle, possibly by disturbing the local solution and decreasings its conductivity. Such rotations would not be possible for the longer rods due to their prohibitively long lengths compared ot the diameter of the pore. However, more investigation must be performed in order to convincingly show that not only do short rod like objects deviate strongly from the classical equations, but also that rotational dynamics is the culprit. Additional experiments must be performed with a larger variety of short rods to show that the effect is general and not limited to the rods used in this study. Furthermore, experiments could be designed in such a way as to retard the rods' rotations, perhaps by using smaller pores or solution with an increased viscosity.
+
+	
+	
 		
 		
 		

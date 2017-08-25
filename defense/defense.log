@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.25)  15 AUG 2017 13:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.25)  24 AUG 2017 16:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1788,18 +1788,18 @@ Overfull \vbox (11.86212pt too high) has occurred while \output is active []
 ] <images/ecoli.jpg, id=150, 803.0pt x 675.52374pt>
 File: images/ecoli.jpg Graphic file (type jpg)
  <use images/ecoli.jpg>
-Package pdftex.def Info: images/ecoli.jpg used on input line 431.
-(pdftex.def)             Requested size: 101.46524pt x 85.35826pt.
+Package pdftex.def Info: images/ecoli.jpg used on input line 453.
+(pdftex.def)             Requested size: 76.08974pt x 64.01869pt.
 
 <images/tobaccomosaicvirus.png, id=151, 387.4475pt x 387.4475pt>
 File: images/tobaccomosaicvirus.png Graphic file (type png)
 
 <use images/tobaccomosaicvirus.png>
-Package pdftex.def Info: images/tobaccomosaicvirus.png used on input line 431.
-(pdftex.def)             Requested size: 85.35695pt x 85.35826pt.
+Package pdftex.def Info: images/tobaccomosaicvirus.png used on input line 453.
+(pdftex.def)             Requested size: 64.01476pt x 64.01869pt.
 File: images/watermark.png Graphic file (type png)
  <use images/watermark.png>
-Package pdftex.def Info: images/watermark.png used on input line 431.
+Package pdftex.def Info: images/watermark.png used on input line 453.
 (pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
 
 Overfull \vbox (11.86212pt too high) has occurred while \output is active []
@@ -1812,11 +1812,11 @@ Overfull \vbox (11.86212pt too high) has occurred while \output is active []
 File: images/particlesreveal.png Graphic file (type png)
 
 <use images/particlesreveal.png>
-Package pdftex.def Info: images/particlesreveal.png used on input line 457.
+Package pdftex.def Info: images/particlesreveal.png used on input line 478.
 (pdftex.def)             Requested size: 144.54pt x 100.30855pt.
 File: images/watermark.png Graphic file (type png)
  <use images/watermark.png>
-Package pdftex.def Info: images/watermark.png used on input line 457.
+Package pdftex.def Info: images/watermark.png used on input line 478.
 (pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
 
 Overfull \vbox (11.86212pt too high) has occurred while \output is active []
@@ -1829,19 +1829,19 @@ Overfull \vbox (11.86212pt too high) has occurred while \output is active []
 File: images/rod_convolution.png Graphic file (type png)
 
 <use images/rod_convolution.png>
-Package pdftex.def Info: images/rod_convolution.png used on input line 477.
+Package pdftex.def Info: images/rod_convolution.png used on input line 502.
 (pdftex.def)             Requested size: 134.2399pt x 75.88371pt.
 
 <images/rod_simulated_labeled.png, id=170, 1072.005pt x 623.32875pt>
 File: images/rod_simulated_labeled.png Graphic file (type png)
 
 <use images/rod_simulated_labeled.png>
-Package pdftex.def Info: images/rod_simulated_labeled.png used on input line 47
-7.
-(pdftex.def)             Requested size: 155.36313pt x 90.3375pt.
+Package pdftex.def Info: images/rod_simulated_labeled.png used on input line 50
+2.
+(pdftex.def)             Requested size: 130.4998pt x 75.88371pt.
 File: images/watermark.png Graphic file (type png)
  <use images/watermark.png>
-Package pdftex.def Info: images/watermark.png used on input line 477.
+Package pdftex.def Info: images/watermark.png used on input line 502.
 (pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
 
 Overfull \vbox (11.86212pt too high) has occurred while \output is active []
@@ -1853,7 +1853,7 @@ Overfull \vbox (11.86212pt too high) has occurred while \output is active []
 File: images/watermark.png Graphic file (type png)
 
 <use images/watermark.png>
-Package pdftex.def Info: images/watermark.png used on input line 500.
+Package pdftex.def Info: images/watermark.png used on input line 525.
 (pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
 
 Overfull \vbox (11.86212pt too high) has occurred while \output is active []
@@ -1910,7 +1910,7 @@ l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local
 texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb>
-Output written on defense.pdf (18 pages, 10831758 bytes).
+Output written on defense.pdf (18 pages, 10834680 bytes).
 PDF statistics:
  253 PDF objects out of 1000 (max. 8388607)
  168 compressed objects within 2 object streams

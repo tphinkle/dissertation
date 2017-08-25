@@ -20,46 +20,46 @@
 \BOOKMARK [2][-]{subsection.1.2.9}{Surface conductance and conductance saturation}{section.1.2}% 20
 \BOOKMARK [2][-]{subsection.1.2.10}{Ion selectivity}{section.1.2}% 21
 \BOOKMARK [2][-]{subsection.1.2.11}{Ionic current rectification}{section.1.2}% 22
-\BOOKMARK [0][-]{chapter.2}{Development and testing of a single carbon nanotube based pore}{}% 23
+\BOOKMARK [0][-]{chapter.2}{Experimental study of ion conductance property of hybrid conductor-insulator nanopores}{}% 23
 \BOOKMARK [1][-]{section.2.1}{Background}{chapter.2}% 24
-\BOOKMARK [0][-]{chapter.3}{Experimental study of ion conductance property of hybrid conductor-insulator nanopores}{}% 25
-\BOOKMARK [1][-]{section.3.1}{Background}{chapter.3}% 26
-\BOOKMARK [1][-]{section.3.2}{Experimental setup}{chapter.3}% 27
-\BOOKMARK [2][-]{subsection.3.2.1}{Silicon nitride}{section.3.2}% 28
-\BOOKMARK [2][-]{subsection.3.2.2}{Gold deposition}{section.3.2}% 29
-\BOOKMARK [2][-]{subsection.3.2.3}{Transmission electron microscope drilling}{section.3.2}% 30
-\BOOKMARK [2][-]{subsection.3.2.4}{Pore conductance characterization}{section.3.2}% 31
-\BOOKMARK [1][-]{section.3.3}{Experimental results}{chapter.3}% 32
-\BOOKMARK [1][-]{section.3.4}{Modelling results}{chapter.3}% 33
-\BOOKMARK [1][-]{section.3.5}{Conclusion \046 Future Work}{chapter.3}% 34
-\BOOKMARK [0][-]{chapter.4}{Resistive pulse studies of aspherical mesoparticles}{}% 35
-\BOOKMARK [1][-]{section.4.1}{Background \046 Theory}{chapter.4}% 36
-\BOOKMARK [2][-]{subsection.4.1.1}{Dynamic time warping}{section.4.1}% 37
-\BOOKMARK [1][-]{section.4.2}{Experiment}{chapter.4}% 38
-\BOOKMARK [1][-]{section.4.3}{Analysis \046 Discussion}{chapter.4}% 39
-\BOOKMARK [1][-]{section.4.4}{Conclusions}{chapter.4}% 40
-\BOOKMARK [0][-]{chapter.5}{Hybrid resistive-pulse optical detections in microfluidic systems}{}% 41
-\BOOKMARK [1][-]{section.5.1}{Background \046 Theory}{chapter.5}% 42
-\BOOKMARK [1][-]{section.5.2}{Experimental hardware and software}{chapter.5}% 43
-\BOOKMARK [1][-]{section.5.3}{Data analysis software}{chapter.5}% 44
-\BOOKMARK [1][-]{section.5.4}{Results \046 Discussion}{chapter.5}% 45
-\BOOKMARK [2][-]{subsection.5.4.1}{Data analysis explanation}{section.5.4}% 46
-\BOOKMARK [2][-]{subsection.5.4.2}{Straight channels}{section.5.4}% 47
-\BOOKMARK [2][-]{subsection.5.4.3}{Channels with a central cavity}{section.5.4}% 48
-\BOOKMARK [1][-]{section.5.5}{Conclusion}{chapter.5}% 49
-\BOOKMARK [0][-]{chapter.6}{Resistive pulse studies of cancer cell deformability}{}% 50
-\BOOKMARK [1][-]{section.6.1}{Background \046 Theory}{chapter.6}% 51
-\BOOKMARK [1][-]{section.6.2}{Experiment and data analysis}{chapter.6}% 52
-\BOOKMARK [2][-]{subsection.6.2.1}{Experiment and instrumentation control}{section.6.2}% 53
-\BOOKMARK [2][-]{subsection.6.2.2}{Data analysis}{section.6.2}% 54
-\BOOKMARK [1][-]{section.6.3}{Results \046 Discussion}{chapter.6}% 55
-\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 56
-\BOOKMARK [1][-]{section.7.1}{Introduction}{chapter.7}% 57
-\BOOKMARK [1][-]{section.7.2}{Ion conductance of nanopores}{chapter.7}% 58
-\BOOKMARK [2][-]{subsection.7.2.1}{Ion conductance of single carbon nanotubes}{section.7.2}% 59
-\BOOKMARK [2][-]{subsection.7.2.2}{Ion conductance of hybrid insulating-conducting nanopores}{section.7.2}% 60
-\BOOKMARK [2][-]{subsection.7.2.3}{Resistive pulse studies of mesoscale rods}{section.7.2}% 61
-\BOOKMARK [2][-]{subsection.7.2.4}{Hybrid resistive pulse-optical platform}{section.7.2}% 62
+\BOOKMARK [1][-]{section.2.2}{Experimental setup}{chapter.2}% 25
+\BOOKMARK [2][-]{subsection.2.2.1}{Silicon nitride}{section.2.2}% 26
+\BOOKMARK [2][-]{subsection.2.2.2}{Gold deposition}{section.2.2}% 27
+\BOOKMARK [2][-]{subsection.2.2.3}{Transmission electron microscope drilling}{section.2.2}% 28
+\BOOKMARK [2][-]{subsection.2.2.4}{Pore conductance characterization}{section.2.2}% 29
+\BOOKMARK [1][-]{section.2.3}{Experimental results}{chapter.2}% 30
+\BOOKMARK [1][-]{section.2.4}{Modelling results}{chapter.2}% 31
+\BOOKMARK [1][-]{section.2.5}{Conclusion \046 Future Work}{chapter.2}% 32
+\BOOKMARK [0][-]{chapter.3}{Resistive pulse studies of aspherical mesoparticles}{}% 33
+\BOOKMARK [1][-]{section.3.1}{Background \046 Theory}{chapter.3}% 34
+\BOOKMARK [2][-]{subsection.3.1.1}{Dynamic time warping}{section.3.1}% 35
+\BOOKMARK [1][-]{section.3.2}{Experiment}{chapter.3}% 36
+\BOOKMARK [1][-]{section.3.3}{Analysis \046 Discussion}{chapter.3}% 37
+\BOOKMARK [1][-]{section.3.4}{Conclusions}{chapter.3}% 38
+\BOOKMARK [0][-]{chapter.4}{Hybrid resistive-pulse optical detections in microfluidic systems}{}% 39
+\BOOKMARK [1][-]{section.4.1}{Background \046 Theory}{chapter.4}% 40
+\BOOKMARK [1][-]{section.4.2}{Experimental hardware and software}{chapter.4}% 41
+\BOOKMARK [1][-]{section.4.3}{Data analysis software}{chapter.4}% 42
+\BOOKMARK [1][-]{section.4.4}{Results \046 Discussion}{chapter.4}% 43
+\BOOKMARK [2][-]{subsection.4.4.1}{Data analysis explanation}{section.4.4}% 44
+\BOOKMARK [2][-]{subsection.4.4.2}{Straight channels}{section.4.4}% 45
+\BOOKMARK [2][-]{subsection.4.4.3}{Channels with a central cavity}{section.4.4}% 46
+\BOOKMARK [1][-]{section.4.5}{Conclusion}{chapter.4}% 47
+\BOOKMARK [0][-]{chapter.5}{Resistive pulse studies of cancer cell deformability}{}% 48
+\BOOKMARK [1][-]{section.5.1}{Background \046 Theory}{chapter.5}% 49
+\BOOKMARK [1][-]{section.5.2}{Experiment and data analysis}{chapter.5}% 50
+\BOOKMARK [2][-]{subsection.5.2.1}{Experiment and instrumentation control}{section.5.2}% 51
+\BOOKMARK [2][-]{subsection.5.2.2}{Data analysis}{section.5.2}% 52
+\BOOKMARK [1][-]{section.5.3}{Results \046 Discussion}{chapter.5}% 53
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 54
+\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 55
+\BOOKMARK [1][-]{section.6.2}{Ion conductance of nanopores}{chapter.6}% 56
+\BOOKMARK [2][-]{subsection.6.2.1}{Ion conductance of single carbon nanotubes}{section.6.2}% 57
+\BOOKMARK [2][-]{subsection.6.2.2}{Ion conductance of hybrid insulating-conducting nanopores}{section.6.2}% 58
+\BOOKMARK [2][-]{subsection.6.2.3}{Resistive pulse studies of mesoscale rods}{section.6.2}% 59
+\BOOKMARK [2][-]{subsection.6.2.4}{Hybrid resistive pulse-optical platform}{section.6.2}% 60
+\BOOKMARK [2][-]{subsection.6.2.5}{Particle deformability cytometry using resistive pulse sensing}{section.6.2}% 61
+\BOOKMARK [1][-]{section.6.3}{Closing remarks}{chapter.6}% 62
 \BOOKMARK [0][-]{section*.63}{Bibliography}{}% 63
 \BOOKMARK [0][-]{appendix.A}{Appendix Title}{}% 64
 \BOOKMARK [1][-]{section.A.1}{Lorem Ipsum}{appendix.A}% 65

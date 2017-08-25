@@ -416,18 +416,40 @@ cross/.default={1pt}}
 
 
 \begin{frame}[c]{High-aspect ratio resistive pulse sensing---motivation}
+ 	\begin{itemize}
+ 		\item Aspherical particles are ubiquitous in biology---e.g., many viruses and bacteria are approximately rod-shaped
+ 	\end{itemize}
+
+
+	\begin{columns}[t]
+		\begin{column}[T]{2.5in}
+			{\centering
+				\includegraphics[height=2.25cm]{ecoli} \\
+				e. coli \\
+				$L\sim \SI{2}{\mu m}$ \\
+				\par
+			}
+		\end{column}
+		
+		
+		\begin{column}[T]{2.5in}
+			{\centering
+				\includegraphics[height=2.25cm]{tobaccomosaicvirus} \\
+				tobacco mosaic virus \\
+				$L\sim \SI{300}{nm}$ \\
+				\par
+			}
+		\end{column}
+	
+
+	\end{columns}
+
 	\begin{itemize}
-		\item Aspherical particles are ubiquitous in biology---e.g., viruses, bacteria 
-		\item RP sensing allows volume determination
-		\item Can we extend RP to measure length?
-		\item How would we do so?
-	\end{itemize}
-	{\centering
-		\includegraphics[height=3cm]{ecoli}
-		\hspace{1cm}
-		\includegraphics[height=3cm]{tobaccomosaicvirus}
-		\par
-	}
+		\item The ability to measure particle shape is highly desirable for sensing applications
+ 		\item How can we extend RP sensing to measure length in addition to volume?
+ 	\end{itemize}
+	
+
 \end{frame}
 
 
@@ -439,9 +461,9 @@ cross/.default={1pt}}
 
 \begin{frame}[c]{Resistive pulse in non-constant width pores}
 	\begin{itemize}
-		\item Change in resistance of pore is approximately
+		\item Consider the RP amplitude for translocation through non-uniform pores
 	\end{itemize}
-	$$ \Delta R\left(z'\right)=\frac{\rho}{\pi}\int_{z=z'}^{z=z'+l_{p}}\frac{dz}{r_{P}^{2}\left(z\right)-s_{p}^{2}\left(z\right)} $$
+	$$ \Delta R\left(z'\right)=\frac{\rho}{\pi}\left[\int_{z=z'}^{z=z'+l_{p}}\left(\frac{1}{r_{P}^{2}\left(z\right)-s_{p}^{2}\left(z\right)}-\frac{1}{r_{P}\left(z\right)^{2}}\right)dz\right] $$
 	\begin{itemize}
 		\item RP amplitude is a function of the pore geometry \textbf{local to the particle's position}
 		\item Particles map the interior of the pore during translocation with their RP signal!
@@ -449,10 +471,9 @@ cross/.default={1pt}}
 	
 	{\centering
 		\includegraphics[width=2in]{particlesreveal.png} \\
-		\par \\
+		\par
 	}
-	
-	
+
 	
 \end{frame}
 
@@ -463,18 +484,41 @@ cross/.default={1pt}}
 
 \begin{frame}[c]{Resistive pulse in non-constant width pores}
 	\begin{itemize}
-		\item Most resistive pulse experiments are performed with channels with smooth interiors
-		\item What about channels with rough or non-constant width interiors?
-		\item Resistive pulses can be seen as a map of the pore interior for pores with non-constant radius
-		\item In regions of low diameter, the pulse is deeper; in large diameter regions, the pulse is shallow
-		\item Particles shorter than the length scale of diameter variation accurately map the pore interiors
-		\item Particles longer than the length scale of diameter variation create RP signals that can be seen as a convolution of the pore's interior shape
+		\item For particles with length shorter than characteristic length of changes in pore size, the interior is mapped with high resolution
+		\item Long particles map pore interiors with low resolution because their lengths extend across multiple features
 	\end{itemize}
-	
+	\vspace{.1in}
+	$$ \Delta R\left(z'\right)=\frac{\rho}{\pi}\left[\int_{z=z'}^{z=z'+l_{p}}\left(\frac{1}{r_{P}^{2}\left(z\right)-s_{p}^{2}\left(z\right)}-\frac{1}{r_{P}\left(z\right)^{2}}\right)dz\right] $$
+	\vspace{.1in}
 	{\centering
-		\includegraphics[height=0.75in]{rod_convolution.png}
-		\hspace{.1in}
-		\includegraphics[height=0.75in]{rod_simulated.png}
+		Simulated resistive pulses of short and long rods \\
+		\vspace{.1in}
+		\includegraphics[height=1.05in]{rod_convolution.png}
+		\hspace{.4in}
+		\includegraphics[height=1.05in]{rod_simulated_labeled.png}
+		\par
+	}
+	
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Qualitative length measurement
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Resistive pulse in non-constant width pores}
+	\begin{itemize}
+		\item For particles with length shorter than characteristic length of changes in pore size, the interior is mapped with high resolution
+		\item Long particles map pore interiors with low resolution because their lengths extend across multiple features
+	\end{itemize}
+	\vspace{.1in}
+	$$ \Delta R\left(z'\right)=\frac{\rho}{\pi}\left[\int_{z=z'}^{z=z'+l_{p}}\left(\frac{1}{r_{P}^{2}\left(z\right)-s_{p}^{2}\left(z\right)}-\frac{1}{r_{P}\left(z\right)^{2}}\right)dz\right] $$
+	\vspace{.1in}
+	{\centering
+		Simulated resistive pulses of short and long rods \\
+		\vspace{.1in}
+		\includegraphics[height=1.05in]{rod_convolution.png}
+		\hspace{.4in}
+		\includegraphics[height=1.05in]{rod_simulated_labeled.png}
 		\par
 	}
 	
