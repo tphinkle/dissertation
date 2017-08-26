@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.25)  24 AUG 2017 16:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.25)  26 AUG 2017 10:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1622,22 +1622,29 @@ Overfull \vbox (11.86212pt too high) has occurred while \output is active []
 
 [7
 
-] <images/singletrajectory.png, id=83, 1112.155pt x 469.755pt>
+] <images/rp_timeseries.png, id=83, 1068.99374pt x 659.46375pt>
+File: images/rp_timeseries.png Graphic file (type png)
+
+<use images/rp_timeseries.png>
+Package pdftex.def Info: images/rp_timeseries.png used on input line 221.
+(pdftex.def)             Requested size: 180.66628pt x 72.26955pt.
+
+<images/singletrajectory.png, id=84, 1112.155pt x 469.755pt>
 File: images/singletrajectory.png Graphic file (type png)
 
 <use images/singletrajectory.png>
-Package pdftex.def Info: images/singletrajectory.png used on input line 218.
+Package pdftex.def Info: images/singletrajectory.png used on input line 221.
 (pdftex.def)             Requested size: 108.405pt x 45.78838pt.
 
-<images/singlerp.png, id=84, 430.60875pt x 363.3575pt>
+<images/singlerp.png, id=85, 430.60875pt x 363.3575pt>
 File: images/singlerp.png Graphic file (type png)
 
 <use images/singlerp.png>
-Package pdftex.def Info: images/singlerp.png used on input line 218.
+Package pdftex.def Info: images/singlerp.png used on input line 221.
 (pdftex.def)             Requested size: 108.405pt x 91.4712pt.
 File: images/watermark.png Graphic file (type png)
  <use images/watermark.png>
-Package pdftex.def Info: images/watermark.png used on input line 218.
+Package pdftex.def Info: images/watermark.png used on input line 221.
 (pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
 
 Overfull \vbox (11.86212pt too high) has occurred while \output is active []
@@ -1645,55 +1652,55 @@ Overfull \vbox (11.86212pt too high) has occurred while \output is active []
 
 [8
 
- <./images/singletrajectory.png> <./images/singlerp.png>]
-<images/photo/conductivitycell.png, id=94, 1156.32pt x 879.285pt>
+ <./images/rp_timeseries.png> <./images/singletrajectory.png> <./images/singler
+p.png>] <images/photo/conductivitycell.png, id=96, 1156.32pt x 879.285pt>
 File: images/photo/conductivitycell.png Graphic file (type png)
 
 <use images/photo/conductivitycell.png>
 Package pdftex.def Info: images/photo/conductivitycell.png used on input line 3
-35.
+38.
 (pdftex.def)             Requested size: 84.17952pt x 64.01869pt.
 
-Overfull \hbox (11.34045pt too wide) in paragraph at lines 335--335
+Overfull \hbox (11.34045pt too wide) in paragraph at lines 338--338
  [][] 
  []
 
-<images/photo/membrane.png, id=95, 1009.7725pt x 1037.8775pt>
+<images/photo/membrane.png, id=97, 1009.7725pt x 1037.8775pt>
 File: images/photo/membrane.png Graphic file (type png)
 
 <use images/photo/membrane.png>
-Package pdftex.def Info: images/photo/membrane.png used on input line 335.
+Package pdftex.def Info: images/photo/membrane.png used on input line 338.
 (pdftex.def)             Requested size: 62.2786pt x 64.01869pt.
 
-<images/photo/solution.png, id=96, 1557.82pt x 2240.37pt>
+<images/photo/solution.png, id=98, 1557.82pt x 2240.37pt>
 File: images/photo/solution.png Graphic file (type png)
 
 <use images/photo/solution.png>
-Package pdftex.def Info: images/photo/solution.png used on input line 335.
+Package pdftex.def Info: images/photo/solution.png used on input line 338.
 (pdftex.def)             Requested size: 44.49815pt x 64.01869pt.
 
-<images/psbeads.jpg, id=97, 275.0275pt x 273.02pt>
+<images/psbeads.jpg, id=99, 275.0275pt x 273.02pt>
 File: images/psbeads.jpg Graphic file (type jpg)
  <use images/psbeads.jpg>
-Package pdftex.def Info: images/psbeads.jpg used on input line 335.
+Package pdftex.def Info: images/psbeads.jpg used on input line 338.
 (pdftex.def)             Requested size: 64.48878pt x 64.01869pt.
 
-<images/photo/electrodes.png, id=98, 1087.06125pt x 1661.20625pt>
+<images/photo/electrodes.png, id=100, 1087.06125pt x 1661.20625pt>
 File: images/photo/electrodes.png Graphic file (type png)
 
 <use images/photo/electrodes.png>
-Package pdftex.def Info: images/photo/electrodes.png used on input line 335.
+Package pdftex.def Info: images/photo/electrodes.png used on input line 338.
 (pdftex.def)             Requested size: 41.88266pt x 64.01869pt.
 
-<images/photo/axon200b.jpg, id=99, 1204.5pt x 429.605pt>
+<images/photo/axon200b.jpg, id=101, 1204.5pt x 429.605pt>
 File: images/photo/axon200b.jpg Graphic file (type jpg)
 
 <use images/photo/axon200b.jpg>
-Package pdftex.def Info: images/photo/axon200b.jpg used on input line 335.
+Package pdftex.def Info: images/photo/axon200b.jpg used on input line 338.
 (pdftex.def)             Requested size: 179.49094pt x 64.01869pt.
 File: images/watermark.png Graphic file (type png)
  <use images/watermark.png>
-Package pdftex.def Info: images/watermark.png used on input line 335.
+Package pdftex.def Info: images/watermark.png used on input line 338.
 (pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
 
 Overfull \vbox (11.86212pt too high) has occurred while \output is active []
@@ -1704,15 +1711,15 @@ Overfull \vbox (11.86212pt too high) has occurred while \output is active []
  <./images/photo/conductivitycell.png> <./images/photo/membrane.png> <./images/
 photo/solution.png> <./images/psbeads.jpg> <./images/photo/electrodes.png> <./i
 mages/photo/axon200b.jpg>]
-<images/comsol/voltage.png, id=111, 598.235pt x 218.8175pt>
+<images/comsol/voltage.png, id=113, 598.235pt x 218.8175pt>
 File: images/comsol/voltage.png Graphic file (type png)
 
 <use images/comsol/voltage.png>
-Package pdftex.def Info: images/comsol/voltage.png used on input line 346.
+Package pdftex.def Info: images/comsol/voltage.png used on input line 349.
 (pdftex.def)             Requested size: 327.77359pt x 119.89256pt.
 File: images/watermark.png Graphic file (type png)
  <use images/watermark.png>
-Package pdftex.def Info: images/watermark.png used on input line 346.
+Package pdftex.def Info: images/watermark.png used on input line 349.
 (pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
 
 Overfull \vbox (11.86212pt too high) has occurred while \output is active []
@@ -1723,12 +1730,12 @@ Overfull \vbox (11.86212pt too high) has occurred while \output is active []
  <./images/comsol/voltage.png>]
 File: images/comsol/voltage.png Graphic file (type png)
  <use images/comsol/voltage.png>
-Package pdftex.def Info: images/comsol/voltage.png used on input line 357.
+Package pdftex.def Info: images/comsol/voltage.png used on input line 360.
 (pdftex.def)             Requested size: 327.77359pt x 119.89256pt.
 File: images/watermark.png Graphic file (type png)
 
 <use images/watermark.png>
-Package pdftex.def Info: images/watermark.png used on input line 357.
+Package pdftex.def Info: images/watermark.png used on input line 360.
 (pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
 
 Overfull \vbox (11.86212pt too high) has occurred while \output is active []
@@ -1737,17 +1744,17 @@ Overfull \vbox (11.86212pt too high) has occurred while \output is active []
 [11
 
 ]
-Overfull \hbox (8206.47662pt too wide) in paragraph at lines 394--394
+Overfull \hbox (8206.47662pt too wide) in paragraph at lines 397--397
 [][][] 
  []
 
 
-Overfull \vbox (684.17712pt too high) detected at line 394
+Overfull \vbox (684.17712pt too high) detected at line 397
  []
 
 File: images/watermark.png Graphic file (type png)
 <use images/watermark.png>
-Package pdftex.def Info: images/watermark.png used on input line 394.
+Package pdftex.def Info: images/watermark.png used on input line 397.
 (pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
 
 Overfull \vbox (11.86212pt too high) has occurred while \output is active []
@@ -1756,17 +1763,17 @@ Overfull \vbox (11.86212pt too high) has occurred while \output is active []
 [12
 
 ]
-Overfull \hbox (8206.47662pt too wide) in paragraph at lines 394--394
+Overfull \hbox (8206.47662pt too wide) in paragraph at lines 397--397
 [][][][] 
  []
 
 
-Overfull \vbox (682.75964pt too high) detected at line 394
+Overfull \vbox (682.75964pt too high) detected at line 397
  []
 
 File: images/watermark.png Graphic file (type png)
 <use images/watermark.png>
-Package pdftex.def Info: images/watermark.png used on input line 394.
+Package pdftex.def Info: images/watermark.png used on input line 397.
 (pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
 
 Overfull \vbox (11.86212pt too high) has occurred while \output is active []
@@ -1777,7 +1784,7 @@ Overfull \vbox (11.86212pt too high) has occurred while \output is active []
 ]
 File: images/watermark.png Graphic file (type png)
  <use images/watermark.png>
-Package pdftex.def Info: images/watermark.png used on input line 408.
+Package pdftex.def Info: images/watermark.png used on input line 411.
 (pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
 
 Overfull \vbox (11.86212pt too high) has occurred while \output is active []
@@ -1785,21 +1792,21 @@ Overfull \vbox (11.86212pt too high) has occurred while \output is active []
 
 [14
 
-] <images/ecoli.jpg, id=150, 803.0pt x 675.52374pt>
+] <images/ecoli.jpg, id=152, 803.0pt x 675.52374pt>
 File: images/ecoli.jpg Graphic file (type jpg)
  <use images/ecoli.jpg>
-Package pdftex.def Info: images/ecoli.jpg used on input line 453.
+Package pdftex.def Info: images/ecoli.jpg used on input line 456.
 (pdftex.def)             Requested size: 76.08974pt x 64.01869pt.
 
-<images/tobaccomosaicvirus.png, id=151, 387.4475pt x 387.4475pt>
+<images/tobaccomosaicvirus.png, id=153, 387.4475pt x 387.4475pt>
 File: images/tobaccomosaicvirus.png Graphic file (type png)
 
 <use images/tobaccomosaicvirus.png>
-Package pdftex.def Info: images/tobaccomosaicvirus.png used on input line 453.
+Package pdftex.def Info: images/tobaccomosaicvirus.png used on input line 456.
 (pdftex.def)             Requested size: 64.01476pt x 64.01869pt.
 File: images/watermark.png Graphic file (type png)
  <use images/watermark.png>
-Package pdftex.def Info: images/watermark.png used on input line 453.
+Package pdftex.def Info: images/watermark.png used on input line 456.
 (pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
 
 Overfull \vbox (11.86212pt too high) has occurred while \output is active []
@@ -1808,15 +1815,15 @@ Overfull \vbox (11.86212pt too high) has occurred while \output is active []
 [15
 
  <./images/ecoli.jpg> <./images/tobaccomosaicvirus.png>]
-<images/particlesreveal.png, id=159, 501.875pt x 348.30125pt>
+<images/particlesreveal.png, id=161, 501.875pt x 348.30125pt>
 File: images/particlesreveal.png Graphic file (type png)
 
 <use images/particlesreveal.png>
-Package pdftex.def Info: images/particlesreveal.png used on input line 478.
+Package pdftex.def Info: images/particlesreveal.png used on input line 481.
 (pdftex.def)             Requested size: 144.54pt x 100.30855pt.
 File: images/watermark.png Graphic file (type png)
  <use images/watermark.png>
-Package pdftex.def Info: images/watermark.png used on input line 478.
+Package pdftex.def Info: images/watermark.png used on input line 481.
 (pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
 
 Overfull \vbox (11.86212pt too high) has occurred while \output is active []
@@ -1825,23 +1832,23 @@ Overfull \vbox (11.86212pt too high) has occurred while \output is active []
 [16
 
  <./images/particlesreveal.png>]
-<images/rod_convolution.png, id=169, 953.5625pt x 539.01375pt>
-File: images/rod_convolution.png Graphic file (type png)
+<images/plain_signal.png, id=171, 402.50375pt x 258.9675pt>
+File: images/plain_signal.png Graphic file (type png)
 
-<use images/rod_convolution.png>
-Package pdftex.def Info: images/rod_convolution.png used on input line 502.
-(pdftex.def)             Requested size: 134.2399pt x 75.88371pt.
+<use images/plain_signal.png>
+Package pdftex.def Info: images/plain_signal.png used on input line 527.
+(pdftex.def)             Requested size: 112.32564pt x 72.26999pt.
 
-<images/rod_simulated_labeled.png, id=170, 1072.005pt x 623.32875pt>
-File: images/rod_simulated_labeled.png Graphic file (type png)
+<images/mystery_plain_signal_3.png, id=172, 289.08pt x 216.81pt>
+File: images/mystery_plain_signal_3.png Graphic file (type png)
 
-<use images/rod_simulated_labeled.png>
-Package pdftex.def Info: images/rod_simulated_labeled.png used on input line 50
-2.
-(pdftex.def)             Requested size: 130.4998pt x 75.88371pt.
+<use images/mystery_plain_signal_3.png>
+Package pdftex.def Info: images/mystery_plain_signal_3.png used on input line 5
+27.
+(pdftex.def)             Requested size: 144.53964pt x 72.2687pt.
 File: images/watermark.png Graphic file (type png)
  <use images/watermark.png>
-Package pdftex.def Info: images/watermark.png used on input line 502.
+Package pdftex.def Info: images/watermark.png used on input line 527.
 (pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
 
 Overfull \vbox (11.86212pt too high) has occurred while \output is active []
@@ -1849,20 +1856,226 @@ Overfull \vbox (11.86212pt too high) has occurred while \output is active []
 
 [17
 
- <./images/rod_convolution.png> <./images/rod_simulated_labeled.png>]
-File: images/watermark.png Graphic file (type png)
+ <./images/plain_signal.png> <./images/mystery_plain_signal_3.png>]
+<images/mystery_plain_signal_2.png, id=181, 289.08pt x 192.2382pt>
+File: images/mystery_plain_signal_2.png Graphic file (type png)
 
+<use images/mystery_plain_signal_2.png>
+Package pdftex.def Info: images/mystery_plain_signal_2.png used on input line 5
+73.
+(pdftex.def)             Requested size: 106.69783pt x 70.95395pt.
+
+<images/mystery_plain_signal.png, id=182, 289.08pt x 192.2382pt>
+File: images/mystery_plain_signal.png Graphic file (type png)
+
+<use images/mystery_plain_signal.png>
+Package pdftex.def Info: images/mystery_plain_signal.png used on input line 573
+.
+(pdftex.def)             Requested size: 106.69783pt x 70.95395pt.
+
+<images/plain_signals_smoothed.png, id=183, 289.08pt x 578.16pt>
+File: images/plain_signals_smoothed.png Graphic file (type png)
+
+<use images/plain_signals_smoothed.png>
+Package pdftex.def Info: images/plain_signals_smoothed.png used on input line 5
+73.
+(pdftex.def)             Requested size: 99.58272pt x 199.16928pt.
+
+
+! Package pgfkeys Error: I do not know the key '/tikz/straight' and I am going 
+to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.573 \end{frame}
+                 
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+
+! Package pgfkeys Error: I do not know the key '/tikz/straight' and I am going 
+to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.573 \end{frame}
+                 
+(That was another \errmessage.)
+
+
+! Package pgfkeys Error: I do not know the key '/tikz/straight' and I am going 
+to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.573 \end{frame}
+                 
+(That was another \errmessage.)
+
+
+! Package pgfkeys Error: I do not know the key '/tikz/straight' and I am going 
+to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.573 \end{frame}
+                 
+(That was another \errmessage.)
+
+
+! Package pgfkeys Error: I do not know the key '/tikz/straight' and I am going 
+to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.573 \end{frame}
+                 
+(That was another \errmessage.)
+
+
+! Package pgfkeys Error: I do not know the key '/tikz/straight' and I am going 
+to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.573 \end{frame}
+                 
+(That was another \errmessage.)
+
+File: images/watermark.png Graphic file (type png)
 <use images/watermark.png>
-Package pdftex.def Info: images/watermark.png used on input line 525.
+Package pdftex.def Info: images/watermark.png used on input line 573.
 (pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
 
 Overfull \vbox (11.86212pt too high) has occurred while \output is active []
 
-Package atenddvi Info: Last page = 18.
 
 [18
 
-])
+ <./images/mystery_plain_signal_2.png> <./images/mystery_plain_signal.png> <./i
+mages/plain_signals_smoothed.png>]
+Overfull \vbox (2.99002pt too high) detected at line 606
+ []
+
+File: images/watermark.png Graphic file (type png)
+<use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 606.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[19
+
+] <images/moving_average_process.png, id=202, 433.62pt x 433.62pt>
+File: images/moving_average_process.png Graphic file (type png)
+
+<use images/moving_average_process.png>
+Package pdftex.def Info: images/moving_average_process.png used on input line 6
+34.
+(pdftex.def)             Requested size: 162.6075pt x 162.6071pt.
+File: images/watermark.png Graphic file (type png)
+ <use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 634.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[20
+
+ <./images/moving_average_process.png>]
+<images/PET.png, id=211, 448.67625pt x 180.675pt>
+File: images/PET.png Graphic file (type png)
+ <use images/PET.png>
+Package pdftex.def Info: images/PET.png used on input line 676.
+(pdftex.def)             Requested size: 134.60391pt x 54.2025pt.
+
+<images/particles.png, id=212, 1591.9475pt x 513.92pt>
+File: images/particles.png Graphic file (type png)
+
+<use images/particles.png>
+Package pdftex.def Info: images/particles.png used on input line 676.
+(pdftex.def)             Requested size: 167.9003pt x 54.2025pt.
+
+Overfull \hbox (5.2928pt too wide) in paragraph at lines 676--676
+ [][] 
+ []
+
+File: images/watermark.png Graphic file (type png)
+<use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 676.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[21
+
+ <./images/PET.png> <./images/particles.png>]
+<images/particles_real_size.png, id=221, 448.67625pt x 180.675pt>
+File: images/particles_real_size.png Graphic file (type png)
+
+<use images/particles_real_size.png>
+Package pdftex.def Info: images/particles_real_size.png used on input line 686.
+
+(pdftex.def)             Requested size: 325.215pt x 130.96257pt.
+
+Overfull \hbox (4.7213pt too wide) in paragraph at lines 686--686
+[][]  
+ []
+
+File: images/watermark.png Graphic file (type png)
+<use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 686.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+Package atenddvi Info: Last page = 22.
+
+[22
+
+ <./images/particles_real_size.png>]
+<images/PET7_raw.png, id=228, 867.24pt x 650.43pt>
+File: images/PET7_raw.png Graphic file (type png)
+ <use images/PET7_raw.png>
+Package pdftex.def Info: images/PET7_raw.png used on input line 697.
+(pdftex.def)             Requested size: 325.215pt x 243.91064pt.
+
+Overfull \hbox (4.7213pt too wide) in paragraph at lines 697--697
+[][]  
+ []
+
+
+Overfull \vbox (7.59021pt too high) detected at line 697
+ []
+
+File: images/watermark.png Graphic file (type png)
+<use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 697.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[23
+
+ <./images/PET7_raw.png>])
 \tf@nav=\write6
 \openout6 = `defense.nav'.
 
@@ -1874,7 +2087,16 @@ Package atenddvi Info: Last page = 18.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 83.
 Package atveryend Info: Executing hook `AfterLastShipout' on input line 83.
- (./defense.aux (./presentation.aux))
+ (./defense.aux
+
+Package atenddvi Warning: Rerun LaTeX, last page has changed.
+
+
+Package animate Warning: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+(animate)                @ Rerun to get internal references right! @
+(animate)                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.
+
+(./presentation.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 83.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 83.
 Package rerunfilecheck Info: File `defense.out' has not changed.
@@ -1884,36 +2106,40 @@ Package rerunfilecheck Info: File `defense.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 31705 strings out of 493013
- 663843 string characters out of 6133328
- 698285 words of memory out of 5000000
- 34584 multiletter control sequences out of 15000+600000
+ 31845 strings out of 493013
+ 666395 string characters out of 6133328
+ 701285 words of memory out of 5000000
+ 34705 multiletter control sequences out of 15000+600000
  20670 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,19n,83p,10460b,997s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,20n,83p,10460b,997s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/lo
-cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/loc
-al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local
-/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local
-/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
-texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb>
-Output written on defense.pdf (18 pages, 10834680 bytes).
+></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.
+pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.p
+fb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pf
+b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
+sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr
+/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local
+/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb>
+Output written on defense.pdf (23 pages, 12481299 bytes).
 PDF statistics:
- 253 PDF objects out of 1000 (max. 8388607)
- 168 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
- 163 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 307 PDF objects out of 1000 (max. 8388607)
+ 198 compressed objects within 2 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 208 words of extra memory for PDF output out of 10000 (max. 10000000)
 

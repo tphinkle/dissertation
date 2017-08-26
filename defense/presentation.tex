@@ -196,6 +196,9 @@
 					\item When a particle enters the channel its resistance changes, yielding a pulse in the measured ionic current
 					\item Pulse properties yield information on size, shape, charge, and concentration of particle
 				\end{itemize}
+				{\centering
+					\includegraphics[height=1in,width=2.5in]{rp_timeseries.png} \\ \par
+				}
 			\end{tiny}
 			
 		\end{column}
@@ -456,7 +459,7 @@ cross/.default={1pt}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Length convolution explanation
+% Resistive pulse in non-constant width pores
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[c]{Resistive pulse in non-constant width pores}
@@ -479,38 +482,197 @@ cross/.default={1pt}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Length convolution explanation
+% RP signal resolution
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[c]{Resistive pulse in non-constant width pores}
-	\begin{itemize}
-		\item For particles with length shorter than characteristic length of changes in pore size, the interior is mapped with high resolution
-		\item Long particles map pore interiors with low resolution because their lengths extend across multiple features
-	\end{itemize}
-	\vspace{.1in}
-	$$ \Delta R\left(z'\right)=\frac{\rho}{\pi}\left[\int_{z=z'}^{z=z'+l_{p}}\left(\frac{1}{r_{P}^{2}\left(z\right)-s_{p}^{2}\left(z\right)}-\frac{1}{r_{P}\left(z\right)^{2}}\right)dz\right] $$
-	\vspace{.1in}
-	{\centering
-		Simulated resistive pulses of short and long rods \\
-		\vspace{.1in}
-		\includegraphics[height=1.05in]{rod_convolution.png}
-		\hspace{.4in}
-		\includegraphics[height=1.05in]{rod_simulated_labeled.png}
-		\par
-	}
+\begin{frame}[c]{RP signal resolution}
 	
+	\vspace{-.1in}
+	\begin{itemize}
+		\item Particles map pore interiors with a length-dependent resolution
+		\item If a particle has length smaller than the characteristic length scale of channel irregularities, the produced signal is a high-resolution mapping
+		\item Particles with lengths longer than characteristic length scale of channel irregularities produce low-resolution mappings
+	\end{itemize}
+	
+	
+	
+	\begin{columns}[t]
+		
+	
+		\begin{column}[T]{2.25in}
+			{\centering
+				\includegraphics[height=1in]{plain_signal.png} \\
+				Short particle \\
+			}
+		\end{column}
+		  
+		\begin{column}[T]{2.25in}
+			{\centering
+				\includegraphics[height=1.in,width=2in]{mystery_plain_signal_3.png} \\
+				Long particle (simulated) \\
+			}
+		\end{column}
+
+	\end{columns}
+	\vspace{.2in}
+	\textcolor{negativered}{\textbf{Can we use this knowledge to measure particle length???}}
+
+	%$$ \Delta R\left(z'\right)=\frac{\rho}{\pi}\left[\int_{z=z'}^{z=z'+l_{p}}\left(\frac{1}{r_{P}^{2}\left(z\right)-s_{p}^{2}\left(z\right)}-\frac{1}{r_{P}^{2}\left(z\right)}\right)dz\right] $$
+
+	
+	
+	
+	
+
 \end{frame}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Qualitative length measurement
+% Qualitative length comparison
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[c]{Qualitative length measurement with resistive pulse}
-	\begin{itemize}
-		\item The 'resolution' of a resistive pulse signal provides a means of qualitatively determining particle length
-		\item Short particles of known length can provide a high resolution mapping to compare with
-		\item Qualitatively, the signals of longer particles should appear similar to the signals of shoter particles, but `smoothed out'
+\begin{frame}[c]{Qualitative length comparison}
+	\vspace{.3in}
+	\begin{picture}(0,0)(0,0)
+		\put(0,-25)
+		{\includegraphics[width=3.75cm]{mystery_plain_signal_2.png}}
+		\put(0,-125)
+		{\includegraphics[width=3.75cm]{mystery_plain_signal.png}}
+		\put(200,-125)
+		{\includegraphics[height=7cm]{plain_signals_smoothed.png}}
+	\end{picture}
 	
+	\begin{tikzpicture}[overlay, x=1cm,y=1cm]
+		% Coordinates
+		\coordinate (x1) at (2.5, -2.5) ;
+		\coordinate (x2) at (5.5, -2.5) ;
+		\coordinate (x3) at (5.5, -.5) ;
+		\coordinate (x4) at (7.25, -.5) ;
+		
+		
+		\coordinate (x5) at (2.5, 1.) ;
+		\coordinate (x6) at (5.5, 1.) ;
+		\coordinate (x7) at (5.5, 2.95) ;
+		\coordinate (x8) at (7.25, 2.95) ;
+
+		% Text hack
+		\node[right] (mag) at (0.25,3.5) {\footnotesize\textcolor{porestatsblack}{Unidentified particles}};
+		\node[right] (mag) at (7.25,3.5) {\footnotesize\textcolor{porestatsblack}{Tracer particles}};
+
+
+		    		    
+		% Arrow
+		\path[draw=gray1,thick,->] (x1) to[straight] (x2) to[straight] (x3) to[straight] (x4);
+		\path[draw=gray1,thick,->] (x5) to[straight] (x6) to[straight] (x7) to[straight] (x8);
+
+
+			
+	\end{tikzpicture}
+	
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Quantitative length measurement
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Reexpressing the RP amplitude of a long particle in terms of shorter particles}
+	
+	
+	{\footnotesize
+	Because resistances add in series, we can express the RP amplitude of a long particle as a sum over the RP amplitudes of shorter particles
+	}
+	
+	
+	{\scriptsize
+		\begin{equation*}
+			\begin{split}
+				\Delta R_{l}\left(z\right) &= \frac{\rho}{\pi}\left[\int_{z}^{z+l_{p}}\left(\frac{1}{r_{P}^{2}\left(z'\right)-s_{p}^{2}\left(z'\right)}-\frac{1}{r_{P}^{2}\left(z'\right)}\right)dz'\right] \\
+				&= \frac{\rho}{\pi}\left[\int_{z}^{z+l_{s}}\left(\frac{1}{r_{P}^{2}\left(z'\right)-s_{p}^{2}\left(z'\right)}-\frac{1}{r_{P}^{2}\left(z'\right)}\right)dz'\right. \\
+				&+ \int_{z+l_{s}}^{z+2l_{s}}\left(\frac{1}{r_{P}^{2}\left(z'\right)-s_{p}^{2}\left(z'\right)}-\frac{1}{r_{P}^{2}\left(z'\right)}\right)dz + ...\\
+				&+ \left.\int_{z+\left(n-1\right)l_{s}}^{z+nl_{s}}\left(\frac{1}{r_{P}^{2}\left(z'\right)-s_{p}^{2}\left(z'\right)}-\frac{1}{r_{P}^{2}\left(z'\right)}\right)dz'\right] \\
+				&= \sum_{i=0}^{n-1}\frac{\rho}{\pi}\left[\int_{z+il_{s}}^{z+\left(i+1\right)l_{s}}\left(\frac{1}{r^{2}_{P}\left(z'\right)-s^{2}_{p}\left(z'\right)}-\frac{1}{r_{P}^{2}\left(z'\right)}\right)dz'\right] \\
+				&= \sum_{i=0}^{n-1}\Delta R_{s}\left(z+il_{s}\right)
+			\end{split}
+		\end{equation*}
+	}
+
+
+		
+
+
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Quantitative length measurement
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Quantitative length measurement}
+	
+	\begin{columns}[t]
+		\begin{column}[T]{2.25in}
+			{\footnotesize
+				Reexpressing the amplitude of long particles in terms of amplitude of short particles suggests a means of measuring length \\
+				\vspace{.2in}
+				We perform a convolution of the RP amplitude signals of shorter particles over various length intervals \\
+				\vspace{.2in}
+				Then, we select the length for which the convolved signal had the greatest similarity to the raw signal of the unknown particle
+			}
+		\end{column}
+		
+		\begin{column}[T]{2.25in}
+			\includegraphics[width=2.25in]{moving_average_process.png}
+		\end{column}
+
+
+	\end{columns}
+\end{frame}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Length measurement experimental platform
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Length measurement experimental test}
+	\begin{itemize}
+		\item Resistive pulse experiments were conducted with PET membranes
+		\item Three types of particles were tested
+		\begin{itemize}
+			\item $\SI{400}{nm}$ polystyrene beads  (`spheres')
+			\item $\SI{590}{nm}$ rods (`short rods')
+			\item $\SI{1920}{nm}$ rods (`long rods')
+		\end{itemize}
+	\end{itemize}
+	
+	\begin{columns}[t]
+		\begin{column}[T]{2.25in}
+			{\centering
+				\includegraphics[height=0.75in]{PET.png} \\
+				PET pore metal replica \\
+				\par
+			}
+		\end{column}
+		
+		\begin{column}[T]{2.25in}
+			{\centering
+				\includegraphics[height=0.75in]{particles.png} \\
+				Nanoparticles \\
+				\par				
+			}
+		\end{column}
+
+	\end{columns}
+
+
+
 \end{frame}
 
 
@@ -519,19 +681,17 @@ cross/.default={1pt}}
 % Length measurement experimental platform
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[c]{Length measurement experimental platform}
-	\begin{itemize}
-		\item Resistive pulses can be seen as a map of the pore interior for pores with non-constant radius
-		\item In regions of low diameter, the pulse is deeper; in large diameter regions, the pulse is shallow
-		\item Particles shorter than the length scale of diameter variation accurately map the pore interiors
-		\item Particles longer than the length scale of diameter variation create RP signals that can be seen as a convolution of the pore's interior shape
-	\end{itemize}
-	
-	\begin{equation}
-		\begin{split}
-			 \Delta R = R_{p}-R_{0} &= \rho\int_{z=0}^{z=l_{P}}\frac{dz}{A\left(z\right)}-\rho\int_{z=0}^{z=l_{P}}\frac{dz}{A'\left(z\right)} \\ 
-			 &= \rho\int_{z=z'-l_{p}/2}^{z=z'+l_{p}/2}\frac{1}{\pi\left[r_{P}^{2}\left(z\right)-r_{p}^{2}\left(z\right)\right]}-\frac{1}{\pi r_{P}^{2}\left(z\right)}
-		\end{split}
-	\end{equation}
+\begin{frame}[c]{Particles to scale}
+	\includegraphics[width=4.5in]{particles_real_size.png}
+\end{frame}
 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results---PET7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Results---PET7 raw events}
+	\includegraphics[width=4.5in]{PET7_raw.png}
 \end{frame}
