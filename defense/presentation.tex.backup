@@ -589,14 +589,19 @@ cross/.default={1pt}}
 		\begin{equation*}
 			\begin{split}
 				\Delta R_{l}\left(z\right) &= \frac{\rho}{\pi}\left[\int_{z}^{z+l_{p}}\left(\frac{1}{r_{P}^{2}\left(z'\right)-s_{p}^{2}\left(z'\right)}-\frac{1}{r_{P}^{2}\left(z'\right)}\right)dz'\right] \\
-				&= \frac{\rho}{\pi}\left[\int_{z}^{z+l_{s}}\left(\frac{1}{r_{P}^{2}\left(z'\right)-s_{p}^{2}\left(z'\right)}-\frac{1}{r_{P}^{2}\left(z'\right)}\right)dz'\right. \\
-				&+ \int_{z+l_{s}}^{z+2l_{s}}\left(\frac{1}{r_{P}^{2}\left(z'\right)-s_{p}^{2}\left(z'\right)}-\frac{1}{r_{P}^{2}\left(z'\right)}\right)dz + ...\\
-				&+ \left.\int_{z+\left(n-1\right)l_{s}}^{z+nl_{s}}\left(\frac{1}{r_{P}^{2}\left(z'\right)-s_{p}^{2}\left(z'\right)}-\frac{1}{r_{P}^{2}\left(z'\right)}\right)dz'\right] \\
+				%&= \frac{\rho}{\pi}\left[\int_{z}^{z+l_{s}}\left(\frac{1}{r_{P}^{2}\left(z'\right)-%s_{p}^{2}\left(z'\right)}-\frac{1}{r_{P}^{2}\left(z'\right)}\right)dz'\right. \\
+				%&+ \int_{z+l_{s}}^{z+2l_{s}}\left(\frac{1}{r_{P}^{2}\left(z'\right)-s_{p}^{2}\left(z'\right)}-\frac{1}%{r_{P}^{2}\left(z'\right)}\right)dz + ...\\
+				%&+ \left.\int_{z+\left(n-1\right)l_{s}}^{z+nl_{s}}\left(\frac{1}{r_{P}^{2}\left(z'\right)-%s_{p}^{2}\left(z'\right)}-\frac{1}{r_{P}^{2}\left(z'\right)}\right)dz'\right] \\
 				&= \sum_{i=0}^{n-1}\frac{\rho}{\pi}\left[\int_{z+il_{s}}^{z+\left(i+1\right)l_{s}}\left(\frac{1}{r^{2}_{P}\left(z'\right)-s^{2}_{p}\left(z'\right)}-\frac{1}{r_{P}^{2}\left(z'\right)}\right)dz'\right] \\
 				&= \sum_{i=0}^{n-1}\Delta R_{s}\left(z+il_{s}\right)
 			\end{split}
 		\end{equation*}
 	}
+		
+	{\footnotesize In terms of the measured RP signal, we relate resistance to current via }
+		
+	{\scriptsize \[ \frac{\Delta R}{R_{0}}=\frac{\Delta I}{I_{p}} \]}
+	
 
 
 		
@@ -614,23 +619,105 @@ cross/.default={1pt}}
 
 \begin{frame}[c]{Quantitative length measurement}
 	
+
+	{\footnotesize
+		Reexpressing the amplitude of long particles in terms of amplitude of short particles suggests a protocol for measuring length \\
+		\begin{enumerate}
+			\item We transform the signals of short particles via a moving average to simulate the signals of longer particles \\
+			\item Then, we compare an unknown particle's signal with each of the simulated signals of the shorter particle \\
+			\item The comparison with the greatest similarity yields the length of the particle
+		\end{enumerate}
+	}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Quantitative length measurement
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Quantitative length measurement---parametric signal transformation}
 	\begin{columns}[t]
+	
 		\begin{column}[T]{2.25in}
-			{\footnotesize
-				Reexpressing the amplitude of long particles in terms of amplitude of short particles suggests a means of measuring length \\
-				\vspace{.2in}
-				We perform a convolution of the RP amplitude signals of shorter particles over various length intervals \\
-				\vspace{.2in}
-				Then, we select the length for which the convolved signal had the greatest similarity to the raw signal of the unknown particle
+			{\centering
+				Single transformation \\
+				\includegraphics[width=2.25in]{moving_average_process.png} \\
+				\par
+			}
+		\end{column}
+		\hfill
+		\begin{column}[T]{2.25in}
+			{\centering
+				Multiple length transformations \\
+				\includegraphics[width=1.25in]{many_plain_signals_smoothed.png} \\
+				\par
+			}
+		\end{column}
+
+	\end{columns}
+	
+
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Quantitative length measurement
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Quantitative length measurement---signal similarity measure}
+	\vspace{-.1in}
+	\begin{columns}[t]
+	
+		\begin{column}[T]{2.25in}
+			{\centering
+				\includegraphics[width=2in]{mystery_signal_7.png} \\
+				\par
 			}
 		\end{column}
 		
 		\begin{column}[T]{2.25in}
-			\includegraphics[width=2.25in]{moving_average_process.png}
+			{\centering
+				\includegraphics[width=2in]{transformed_signal.png} \\
+				\par
+			}
 		\end{column}
 
+	\end{columns}
+
+	\vspace{.2in}	
+	
+	\begin{columns}[t]
+	
+		\begin{column}[T]{\paperwidth/3}
+			{\centering
+				\includegraphics[width=1.25in]{dtw_matching.png} \\
+				\par
+			}
+		\end{column}
+		
+		\begin{column}[T]{\paperwidth/3}
+			{\centering
+				\vspace{.2in}
+				{\scriptsize \[\mathrm{Cost}=\sum_{\left(i,i'\right)}\left[\left(\frac{\Delta I}{I_{p}}\right)_{i}-\left(\frac{\Delta I}{I_{p}}\right)_{i'}\right] \] } \\
+				\par
+			}
+		\end{column}
+		
+		\begin{column}[T]{\paperwidth/3}
+			{\centering
+				\includegraphics[width=1.5in]{cost_minimization.png} \\
+				\par
+			}
+		\end{column}
 
 	\end{columns}
+	
+
+
 \end{frame}
 
 
@@ -642,11 +729,12 @@ cross/.default={1pt}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[c]{Length measurement experimental test}
+	\textcolor{negativered}{Can we experimentally implement and test the length measurement protocol?} \\
 	\begin{itemize}
-		\item Resistive pulse experiments were conducted with PET membranes
+		\item Experiments were conducted with single pores etched into PET membranes $\left(D\sim\SI{750}{nm}, L=\SI{12}{\mu m}\right)$
 		\item Three types of particles were tested
 		\begin{itemize}
-			\item $\SI{400}{nm}$ polystyrene beads  (`spheres')
+			\item $280$ and $\SI{400}{nm}$ polystyrene beads  (`spheres')
 			\item $\SI{590}{nm}$ rods (`short rods')
 			\item $\SI{1920}{nm}$ rods (`long rods')
 		\end{itemize}
@@ -684,3 +772,468 @@ cross/.default={1pt}}
 \begin{frame}[c]{Particles to scale}
 	\includegraphics[width=4.5in]{particles_real_size.png}
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results---raw data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Results---raw data}
+
+	{\centering
+		\includegraphics[width=3.75in]{experiment_timeseries.png} \\
+		Resistive pulse time series \\
+		\par
+	}
+	
+	\begin{columns}[t]
+		\begin{column}[T]{2.25in}
+			{\centering
+				\includegraphics[height=1.25in]{experiment_scatter.png} \\
+				Amplitude-duration scatter
+				\par
+			}
+		\end{column}
+		
+		\begin{column}[T]{2.25in}
+			{\centering
+				\includegraphics[height=1.25in]{experiment_singleevent.png} \\
+				Raw event \\
+				\par
+			}
+		\end{column}
+
+	\end{columns}
+	
+\end{frame}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results---PET21---Raw
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ \begin{frame}[c]{Results---sphere, short rod, and long rod events}
+ 	\includegraphics[width=4.25in]{PET21_raw.png}
+ \end{frame}
+
+ 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Results---PET21---Smoothed
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% \begin{frame}[c]{Results---PET21 averaged events}
+% 	\includegraphics[width=4.5in]{PET21_averaged.png}
+% \end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results---PET7---Raw and averaged event comparison
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Results---Qualitative event comparison}
+	{\centering
+		\includegraphics[width=3.5in]{PETevents.png} \\
+		\textcolor{negativered}{The averaging process produces signals that are qualitatively similar to the observed signals of longer particles}
+		\par
+	}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results---PET7---Raw and smoothed
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Results---Quantitative event comparison}
+	{\centering
+		\includegraphics[width=2.75in]{dtwfit.png} \\
+		\textcolor{negativered}{Quantitative measurement of particle length yields a distribution closely matching the actual distribution of lengths!}
+		\par
+	}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Future work
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Future work}
+	Some things left for the future:
+	\begin{enumerate}
+		\item Test robustness of quantitative length measurement
+		\item Run length measurement protocol on particles of various unknown lengths, test results
+		\item Reduce system scale: Test length measurement protocol with fabricated planar nanochannels with controlled geometries
+	\end{enumerate}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RP-IM title slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{}
+	\begin{center}
+		\textbf{Hybrid imaging-resistive pulse measurements in microfluidic channels}
+	\end{center}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RP-IM motivation 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Motivation 1}
+	
+	In an RP experiment, the usual parameters measured are amplitude and duration, which can relate to particle's volume, charge, etc. \\
+	
+	But, the equations which relate the RP signal to the physical observable are only accurate under restricting conditions that are seldom met in experimental systems \\
+	
+	For instance, spheroids moving along the axis of an infinitely long cylinder \\
+	
+	\vspace{.25in}
+	
+	{\centering
+		Sphere \hspace{.2in} $\frac{\Delta I}{I_{p}}=\frac{d^{3}}{D^{2}L}\left[1-0.8\left(\frac{d}{D}\right)^{3}\right]^{-1}$ \\
+		\vspace{.1in}
+		Ellipsoid \hspace{.2in} $\frac{\Delta I}{I_{p}}=\left[f_{\perp}+\left(f_{\parallel}-f_{\perp}\right)\cos^{2}\alpha\right]\frac{v}{V}$ \\
+	}
+	
+		 
+ 	%\begin{equation}
+ 	%	\frac{\Delta I}{I_{p}}=\frac{d^{3}}{D^{2}L}\left[1-0.8\left(\frac{d}{D}\right)^{3}\right]^{-1}
+ 	%\end{equation}
+
+
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RP-IM motivation 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Motivation 2}
+	
+	
+	
+	In reality, the experimental set up can never be constrained to this degree
+	
+	Some confounding factors include
+	
+	\begin{itemize}
+		\item Entrance effects in low or medium aspect ratio pores
+		\item Non-spheroidal particles, rotational effects
+		\item Off-axis translocation
+	\end{itemize}
+	
+	The influence of each of these effects on the RP signal is difficult to measure
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RP-IM motivation 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Motivation 3}
+	
+	What if we could \textit{see} what is happening during a resistive pulse experiment? Then we could determine the influence of these confounding factors during the event translocation \\
+	
+	\vspace{.2in}
+	
+	For instance, we could directly observe the effect of off-axis translocation on the resistive pulse signal \\
+	
+	\vspace{.2in}
+	
+	The results would generalize to other resistive pulse experiments and lead to better interpretability of the resistive pulse signals! \\
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RP-IM motivation 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Motivation 4}
+	
+	But, the trouble is that directly imaging nanoscale resistive pulse experiments is extremely difficult; need an electron microscope that can operate \textit{in situ}
+	
+	\vspace{.2in}
+	
+	However, no such restriction is necessary at the \textit{microscale}, above the optical diffraction limit!
+	
+	\vspace{.2in}
+	
+	The results should generalize to the nanoscale as well, since the confounding factors arise due to electrostatic boundary conditions that are scale independent (in the mean-field approximation)
+	
+	\vspace{.2in}
+	
+	\textcolor{negativered}{Objective: Create a hybrid resistive pulse-optical characterization platform}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Device fabrication
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{PDMS channel fabrication}
+
+	\vspace{-.1in}
+	{\footnotesize
+	\begin{enumerate}
+		\item Channel design is printed onto a high-resolution phototransparency
+		\item SU8 photoresist is spun onto a silicon wafer
+		\item UV light shone through the transparency and onto the SU8, cross-linking the polymer bonds
+		\item Wafer developed with SU8 developer, leaving the mold for the channels
+		\item PDMS is poured onto the channel mold and cured
+		\item PDMS removed from wafer and bonded with glass slide
+	\end{enumerate}
+	}
+	
+	
+	\begin{columns}[t]
+		\begin{column}[T]{1.67in}
+			{\centering
+				\includegraphics[height=.85in]{transparency} \\
+				Phototransparency \\
+				\par
+			}
+		\end{column}
+		
+		\begin{column}[T]{1.67in}
+			{\centering
+				\includegraphics[height=.85in]{wafer} \\
+				Silicon/SU8 wafer \\
+				\par
+			}
+		\end{column}
+		
+		\begin{column}[T]{1.67in}
+			{\centering
+				\includegraphics[height=.85in]{chip} \\
+				PDMS channels
+				\par
+			}
+		\end{column}
+
+	\end{columns}
+
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experimental set up
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Hardware configuration}
+
+
+	{\footnotesize
+		Device is placed on the stage of a microscope, which has a high-speed camera attached for capturing the images
+		
+		Electrodes are attached at the channel access ports for recording the RP signal
+		
+		A particle suspension is driven through the channels \textit{via} syringe pump
+		
+		The camera and resistive pulse data are simultaneously recorded
+	}
+	
+	{\centering 
+		\includegraphics[width=2.5in]{hardware.jpg} \\
+		\par
+	}
+	
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Total experimental set up
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Hardware configuration}
+
+
+	{\centering 
+		\includegraphics[width=4.5in]{setup_chip_closeup.png} \\
+		\par
+	}
+	
+	
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Channels and particles
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Channels and particles}
+
+	\begin{columns}[t]
+		\begin{column}[T]{2.25in}
+			{\centering 
+				\includegraphics[height=1.in]{polystyrene_bangs} \\
+				$\SI{10}{\mu m}$ polystyrene beads \\
+				\par
+			}		 
+		\end{column}
+		
+		\begin{column}[T]{2.25in}
+			{\centering 
+				\includegraphics[height=1.in]{trajectories} \\
+				PDMS channels \\
+				{\footnotesize
+					\textbf{Top row:} straight \\
+					\textbf{Bottom row:} with cavity \\
+					\par
+				}
+			}		 
+		\end{column}
+	\end{columns}	
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Raw data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Raw data---resistive pulse and optics}
+
+	\begin{columns}[t]
+		\begin{column}[T]{2.25in}
+			{\centering 
+				\includegraphics[height=1.25in]{rp_timeseries.png} \\
+				Raw RP series \\
+				data = $I\left(t\right)$ \\
+				\par
+			}
+		\end{column}
+		
+		
+		\begin{column}[T]{2.25in}
+			{\centering 
+				\includegraphics[height=1.25in]{raw_video.png} \\
+				Image stills \\
+				data = $\left\{\mathrm{frame1, frame2, ...}\right\}$
+				\par
+			}
+		\end{column}
+	\end{columns}
+	\vspace{.2in}
+	
+	Start with two raw data streams recorded independently \\
+		
+	\begin{itemize}
+		\item The objective is to connect the two data sets so that we know the instantaneous value of the current for each frame
+		\item This will allow us to map the instanteous state of the channel (occupancy, occupant position) to the current level
+	\end{itemize}
+
+
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tracked events
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Tracked events}
+
+	\begin{columns}[t]
+		\begin{column}[T]{2.25in}
+			{\centering 
+				\includegraphics[height=1.45in]{single_rp_event.png} \\
+				data = $\frac{\Delta I}{I_{p}}\left(t_{RP}\right)$ \\
+				\par
+			}
+		\end{column}
+		
+		
+		\begin{column}[T]{2.25in}
+			{\centering 
+				\movie[height=1.25in,width=2.25in,autostart,loop]{}{trajectory_vid.mp4} \\
+				\vspace{.25in}
+				data = $\vec{x}_{c}\left(t_{IM}\right)$
+				\par
+			}
+		\end{column}
+	\end{columns}
+	\vspace{.2in}
+	
+	Resistive pulse events and imaging events are independently detected in both data sets
+	\begin{itemize}
+		\item RP events are detected via a threshold algorithm
+		\item Individual particles are detected via image processing techniques and tracked across frames
+	\end{itemize}
+	
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Synchronizing the two data sets
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Synchronizing the two data sets}
+
+	{\scriptsize
+		After the events are detected independently, we plot a sequence of the time at which each event occurs in its own data stream \\
+		Then, we align the two sequences, resulting in a synchronized data set \\
+		\[ \frac{\Delta I}{I_{p}}\left(t, x_{c}, y_{c}\right) \]
+	}
+	
+	{\centering
+		\includegraphics[width=3.25in]{synced_sequences.pdf} \\
+		\vspace{.2in}
+		\includegraphics[width=1.25in]{synced_event.pdf} \\
+		\par
+	}
+	
+	
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resistance maps---video
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Resistance maps---video}
+	
+	Synchronizing the two data streams allows us to create `resistance maps' of the channel, a plot where each particle position is mapped onto the instantaneous value of the RP amplitude \\
+	\vspace{.2in}
+	\movie[height = 0.6 \textwidth,width = 1 \textwidth,autostart,loop]{}{resistance_map.mp4}
+\end{frame}
+

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.25)  26 AUG 2017 10:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.25)  28 AUG 2017 11:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1968,12 +1968,9 @@ Overfull \vbox (11.86212pt too high) has occurred while \output is active []
 
  <./images/mystery_plain_signal_2.png> <./images/mystery_plain_signal.png> <./i
 mages/plain_signals_smoothed.png>]
-Overfull \vbox (2.99002pt too high) detected at line 606
- []
-
 File: images/watermark.png Graphic file (type png)
-<use images/watermark.png>
-Package pdftex.def Info: images/watermark.png used on input line 606.
+ <use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 611.
 (pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
 
 Overfull \vbox (11.86212pt too high) has occurred while \output is active []
@@ -1981,16 +1978,10 @@ Overfull \vbox (11.86212pt too high) has occurred while \output is active []
 
 [19
 
-] <images/moving_average_process.png, id=202, 433.62pt x 433.62pt>
-File: images/moving_average_process.png Graphic file (type png)
-
-<use images/moving_average_process.png>
-Package pdftex.def Info: images/moving_average_process.png used on input line 6
-34.
-(pdftex.def)             Requested size: 162.6075pt x 162.6071pt.
+]
 File: images/watermark.png Graphic file (type png)
  <use images/watermark.png>
-Package pdftex.def Info: images/watermark.png used on input line 634.
+Package pdftex.def Info: images/watermark.png used on input line 632.
 (pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
 
 Overfull \vbox (11.86212pt too high) has occurred while \output is active []
@@ -1998,27 +1989,24 @@ Overfull \vbox (11.86212pt too high) has occurred while \output is active []
 
 [20
 
- <./images/moving_average_process.png>]
-<images/PET.png, id=211, 448.67625pt x 180.675pt>
-File: images/PET.png Graphic file (type png)
- <use images/PET.png>
-Package pdftex.def Info: images/PET.png used on input line 676.
-(pdftex.def)             Requested size: 134.60391pt x 54.2025pt.
+] <images/moving_average_process.png, id=209, 433.62pt x 433.62pt>
+File: images/moving_average_process.png Graphic file (type png)
 
-<images/particles.png, id=212, 1591.9475pt x 513.92pt>
-File: images/particles.png Graphic file (type png)
+<use images/moving_average_process.png>
+Package pdftex.def Info: images/moving_average_process.png used on input line 6
+63.
+(pdftex.def)             Requested size: 162.6075pt x 162.6071pt.
 
-<use images/particles.png>
-Package pdftex.def Info: images/particles.png used on input line 676.
-(pdftex.def)             Requested size: 167.9003pt x 54.2025pt.
+<images/many_plain_signals_smoothed.png, id=210, 289.08pt x 578.16pt>
+File: images/many_plain_signals_smoothed.png Graphic file (type png)
 
-Overfull \hbox (5.2928pt too wide) in paragraph at lines 676--676
- [][] 
- []
-
+<use images/many_plain_signals_smoothed.png>
+Package pdftex.def Info: images/many_plain_signals_smoothed.png used on input l
+ine 663.
+(pdftex.def)             Requested size: 90.3375pt x 180.67455pt.
 File: images/watermark.png Graphic file (type png)
-<use images/watermark.png>
-Package pdftex.def Info: images/watermark.png used on input line 676.
+ <use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 663.
 (pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
 
 Overfull \vbox (11.86212pt too high) has occurred while \output is active []
@@ -2026,48 +2014,70 @@ Overfull \vbox (11.86212pt too high) has occurred while \output is active []
 
 [21
 
- <./images/PET.png> <./images/particles.png>]
-<images/particles_real_size.png, id=221, 448.67625pt x 180.675pt>
-File: images/particles_real_size.png Graphic file (type png)
+ <./images/moving_average_process.png> <./images/many_plain_signals_smoothed.pn
+g>] <images/mystery_signal_7.png, id=219, 433.62pt x 216.81pt>
+File: images/mystery_signal_7.png Graphic file (type png)
 
-<use images/particles_real_size.png>
-Package pdftex.def Info: images/particles_real_size.png used on input line 686.
+<use images/mystery_signal_7.png>
+Package pdftex.def Info: images/mystery_signal_7.png used on input line 721.
+(pdftex.def)             Requested size: 144.54pt x 72.2687pt.
 
-(pdftex.def)             Requested size: 325.215pt x 130.96257pt.
+<images/transformed_signal.png, id=220, 433.62pt x 216.81pt>
+File: images/transformed_signal.png Graphic file (type png)
 
-Overfull \hbox (4.7213pt too wide) in paragraph at lines 686--686
-[][]  
+<use images/transformed_signal.png>
+Package pdftex.def Info: images/transformed_signal.png used on input line 721.
+(pdftex.def)             Requested size: 144.54pt x 72.2687pt.
+
+<images/dtw_matching.png, id=221, 349.7868pt x 439.4016pt>
+File: images/dtw_matching.png Graphic file (type png)
+
+<use images/dtw_matching.png>
+Package pdftex.def Info: images/dtw_matching.png used on input line 721.
+(pdftex.def)             Requested size: 90.3375pt x 113.47737pt.
+
+Overfull \hbox (1.64803pt too wide) detected at line 721
+[] \OT1/cmss/m/n/8 = [] []
  []
 
+<images/cost_minimization.png, id=222, 477.785pt x 411.5375pt>
+File: images/cost_minimization.png Graphic file (type png)
+
+<use images/cost_minimization.png>
+Package pdftex.def Info: images/cost_minimization.png used on input line 721.
+(pdftex.def)             Requested size: 108.405pt x 93.3706pt.
 File: images/watermark.png Graphic file (type png)
-<use images/watermark.png>
-Package pdftex.def Info: images/watermark.png used on input line 686.
+ <use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 721.
 (pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
 
 Overfull \vbox (11.86212pt too high) has occurred while \output is active []
 
-Package atenddvi Info: Last page = 22.
 
 [22
 
- <./images/particles_real_size.png>]
-<images/PET7_raw.png, id=228, 867.24pt x 650.43pt>
-File: images/PET7_raw.png Graphic file (type png)
- <use images/PET7_raw.png>
-Package pdftex.def Info: images/PET7_raw.png used on input line 697.
-(pdftex.def)             Requested size: 325.215pt x 243.91064pt.
+ <./images/mystery_signal_7.png> <./images/transformed_signal.png> <./images/dt
+w_matching.png> <./images/cost_minimization.png>]
+<images/PET.png, id=235, 448.67625pt x 180.675pt>
+File: images/PET.png Graphic file (type png)
+ <use images/PET.png>
+Package pdftex.def Info: images/PET.png used on input line 764.
+(pdftex.def)             Requested size: 134.60391pt x 54.2025pt.
 
-Overfull \hbox (4.7213pt too wide) in paragraph at lines 697--697
-[][]  
- []
+<images/particles.png, id=236, 1591.9475pt x 513.92pt>
+File: images/particles.png Graphic file (type png)
 
+<use images/particles.png>
+Package pdftex.def Info: images/particles.png used on input line 764.
+(pdftex.def)             Requested size: 167.9003pt x 54.2025pt.
 
-Overfull \vbox (7.59021pt too high) detected at line 697
+Overfull \hbox (5.2928pt too wide) in paragraph at lines 764--764
+ [][] 
  []
 
 File: images/watermark.png Graphic file (type png)
 <use images/watermark.png>
-Package pdftex.def Info: images/watermark.png used on input line 697.
+Package pdftex.def Info: images/watermark.png used on input line 764.
 (pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
 
 Overfull \vbox (11.86212pt too high) has occurred while \output is active []
@@ -2075,7 +2085,376 @@ Overfull \vbox (11.86212pt too high) has occurred while \output is active []
 
 [23
 
- <./images/PET7_raw.png>])
+ <./images/PET.png> <./images/particles.png>]
+<images/particles_real_size.png, id=245, 448.67625pt x 180.675pt>
+File: images/particles_real_size.png Graphic file (type png)
+
+<use images/particles_real_size.png>
+Package pdftex.def Info: images/particles_real_size.png used on input line 774.
+
+(pdftex.def)             Requested size: 325.215pt x 130.96257pt.
+
+Overfull \hbox (4.7213pt too wide) in paragraph at lines 774--774
+[][]  
+ []
+
+File: images/watermark.png Graphic file (type png)
+<use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 774.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[24
+
+ <./images/particles_real_size.png>]
+<images/experiment_timeseries.png, id=253, 872.2989pt x 213.9192pt>
+File: images/experiment_timeseries.png Graphic file (type png)
+
+<use images/experiment_timeseries.png>
+Package pdftex.def Info: images/experiment_timeseries.png used on input line 80
+7.
+(pdftex.def)             Requested size: 271.0125pt x 66.46115pt.
+
+<images/experiment_scatter.png, id=254, 300.12125pt x 234.8775pt>
+File: images/experiment_scatter.png Graphic file (type png)
+
+<use images/experiment_scatter.png>
+Package pdftex.def Info: images/experiment_scatter.png used on input line 807.
+(pdftex.def)             Requested size: 115.43025pt x 90.3375pt.
+
+<images/experiment_singleevent.png, id=255, 459.7175pt x 327.2225pt>
+File: images/experiment_singleevent.png Graphic file (type png)
+
+<use images/experiment_singleevent.png>
+Package pdftex.def Info: images/experiment_singleevent.png used on input line 8
+07.
+(pdftex.def)             Requested size: 126.91022pt x 90.3375pt.
+File: images/watermark.png Graphic file (type png)
+ <use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 807.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[25
+
+ <./images/experiment_timeseries.png> <./images/experiment_scatter.png> <./imag
+es/experiment_singleevent.png>]
+<images/PET21_raw.png, id=266, 867.24pt x 650.43pt>
+File: images/PET21_raw.png Graphic file (type png)
+ <use images/PET21_raw.png>
+Package pdftex.def Info: images/PET21_raw.png used on input line 820.
+(pdftex.def)             Requested size: 307.14749pt x 230.36336pt.
+File: images/watermark.png Graphic file (type png)
+
+<use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 820.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[26
+
+ <./images/PET21_raw.png>]
+<images/PETevents.png, id=274, 1154.3125pt x 903.375pt>
+File: images/PETevents.png Graphic file (type png)
+
+<use images/PETevents.png>
+Package pdftex.def Info: images/PETevents.png used on input line 844.
+(pdftex.def)             Requested size: 252.94499pt x 197.9574pt.
+
+Overfull \vbox (1.237pt too high) detected at line 844
+ []
+
+File: images/watermark.png Graphic file (type png)
+<use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 844.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[27
+
+ <./images/PETevents.png>]
+<images/dtwfit.png, id=282, 1006.76125pt x 940.51375pt>
+File: images/dtwfit.png Graphic file (type png)
+
+<use images/dtwfit.png>
+Package pdftex.def Info: images/dtwfit.png used on input line 858.
+(pdftex.def)             Requested size: 198.7425pt x 185.65973pt.
+File: images/watermark.png Graphic file (type png)
+ <use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 858.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[28
+
+ <./images/dtwfit.png>]
+File: images/watermark.png Graphic file (type png)
+ <use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 873.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[29
+
+]
+File: images/watermark.png Graphic file (type png)
+ <use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 886.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[30
+
+]
+File: images/watermark.png Graphic file (type png)
+ <use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 918.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[31
+
+]
+File: images/watermark.png Graphic file (type png)
+ <use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 943.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[32
+
+]
+File: images/watermark.png Graphic file (type png)
+ <use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 964.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[33
+
+]
+File: images/watermark.png Graphic file (type png)
+ <use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 989.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[34
+
+] <images/transparency.jpg, id=328, 2225.31375pt x 1689.31125pt>
+File: images/transparency.jpg Graphic file (type jpg)
+
+<use images/transparency.jpg>
+Package pdftex.def Info: images/transparency.jpg used on input line 1040.
+(pdftex.def)             Requested size: 80.91597pt x 61.42993pt.
+
+<images/wafer.jpg, id=329, 2279.51625pt x 1773.62625pt>
+File: images/wafer.jpg Graphic file (type jpg)
+ <use images/wafer.jpg>
+Package pdftex.def Info: images/wafer.jpg used on input line 1040.
+(pdftex.def)             Requested size: 78.92165pt x 61.42993pt.
+
+<images/chip.jpg, id=330, 2159.06625pt x 1695.33376pt>
+File: images/chip.jpg Graphic file (type jpg)
+ <use images/chip.jpg>
+Package pdftex.def Info: images/chip.jpg used on input line 1040.
+(pdftex.def)             Requested size: 78.2106pt x 61.42993pt.
+File: images/watermark.png Graphic file (type png)
+
+<use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 1040.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[35
+
+ <./images/transparency.jpg> <./images/wafer.jpg> <./images/chip.jpg>]
+<hardware.jpg, id=337, 253.1859pt x 191.5155pt>
+File: hardware.jpg Graphic file (type jpg)
+ <use hardware.jpg>
+Package pdftex.def Info: hardware.jpg used on input line 1067.
+(pdftex.def)             Requested size: 180.67499pt x 136.67244pt.
+File: images/watermark.png Graphic file (type png)
+
+<use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 1067.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[36
+
+ <./hardware.jpg>]
+<images/setup_chip_closeup.png, id=344, 2681.01625pt x 1109.14375pt>
+File: images/setup_chip_closeup.png Graphic file (type png)
+
+<use images/setup_chip_closeup.png>
+Package pdftex.def Info: images/setup_chip_closeup.png used on input line 1086.
+
+(pdftex.def)             Requested size: 325.215pt x 134.53006pt.
+
+Overfull \hbox (4.7213pt too wide) in paragraph at lines 1086--1086
+ [][] 
+ []
+
+File: images/watermark.png Graphic file (type png)
+<use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 1086.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[37
+
+ <./images/setup_chip_closeup.png>]
+<images/polystyrene_bangs.png, id=353, 100.375pt x 100.375pt>
+File: images/polystyrene_bangs.png Graphic file (type png)
+
+<use images/polystyrene_bangs.png>
+Package pdftex.def Info: images/polystyrene_bangs.png used on input line 1119.
+(pdftex.def)             Requested size: 72.27452pt x 72.26999pt.
+
+<images/trajectories.pdf, id=354, 229.0959pt x 118.5228pt>
+File: images/trajectories.pdf Graphic file (type pdf)
+
+<use images/trajectories.pdf>
+Package pdftex.def Info: images/trajectories.pdf used on input line 1119.
+(pdftex.def)             Requested size: 139.69934pt x 72.26999pt.
+File: images/watermark.png Graphic file (type png)
+ <use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 1119.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[38
+
+ <./images/polystyrene_bangs.png> <./images/trajectories.pdf>]
+File: images/rp_timeseries.png Graphic file (type png)
+
+<use images/rp_timeseries.png>
+Package pdftex.def Info: images/rp_timeseries.png used on input line 1161.
+(pdftex.def)             Requested size: 146.42842pt x 90.3375pt.
+
+<images/raw_video.png, id=368, 553.5882pt x 326.6604pt>
+File: images/raw_video.png Graphic file (type png)
+
+<use images/raw_video.png>
+Package pdftex.def Info: images/raw_video.png used on input line 1161.
+(pdftex.def)             Requested size: 153.09459pt x 90.3375pt.
+File: images/watermark.png Graphic file (type png)
+ <use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 1161.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[39
+
+ <./images/raw_video.png>]
+<images/single_rp_event.png, id=378, 433.62pt x 289.08pt>
+File: images/single_rp_event.png Graphic file (type png)
+
+<use images/single_rp_event.png>
+Package pdftex.def Info: images/single_rp_event.png used on input line 1199.
+(pdftex.def)             Requested size: 157.18156pt x 104.79128pt.
+File: images/watermark.png Graphic file (type png)
+ <use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 1199.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[40
+
+ <./images/single_rp_event.png>]
+<images/synced_sequences.pdf, id=389, 461.08258pt x 49.8663pt>
+File: images/synced_sequences.pdf Graphic file (type pdf)
+
+<use images/synced_sequences.pdf>
+Package pdftex.def Info: images/synced_sequences.pdf used on input line 1225.
+(pdftex.def)             Requested size: 234.87749pt x 25.4018pt.
+
+<images/synced_event.pdf, id=390, 243.5499pt x 294.8616pt>
+File: images/synced_event.pdf Graphic file (type pdf)
+
+<use images/synced_event.pdf>
+Package pdftex.def Info: images/synced_event.pdf used on input line 1225.
+(pdftex.def)             Requested size: 90.3375pt x 109.36703pt.
+File: images/watermark.png Graphic file (type png)
+ <use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 1225.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+
+[41
+
+ <./images/synced_sequences.pdf> <./images/synced_event.pdf
+
+pdfTeX warning: /opt/texbin/pdflatex (file ./images/synced_event.pdf): PDF incl
+usion: multiple pdfs with page group included in a single page
+>]
+File: images/resistancemap.png Graphic file (type png)
+ <use images/resistancemap.png>
+Package pdftex.def Info: images/resistancemap.png used on input line 1240.
+(pdftex.def)             Requested size: 320.50815pt x 192.29643pt.
+
+Overfull \hbox (35.20097pt too wide) in paragraph at lines 1240--1240
+[]\OT1/cmss/m/n/12 <only1>[][][] 
+ []
+
+
+Overfull \hbox (35.21542pt too wide) in paragraph at lines 1240--1240
+\OT1/cmss/m/n/12 <only2>[]  
+ []
+
+
+Overfull \vbox (214.22787pt too high) detected at line 1240
+ []
+
+File: images/watermark.png Graphic file (type png)
+<use images/watermark.png>
+Package pdftex.def Info: images/watermark.png used on input line 1240.
+(pdftex.def)             Requested size: 364.1942pt x 273.1569pt.
+
+Overfull \vbox (11.86212pt too high) has occurred while \output is active []
+
+Package atenddvi Info: Last page = 42.
+
+[42
+
+])
 \tf@nav=\write6
 \openout6 = `defense.nav'.
 
@@ -2087,16 +2466,7 @@ Overfull \vbox (11.86212pt too high) has occurred while \output is active []
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 83.
 Package atveryend Info: Executing hook `AfterLastShipout' on input line 83.
- (./defense.aux
-
-Package atenddvi Warning: Rerun LaTeX, last page has changed.
-
-
-Package animate Warning: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-(animate)                @ Rerun to get internal references right! @
-(animate)                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.
-
-(./presentation.aux))
+ (./defense.aux (./presentation.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 83.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 83.
 Package rerunfilecheck Info: File `defense.out' has not changed.
@@ -2106,40 +2476,40 @@ Package rerunfilecheck Info: File `defense.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 31845 strings out of 493013
- 666395 string characters out of 6133328
- 701285 words of memory out of 5000000
- 34705 multiletter control sequences out of 15000+600000
- 20670 words of font info for 80 fonts, out of 8000000 for 9000
+ 32043 strings out of 493013
+ 670256 string characters out of 6133328
+ 698285 words of memory out of 5000000
+ 34840 multiletter control sequences out of 15000+600000
+ 21385 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,20n,83p,10460b,997s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.
 pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.p
 fb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pf
-b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/lo
-cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/lo
-cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
-al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local
-/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb>
-Output written on defense.pdf (23 pages, 12481299 bytes).
+b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local
+/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local
+/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/local
+/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb>
+Output written on defense.pdf (42 pages, 21647437 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
- 198 compressed objects within 2 object streams
- 47 named destinations out of 1000 (max. 500000)
- 208 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 509 PDF objects out of 1000 (max. 8388607)
+ 337 compressed objects within 4 object streams
+ 85 named destinations out of 1000 (max. 500000)
+ 321 words of extra memory for PDF output out of 10000 (max. 10000000)
 
