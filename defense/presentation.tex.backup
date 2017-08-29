@@ -984,7 +984,36 @@ cross/.default={1pt}}
 	
 	\vspace{.2in}
 	
-	\textcolor{negativered}{Objective: Create a hybrid resistive pulse-optical characterization platform}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experimental objective
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Experimental objective}
+
+	\textcolor{negativered}{Objective: Create a hybrid resistive pulse-optical characterization platform} \\
+	
+	\vspace{.1in}
+	
+	Essentially, we want to devise a micro-sized resistive pulse system that we can image \\
+	
+	\vspace{.1in}
+	
+	This requires adding a few elements to the standard resistive pulse set up
+	
+	\begin{itemize}
+		\item Optically transparent, planar microchannels
+		\item Pressure-induced flow, e.g. via a syringe pump (electrophoresis and electroosmosis are less pronounced at this scale)
+		\item Microscope to magnify the image
+		\item High-speed camera to capture images
+	\end{itemize}
+
+	
+	
 
 \end{frame}
 
@@ -996,15 +1025,16 @@ cross/.default={1pt}}
 
 \begin{frame}[c]{PDMS channel fabrication}
 
-	\vspace{-.1in}
+	The channels were fabricated with PDMS, an optically transparent elastomer ideal for microfluidic experiments \\
+	
+	
+
 	{\footnotesize
 	\begin{enumerate}
 		\item Channel design is printed onto a high-resolution phototransparency
-		\item SU8 photoresist is spun onto a silicon wafer
-		\item UV light shone through the transparency and onto the SU8, cross-linking the polymer bonds
-		\item Wafer developed with SU8 developer, leaving the mold for the channels
-		\item PDMS is poured onto the channel mold and cured
-		\item PDMS removed from wafer and bonded with glass slide
+		\item Channel design is then transferred to a mold via standard soft photolithography
+		\item PDMS is poured over mold and removed after curing
+		\item PDMS bonded to a glass slide using an oxygen plasma
 	\end{enumerate}
 	}
 	
@@ -1049,13 +1079,13 @@ cross/.default={1pt}}
 
 
 	{\footnotesize
-		Device is placed on the stage of a microscope, which has a high-speed camera attached for capturing the images
-		
-		Electrodes are attached at the channel access ports for recording the RP signal
-		
-		A particle suspension is driven through the channels \textit{via} syringe pump
-		
-		The camera and resistive pulse data are simultaneously recorded
+		Device is placed on the stage of a microscope, which has a high-speed camera $\left(>\SI{100}{kfps}!\right)$ attached for capturing the images \\
+		\vspace{.1in}
+		Electrodes are attached at the channel access ports for recording the RP signal \\
+		\vspace{.1in}
+		A particle suspension is driven through the channels \textit{via} syringe pump \\
+		\vspace{.1in}
+		The camera and resistive pulse data are simultaneously recorded \\
 	}
 	
 	{\centering 
@@ -1181,7 +1211,7 @@ cross/.default={1pt}}
 		\begin{column}[T]{2.25in}
 			{\centering 
 				\movie[height=1.25in,width=2.25in,autostart,loop]{}{trajectory_vid.mp4} \\
-				\vspace{.25in}
+				\vspace{.225in}
 				data = $\vec{x}_{c}\left(t_{IM}\right)$
 				\par
 			}
@@ -1210,7 +1240,7 @@ cross/.default={1pt}}
 	{\scriptsize
 		After the events are detected independently, we plot a sequence of the time at which each event occurs in its own data stream \\
 		Then, we align the two sequences, resulting in a synchronized data set \\
-		\[ \frac{\Delta I}{I_{p}}\left(t, x_{c}, y_{c}\right) \]
+		\[ \mathrm{data} = \frac{\Delta I}{I_{p}}\left(t, x_{c}, y_{c}\right) \]
 	}
 	
 	{\centering
@@ -1226,14 +1256,535 @@ cross/.default={1pt}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Resistance maps---video
+% Resistance maps---process video
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{frame}[c]{Resistance maps---video}
+\begin{frame}[c]{Resistance map}
 	
 	Synchronizing the two data streams allows us to create `resistance maps' of the channel, a plot where each particle position is mapped onto the instantaneous value of the RP amplitude \\
 	\vspace{.2in}
-	\movie[height = 0.6 \textwidth,width = 1 \textwidth,autostart,loop]{}{resistance_map.mp4}
+	{\centering
+		\movie[height = 0.75 \textwidth,width = .75 \textwidth,autostart,loop]{}{resistance_map.mp4} \\
+		\par
+	}
+	
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resistance maps---final image
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Resistance map}
+	
+	Synchronizing the two data streams allows us to create `resistance maps' of the channel, a plot where each particle position is mapped onto the instantaneous value of the RP amplitude \\
+	\vspace{.1in}
+	{\centering
+		\only<1>{\includegraphics[width=0.75\textwidth]{resistance_map_undulating.png}}
+		\only<2>{\includegraphics[width=0.5\textwidth]{resistancemaps.png}} \\
+		\par
+	}
+	
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resistance maps---final image
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Key scientific questions}
+	
+	The hybrid resistive pulse-imaging platform, along with the resistance maps, is a general tool for enhancing the interpretability of resistive pulse experiments \\
+	\vspace{.1in}
+	We were interested in answering the following: \\
+	
+	\begin{itemize}
+		\item How far into a channel must a particle travel before the RP amplitude plateaus?
+		\item How does off-axis translocation effect the RP amplitude in constant width and non-constant width channels?
+		\item How is the resistance distributed in channels with varying widths?
+	\end{itemize}
+	
+	The resistance map allows these questions to be answered
+
+	
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Distance into channel
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Channel entrance effects}
+
+	{\scriptsize
+		In RP experiments, event duration can be used to measure the $\zeta-$potential of the particle or pore \\
+		\vspace{0.1in}
+		In order to measure duration accurately, the exact time corresponding to particle entrance and exit must be known \\
+		\vspace{0.1in}
+		There is no standard point in RP signal at which to mark the event start and stop \\
+		\vspace{0.1in}
+	}
+	
+	\vspace{0.1in}
+
+	\hspace{1.in} \includegraphics[width=1in]{channel_entrance_resistance_map.png} \\
+	
+	\begin{tikzpicture}[overlay, x=1cm,y=1cm]
+		% Coordinates
+		\coordinate (x1a) at (3.25, 1.35) ;
+		\coordinate (x1b) at (2, -0.25) ;
+		
+		\coordinate (x2a) at (4, 1.35) ;
+		\coordinate (x2b) at (7.05, .25) ;
+		
+		\coordinate (x3a) at (4.5, 1.35) ;
+		\coordinate (x3b) at (6.35, 1.75) ;
+
+
+		% Text hack
+		\node[right] (mag) at (0.25,-0.5) {\footnotesize\textcolor{porestatsblack}{Bulk resistance}};
+		\node[right] (mag) at (7.25,0.25) {\footnotesize\textcolor{porestatsblack}{Transition zone}};
+		\node[right] (mag) at (6.5,1.75) {\footnotesize\textcolor{porestatsblack}{Intrachannel resistance}};
+
+
+		    		    
+		% Arrow
+		\path[draw=gray1,thick,->] (x1a) to[bend right] (x1b) ;
+		\path[draw=gray1,thick,->] (x2a) to[bend right] (x2b) ;
+		\path[draw=gray1,thick,->] (x3a) to[bend left] (x3b) ;
+		
+
+
+			
+	\end{tikzpicture}
+	
+
+	
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Distance into channel
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Channel entrance effects}
+	
+	{\scriptsize
+		Plotting current amplitude $\Delta I/I_{p}$ versus axial position $x_{c}$ shows how the current transitions to its full amplitude as the particle enters the channel \\
+		\vspace{.1in}
+		We found the full amplitude was not attained until the particle was well-within the channel, even as much as $\sim\SI{10}{\mu m}$ ($7\%$ of the total channel length) \\
+		\vspace{.1in}
+		The channel-crossing threshold most closely coincides with the FWHM of the RP signal, suggesting that current value may be the most appropriate to choose for the channel entrance and exit positions \\
+	}
+	
+	
+	{\centering
+		\includegraphics[width=3in]{channelentrancestraight.pdf} \\
+		\par
+	}
+	
+
+	
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Effect of off-axis translocation---Introduction
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Effect of off-axis translocations}
+	
+	{\scriptsize
+		Electrostatic boundary conditions at the surface of the insulating particle leads to distortion of the electric field in its vicinity \\
+		\vspace{.1in}
+		{\centering
+			\includegraphics[height=.65in]{channel_coordinates.pdf}
+			\hspace{.4in}
+			\includegraphics[height=.65in]{berge_fig.png} \\ 
+			\par
+		}
+		
+		\vspace{.1in}
+		When the particle travels off-axis, this distortion couples with the distortion of the $\vec{E}$ field in the vicinity of the channel, increasing the total system resistance \\
+		\vspace{.1in}
+		This off-axis effect leads to a dispersion in the amplitudes produced by particles of the same size, resulting ultimately in larger uncertainties in their measured volumes \\
+		\vspace{.1in}
+		{\centering
+			\includegraphics[width=1.75in]{saleh_fig.png} \\
+			\par
+		}
+		
+	}
+	
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Effect of off-axis translocation---Straight channels
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Off-axis translocation in straight channels}
+	
+	{\centering
+		\includegraphics[width=1.75in]{off_axis_straight.pdf} \\
+		{\scriptsize \textcolor{negativered}{The scatter plots clearly show an increase in event amplitude with transverse displacement } } \\
+		\par
+	}
+	
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Effect of off-axis translocation---Undulating channels
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Off-axis translocation in cavitated channels}
+	
+	{\centering
+		\includegraphics[width=3.75in]{off_axis_cavity.pdf} \\
+		{\scriptsize \textcolor{negativered}{In channels with a central cavity, we observe the opposite effect of lateral displacement when the particle is inside the cavity! } } \\
+		\par
+	}
+	
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Conclusions and future work
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Conclusions and future work}
+	
+	{\centering
+		The hybrid resistive pulse-optical detection platform allows one to explore position-related effects on the resistive pulse amplitude \\
+		In the future, we could look at translocations for aspherical particles \\
+		Particle rotation dynamics can affect the amplitude of the resistive pulse signal, and the hybrid approach could be used to better understand this effect \\
+		In particular, we are interested in using the hybrid approach to study particle deformation dynamics, and how deformation affects the resistive pulse amplitudes \\
+	}
+	
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cell title slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{}
+	\begin{center}
+		\textbf{Resistive pulse sensing of biological cells}
+	\end{center}
+\end{frame}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cell background slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Cell mechanical properties}
+	\begin{columns}[t]
+		\begin{column}[T]{2.25in}
+			\begin{itemize}
+				\item Traditional cell characterization platforms have been primarily chemical,~e.g. fluorescence microscopy
+				\item Recently, researchers have recognized the importance of measuring mechanical properties of cells
+				\item For instance, size and shape are very predictive of cell type
+			\end{itemize}
+		\end{column}
+		
+		
+		\begin{column}[T]{2.25in}
+			\includegraphics[width=2.25in]{bloodcells.jpg}
+		\end{column}
+
+
+	\end{columns}
+
+	
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cell background slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Cell mechanical properties}
+	\begin{itemize}
+		\item Another important mechanical feature is stiffness---cells behave like elastic deforming objects
+		\item Stiffness depends on physiological properties in the membrane and body, such as cytoskeletal strength
+		\item Stiffness varies across cell lines, and has shown to be predictive in the same way as size and shape are---for instance, cancer cells are generally more elastic than non-cancerous cells
+		
+	\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cell background slide
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Stiffness detection}
+
+	\begin{itemize}
+		\item Is it possible to build a sensor that measures cell deformability?
+		\item One way to measure deformability is to drive cells through ultra fast fluidic flows
+		\item Hydrodynamic forces act on the particle, inducing a measurable deformation response
+	\end{itemize}
+	
+	\vspace{.1in}
+	
+	{\centering
+		\only<1>{\includegraphics[width=3in]{otto_et_al.png}}\only<2>{\includegraphics[width=2in]{dicarlo_et_al.png}} \\
+		{\tiny \only<1>{Otto \emph{et al.} 2015. Biophys. J. 109:2023-2036.}\only<2>{Gossett \emph{et al.} 2012. PNAS 109:7630-7635.}} \\
+		\par
+	}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Optical response measurement
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Optical measurement of deformation}
+	\begin{itemize}
+		\item Currently, cell deformation response is primarily determined via high-speed microscopy, which comes with a few disadvantages, including
+		\begin{itemize}
+			\item High cost; high-speed camera can cost upwards of $\$100\mathrm{k}$
+			\item Computationally expensive---current cell throughput is limited to $\sim 100\,\mathrm{cells/second}$ for online analysis
+		\end{itemize}
+		\item Can we replace imaging with resistive pulse, which doesn't suffer these drawbacks?
+	\end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Measuring deformability with resistive pulse
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Optical measurement of deformation}
+
+	{\scriptsize
+		We can approximate deformed cell configurations as ellipsoids, which have resistive pulse amplitude described by \\
+		
+		\[ \frac{\Delta I}{I_{p}}=f_{\parallel}\frac{v}{V} \] \\
+		
+		$f_{\parallel}$: `electrical shape factor', related to aspect ratio of the ellipse \\
+	}
+
+	\vspace{.1in}
+	
+	{\centering
+		\includegraphics[width=2.in]{dIellipsoid.png} \\
+		\par
+	}
+	
+	
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Measuring deformability with resistive pulse
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Proposed channel design for inducing deformation}
+
+	{\scriptsize
+		Consider channels containing a central cavity \\
+		\vspace{.1in}
+		Mass continuity dictates that the fluid flow slows in the cavity \\
+		\vspace{.1in}
+		Accelerating extensional flows pull the particle into an elongated geometry \\
+		\vspace{.1in}
+		Decelerating flows compress the particle axially \\
+		\vspace{.1in}
+	}
+	
+	
+	{\centering
+		\includegraphics[width=4.in]{deformation_motif.png} \\
+		\par
+	}
+			
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Measuring deformability with resistive pulse
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Resistive pulse distortion}
+
+		According to the deformation motif presented in the previous slide, deformations should follow the following pattern
+		
+		\begin{equation*}
+			\begin{split}
+				&s\rightarrow p\rightarrow o\rightarrow p\rightarrow o\rightarrow s \\
+				&s: \mathrm{spherical},\,p: \mathrm{prolate},\,o:\mathrm{oblate}
+			\end{split}
+		\end{equation*}
+		
+
+	
+	
+	\begin{columns}[t]
+		\begin{column}[T]{2in}
+			{\centering
+				\includegraphics[height=1.35in]{dIellipsoid.png} \\
+				\par
+			}
+		\end{column}
+		
+		
+		\begin{column}[T]{2.5in}
+			{\centering
+				\includegraphics[height=1.35in]{deformation_motif_rp.png} \\
+				\par
+			}
+		\end{column}
+	\end{columns}
+			
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Key scientific questions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Key scientific questions}
+
+	\begin{enumerate}
+		\item \only<1>{Do the cells deform according to the presented motif?}\only<2,3>{\textcolor{positivegreen}{Do the cells deform according to the presented motif?}}
+		\item \only<1>{Is the deformation observable in the resistive pulse signal?}\only<2,3>{\textcolor{electricyellow}{Is the deformation observable in the resistive pules signal?}}
+	\end{enumerate}
+	
+	{\scriptsize
+		\only<1,2>{\textcolor{gray2}{The hybrid RP-IM system is employed to characterize the device and the cells' resistive pulses \\
+			\vspace{0.1in}
+			Ultimately, the goal is to remove the camera from the set up and measure deformability with resistive pulse alone \\
+		}}
+		
+		\only<3>{\textcolor{porestatsblack}{The hybrid RP-IM system is employed to characterize the device and the resistive pulses it creates \\
+			\vspace{0.1in}
+			Ultimately, the goal is to remove the camera from the set up and measure deformability with resistive pulse alone \\
+		}}
+	}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Key scientific questions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Key scientific questions}
+
+	\begin{enumerate}
+		\item \only<1>{Do the cells deform according to the presented motif?}\only<2,3>{\textcolor{positivegreen}{Do the cells deform according to the presented motif?}}
+		\item \only<1>{Is the deformation observable in the resistive pulse signal?}\only<2,3>{\textcolor{electricyellow}{Is the deformation observable in the resistive pules signal?}}
+	\end{enumerate}
+	
+	{\scriptsize
+		\only<1,2>{\textcolor{gray2}{The hybrid RP-IM system is employed to characterize the device and the cells' resistive pulses \\
+			\vspace{0.1in}
+			Ultimately, the goal is to remove the camera from the set up and measure deformability with resistive pulse alone \\
+		}}
+		
+		\only<3>{\textcolor{porestatsblack}{The hybrid RP-IM system is employed to characterize the device and the resistive pulses it creates \\
+			\vspace{0.1in}
+			Ultimately, the goal is to remove the camera from the set up and measure deformability with resistive pulse alone \\
+		}}
+	}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Do the cells deform?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{1. Do the cells deform?}
+
+	
+	
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Group
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{The Siwy lab}
+	\begin{columns}[t]
+		\begin{column}[T]{1.5in}
+			{\centering
+				\includegraphics[height=1.5in]{lab/siwy} \\
+				\par
+			}
+		\end{column}
+		
+		\begin{column}[T]{3in}
+			\begin{columns}[t]
+				\begin{column}[T]{1in}
+					% Elif
+					{\centering
+						\includegraphics[height=1in]{lab/default.png} \\
+						\par
+					}
+				\end{column}
+			
+				\begin{column}[T]{1in}
+					% Yinghua
+					{\centering
+						\includegraphics[height=1in]{lab/yinghua.png} \\
+						\par
+					}
+				\end{column}
+			
+				\begin{column}[T]{1in}
+					% Tim
+					{\centering
+						\includegraphics[height=1in]{lab/tim.png} \\
+						\par
+					}
+				\end{column}
+			\end{columns}
+			
+			
+		 
+		\end{column}
+
+
+	\end{columns}
+
+	
+	
+\end{frame}
+
+
+
+
+
+
+
 
