@@ -154,21 +154,42 @@
 
 \begin{frame}[c]{Resistive pulse sensing---description}
 	
-	\begin{columns}[t]
-		\begin{column}[T]{2.75in}
+	
 	
 			\begin{itemize}
 				\item Resistive pulse sensing (RP) is a method for single particle detection and characterization
-				\item Works at any scale (nano, micro, milli, etc.)
-				\item A diverse range of applications: red blood cell counting (several $\SI{}{\mu m}$), virus detection ($10-\SI{100}{\mu m}$), and DNA sequencing ($\sim\SI{1}{nm}$), among others
+				\item Works at any scale (nano, micro, milli, etc.) and in a diverse range of applications
 			\end{itemize}
 	
+
+	\begin{columns}[t]
+		\begin{column}[T]{1.67in}
+			{\centering
+				\includegraphics[height=1.25in]{bloodcells.jpg} \\
+				Blood cell counting \\
+				$\left(\sim\mathrm{several}\,\SI{}{\mu m}\right)$ \\
+				\par
+			}
 		\end{column}
 		
-		\begin{column}[T]{1.75in}
-			\includegraphics[width=1.75in]{coulter_patent_drawing.png}
+		\begin{column}[T]{1.67in}
+			{\centering
+				\includegraphics[height=1.25in]{tobaccomosaicvirus.png} \\
+				Virus detection \\
+				$\left(\sim\SI{10}{nm}\right)$ \\
+				\par
+			}
 		\end{column}
 		
+		\begin{column}[T]{1.67in}
+			{\centering
+				\includegraphics[height=1.25in]{dna.png} \\
+				DNA sequencing \\
+				$\left(\SI{1}{nm}\right)$ \\
+				\par
+			}
+		\end{column}
+
 	\end{columns}
 
 	
@@ -183,180 +204,75 @@
 
 \begin{frame}[c]{Resistive pulse sensing---how does it work?}
 
-	\begin{columns}[t]
-		\begin{column}[T]{2.75in}
-	      
-	
-
-			\begin{tiny}
-				\begin{itemize}
-				
-					\item A nanopore immersed in electrolyte solution acts as an ionic resistor
-					\item Current-Voltage relationship follows Ohm's law $V=IR$
-					\item When a particle enters the channel its resistance changes, yielding a pulse in the measured ionic current
-					\item Pulse properties yield information on size, shape, charge, and concentration of particle
-				\end{itemize}
-				{\centering
-					\includegraphics[height=1in,width=2.5in]{rp_timeseries.png} \\ \par
-				}
-			\end{tiny}
-			
-		\end{column}
-		
-		\begin{column}[T]{1.75in}
-			{\centering
-				\vspace{.5cm}
-				\includegraphics[width=1.5in]{singletrajectory} \\
-				\vspace{.75cm}
-				\includegraphics[width=1.5in]{singlerp} \\
-				\par
-			}
-			
-		\end{column}
-
-	
-	
-	\end{columns}
-	
-\end{frame}
+	\begin{itemize}
+		\item A channel is immersed in electrolyte solution
+		\item An applied voltage induces an ionic current according to Ohm's law $I=V/R$
+		\item The channel's resistance $R$ is a function of the channel geometry and the conductivity of solution it is filled with
+	\end{itemize}
 
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Resistive pulse background---system components
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{frame}[c]{Resistive pulse sensing---system components}
-	%\begin{picture}(0,0)(0,0)
-		%\put(90,-125){\includegraphics[width=7cm]{photo/conductivitycell.png}}
-		%\put(100,0){\includegraphics[width=2cm]{photo/electrodes.png}}
-		%\put(10,-20){\includegraphics[width=2cm]{photo/membrane.png}}
-		%\put(30,-80){\includegraphics[width=2cm]{photo/solution.png}}
-	%\end{picture}
-% 	{\centering 
-% 		\vspace{0.35cm}
-% 		\includegraphics[width=9cm]{photo/conductivitycell.png}
-% 		\newline
-% 		\vspace{.35cm}
-% 		\includegraphics[width=1.5cm]{photo/solution.png}
-% 		\hspace{1cm}
-% 		\includegraphics[width=2cm]{photo/membrane.png}
-% 		\hspace{1cm}
-% 		\includegraphics[width=1.5cm]{photo/electrodes.png}
-% 		\hspace{1cm}
-% 		\par
-% 	}
-
-
-	\begin{columns}[t]
-		\begin{column}[T]{\paperwidth/5}
-			{\centering
-				\includegraphics[height=2.25cm]{photo/conductivitycell.png} \\
-				{\footnotesize Conductivity cell}
-				\par
-			}
-		\end{column}
-		
-		
-		\begin{column}[T]{\paperwidth/5}
-			{\centering
-				\includegraphics[height=2.25cm]{photo/membrane.png} \\
-				{\footnotesize Pore membrane}
-				\par
-			}
-		\end{column}
-		
-		
-		
-		\begin{column}[T]{\paperwidth/5}
-			{\centering
-				\includegraphics[height=2.25cm]{photo/solution.png} \\
-				{\footnotesize Electrolyte}
-				\par
-			}
-		\end{column}
-
-		
-		
-
-		
-		\begin{column}[T]{\paperwidth/5}
-			{\centering
-				\includegraphics[height=2.25cm]{psbeads} \\
-				{\footnotesize Particles}
-				\par
-			}
-		\end{column}
-
-	\end{columns}
-	
-	\vspace{1cm}
-	
-	\begin{columns}[t]
-		\begin{column}[T]{\paperwidth/5}
-			{\centering
-				\includegraphics[height=2.25cm]{photo/electrodes.png} \\
-				{\footnotesize Ag-AgCl electrodes}
-				\par
-			}
-		\end{column}
-		
-		
-		\begin{column}[T]{.6\paperwidth}
-			{\centering
-				\includegraphics[height=2.25cm]{photo/axon200b} \\
-				Voltage amplifier + current recorder
-				\par
-			}
-		\end{column}
-	
-
-	\end{columns}
-
-
-
-
-% 	
-% 
-% 
-% 	\begin{center}
-% 		\begin{figure}
-% 		\includegraphics[height=2.25cm]{photo/conductivitycell.png}
-% 		\caption{asdf}
-% 		\end{figure}
-% 		\hspace{.35cm}
-%  		\includegraphics[height=2.25cm]{photo/solution.png}
-%  		\hspace{.35cm}
-%  		\includegraphics[height=2.25cm]{photo/membrane.png}
-%  		\hspace{.35cm}
-%  		\includegraphics[height=2.25cm]{photo/electrodes.png}
-%  		\hspace{.35cm}
-% 	\end{center}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Resistive pulse background---electrostatic boundary conditions
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[c]{Resistive pulse sensing}
-	{\centering
-		\includegraphics[width=0.9\paperwidth]{comsol/voltage.png}
+	{\centering 
+		\includegraphics[width=2.5in]{nanopore_cartoon.png} \\
 		\par
 	}
+
+	
 \end{frame}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Resistive pulse background---electrostatic boundary conditions
+% Resistive pulse background---how does it work?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[c]{Resistive pulse sensing---electrostatic boundary conditions}
-	{\centering
-		\includegraphics[width=0.9\paperwidth]{comsol/voltage.png}
-		\par
-	}
+\begin{frame}[c]{Resistive pulse sensing---how does it work?}
+
+	\begin{itemize}
+		\item When a particle enters the channel its resistance changes, yielding a pulse in the measured ionic current
+		\item Pulse properties yield information on size, shape, charge, and concentration of particle
+	\end{itemize}
+	
+	\begin{columns}[t]
+	
+		\begin{column}[T]{2.25in}
+			{\centering
+				\includegraphics[height=1.25in]{rp_timeseries.png} \\
+				Resistive pulse time series \\
+				\par
+			}
+		\end{column}
+		
+		\begin{column}[T]{2.25in}
+			{\centering
+				\includegraphics[height=1.25in]{singlerp} \\
+				Series zoomed in on a single event \\
+				\par
+			}
+		\end{column}
+
+	\end{columns}
+
+
+	
+\end{frame}
+
+
+		
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resistive pulse background---physics
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Resistive pulse sensing---physics}
+
+	In order to understand resistive pulse sensing and the amplitudes of the event pulses, we need to consider the following domains of physics
+	
+	\begin{itemize}
+		\item Ion transport mechanisms
+		\item Electrostatics
+		\item Particle transport mechanisms
+	\end{itemize}
+
 \end{frame}
 
 
@@ -372,30 +288,133 @@ cross/.default={1pt}}
 
 \begin{frame}[c]{Resistive pulse sensing---ion transport}
 	\begin{itemize}
-		\item Ion transport is driven by \textbf{diffusion}, \textbf{convection}, and \textbf{electric migration}
+		\item Ion transport in general occurs via a combination of \textbf{diffusion}, \textbf{convection}, and \textbf{electric migration} (or electrophoresis)
 		\item \underline{Diffusion}: Average flow of ions from high to low concentration
 		\item \underline{Convection}: Ions move with the fluid/solvent
 		\item \underline{Electrical migration}: Ions move in electric field
 	\end{itemize}
-	\only<1>{
-		$$ \vec{J}_{i}=\underbrace{z_{i}eD_{i}\nabla c_{i}}_{\mathrm{diffusion}}+\overbrace{z_{i}ec_{i}\vec{u}}^{\mathrm{convection}}+\underbrace{z_{i}ec_{i}\mu_{i}\vec{E}}_{\mathrm{migration}} $$
-	}
-	\only<2>{
-		$$ \vec{J}_{i}=\underbrace{\xcancel{z_{i}eD_{i}\nabla c_{i}}}_{\mathrm{diffusion}}+\overbrace{\xcancel{z_{i}ec_{i}\vec{u}}}^{\mathrm{convection}}+\underbrace{z_{i}ec_{i}\mu_{i}\vec{E}}_{\mathrm{migration}} $$
-	}
 	
-	$$ I=\sum_{i}\iint_{S}\vec{J_{i}}\cdot \hat{n}dS $$
 	
-	% xs over two terms in equation
-	\onslide<2>{
-		\begin{tikzpicture}[]
-			\draw(300,25) node[cross=10pt,red] {};
-			\draw(1,0) node[cross=10pt,red] {};
-		\end{tikzpicture}
-	}
+	\begin{equation} \tag{Nernst-Planck equation}
+		\vec{J}_{i}=\underbrace{z_{i}eD_{i}\nabla c_{i}}_{\mathrm{diffusion}} + \overbrace{z_{i}ec_{i}\vec{u}}^{\mathrm{convection}}+\underbrace{z_{i}ec_{i}\mu_{i}\vec{E}}_{\mathrm{migration}}
+	\end{equation}
+
+	
+	\begin{equation} \tag{Conductivity} 
+		\sigma\equiv\sum_{i}^{\mathrm{species}} z_{i}ec_{i}\mu_{i}
+	\end{equation}
+
+	%$$ I=\sum_{i}\iint_{S}\vec{J_{i}}\cdot \hat{n}dS $$
+	
+
 
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resistive pulse background---electrostatics
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Resistive pulse sensing---electrostatics}
+
+	To solve for the currents in the pore (empty and occupied), we treat the system as a classical electrodynamics problem \\
+		\begin{align}		
+			\vec{J} &= \sigma\vec{E} \tag{Ohm's law} \\
+			\rightarrow \nabla^{2}V &= 0 \tag{Laplace equation} \\
+			\left. \vec{J}\cdot\hat{n}\right\vert_{\mathrm{channel}} &= 0 \tag{Boundary conditions}\\
+			\left. \vec{J}\cdot\hat{t}\right\vert_{\mathrm{electrode}} &= 0 \notag
+		\end{align}
+		
+	For an unoccupied cylindrical pore with electrodes exactly at the pore entrance and exit, we find
+	
+	\begin{equation} \tag{Ideal cylinder}
+		I=\frac{V}{R}=V\frac{A}{\rho L}
+	\end{equation}
+	
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resistive pulse background---electrostatics
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Resistive pulse sensing---electrostatics}
+
+
+		The presence of a particle increases the system resistance, for two reasons
+		
+		\begin{enumerate}
+			\item The volume occupied by the particle no longer contains conductive solution
+			\item Electric field lines in the vicinity of the particle are distorted, with reduced axial components
+		\end{enumerate}
+		
+		Both of these effects contribute to the transient reduction in current when the particle passes through the channel
+		
+		A reasonable approximation for the resistance of the channel with or without the particle can be found \textit{via}
+		
+		\[ \Delta R=\int\rho\frac{dz}{A\left(z\right)} \],
+		
+		where $A\left(z\right)$ is area of the annular region of solution at position $z$
+
+		
+	
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resistive pulse background---electrostatics
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Resistive pulse sensing---electrostatics}
+
+
+		The equations for the change in resistance in the occupied case have been solved analytically in some limiting geometries \\
+		
+		\vspace{.1in}
+		
+		
+		\begin{equation} \tag{On-axis sphere through cylinder}
+			\frac{\Delta R}{R_{0}}=\frac{d^{3}}{LD^{2}}\left[1-0.8\left(\frac{d}{D}\right)^{3}\right]^{-1}
+		\end{equation}
+		
+		\vspace{.1in}
+		
+		
+		\begin{equation} \tag{On-axis ellipsoid of revolution}
+			\frac{\Delta R}{R_{0}}=\left[f_{\perp}+\left(f_{\parallel}-f_{\perp}\right)\cos^{2}\alpha\right]\frac{v}{V}
+		\end{equation}
+		
+		\vspace{0.1in}
+		
+		
+		Since we usually measure current in an experiment instead of resistance, it's conventional to replace $R$ for $I$ using Ohm's law:
+		\[ \frac{\Delta R}{R_{0}}\Rightarrow\frac{\Delta I}{I_{p}} \]
+\end{frame}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resistive pulse background---particle transport
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Resistive pulse sensing---single particle transport}
+	\begin{itemize}
+		\item Similar to ions, single particle transport can occur via \textbf{thermal motion}, \textbf{convection}, and \textbf{electrophoresis}
+		\item \underline{Thermal motion}: Collisions with atoms and molecules causes random diffusive motion; usually only important in the absence of other forces 
+		\item \underline{Convection}: Motion due to fluid flow, which is induced by external pressure or electroosmosis
+		\item \underline{Electrophoresis}: Effective force on charged particles in electric fields
+	\end{itemize}
+	
+	
+	%$$ \vec{u}=\mu_{EP}\vec{E}+\mu_{EO}
+
+\end{frame}
 
 
 
@@ -420,7 +439,7 @@ cross/.default={1pt}}
 
 \begin{frame}[c]{High-aspect ratio resistive pulse sensing---motivation}
  	\begin{itemize}
- 		\item Aspherical particles are ubiquitous in biology---e.g., many viruses and bacteria are approximately rod-shaped
+ 		\item Aspherical particles are ubiquitous in biology---e.g., many viruses and bacteria are approximately ellipsoidal
  	\end{itemize}
 
 
@@ -588,25 +607,16 @@ cross/.default={1pt}}
 	{\scriptsize
 		\begin{equation*}
 			\begin{split}
-				\Delta R_{l}\left(z\right) &= \frac{\rho}{\pi}\left[\int_{z}^{z+l_{p}}\left(\frac{1}{r_{P}^{2}\left(z'\right)-s_{p}^{2}\left(z'\right)}-\frac{1}{r_{P}^{2}\left(z'\right)}\right)dz'\right] \\
+				\frac{\Delta I}{I_{p}}=\frac{\Delta R_{l}}{R_{0}} &= \frac{\rho}{\pi}\left[\int_{z}^{z+l_{p}}\left(\frac{1}{r_{P}^{2}\left(z'\right)-s_{p}^{2}\left(z'\right)}-\frac{1}{r_{P}^{2}\left(z'\right)}\right)dz'\right]/R_{0} \\
 				%&= \frac{\rho}{\pi}\left[\int_{z}^{z+l_{s}}\left(\frac{1}{r_{P}^{2}\left(z'\right)-%s_{p}^{2}\left(z'\right)}-\frac{1}{r_{P}^{2}\left(z'\right)}\right)dz'\right. \\
 				%&+ \int_{z+l_{s}}^{z+2l_{s}}\left(\frac{1}{r_{P}^{2}\left(z'\right)-s_{p}^{2}\left(z'\right)}-\frac{1}%{r_{P}^{2}\left(z'\right)}\right)dz + ...\\
 				%&+ \left.\int_{z+\left(n-1\right)l_{s}}^{z+nl_{s}}\left(\frac{1}{r_{P}^{2}\left(z'\right)-%s_{p}^{2}\left(z'\right)}-\frac{1}{r_{P}^{2}\left(z'\right)}\right)dz'\right] \\
-				&= \sum_{i=0}^{n-1}\frac{\rho}{\pi}\left[\int_{z+il_{s}}^{z+\left(i+1\right)l_{s}}\left(\frac{1}{r^{2}_{P}\left(z'\right)-s^{2}_{p}\left(z'\right)}-\frac{1}{r_{P}^{2}\left(z'\right)}\right)dz'\right] \\
-				&= \sum_{i=0}^{n-1}\Delta R_{s}\left(z+il_{s}\right)
+				&= \sum_{i=0}^{n-1}\frac{\rho}{\pi}\left[\int_{z+il_{s}}^{z+\left(i+1\right)l_{s}}\left(\frac{1}{r^{2}_{P}\left(z'\right)-s^{2}_{p}\left(z'\right)}-\frac{1}{r_{P}^{2}\left(z'\right)}\right)dz'\right]/R_{0} \\
+				&= \sum_{i=0}^{n-1}\Delta R_{s}\left(z+il_{s}\right)/R_{0}
 			\end{split}
 		\end{equation*}
 	}
 		
-	{\footnotesize In terms of the measured RP signal, we relate resistance to current via }
-		
-	{\scriptsize \[ \frac{\Delta R}{R_{0}}=\frac{\Delta I}{I_{p}} \]}
-	
-
-
-		
-
-
 
 \end{frame}
 
@@ -623,7 +633,7 @@ cross/.default={1pt}}
 	{\footnotesize
 		Reexpressing the amplitude of long particles in terms of amplitude of short particles suggests a protocol for measuring length \\
 		\begin{enumerate}
-			\item We transform the signals of short particles via a moving average to simulate the signals of longer particles \\
+			\item We perform a moving average transformation on the signals of shorter particles to simulate the signals of longer particles \\
 			\item Then, we compare an unknown particle's signal with each of the simulated signals of the shorter particle \\
 			\item The comparison with the greatest similarity yields the length of the particle
 		\end{enumerate}
@@ -716,6 +726,41 @@ cross/.default={1pt}}
 
 	\end{columns}
 	
+	
+	\begin{tikzpicture}[overlay, x=1cm,y=1cm]
+		% Coordinates
+		\coordinate (x1a) at (7, 5.25) ;
+		\coordinate (x1b) at (3.5, 4) ;
+		
+		\coordinate (x2a) at (2, 4.75) ;
+		\coordinate (x2b) at (1.75, 3.5) ;
+		
+		\coordinate (x3a) at (3, 1.35) ;
+		\coordinate (x3b) at (4, 1.95) ;
+		
+		\coordinate (x4a) at (6.0, 1.95) ;
+		\coordinate (x4b) at (8.05, 1.25) ;
+
+
+		    		    
+		% Arrow
+		\path[draw=red,thick,->] (x1a) to[bend right] (x1b) ;
+		
+		\path[draw=red,thick,->] (x2a) to[bend right] (x2b) ;
+		
+		\path[draw=red,thick,->] (x3a) to[bend right] (x3b) ;
+
+		\path[draw=red,thick,->] (x4a) to[bend right] (x4b) ;
+		
+
+
+		
+
+
+			
+	\end{tikzpicture}
+	
+	
 
 
 \end{frame}
@@ -729,7 +774,7 @@ cross/.default={1pt}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[c]{Length measurement experimental test}
-	\textcolor{negativered}{Can we experimentally implement and test the length measurement protocol?} \\
+	\textcolor{negativered}{Can we implement and test the length measurement protocol?} \\
 	\begin{itemize}
 		\item Experiments were conducted with single pores etched into PET membranes $\left(D\sim\SI{750}{nm}, L=\SI{12}{\mu m}\right)$
 		\item Three types of particles were tested
@@ -764,7 +809,6 @@ cross/.default={1pt}}
 \end{frame}
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Length measurement experimental platform
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -772,6 +816,87 @@ cross/.default={1pt}}
 \begin{frame}[c]{Particles to scale}
 	\includegraphics[width=4.5in]{particles_real_size.png}
 \end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resistive pulse background---system components
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[c]{Polymer nanopore experiment components}
+
+
+
+	\begin{columns}[t]
+		\begin{column}[T]{\paperwidth/5}
+			{\centering
+				\includegraphics[height=2.25cm]{photo/conductivitycell.png} \\
+				{\footnotesize Conductivity cell}
+				\par
+			}
+		\end{column}
+		
+		
+		\begin{column}[T]{\paperwidth/5}
+			{\centering
+				\includegraphics[height=2.25cm]{photo/membrane.png} \\
+				{\footnotesize Pore membrane}
+				\par
+			}
+		\end{column}
+		
+		
+		
+		\begin{column}[T]{\paperwidth/5}
+			{\centering
+				\includegraphics[height=2.25cm]{photo/solution.png} \\
+				{\footnotesize Electrolyte}
+				\par
+			}
+		\end{column}
+
+		
+		
+
+		
+		\begin{column}[T]{\paperwidth/5}
+			{\centering
+				\includegraphics[height=2.25cm]{psbeads} \\
+				{\footnotesize Particles}
+				\par
+			}
+		\end{column}
+
+	\end{columns}
+	
+	\vspace{1cm}
+	
+	\begin{columns}[t]
+		\begin{column}[T]{\paperwidth/5}
+			{\centering
+				\includegraphics[height=2.25cm]{photo/electrodes.png} \\
+				{\footnotesize Ag-AgCl electrodes}
+				\par
+			}
+		\end{column}
+		
+		
+		\begin{column}[T]{.6\paperwidth}
+			{\centering
+				\includegraphics[height=2.25cm]{photo/axon200b} \\
+				Voltage amplifier + current recorder
+				\par
+			}
+		\end{column}
+	
+
+	\end{columns}
+
+
+\end{frame}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Results---raw data
@@ -863,8 +988,10 @@ cross/.default={1pt}}
 % Future work
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[c]{Future work}
-	Some things left for the future:
+\begin{frame}[c]{Conclusions \& Future work}
+	It's apparent that the model for how particles map the interiors of pores is accurate \\
+	This suggests the technique could be used to accurately particle length \\
+	Some things left for the future: \\
 	\begin{enumerate}
 		\item Test robustness of quantitative length measurement
 		\item Run length measurement protocol on particles of various unknown lengths, test results
@@ -892,13 +1019,12 @@ cross/.default={1pt}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{frame}[c]{Motivation 1}
+\begin{frame}[c]{Motivation---Why introduce optics?}
 	
 	In an RP experiment, the usual parameters measured are amplitude and duration, which can relate to particle's volume, charge, etc. \\
 	
-	But, the equations which relate the RP signal to the physical observable are only accurate under restricting conditions that are seldom met in experimental systems \\
+	But, the equations which relate the RP signal to physical observables are only accurate under restrictive conditions or approximations that are seldom met in experimental systems \\
 	
-	For instance, spheroids moving along the axis of an infinitely long cylinder \\
 	
 	\vspace{.25in}
 	
@@ -924,7 +1050,7 @@ cross/.default={1pt}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{frame}[c]{Motivation 2}
+\begin{frame}[c]{Motivation---Why introduce optics?}
 	
 	
 	
@@ -949,13 +1075,13 @@ cross/.default={1pt}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{frame}[c]{Motivation 3}
+\begin{frame}[c]{Motivation---Why introduce optics?}
 	
 	What if we could \textit{see} what is happening during a resistive pulse experiment? Then we could determine the influence of these confounding factors during the event translocation \\
 	
 	\vspace{.2in}
 	
-	For instance, we could directly observe the effect of off-axis translocation on the resistive pulse signal \\
+	For instance, we could directly observe the effect of off-axis translocation on the resistive pulse signal
 	
 	\vspace{.2in}
 	
@@ -970,7 +1096,7 @@ cross/.default={1pt}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{frame}[c]{Motivation 4}
+\begin{frame}[c]{Motivation---Why introduce optics?}
 	
 	But, the trouble is that directly imaging nanoscale resistive pulse experiments is extremely difficult; need an electron microscope that can operate \textit{in situ}
 	
@@ -980,7 +1106,7 @@ cross/.default={1pt}}
 	
 	\vspace{.2in}
 	
-	The results should generalize to the nanoscale as well, since the confounding factors arise due to electrostatic boundary conditions that are scale independent (in the mean-field approximation)
+	The results should generalize to the nanoscale as well, since the confounding factors arise due to electrostatic boundary conditions that are scale independent
 	
 	\vspace{.2in}
 	
@@ -999,7 +1125,7 @@ cross/.default={1pt}}
 	
 	\vspace{.1in}
 	
-	Essentially, we want to devise a micro-sized resistive pulse system that we can image \\
+	Essentially, we want to devise a micro-sized resistive pulse system that we can also image \\
 	
 	\vspace{.1in}
 	
@@ -1127,7 +1253,7 @@ cross/.default={1pt}}
 	\begin{columns}[t]
 		\begin{column}[T]{2.25in}
 			{\centering 
-				\includegraphics[height=1.in]{polystyrene_bangs} \\
+				\includegraphics[height=1.5in]{polystyrene_bangs} \\
 				$\SI{10}{\mu m}$ polystyrene beads \\
 				\par
 			}		 
@@ -1135,7 +1261,7 @@ cross/.default={1pt}}
 		
 		\begin{column}[T]{2.25in}
 			{\centering 
-				\includegraphics[height=1.in]{trajectories} \\
+				\includegraphics[height=1.5in]{trajectories} \\
 				PDMS channels \\
 				{\footnotesize
 					\textbf{Top row:} straight \\
