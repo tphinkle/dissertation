@@ -19,7 +19,7 @@
   
   % Title
   \Huge{
-	\textcolor{gray0}{Resistive-pulse sensing at the micro- and nanoscale}
+	\textcolor{gray0}{Resistive Pulse Sensing at the Micro- and Nanoscale}
   }
   
   
@@ -81,7 +81,7 @@
 			\onslide<1>{
 				\begin{picture}(0,0)(0,0)
 					\put(0,-180)
-					{\includegraphics[width=2in]{coulter_patent_drawing}}
+					{\includegraphics[width=1.25in]{coulter_patent_drawing}}
 				\end{picture}
 			}
 
@@ -176,7 +176,7 @@
 			{\centering
 				\includegraphics[height=1.25in]{tobaccomosaicvirus.png} \\
 				Virus detection \\
-				$\left(\sim\SI{10}{nm}\right)$ \\
+				$\left(\sim\SI{50}{nm}\right)$ \\
 				\par
 			}
 		\end{column}
@@ -227,7 +227,7 @@
 \begin{frame}[c]{Resistive pulse sensing---how does it work?}
 
 	\begin{itemize}
-		\item When a particle enters the channel its resistance changes, yielding a pulse in the measured ionic current
+		\item When a particle enters the channel, the channel's resistance changes, yielding a pulse in the measured ionic current
 		\item Pulse properties yield information on size, shape, charge, and concentration of particle
 	\end{itemize}
 	
@@ -269,7 +269,7 @@
 	
 	\begin{itemize}
 		\item Ion transport mechanisms
-		\item Electrostatics
+		\item Electrodynamics
 		\item Particle transport mechanisms
 	\end{itemize}
 
@@ -286,22 +286,29 @@ cross/.default={1pt}}
 
 
 
-\begin{frame}[c]{Resistive pulse sensing---ion transport}
+\begin{frame}[c]{Resistive pulse sensing---ion transport}	
 	\begin{itemize}
-		\item Ion transport in general occurs via a combination of \textbf{diffusion}, \textbf{convection}, and \textbf{electric migration} (or electrophoresis)
+		\item Ion transport in general occurs via a combination of \textbf{diffusion}, \textbf{convection}, and \textbf{electrophoresis} (or electrophoresis)
 		\item \underline{Diffusion}: Average flow of ions from high to low concentration
-		\item \underline{Convection}: Ions move with the fluid/solvent
-		\item \underline{Electrical migration}: Ions move in electric field
+		\item \underline{Convection}: Ions are carried passively with the fluid/solvent
+		\item \underline{Electrophoresis}: Ions move in electric field
 	\end{itemize}
-	
-	
-	\begin{equation} \tag{Nernst-Planck equation}
-		\vec{J}_{i}=\underbrace{z_{i}eD_{i}\nabla c_{i}}_{\mathrm{diffusion}} + \overbrace{z_{i}ec_{i}\vec{u}}^{\mathrm{convection}}+\underbrace{z_{i}ec_{i}\mu_{i}\vec{E}}_{\mathrm{migration}}
-	\end{equation}
-
-	
-	\begin{equation} \tag{Conductivity} 
-		\sigma\equiv\sum_{i}^{\mathrm{species}} z_{i}ec_{i}\mu_{i}
+	\only<1>{
+		\begin{equation} \tag{Nernst-Planck equation}
+			\vec{J}=\sum_{i}^{\mathrm{species}}\left[\underbrace{-z_{i}eD_{i}\nabla c_{i}}_{\mathrm{diffusion}} + \overbrace{z_{i}ec_{i}\vec{u}}^{\mathrm{convection}}+\underbrace{z_{i}ec_{i}\mu^{ep}_{i}\vec{E}}_{\mathrm{electrophoresis}}\right]
+		\end{equation}
+	}\only<2>{
+		\begin{equation} \tag{Nernst-Planck equation}
+			\vec{J}=\sum_{i}^{\mathrm{species}}\left[\underbrace{\xcancel{-z_{i}eD_{i}\nabla c_{i}}}_{\mathrm{diffusion}} + \overbrace{\xcancel{z_{i}ec_{i}\vec{u}}}^{\mathrm{convection}}+\underbrace{z_{i}ec_{i}\mu^{ep}_{i}\vec{E}}_{\mathrm{migration}}\right]
+		\end{equation}
+	}
+	\only<3>{
+		\begin{equation} \tag{Electrophoretic current}
+			\vec{J}=\sum_{i}^{\mathrm{species}}z_{i}ec_{i}\mu^{ep}_{i}\vec{E}=\sigma\vec{E}
+		\end{equation}
+	}
+	\begin{equation} \tag{Einstein-Smoluchowski relation} 
+		\mu^{ep}_{i}=\frac{z_{i}e}{kT}D_{i}
 	\end{equation}
 
 	%$$ I=\sum_{i}\iint_{S}\vec{J_{i}}\cdot \hat{n}dS $$
@@ -315,7 +322,7 @@ cross/.default={1pt}}
 % Resistive pulse background---electrostatics
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[c]{Resistive pulse sensing---electrostatics}
+\begin{frame}[c]{Resistive pulse sensing---electrodynamics}
 
 	To solve for the currents in the pore (empty and occupied), we treat the system as a classical electrodynamics problem \\
 		\begin{align}		
@@ -328,7 +335,7 @@ cross/.default={1pt}}
 	For an unoccupied cylindrical pore with electrodes exactly at the pore entrance and exit, we find
 	
 	\begin{equation} \tag{Ideal cylinder}
-		I=\frac{V}{R}=V\frac{A}{\rho L}
+		R=\rho\frac{L}{A}
 	\end{equation}
 	
 
@@ -340,26 +347,39 @@ cross/.default={1pt}}
 % Resistive pulse background---electrostatics
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[c]{Resistive pulse sensing---electrostatics}
+\begin{frame}[c]{Resistive pulse sensing---electrodynamics}
 
 
-		The presence of a particle increases the system resistance, for two reasons
+		The presence of an insulating particle increases the system resistance for two reasons
 		
 		\begin{enumerate}
 			\item The volume occupied by the particle no longer contains conductive solution
 			\item Electric field lines in the vicinity of the particle are distorted, with reduced axial components
 		\end{enumerate}
 		
-		Both of these effects contribute to the transient reduction in current when the particle passes through the channel
+		The result is a \underline{decrease in current} when the particle is inside the channel
 		
-		A reasonable approximation for the resistance of the channel with or without the particle can be found \textit{via}
+		{\centering
+			\includegraphics[width=1.5in]{efield.png} \\
+			\par
+		}
 		
-		\[ \Delta R=\int\rho\frac{dz}{A\left(z\right)} \],
-		
-		where $A\left(z\right)$ is area of the annular region of solution at position $z$
 
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resistive pulse background---electrostatics
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Resistive pulse sensing---electrodynamics}
+ 
+	Ignoring the distortion of the electric field, a reasonable approximation for the resistance of the channel with or without the particle can be found \textit{via}
 		
-	
+	\[ \Delta R=\int\rho\frac{dz}{A\left(z\right)} \],
+		
+	where $A\left(z\right)$ is area of the annular region of solution at position $z$
 
 \end{frame}
 
@@ -368,27 +388,44 @@ cross/.default={1pt}}
 % Resistive pulse background---electrostatics
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[c]{Resistive pulse sensing---electrostatics}
+\begin{frame}[c]{Resistive pulse sensing---electrodynamics}
+
+		% Clarify symbols and spend less time on the explanatoin
 
 
-		The equations for the change in resistance in the occupied case have been solved analytically in some limiting geometries \\
-		
+		Analytic solutions to resistive pulse amplitude:
 		\vspace{.1in}
 		
-		
-		\begin{equation} \tag{On-axis sphere through cylinder}
-			\frac{\Delta R}{R_{0}}=\frac{d^{3}}{LD^{2}}\left[1-0.8\left(\frac{d}{D}\right)^{3}\right]^{-1}
-		\end{equation}
-		
-		\vspace{.1in}
-		
-		
-		\begin{equation} \tag{On-axis ellipsoid of revolution}
-			\frac{\Delta R}{R_{0}}=\left[f_{\perp}+\left(f_{\parallel}-f_{\perp}\right)\cos^{2}\alpha\right]\frac{v}{V}
-		\end{equation}
+		\begin{columns}[t]
+			\begin{column}[T]{2.5in}
+				\begin{equation} \tag{Sphere through cylinder}
+					\frac{\Delta R}{R_{0}}=\frac{3}{2}\frac{v}{V}
+				\end{equation}
+				\vspace{-.1in}				
+				\begin{equation} \tag{Ellipsoid through cylinder}
+					\frac{\Delta R}{R_{0}}=\left[f_{\perp}+\left(f_{\parallel}-f_{\perp}\right)\cos^{2}\alpha\right]\frac{v}{V}
+				\end{equation}
+			\end{column}
+			\hfill
+			\begin{column}[T]{1.5in}
+				$v$: Particle diameter \\
+				\vspace{.0675in}
+				$V$: Channel diameter \\
+				\vspace{.0675in}
+				$f_{\perp}, f_{\parallel}$: Electrical shape factors \\
+				\vspace{.0675in}
+				$\alpha$: Angle of rotation
+			\end{column}
+
+		\end{columns}
+
 		
 		\vspace{0.1in}
-		
+		{\centering
+			\noindent\rule{4.5in}{1pt} \\
+			\par
+		}
+
 		
 		Since we usually measure current in an experiment instead of resistance, it's conventional to replace $R$ for $I$ using Ohm's law:
 		\[ \frac{\Delta R}{R_{0}}\Rightarrow\frac{\Delta I}{I_{p}} \]
@@ -404,10 +441,10 @@ cross/.default={1pt}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[c]{Resistive pulse sensing---single particle transport}
+	Similar to ions, single particle transport can occur via \textbf{thermal motion}, \textbf{convection}, and \textbf{electrophoresis}
 	\begin{itemize}
-		\item Similar to ions, single particle transport can occur via \textbf{thermal motion}, \textbf{convection}, and \textbf{electrophoresis}
-		\item \underline{Thermal motion}: Collisions with atoms and molecules causes random diffusive motion; usually only important in the absence of other forces 
-		\item \underline{Convection}: Motion due to fluid flow, which is induced by external pressure or electroosmosis
+		\item \underline{Thermal motion}: Collisions with atoms and molecules causes random diffusive motion
+		\item \underline{Convection}: Motion due to fluid flow, usually induced by external pressure or electroosmosis
 		\item \underline{Electrophoresis}: Effective force on charged particles in electric fields
 	\end{itemize}
 	
@@ -438,6 +475,9 @@ cross/.default={1pt}}
 
 
 \begin{frame}[c]{High-aspect ratio resistive pulse sensing---motivation}
+ 	
+ 	% Keep in back pocket idea about the fact that particle shape is related to time it spends in blood stream; important for drug delivery systems.
+ 	
  	\begin{itemize}
  		\item Aspherical particles are ubiquitous in biology---e.g., many viruses and bacteria are approximately ellipsoidal
  	\end{itemize}
@@ -468,7 +508,7 @@ cross/.default={1pt}}
 
 	\begin{itemize}
 		\item The ability to measure particle shape is highly desirable for sensing applications
- 		\item How can we extend RP sensing to measure length in addition to volume?
+ 		\item How an we extend RP sensing to measure length in addition to volume?
  	\end{itemize}
 	
 
@@ -481,20 +521,37 @@ cross/.default={1pt}}
 % Resistive pulse in non-constant width pores
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[c]{Resistive pulse in non-constant width pores}
-	\begin{itemize}
-		\item Consider the RP amplitude for translocation through non-uniform pores
-	\end{itemize}
-	$$ \Delta R\left(z'\right)=\frac{\rho}{\pi}\left[\int_{z=z'}^{z=z'+l_{p}}\left(\frac{1}{r_{P}^{2}\left(z\right)-s_{p}^{2}\left(z\right)}-\frac{1}{r_{P}\left(z\right)^{2}}\right)dz\right] $$
-	\begin{itemize}
-		\item RP amplitude is a function of the pore geometry \textbf{local to the particle's position}
-		\item Particles map the interior of the pore during translocation with their RP signal!
-	\end{itemize}
-	
-	{\centering
-		\includegraphics[width=2in]{particlesreveal.png} \\
-		\par
+\begin{frame}[c]{Resistive pulse in non-uniform pores}
+
+	{\small Consider the RP amplitude for translocation through non-uniform pores} \\
+	{\small
+		$$ \Delta R\left(z'\right)=\frac{\rho}{\pi}\left[\int_{z=z'}^{z=z'+l_{p}}\left(\frac{1}{r_{P}^{2}\left(z\right)-s_{p}^{2}\left(z\right)}-\frac{1}{r_{P}\left(z\right)^{2}}\right)dz\right] $$
 	}
+	
+	\vspace{.1in}
+	
+	\begin{columns}[t]
+		\begin{column}[T]{2.5in}
+			{\small
+				RP amplitude is a function of the pore geometry \textbf{local to the particle's position} \\
+				\vspace{.2in}
+				Particles map the interior of the pore during translocation with their RP signal! \\
+			}
+		\end{column}
+		
+		\begin{column}[T]{2in}
+			{\centering
+				\includegraphics[width=2in]{particlesreveal.png} \\
+				{\tiny Pevarnik \textit{et al}. \textit{ACS Nano.} \textbf{6}, 7295-7302 (2012).} \\
+				\par
+			}
+		\end{column}
+	\end{columns}
+
+	
+	
+	
+	
 
 	
 \end{frame}
@@ -509,8 +566,8 @@ cross/.default={1pt}}
 	\vspace{-.1in}
 	\begin{itemize}
 		\item Particles map pore interiors with a length-dependent resolution
-		\item If a particle has length smaller than the characteristic length scale of channel irregularities, the produced signal is a high-resolution mapping
-		\item Particles with lengths longer than characteristic length scale of channel irregularities produce low-resolution mappings
+		\item If a particle has length less than the characteristic length scale of channel irregularities, the produced signal is a high-resolution mapping
+		\item Particles with lengths greater than characteristic length scale of channel irregularities produce low-resolution mappings
 	\end{itemize}
 	
 	
@@ -534,7 +591,7 @@ cross/.default={1pt}}
 
 	\end{columns}
 	\vspace{.2in}
-	\textcolor{negativered}{\textbf{Can we use this knowledge to measure particle length???}}
+	{\large \textcolor{negativered}{Can we use this knowledge to measure particle length?}}
 
 	%$$ \Delta R\left(z'\right)=\frac{\rho}{\pi}\left[\int_{z=z'}^{z=z'+l_{p}}\left(\frac{1}{r_{P}^{2}\left(z\right)-s_{p}^{2}\left(z\right)}-\frac{1}{r_{P}^{2}\left(z\right)}\right)dz\right] $$
 
@@ -616,6 +673,7 @@ cross/.default={1pt}}
 			\end{split}
 		\end{equation*}
 	}
+	
 		
 
 \end{frame}
@@ -634,10 +692,14 @@ cross/.default={1pt}}
 		Reexpressing the amplitude of long particles in terms of amplitude of short particles suggests a protocol for measuring length \\
 		\begin{enumerate}
 			\item We perform a moving average transformation on the signals of shorter particles to simulate the signals of longer particles \\
-			\item Then, we compare an unknown particle's signal with each of the simulated signals of the shorter particle \\
+			%\[ S_{i}\rightarrow S'_{i}=\frac{1}{\Delta i}\sum_{i-\frac{\Delta i}{2}}^{i+\frac{\Delta I}{2}}S_{i} \]^{2}
+			\item Then, we calculate the `distance' between an unknown particle's signal with each of the simulated signals of the shorter particle \\
+			%\[ D\left(S^{\mathrm{long}},S'^{\mathrm{short}}\right)=\sum_{i,j}\left[S^{\mathrm{long}}_{i}-S'^{\mathrm{short}}_{j}\right] \]
 			\item The comparison with the greatest similarity yields the length of the particle
 		\end{enumerate}
 	}
+	
+
 
 \end{frame}
 
@@ -702,7 +764,7 @@ cross/.default={1pt}}
 	
 	\begin{columns}[t]
 	
-		\begin{column}[T]{\paperwidth/3}
+		\begin{column}[T]{1.25in}
 			{\centering
 				\includegraphics[width=1.25in]{dtw_matching.png} \\
 				\par
@@ -712,14 +774,15 @@ cross/.default={1pt}}
 		\begin{column}[T]{\paperwidth/3}
 			{\centering
 				\vspace{.2in}
-				{\scriptsize \[\mathrm{Cost}=\sum_{\left(i,i'\right)}\left[\left(\frac{\Delta I}{I_{p}}\right)_{i}-\left(\frac{\Delta I}{I_{p}}\right)_{i'}\right] \] } \\
+				{\tiny \[\mathrm{Distance}=\sum_{\left(i,i'\right)}\left[\left(\frac{\Delta I}{I_{p}}\right)_{i}-\left(\frac{\Delta I}{I_{p}}\right)_{i'}\right]^{2} \] } \\
 				\par
 			}
 		\end{column}
 		
 		\begin{column}[T]{\paperwidth/3}
 			{\centering
-				\includegraphics[width=1.5in]{cost_minimization.png} \\
+				\vspace{.3in}
+				\includegraphics[width=1.25in]{distance_minimization.png} \\
 				\par
 			}
 		\end{column}
@@ -779,9 +842,9 @@ cross/.default={1pt}}
 		\item Experiments were conducted with single pores etched into PET membranes $\left(D\sim\SI{750}{nm}, L=\SI{12}{\mu m}\right)$
 		\item Three types of particles were tested
 		\begin{itemize}
-			\item $280$ and $\SI{400}{nm}$ polystyrene beads  (`spheres')
-			\item $\SI{590}{nm}$ rods (`short rods')
-			\item $\SI{1920}{nm}$ rods (`long rods')
+			\item $280$ and $\SI{410}{nm}$ polystyrene beads  (`spheres')
+			\item $\SI{590}{nm}$ silica rods (`short rods')
+			\item $\SI{1920}{nm}$ silica rods (`long rods')
 		\end{itemize}
 	\end{itemize}
 	
@@ -840,7 +903,7 @@ cross/.default={1pt}}
 		
 		\begin{column}[T]{\paperwidth/5}
 			{\centering
-				\includegraphics[height=2.25cm]{photo/membrane.png} \\
+				\includegraphics[height=2.25cm]{photo/PETmembrane.png} \\
 				{\footnotesize Pore membrane}
 				\par
 			}
@@ -961,8 +1024,12 @@ cross/.default={1pt}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[c]{Results---Qualitative event comparison}
+	% Add citation
+	
 	{\centering
-		\includegraphics[width=3.5in]{PETevents.png} \\
+		\includegraphics[width=2.5in]{PETevents.png} \\
+		{\tiny Qiu \textit{et al.} \textit{ACS Nano} \textbf{9}, 4390-4397 (2015).} \\
+		\vspace{.2in}
 		\textcolor{negativered}{The averaging process produces signals that are qualitatively similar to the observed signals of longer particles}
 		\par
 	}
@@ -989,14 +1056,26 @@ cross/.default={1pt}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[c]{Conclusions \& Future work}
-	It's apparent that the model for how particles map the interiors of pores is accurate \\
-	This suggests the technique could be used to accurately particle length \\
-	Some things left for the future: \\
-	\begin{enumerate}
-		\item Test robustness of quantitative length measurement
-		\item Run length measurement protocol on particles of various unknown lengths, test results
-		\item Reduce system scale: Test length measurement protocol with fabricated planar nanochannels with controlled geometries
-	\end{enumerate}
+
+	\only<1>{
+		{\centering
+			\includegraphics[width=2.75in]{paper/acsnano.png} \\ 
+			\par
+		}
+	}
+      
+	% Too wordy
+
+	\only<2>{
+		It's apparent that the model for how particles map the interiors of pores is accurate \\
+		\vspace{.2in}
+		Some things left for the future: \\
+		\begin{enumerate}
+			\item Test robustness of quantitative length measurement
+			\item Run length measurement protocol on particles of various unknown lengths, test results
+			\item Reduce system scale: Test length measurement protocol with fabricated nanochannels with controlled geometries
+		\end{enumerate}
+	}
 \end{frame}
 
 
@@ -1022,24 +1101,11 @@ cross/.default={1pt}}
 \begin{frame}[c]{Motivation---Why introduce optics?}
 	
 	In an RP experiment, the usual parameters measured are amplitude and duration, which can relate to particle's volume, charge, etc. \\
-	
+	\vspace{.3in}
 	But, the equations which relate the RP signal to physical observables are only accurate under restrictive conditions or approximations that are seldom met in experimental systems \\
-	
-	
-	\vspace{.25in}
-	
-	{\centering
-		Sphere \hspace{.2in} $\frac{\Delta I}{I_{p}}=\frac{d^{3}}{D^{2}L}\left[1-0.8\left(\frac{d}{D}\right)^{3}\right]^{-1}$ \\
-		\vspace{.1in}
-		Ellipsoid \hspace{.2in} $\frac{\Delta I}{I_{p}}=\left[f_{\perp}+\left(f_{\parallel}-f_{\perp}\right)\cos^{2}\alpha\right]\frac{v}{V}$ \\
-	}
-	
-		 
- 	%\begin{equation}
- 	%	\frac{\Delta I}{I_{p}}=\frac{d^{3}}{D^{2}L}\left[1-0.8\left(\frac{d}{D}\right)^{3}\right]^{-1}
- 	%\end{equation}
-
-
+	\vspace{.3in}
+ 	In reality, the experimental set up can never be constrained to this degree \\
+ 	
 
 \end{frame}
 
@@ -1052,9 +1118,7 @@ cross/.default={1pt}}
 
 \begin{frame}[c]{Motivation---Why introduce optics?}
 	
-	
-	
-	In reality, the experimental set up can never be constrained to this degree
+
 	
 	Some confounding factors include
 	
@@ -1077,7 +1141,11 @@ cross/.default={1pt}}
 
 \begin{frame}[c]{Motivation---Why introduce optics?}
 	
-	What if we could \textit{see} what is happening during a resistive pulse experiment? Then we could determine the influence of these confounding factors during the event translocation \\
+	What if we could \textit{see} what is happening during a resistive pulse experiment? 
+	
+	\vspace{.2in}
+	
+	Then we could determine the influence of these confounding factors during the event translocation \\
 	
 	\vspace{.2in}
 	
@@ -1085,10 +1153,10 @@ cross/.default={1pt}}
 	
 	\vspace{.2in}
 	
-	The results would generalize to other resistive pulse experiments and lead to better interpretability of the resistive pulse signals! \\
+	The results would generalize to other resistive pulse experiments and lead to greater interpretability of the RP signals!  \\
+	
 
 \end{frame}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1102,7 +1170,7 @@ cross/.default={1pt}}
 	
 	\vspace{.2in}
 	
-	However, no such restriction is necessary at the \textit{microscale}, above the optical diffraction limit!
+	However, at the microscale we can use plain optics to image the experiments while simultaneously measuring the resistive pulses
 	
 	\vspace{.2in}
 	
@@ -1253,7 +1321,7 @@ cross/.default={1pt}}
 	\begin{columns}[t]
 		\begin{column}[T]{2.25in}
 			{\centering 
-				\includegraphics[height=1.5in]{polystyrene_bangs} \\
+				\includegraphics[height=1.15in]{polystyrene_bangs} \\
 				$\SI{10}{\mu m}$ polystyrene beads \\
 				\par
 			}		 
@@ -1261,7 +1329,7 @@ cross/.default={1pt}}
 		
 		\begin{column}[T]{2.25in}
 			{\centering 
-				\includegraphics[height=1.5in]{trajectories} \\
+				\includegraphics[height=1.15in]{trajectories} \\
 				PDMS channels \\
 				{\footnotesize
 					\textbf{Top row:} straight \\
@@ -1283,6 +1351,7 @@ cross/.default={1pt}}
 
 \begin{frame}[c]{Raw data---resistive pulse and optics}
 
+
 	\begin{columns}[t]
 		\begin{column}[T]{2.25in}
 			{\centering 
@@ -1296,7 +1365,7 @@ cross/.default={1pt}}
 		
 		\begin{column}[T]{2.25in}
 			{\centering 
-				\includegraphics[height=1.25in]{raw_video.png} \\
+				\includegraphics[height=1.25in]{raw_video_2.png} \\
 				Image stills \\
 				data = $\left\{\mathrm{frame1, frame2, ...}\right\}$
 				\par
@@ -1386,12 +1455,12 @@ cross/.default={1pt}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{frame}[c]{Resistance map}
+\begin{frame}[c]{Resistance maps}
 	
-	Synchronizing the two data streams allows us to create `resistance maps' of the channel, a plot where each particle position is mapped onto the instantaneous value of the RP amplitude \\
-	\vspace{.2in}
+	{\scriptsize
+		Synchronizing the two data streams allows us to create `resistance maps' of the channel, plots where each particle position is mapped onto the instantaneous value of the RP amplitude} \\
 	{\centering
-		\movie[height = 0.75 \textwidth,width = .75 \textwidth,autostart,loop]{}{resistance_map.mp4} \\
+		\movie[height = 0.55 \textwidth,width = .55 \textwidth,autostart,loop]{}{resistance_map_3.mp4} \\
 		\par
 	}
 	
@@ -1402,13 +1471,12 @@ cross/.default={1pt}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{frame}[c]{Resistance map}
-	
-	Synchronizing the two data streams allows us to create `resistance maps' of the channel, a plot where each particle position is mapped onto the instantaneous value of the RP amplitude \\
-	\vspace{.1in}
+\begin{frame}[c]{Resistance maps}
+
+
 	{\centering
-		\only<1>{\includegraphics[width=0.75\textwidth]{resistance_map_undulating.png}}
-		\only<2>{\includegraphics[width=0.5\textwidth]{resistancemaps.png}} \\
+		\only<1>{\includegraphics[width=0.55\textwidth]{resistance_map_undulating.png}}
+		\only<2>{\includegraphics[width=0.625\textwidth]{resistancemaps.png}} \\
 		\par
 	}
 	
@@ -1422,7 +1490,7 @@ cross/.default={1pt}}
 
 \begin{frame}[c]{Key scientific questions}
 	
-	The hybrid resistive pulse-imaging platform, along with the resistance maps, is a general tool for enhancing the interpretability of resistive pulse experiments \\
+	The hybrid resistive pulse-imaging platform is a general tool for enhancing the interpretability of resistive pulse experiments \\
 	\vspace{.1in}
 	We were interested in answering the following: \\
 	
@@ -1432,8 +1500,6 @@ cross/.default={1pt}}
 		\item How is the resistance distributed in channels with varying widths?
 	\end{itemize}
 	
-	The resistance map allows these questions to be answered
-
 	
 \end{frame}
 
@@ -1541,12 +1607,16 @@ cross/.default={1pt}}
 		\vspace{.1in}
 		When the particle travels off-axis, this distortion couples with the distortion of the $\vec{E}$ field in the vicinity of the channel, increasing the total system resistance \\
 		\vspace{.1in}
-		This off-axis effect leads to a dispersion in the amplitudes produced by particles of the same size, resulting ultimately in larger uncertainties in their measured volumes \\
-		\vspace{.1in}
-		{\centering
-			\includegraphics[width=1.75in]{saleh_fig.png} \\
-			\par
-		}
+		This off-axis effect leads to a dispersion in the amplitudes produced by particles of the same size, ultimately resulting in larger uncertainties in their measured volumes \\
+		\vspace{.025in}
+		\begin{columns}[t]
+			\begin{column}[T]{1.75in}
+				\includegraphics[width=1.65in]{saleh_fig.png} \\
+				{\tiny Saleh, O.A. and Sohn, L.L. \textit{Rev. Sci. Instrum.} \textbf{73}, 4396--4398 (2002).} \\ 
+				\par
+			\end{column}
+		\end{columns}
+
 		
 	}
 	
@@ -1563,7 +1633,7 @@ cross/.default={1pt}}
 	
 	{\centering
 		\includegraphics[width=1.75in]{off_axis_straight.pdf} \\
-		{\scriptsize \textcolor{negativered}{The scatter plots clearly show an increase in event amplitude with transverse displacement } } \\
+		{\scriptsize \textcolor{negativered}{The scatter plots show an increase in event amplitude of close to 10\%, in agreement with theoretical expectations.} } \\
 		\par
 	}
 	
@@ -1580,7 +1650,7 @@ cross/.default={1pt}}
 	
 	{\centering
 		\includegraphics[width=3.75in]{off_axis_cavity.pdf} \\
-		{\scriptsize \textcolor{negativered}{In channels with a central cavity, we observe the opposite effect of lateral displacement when the particle is inside the cavity! } } \\
+		{\scriptsize \textcolor{negativered}{In channels with a central cavity, we observe the opposite effect of lateral displacement when the particle is inside the cavity.} } \\
 		\par
 	}
 	
@@ -1594,14 +1664,21 @@ cross/.default={1pt}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{frame}[c]{Conclusions and future work}
-	
+\begin{frame}[c]{Conclusions and ongoing work}
+
+
 	{\centering
-		The hybrid resistive pulse-optical detection platform allows one to explore position-related effects on the resistive pulse amplitude \\
-		In the future, we could look at translocations for aspherical particles \\
-		Particle rotation dynamics can affect the amplitude of the resistive pulse signal, and the hybrid approach could be used to better understand this effect \\
-		In particular, we are interested in using the hybrid approach to study particle deformation dynamics, and how deformation affects the resistive pulse amplitudes \\
+		\includegraphics[width=3in]{paper/scientificreports.png} \\
+		\par
 	}
+	
+	\vspace{.4in}
+	{\small
+		The hybrid resistive pulse-optical detection platform allows one to explore position-related effects on the resistive pulse amplitude \\
+		\vspace{.1in}
+		We are currently interested in using the hybrid approach to study particle deformation dynamics, and how deformation affects the resistive pulse amplitudes \\
+	}
+
 	
 \end{frame}
 
@@ -1630,7 +1707,7 @@ cross/.default={1pt}}
 			\begin{itemize}
 				\item Traditional cell characterization platforms have been primarily chemical,~e.g. fluorescence microscopy
 				\item Recently, researchers have recognized the importance of measuring mechanical properties of cells
-				\item For instance, size and shape are very predictive of cell type
+				\item For instance, size and shape can be predictive of cell type
 			\end{itemize}
 		\end{column}
 		
@@ -1654,7 +1731,7 @@ cross/.default={1pt}}
 
 \begin{frame}[c]{Cell mechanical properties}
 	\begin{itemize}
-		\item Another important mechanical feature is stiffness---cells behave like elastic deforming objects
+		\item Another important mechanical feature is stiffness---cells are elastic and deformable objects
 		\item Stiffness depends on physiological properties in the membrane and body, such as cytoskeletal strength
 		\item Stiffness varies across cell lines, and has shown to be predictive in the same way as size and shape are---for instance, cancer cells are generally more elastic than non-cancerous cells
 		
@@ -1678,10 +1755,18 @@ cross/.default={1pt}}
 	\vspace{.1in}
 	
 	{\centering
-		\only<1>{\includegraphics[width=3in]{otto_et_al.png}}\only<2>{\includegraphics[width=2in]{dicarlo_et_al.png}} \\
-		{\tiny \only<1>{Otto \emph{et al.} 2015. Biophys. J. 109:2023-2036.}\only<2>{Gossett \emph{et al.} 2012. PNAS 109:7630-7635.}} \\
+		\includegraphics[width=3in]{otto_et_al.png} \\
+		{\tiny Otto \textit{et al.} \textit{Biophys. J.} \textbf{109}, 2023--2036 (2015).} \\
 		\par
 	}
+	
+	
+% 	{\centering
+% 		\only<1>{\includegraphics[width=3in]{otto_et_al.png}}\only<2>{\includegraphics[width=2in]{dicarlo_et_al.png}} \\
+% 		{\tiny \only<1>{Otto \emph{et al.} \textit{Biophys. J.} 
+% 		\textbf{109}, 2023--2036 (2015).}\only<2>{Gossett \emph{et al.} \textit{Proc. Natl. Acad. Sci. USA} \textbf{109}, 7630--7635 (2012).}} \\
+% 		\par
+% 	}
 \end{frame}
 
 
@@ -1691,13 +1776,14 @@ cross/.default={1pt}}
 
 \begin{frame}[c]{Optical measurement of deformation}
 	\begin{itemize}
-		\item Currently, cell deformation response is primarily determined via high-speed microscopy, which comes with a few disadvantages, including
-		\begin{itemize}
-			\item High cost; high-speed camera can cost upwards of $\$100\mathrm{k}$
-			\item Computationally expensive---current cell throughput is limited to $\sim 100\,\mathrm{cells/second}$ for online analysis
-		\end{itemize}
-		\item Can we replace imaging with resistive pulse, which doesn't suffer these drawbacks?
+		\item The cell's deformation response is usually determined via high-speed microscopy \\
+		\item High-speed imaging is computationally expensive---many images must be rapidly recorded and undergo complex transformations in order to fit the shape of each cell \\
+		\item Real-time analysis is bottlenecked at the CPU; current throughputs are only $\sim100$ cells/second \\
+		\item Can we replace imaging with resistive pulse, which is less computationally demanding to analyze?
 	\end{itemize}
+	
+	Imaging bandwidth $\sim\SI{1}{GB/s}$ \\
+	Resistive pulse bandwidth $\sim\SI{1}{MB/s}$
 \end{frame}
 
 
@@ -1722,6 +1808,10 @@ cross/.default={1pt}}
 		\par
 	}
 	
+	\vspace{.1in}
+	
+	Particles of the same volume but different aspect ratio have different resistive pulse amplitudes $\Delta I/I_{p}$!
+	
 	
 \end{frame}
 
@@ -1734,7 +1824,7 @@ cross/.default={1pt}}
 	{\scriptsize
 		Consider channels containing a central cavity \\
 		\vspace{.1in}
-		Mass continuity dictates that the fluid flow slows in the cavity \\
+		Incompressibility of the fluid means that it must slow down in the cavity \\
 		\vspace{.1in}
 		Accelerating extensional flows pull the particle into an elongated geometry \\
 		\vspace{.1in}
@@ -1758,7 +1848,7 @@ cross/.default={1pt}}
 
 \begin{frame}[c]{Resistive pulse distortion}
 
-		According to the deformation motif presented in the previous slide, deformations should follow the following pattern
+		According to the deformation motif presented in the previous slide, deformations should adhere to the following pattern as the particle translocates \\
 		
 		\begin{equation*}
 			\begin{split}
@@ -1797,63 +1887,184 @@ cross/.default={1pt}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[c]{Key scientific questions}
-
+	  
+	Experiments must be conducted to answer the following questions
 	\begin{enumerate}
-		\item \only<1>{Do the cells deform according to the presented motif?}\only<2,3>{\textcolor{positivegreen}{Do the cells deform according to the presented motif?}}
-		\item \only<1>{Is the deformation observable in the resistive pulse signal?}\only<2,3>{\textcolor{electricyellow}{Is the deformation observable in the resistive pules signal?}}
+		\item Do the cells deform according to the presented motif?
+		\item Is the deformation observable in the resistive pulse signal?
 	\end{enumerate}
+
+	The hybrid RP-IM system is employed to characterize the device and the cells' resistive pulses \\
+	\vspace{0.1in}
+	Ultimately, the goal is to remove the camera from the set up and measure deformability with resistive pulse alone \\
 	
-	{\scriptsize
-		\only<1,2>{\textcolor{gray2}{The hybrid RP-IM system is employed to characterize the device and the cells' resistive pulses \\
-			\vspace{0.1in}
-			Ultimately, the goal is to remove the camera from the set up and measure deformability with resistive pulse alone \\
-		}}
-		
-		\only<3>{\textcolor{porestatsblack}{The hybrid RP-IM system is employed to characterize the device and the resistive pulses it creates \\
-			\vspace{0.1in}
-			Ultimately, the goal is to remove the camera from the set up and measure deformability with resistive pulse alone \\
-		}}
-	}
+
+	
 \end{frame}
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Key scientific questions
+% Cell experimental set up
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[c]{Key scientific questions}
+\begin{frame}[c]{Experimental set up}
 
+	Experiments were conducted with the hybrid resistive pulse-optical characterization platform \\
+	Two cell lines are currently being tested \\
 	\begin{enumerate}
-		\item \only<1>{Do the cells deform according to the presented motif?}\only<2,3>{\textcolor{positivegreen}{Do the cells deform according to the presented motif?}}
-		\item \only<1>{Is the deformation observable in the resistive pulse signal?}\only<2,3>{\textcolor{electricyellow}{Is the deformation observable in the resistive pules signal?}}
+		\item HCT-116, colorectal cancer cells (left)
+		\item 293-T, embryonic kidney cells (right)
 	\end{enumerate}
 	
-	{\scriptsize
-		\only<1,2>{\textcolor{gray2}{The hybrid RP-IM system is employed to characterize the device and the cells' resistive pulses \\
-			\vspace{0.1in}
-			Ultimately, the goal is to remove the camera from the set up and measure deformability with resistive pulse alone \\
-		}}
+	\begin{columns}[t]
 		
-		\only<3>{\textcolor{porestatsblack}{The hybrid RP-IM system is employed to characterize the device and the resistive pulses it creates \\
-			\vspace{0.1in}
-			Ultimately, the goal is to remove the camera from the set up and measure deformability with resistive pulse alone \\
-		}}
-	}
+		\begin{column}[T]{2.25in}
+			{\centering
+				\includegraphics[width=1.75in]{HCT.jpg} \\
+				\par
+			}
+		\end{column}
+		
+		\begin{column}[T]{2.25in}
+			{\centering
+				\includegraphics[width=1.75in]{293.jpg} \\
+				\par
+			}
+		\end{column}
+
+	\end{columns}
+
+	
+	
+	
+
+	
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cell experimental set up
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Data analysis}
+
+	Individual cells were detected and tracked as they passed through the camera's field of view \\
+	To determine whether particles deform, we fit ellipses to their borders at every frame in the video \\
+	After fitting the ellipses, we have a time-series of position $\vec{x}_{c}$, and ellipse axes $\vec{a}$ and $\vec{b}$ for each frame and each particle
+	
+	\includegraphics[width=4.5in]{ellipse_fit.png}
+	
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Do the cells deform?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Do the cells deform?}
+
+	\movie[height=1.25in,width=2.25in,autostart,loop]{}{cell_deformation_0.mp4} \\
+
+	
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Do the cells deform?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Magnitude of the deformation response}
+
+	\begin{columns}[t]
+		\begin{column}[T]{1.3in}
+			\includegraphics[width=1.3in]{deform1.png}
+			\includegraphics[width=1.3in]{deform4.png}
+			\includegraphics[width=1.3in]{deform7.png}
+		\end{column}
+		
+		\begin{column}[T]{1.3in}
+			\includegraphics[width=1.3in]{deform2.png}
+			\includegraphics[width=1.3in]{deform5.png}
+			\includegraphics[width=1.3in]{deform8.png}
+		\end{column}
+		
+		\begin{column}[T]{1.3in}
+			\includegraphics[width=1.3in]{deform3.png}
+			\includegraphics[width=1.3in]{deform6.png}
+		\end{column}
+
+	\end{columns}
+
+	
+\end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do the cells deform?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[c]{1. Do the cells deform?}
-
-	\movie[height=1.25in,width=2.25in,autostart,loop]{}{cell_deformation_0.mp4} \\
+\begin{frame}[c]{Axial position versus aspect ratio}
+	
+	\begin{columns}[t]
+	 
+	\begin{column}[T]{2.25in}
+		{\centering
+			\includegraphics[width=3in]{position-aspect.png} \\
+			\par
+		}
+	\end{column}
+	
+	
+	\begin{column}[T]{2.25in}
+		{\centering
+			\includegraphics[width=3in]{position-aspect.png} \\
+			\par
+		}
+	\end{column}
+	
+	
+	
+	\end{columns}
+	
+	
+	The change in the aspect ratios agrees with the motif presented for the cavitated channels
+	
+	
 
 	
 \end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Do the cells deform?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Conclusions and future work}
+	
+	We've convincingly shown that our channel configuration is inducing two modes of deformations in cells \\
+	
+	Current efforts are focused on improving our optical measurement set up \\
+	
+	The magnitude of deformation observed implies that cell shape changes are detectable via resistive pulse sensing \\
+	
+
+	
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Conclusions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{}
+
+	\centering{\textbf{Thank you for your attention!}}
+
+	
+\end{frame}
+
+
+
 
 
 
@@ -1959,7 +2170,7 @@ cross/.default={1pt}}
 				\begin{column}[T]{1in}
 					% Joseph
 					{\centering
-						\includegraphics[height=.9in]{lab/default.png} \\
+						\includegraphics[height=.9in]{lab/joseph.jpg} \\
 						\vspace{-.1in}
 						{\tiny Joseph Martinez} \\
 						\par
@@ -2032,8 +2243,17 @@ cross/.default={1pt}}
 
 \begin{frame}[c]{Acknowledgements}
 	
+	\underline{Dr Trisha Westerhof}---Providing cells for the experiments \\
+	\vspace{.15in}
+	\underline{David J. Mallin} and \underline{Matthew L. Wallace}---Camera and lighting hardware support \\
+	\vspace{.15in}
+	\underline{Alexandra Perebikovsky}---Photolithography training \\
+	\vspace{.15in}
+	
 	{\centering
-		\includegraphics[width=3in]{lab/dsi.png} \\
+		{\large Beall's foundation} \\
+		\vspace{0.3in}
+		\includegraphics[width=2in]{lab/dsi.png} \\
 		\par
 	}
 	
