@@ -80,8 +80,8 @@
 			% RP Background 1
 			\onslide<1>{
 				\begin{picture}(0,0)(0,0)
-					\put(0,-180)
-					{\includegraphics[width=1.25in]{coulter_patent_drawing}}
+					\put(35,-150)
+					{\includegraphics[width=1.5in]{coulter_patent_drawing}}
 				\end{picture}
 			}
 
@@ -291,7 +291,7 @@ cross/.default={1pt}}
 		\item Ion transport in general occurs via a combination of \textbf{diffusion}, \textbf{convection}, and \textbf{electrophoresis} (or electrophoresis)
 		\item \underline{Diffusion}: Average flow of ions from high to low concentration
 		\item \underline{Convection}: Ions are carried passively with the fluid/solvent
-		\item \underline{Electrophoresis}: Ions move in electric field
+		\item \underline{Electrophoresis}: Ions drift in an electric field
 	\end{itemize}
 	\only<1>{
 		\begin{equation} \tag{Nernst-Planck equation}
@@ -308,10 +308,9 @@ cross/.default={1pt}}
 		\end{equation}
 	}
 	\begin{equation} \tag{Einstein-Smoluchowski relation} 
-		\mu^{ep}_{i}=\frac{z_{i}e}{kT}D_{i}
+		\mu^{ep}_{i}=\frac{z_{i}e}{k_{B}T}D_{i}
 	\end{equation}
 
-	%$$ I=\sum_{i}\iint_{S}\vec{J_{i}}\cdot \hat{n}dS $$
 	
 
 
@@ -1102,9 +1101,9 @@ cross/.default={1pt}}
 	
 	In an RP experiment, the usual parameters measured are amplitude and duration, which can relate to particle's volume, charge, etc. \\
 	\vspace{.3in}
-	But, the equations which relate the RP signal to physical observables are only accurate under restrictive conditions or approximations that are seldom met in experimental systems \\
+	But, the equations which relate the RP signal to physical observables are only accurate under sterile conditions \\
 	\vspace{.3in}
- 	In reality, the experimental set up can never be constrained to this degree \\
+ 	In reality, the experimental setup can seldom be constrained to this degree \\
  	
 
 \end{frame}
@@ -1846,37 +1845,48 @@ cross/.default={1pt}}
 % Measuring deformability with resistive pulse
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}[c]{Resistive pulse distortion}
+\begin{frame}[c]{Deformation motif in channels with central cavities}
 
-		According to the deformation motif presented in the previous slide, deformations should adhere to the following pattern as the particle translocates \\
-		
-		\begin{equation*}
-			\begin{split}
-				&s\rightarrow p\rightarrow o\rightarrow p\rightarrow o\rightarrow s \\
-				&s: \mathrm{spherical},\,p: \mathrm{prolate},\,o:\mathrm{oblate}
-			\end{split}
-		\end{equation*}
-		
+		\begin{columns}[t]
+			\begin{column}[T]{2.25in}
+				According to the deformation motif presented in the previous slide, deformations should adhere to the following pattern as the particle translocates \\
+				
+				\begin{equation*}
+					\begin{split}
+						&s\rightarrow p\rightarrow o\rightarrow p\rightarrow o\rightarrow s \\
+						&s: \mathrm{spherical},\,p: \mathrm{prolate},\,o:\mathrm{oblate}
+					\end{split}
+				\end{equation*}
+				
+			\end{column}
 
-	
-	
-	\begin{columns}[t]
-		\begin{column}[T]{2in}
-			{\centering
-				\includegraphics[height=1.35in]{dIellipsoid.png} \\
-				\par
-			}
-		\end{column}
+
+			\begin{column}[T]{2.25in}
+				{\centering
+					\includegraphics[width=2.25in]{dIellipsoid.png} \\
+					\par
+				}
+			\end{column}
 		
-		
-		\begin{column}[T]{2.5in}
-			{\centering
-				\includegraphics[height=1.35in]{deformation_motif_rp.png} \\
-				\par
-			}
-		\end{column}
 	\end{columns}
 			
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Measuring deformability with resistive pulse
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[c]{Resistive pulse distortion}
+
+	{\centering
+		\includegraphics[height=1.35in]{dIellipsoid.png} \\
+		\vspace{0.1in}
+		\includegraphics[height=1.75in]{deformation_motif_rp.png} \\
+		\par
+	}
+
 
 \end{frame}
 
@@ -1894,6 +1904,8 @@ cross/.default={1pt}}
 		\item Is the deformation observable in the resistive pulse signal?
 	\end{enumerate}
 
+	\vspace{.2in}
+	
 	The hybrid RP-IM system is employed to characterize the device and the cells' resistive pulses \\
 	\vspace{0.1in}
 	Ultimately, the goal is to remove the camera from the set up and measure deformability with resistive pulse alone \\
@@ -1962,39 +1974,14 @@ cross/.default={1pt}}
 
 \begin{frame}[c]{Do the cells deform?}
 
-	\movie[height=1.25in,width=2.25in,autostart,loop]{}{cell_deformation_0.mp4} \\
+	{\centering
+		\movie[height=1.25in,width=2.25in,autostart,loop]{}{cell_deformation.mp4} \\
+		\par
+	}
 
 	
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Do the cells deform?
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[c]{Magnitude of the deformation response}
-
-	\begin{columns}[t]
-		\begin{column}[T]{1.3in}
-			\includegraphics[width=1.3in]{deform1.png}
-			\includegraphics[width=1.3in]{deform4.png}
-			\includegraphics[width=1.3in]{deform7.png}
-		\end{column}
-		
-		\begin{column}[T]{1.3in}
-			\includegraphics[width=1.3in]{deform2.png}
-			\includegraphics[width=1.3in]{deform5.png}
-			\includegraphics[width=1.3in]{deform8.png}
-		\end{column}
-		
-		\begin{column}[T]{1.3in}
-			\includegraphics[width=1.3in]{deform3.png}
-			\includegraphics[width=1.3in]{deform6.png}
-		\end{column}
-
-	\end{columns}
-
-	
-\end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2007,7 +1994,7 @@ cross/.default={1pt}}
 	 
 	\begin{column}[T]{2.25in}
 		{\centering
-			\includegraphics[width=3in]{position-aspect.png} \\
+			\includegraphics[width=2.25in]{position-aspect.png} \\
 			\par
 		}
 	\end{column}
@@ -2015,7 +2002,7 @@ cross/.default={1pt}}
 	
 	\begin{column}[T]{2.25in}
 		{\centering
-			\includegraphics[width=3in]{position-aspect.png} \\
+			\includegraphics[width=2.25in]{dIellipsoidexpected.png} \\
 			\par
 		}
 	\end{column}
@@ -2025,7 +2012,7 @@ cross/.default={1pt}}
 	\end{columns}
 	
 	
-	The change in the aspect ratios agrees with the motif presented for the cavitated channels
+	The change in the aspect ratios agrees with the motif presented for the cavitated channels \\
 	
 	
 
@@ -2034,16 +2021,20 @@ cross/.default={1pt}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Do the cells deform?
+% Conclusions and future work
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[c]{Conclusions and future work}
 	
 	We've convincingly shown that our channel configuration is inducing two modes of deformations in cells \\
 	
+	\vspace{.2in}
+	
 	Current efforts are focused on improving our optical measurement set up \\
 	
-	The magnitude of deformation observed implies that cell shape changes are detectable via resistive pulse sensing \\
+	\vspace{.2in}
+	
+	The magnitude of deformation observed implies that cell shape changes may be detectable with resistive pulse sensing after improving the signal-to-noise of our measurements \\
 	
 
 	
@@ -2248,7 +2239,7 @@ cross/.default={1pt}}
 	\underline{David J. Mallin} and \underline{Matthew L. Wallace}---Camera and lighting hardware support \\
 	\vspace{.15in}
 	\underline{Alexandra Perebikovsky}---Photolithography training \\
-	\vspace{.15in}
+	\vspace{.35in}
 	
 	{\centering
 		{\large Beall's foundation} \\
