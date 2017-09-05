@@ -2,67 +2,149 @@
 
 
 \chapter{Introduction}
+\label{chap:intro}
 
-	The introduction to this dissertation is structured as follows. First, we introduce the main topic of this dissertation and of my PhD research work, the nanopore. This section serves to introduce the reader first, to the basic definition of a nanopore and then to some of their applications, in addition to miscellaneous facts about nanopores that provide context for why they are of interest to scientists. This section is entirely qualitative and does not aim to make any statements about the underlying physics needed to understand nanopore systems. Subsequently, I introduce in three stages the physics that is relevant to nanopore systems. It turns out that if we take a macroscaled system (say, a tube rather than a nanotube) and slowly shrink it in size, then as the system size shrinks new types of physics emerges and become increasingly relevant to the system. We will start by addressing the relevant physics at the milliscale and shrink in intervals of powers of three, stopping at the sub-nanoscale. Therefore, the progression looks like milli-, micro-, nano-, and finally, sub-nano-. To provide a bigger picture of the journey through different length scales, the progression looks like ant, cell, protein, molecule.
+	In the least specific terms possible, this dissertation is about ions, the atoms with either a surplus or deficit of electrons that you hear about in chemistry but seldom talk about in physics. When you put salt into water, the water molecules pull apart the ionic bonds holding the two elements together, leaving one of the atoms with a positive charge (cation) and the other with a negative charge (anion). These ions fill the channel, and because each has a net charge and can move around, the solution is conductive. Next, you can build a system with a conduit connecting two fluid reservoirs that are large in comparison. Now, if you apply a voltage to one of the reservoirs and a different voltage to the other reservoir, the established potential difference will induce an ionic current to pass from one electrode to the other. The type of system we've just described is the ionic analogue of the most introductory circuit possible, a single resistor hooked up to a voltage source, for instance a battery. Despite its simplicity, this forms the foundation of the topics that I worked on in the course of my PhD and that I will discuss in this dissertation. These projects fall into two categories: 
+	
+	
+	\begin{enumerate}develop
+		\item developing novel nanoscale ionic channels, and
+		\item advancing resistive pulse sensing applications.
+	\end{enumerate}
+	
+	The conduit in the system described above is an ionic resistor, meaning that a voltage difference can occur across it and induce a magnitude of current to flow through it in proportion to its resistance value. If the channel is very large, the resistance can be calculated \textit{via} $R=\rho\int\frac{dz}{A}$, where $R$ is the resistance of the channel, $\rho$ is the ion solution's resistivity, and $A$ is the cross-sectional area of the channel. However, so far we haven't talked about the surface of the conduit itself. It turns out that if you immerse a surface in ionic solution, it is essentially guaranteed that the surface will at least have some electrical charge on it, and hence will also have a surface potential. Because the solution it is immersed in is conductive, mobile ions of the opposite charge polarity as the surface (the `counterions') will flow towards the surface, and `coions', will flow away. The complex that emerges is a tiny sheathe of solution that has a varying ion charge density, and is known as the electrical double layer. While this tiny sheathe is present on virtually \textit{every} surface in contact with a conductive fluid, it goes completely unnoticed in our day-to-day lives. It's only when we build a version of the system described above where the conduit is approximately $\SI{100}{nm}$ or smaller---less than one-one-thousandth of the thickness of a human hair---that we begin to see any activity out of it. In fact, as we scale down further in size the influence of this tiny sheathe becomes increasingly important, and eventually even begins to dominate the behavior of the entire system! To find inspiration for why this is important, we only need to look at our own bodies. Our cells and their surroundings are completely immersed in water. We are filled with all sorts of different types of ions, each that is essential to our ability to function. The scale of the tiny machinery that keeps us running is at the scale where surface properties dominate over bulk. One particular type of machine that is integral to our functioning is the nanopore, a class of holes on the order of $\SI{1}{nm}$ in diameter that allow passage of ions and biological particles. There are a wide variety of biological nanopores, but one of their chief functions is in acting as a gate keeper, allowing passage of some particles while denying others, an incredibly important role. For instance, signalling in nerves is achieved when an `action potential' is propagated down an axon cell by pores that open and close for certain types of ions. Again, this functionality is achieved through the surface properties of the pores; passive conductors with only bulk behavior cannot create this type of behavior. It is clear that by studying the effects of surface charge in ion channel systems, we gain better insight into how our biology functions. Aside from pure scientific research, we can also see these systems as inspiration for amazing feats that can be achieved through clever nanoscale engineering, and perhaps artificially create systems ourselves that exhibit complex functionality. On that note, the first subject described in this thesis concerns the conductance properties of a particular type of nanopore that is composed of part insulating and part conductive material, and we discuss how the specific arrangement of surface charges on the pore surface leads to a novel conductance behavior.
+	
+	So far we have seen that ion conducting channels are integral components of biological systems, and we have been focused on understanding the properties of the pores themselves. However, it turns out that there is a technique that can be used wherein ion channels are used as a \textit{tool} that can be used to study the properties of small particles. In this technique, called resistive pulse sensing, our subject is the particle of interest, and not the channel itself. However, much stays the same. We are still interested in measuring the conductance of the channel, and when employing resistive pulse sensing at the nanoscale the behavior of the electrical double layer may still be important. Resistive pulse sensing comprises the bulk of this thesis. First, we describe a protocol for measuring the lengths of unknown particles using resistive pulse sensing, and summarize the mesoscale experiments that were conducted to test the protocol. Next, we introduce a new type of microscale resistive pulse sensing application where we augment electrical measurements with optics. We show that the hybrid platform can be used to validate the measurements in resistive pulse experiments. Following up on this project, we perform resistive pulse sensing experiments with biological cells, and describe how resistive pulse sensing may be used to detect the cells' deformability. The hybrid resistive pulse-optical imaging platform is employed to help us better understand how deformability can be measured in the resistive pulse signal.
+	
+	In the rest of this introductory chapter I go over additional information that will be useful before tackling the rest of this thesis. First, I get into the underlying physics that is important to the systems I studied. This includes the physics of ion and solvent transport, electrodynamics, and the electrical double layer and its related phenomena. The last section contains background information on nanopores, and while it's not necessary for the rest of this thesis, it may be useful for understanding why nanopore research is important, and what motivated some of my PhD projects.
 
-	\section{Nanopores}
+	
 
-		Unlike most physics jargon, the name nanopore is entirely self-explanatory. In fact, the following is a terse (but accurate) definition of a nanopore:
+	
+
+	\section{Physics}
+	
+	
+		\subsection{Ion transport}
+			This thesis is about measuring the current through conductive channels, and that current originates due to the motion of the ions. Therefore, it's fundamentally important to understand which forces are responsible for this motion.
+			
+			\subsubsection{Diffusion}
+				The most basic type of motion to consider is diffusion, a type of passive motion. Ions are immersed in a particle laden environment; in fact, the ions in solution have a mean-free path of less than a nanometer before they collide with other ions or water molecules, randomizing their velocity. For this reason, individual ions undergo Brownian motion, jittering about in random directions. In a solution of ions with constant number density everywhere, there is never any net motion. For every ion that vacates a region, there will be another ion to take its place. However, if there are two regions of connected solution that have different number densities, then a net current will arise. The individual ions still move about aimlessly, but \textit{on average}, they flow from the region of high concentration to low concentration due to the imbalance. In physics terms, there is a net flux of ions between the two regions. The flux depends on how large the imbalance in concentration is and on how quickly the individual ions diffuse around. The equation for the flux of an ion species $i$, known as Fick's law,
+				
+				\begin{equation} \label{eq:iondiffusion} \tag{Fick's first law}
+					\vec{j}^{\mathrm{diffusion}}_{i}=-\frac{D_{i}}\nabla c_{i}.
+				\end{equation}
+
+				In the above equation (\ref{eq:iondiffusion}), $\vec{j}_{i}$ is the flux of species $i$, $D_{i}$ is the species' diffusion coefficient, and $c_{i}$ the concentration of the ions. $D$ is essentially a measure of how fast the ions diffuse about, which depends on their size and temperature, and on the viscosity of the solution surrounding them. The diffusion coefficient is given by the Stokes-Einstein equation
+				
+				\begin{equation} \label{eq:stokeseinstein} \tag{Stokes-Einstein equation}
+					D_{i}=\frac{k_{B}T}{6\pi\eta r_{i}},
+				\end{equation}
+				
+				where $k_{B}$ is the Boltzmann constant, $T$ the system temperature, $\eta$ the viscosity of the solution, and $r_{i}$ the solvation radius of the ion.
+			
+			\subsubsection{Convection}
+				If the solvent in which the ions is dissolved is moving, it will carry the ions with it. In this type of transport, we consider the ions concentration to be a \textit{passive scalar}---the scalar value of the concentration travels freely with the solution. This type of transport is called convection, and the flux due to it is straight forward:
+				
+				\begin{equation} \label{eq:ionconvection} \tag{Ion convection}
+					\vec{j}^{\mathrm{convection}}_{i}=\vec{u}c_{i}.
+				\end{equation}
+
+				In the above equation (\ref{ionconvection}), $\vec{u}$ is the velocity of the fluid. The motion of the fluid itself can be due to any number of forces in the system.
+				
+			\subsubsection{Electrophoresis}
+				Electrophoresis, or electrical migration, is the motion of the charged ions due to the presence of an electric field. Interestingly, the \textit{electrophoretic velocity} of the ions is proportional to the magnitude of the electric force they experience, which indicates that the ions move with terminal velocity. The proportionality constant is known as the electrophoretic mobility. The flux of ions due to electrophoresis is
+				
+				\begin{equation} \label{eq:ionelectrophoresis} \tag{Ion electrophoresis}
+					\vec{j}^{\mathrm{electrophoresis}}_{i}=c_{i}\mu^{ep}_{i}\vec{E},
+				\end{equation}
+				
+				where the proportionality constant $\mu^{ep}_{i}$ is the electrophoretic mobility, and $\vec{E}$ is the electric field vector. There is a connection between the diffusion coefficient and the electrophoretic mobility, a result of the fluctuation-dissipation theorem, captured by the Einstein-Smoluchowski relationship
+				
+				\begin{equation} \label{eq:einsteinsmoluchowski} \tag{Einstein-Smoluchowski relation}
+					D_{i}=\frac{\mu^{ep}_{i}k_{B}T}{q_{i}},
+				\end{equation}
+				
+				where $q_{i}$ is the charge of the particle.
+				
+				\subsubsection{Nernst-Planck equation}
+					
+				Diffusion, convection, and electrophoresis are the three most important forces relating to ion motion. Summing the three terms, we arrive at the Nernst-Planck equation for the total ion flux
+				
+				\begin{equation} \label{eq:nernstplanck} \tag{Nernst-Planck equation}
+					\begin{align}
+						j_{i}&=j^{\mathrm{diffusion}}_{i}+j^{\mathrm{convection}}_{i}+j^{\mathrm{migration}}_{i} \\
+						j_{i}&=-\frac{D_{i}}\nabla c_{i}+\vec{u}c_{i}+c_{i}\mu^{ep}_{i}\vec{E}. \\
+					\end{align} 
+				\end{equation}
+				
+				In working with ion channels, we're primarily interested with the \textit{current}, not the flux of ions. To calculate the current of an ion flux, we simply multiply by the charge of the ion species, $q_{i}=z_{i}e$. Additionally, we're also interested in the total current across all species which we obtain with a simple sum. The current density is then 
+
+				\begin{equation} \label{eq:currentdensity} \tag{Ionic current density}
+					\begin{align}
+						J_{i}&=J^{\mathrm{diffusion}}_{i}+J^{\mathrm{convection}}_{i}+J^{\mathrm{migration}}_{i} \\
+						j_{i}&=-z_{i}e\frac{D_{i}}\nabla c_{i}+z_{i}e\vec{u}c_{i} +z_{i}ec_{i}\mu^{ep}_{i}\vec{E}. \\
+					\end{align} 
+				\end{equation}
+				
+				In experiments, the electrophoretic term is usually the most important. Diffusion can play a role in ion transport processes, but only when large gradients are built up in the system. In most nanopore experiments, we work with symmetric solution across the pore, and while local gradients may build up, the diffusive flux is still usually smaller than the electrophoretic flux. The convective term usually also ends up being unimportant. Because convection means that ions are carried around passively, cations and anions flow in equal number and therefore there is no net flux. However, in regions that have a net fluid flow \textit{and} a net charge density, convection does contribute to the electric current. As we will see, this effect occurs in the vicinity of charged surfaces, where a polarized screening layer exists in the solution. In extremely exotic systems, such as carbon nanotubes, convective current may even be the dominant contributor to the total!
 
 
-		\begin{definition} \label{def:nanopore}
-			A nanopore is a hole on the order of $\SI{1}{nm}$ in size
-		\end{definition}
-
-
-		As we will discover, this definition, while accurate, does not do justice to the field of nanopore research. 
-
-		Nanopores generally belong to two classes, biological and synthetic. Because nanopores can be found in biology, many scientists are interested in studying them in their own right, to better understand how biological systems function. On the other hand, nanopores, both biological and synthetic, can be used in a surprisingly large variety of applications, with the total count of such applications constantly increasing. In this section we will briefly discuss the types of biological nanopores and where they are found in nature, and then move on to describing different types of synthetic nanopores. Given the loose criteria required by \ref{def:nanopore} for something to constitute a nanopore, listing off every type of either biological or synthetic nanopores would be impossible; instead, I seek to introduce the most relevant types, with an admitted bias towards the types of nanopores I am most familiar with and that I have worked with in my research. After discussing the various types of nanopores, I will give a summary of applications in which nanopores see use. Some of these applications, for instance resistive-pulse sensing, are a major part of this dissertation and will therefore be discussed in much greater detail later on, while others, such as DNA sequencing, are important enough to be mentioned but not discussed in significant detail later on. An extensive list of references, including those not explicitly referenced in this work, will be included should the reader wish to read more on a particular topic.
-
-		\begin{figure}[h]
-			\includegraphics[width=\textwidth]{bio_synth_nanopores.png}
-			\caption{Two types of nanopores. \textbf{Left:} Alpha-hemolysin, a biological type of nanopore approximately $\SI{1}{nm}$ in diameter. \textbf{Right:} A silicon nitride nanopore drilled using a transmission electron microscope (TEM), approximately $\SI{10}{nm}$ in diameter.}
-		\end{figure}
-
-		\subsection{Biological nanopores}
-
-			As mentioned before, nanopores exist naturally in biology. Their most important function is to enable passage from one region to another, much like a tunnel does; however, where a tunnel permits cars, trucks, etc., the passengers in nanopore systems are water, ions, proteins, etc. Nanopores typically connect regions that are necessarily divided in order for a cell to function. Membrane-bound nanopores are structures made out of protein that are embedded in a cell's lipid bilayer that connect the outside of a cell to the inside of a cell. They serve the useful function of regulation osmotic pressure by allowing water to enter and exit the cell, and also balance voltage differences by allowing passage of important electrolytes such as sodium, potassium, and chloride. Therefore, maintaining homeostasis is one of the chief functions of these types of nanopores. These pores also enable passage of messenger molecules that enable extracellular messenging, crucial to all multicelled organisms. Like lipid bilayer pores, there are also pores in the nuclear membrane that enable transport into and out of the nucleus of a cell. These pores' chief responsibility is to allow the passage of messenger molecules in and out of the nucleus. 
-
-			The most fascinating property of nanopores is their capacity for active management of transport. For instance, some nanopores may open or close when the voltage difference across them surpasses a threshold; other types of nanopores are \textit{ion selective}, permitting passage of some types of ions while denying passage to others. \textit{Active} transport is absolutely crucial to biological systems; if all nanopores were passive holes that permitted anything to pass through, the system would equilibrate in a homogeneous, non-functional soup of maximum entropy---life simply could not exist. Fortunately for us, nanopores are active transport regulators and life goes on. Going back to our tunnel analogy, nanopores act more like regulated tunnels, for instance some with guards that permit small cars only and deny trucks, or permit passage in only one direction, etc.
-
-		\subsection{Synthetic nanopores}
-
-			Advances in nano- and microfabrication have led to an enormous number of different types of synthetic nanopores. Synthetic nanopores can be made from a variety of different types of materials, and often their geometry (shape and size), as well as their surface chemistry properties, can be tailored to introduce specific types of behavior. However, the type of material used to make the nanopore most often determines the types of geometries and chemistries that are allowed. The following is a list of common types of nanopores, with a description of the type of material they are made from, their permissable length scales, and other miscellaneous relevant facts about them.
-
-			\textbf{Monolayer pores.} The invention of graphene, a monolayer of carbon atoms, and later MoS2, opened the possibility of creating nanopores with a length of a single atom. These types of pores are created by punching through the thin monolayer, typically with an electron or ion beam. While still a very new field of study, these pores may see future use in desalination (removing electrolyte ions from water).
-
-			\textbf{Carbon nanotubes.} A carbon nanotube can be conceptually understood as a rolled up tube of one or a stack of graphene layers. Graphene is a a monolayer of carbon atoms, and therefore a carbon nanotube itself is a type of pure crystal structure. The lattice arrangement of carbon atoms permits only certain tube diameters, which itself depends on the chirality of the tube (the way the tube is rolled up). Carbon nanotubes are interesting to researchers because of the exotic behaviors they exhibit that are not present in most other types of nanopores---for instance, they exhibit frictionless transport of water, hydrogen-dominant conductance (\textit{via} the Grotthus mechanism), ion selectivity, and more. As of the submission of this dissertation, the use of CNTs as nanopore is still a new field of study, and the physical mechanism for the previously mentioned behaviors is still poorly understood. Nevertheless, the extreme confinement ($\SI{1}{nm}$ and below for small CNTs) and the atomic-level precision of their structure are believed to be responsible. Another interesting aspect of the smallest CNTs is the breakdown of mean-field physics in describing their behavior. For instance, the Navier-Stokes equations which describe fluid dynamics, breaks down at this level because the water must be considered at the molecular level; the mean-field approach is no longer valid. Because they are still new, we do not yet know the exact applications that these nanopores will see use in. However, it is likely that they could be used in desalination applications (removing ions from water), or in ionic circuits as cation selective elements.
-
-			\textbf{Silicon nitride.} Silicon nitride is a type of crystalline semiconductor that permits engineering of nanopores through several different fabrication processes. Briefly, very thin layers of silicon nitride (e.g.~$10-100$ nm) are grown, and a hole is bored through via either electron or ion beam milling. For instance, in one project of this dissertation I describe a project conducted with silicon nitride pores that were drilled via high-energy transmission electron microscope (TEM). Depending on the type of mill used (ion or electron), the size of these nanopores ranges, but the diameter is generally in the range of $1-100$ nm. One advantage of silicon nitride pores is their smooth interior geometries, as well as the native silane chemistry on the surface that permits many types of chemical modifications. These types of pores are used as ionic rectifiers (after modification), and in resistive pulse applications.
-
-			\textbf{Glass nanopipettes.} Quartz pipettes can be heated and slowly stretched, reducing the tip diameter with the possibility of reaching the nanoscale. Unlike the previously mentioned pores which all had an approximately cylindrical geometry, these nanopipettes have a conical shape. These pores have a couple advantages. First, the stretching process itself is simple and can be used to create many pores over a short amount of time. Second, the surface chemistry of the glass or quartz is amenable towards chemical modification. These pores may be used in ionic circuits, in resistive pulse sensing, or as a surface probe, by monitoring the current through the pipette as it approaches a charged surface.
-
-			\textbf{Track-etched polymer nanopores.} These types of pores are perhaps the most robust, dependable types of nanopores. Pore formation is a multistep process. First, untouched polymer membranes are irradiated by a single heavy isotope of an element such as gold and xenon, that has been accelerated to high speeds in a particle accelerator. The ion rips through the membrane, uniformly dispersing some of its kinetic energy into the surrounding polymer, and breaking the bonds in the polymer surrounding its trajectory. This location of damaged polymer bonds is known as the `damage track'. An ion detector is placed at the exit point of the membranes so that the beam can be switched off when a single ion is detected. This detection, along with a solid mask placed in front of the beam that blocks the vast majority of the ions in the beam, ensures that films that only have a single damage track can be prepared. This step, known as irradiation, must be performed off-site at a particle accelerator. After heavy ion irradiation, the membranes are immersed in an etchant solution such as NaOH or KOH. The etchant preferentially attacks the polymer in the damage track, clearing out the polymers along the track much faster than elsewhere in the membrane. Once the track has been etched out, the rest of the membrane is isotropically etched slowly by the NaOH. Pores prepared by the track-etch technique have a few advantages, including a customizable size and geometry. By putting etching solution on only one side of the membrane, it is possible to create conical pores of various aspect ratios. By applying a voltage across the pore during the etching process, the ionic current can be monitored and the etching process can be stopped at a particular current level, allowing the researcher customize the pore diameter. Another advantage of these pores is the carboxyl groups native to their surfaces, which permit many types of useful chemical modifications.
-
-			\textbf{Hybrid biological-synthetic nanopores.} Biological nanopores, such as alpha hemolysin, aerolysin, or MSPA to name a few, can be isolated from their host biological systems and inserted into synthetic systems, forming a hybrid biological-synthetic complex. In these cases, the pore is entirely biological, but the complex does not appear naturally in nature, and the pores may be used in engineering or scientific applications. To make matters even more confusing, such pores may also be genetically modified to change some of their behavior, meaning they are derived from biology but are synthesized in the lab. For instance, the company Oxford nanopore invented a genetically modified alpha hemolysin nanopore that is especially adept at differentiating between nucleotides, and is currently being used in DNA sequencing applications.
-
-		\subsection{Applications (introductions)}
-
-			So far, I have hinted at or referred to nanopore applications without getting into specifics. Just as there are too many types of nanopores to enumerate, there are too many applications of nanopores to list them all off. This is a list of some of the most important applications of nanopores.
-
-			\textbf{Analyte detection and characterization with the resistive pulse technique.} Surprisingly, nanopores may be used as a sort of particle characterizer using something called the resistive pulse technique, which works as follows. A voltage is applied across the nanopore, which induces a measurable ionic current to flow through the channel. If a particle enters the nanopore, the particle will occupy a volume that otherwise would be occupied by high-conductivity ions, increasing the pore's resistance, and decreasing the measured current. It turns out that by studying the nature of the decrease in the current, we can gather some information about the transiting particle. For instance, by counting the number of pulses in the measured ionic current, we can determine the concentration of particles in the suspension. The size of the particle can be determined by relating it to the depth of the pulse---larger particles block the current to a larger degree, and therefore create deeper resistive pulses. If the particle is at least partially driven through the channel \textit{via} electrophoresis (discussed later), then the particle's surface charge can be determined by the length of the pulse, or `dwell time' of the particle.
-
-			One advantage of resistive pulse sensing is its scale-independence, which is a result of the generality of the physics involved. For this reason, resistive pulse sensing has been used in a large number of applications. The original use of the resistive pulse technique was in performing red blood cell counts (channel size approximately $\sim\SI{100}{\mu m}$ which was achieved by Coulter in 1953; this is the reason why sometimes the resistive pulse technique is referred to as the Coulter counter priniciple, or simply the Coulter principle. Since Coulter's original design, the resistive pulse technique has been used in counting smaller specimens such as exosomes, proteins, and viruses, used to measure particle rigidity, and perhaps most importantly, in DNA sequencing. The basic idea of resistive-pulse sensing for DNA sequencing is that the four types of nucleotides have slightly different sizes, and therefore lead to four unique current blockages. DNA can be slowly threaded through a nanopore while the current is monitored, and the discrete states in the resulting time-series of the measured current yield the sequence of DNA.
-
-			\textbf{Water desalination.} Charged nanopores are slightly ion selective, meaning they preferentially allow one polarity of charge over another to pass through. If one side of a nanopore membrane is filled with electrolyte solution and a pressure is applied, water will pass through the pore, and due to the selectivity of the membrane, fewer ions will pass through than are contained in the bulk. In this way, nanopores can be used for water desalination. This mechanism of salt rejection is electrostatic, since the finite potential in the vicinity of the pore walls is responsible for screening ions. Traditional water desalination relies on reverse osmosis membranes that are completely impermeable to salts, and therefore \textit{sterically} reject ions.  In future sections we will discuss the physics involved with water desalination.
-
-			\textbf{Nanopore ionics and ionic circuits.} Ion transport is fundamentally important to all cellular life. At the most basic level, single cells maintain homeostasis with their environment by maintaining a careful balance of salt ions across their membranes. This balance is regulated by a rich variety of ion channels, each with their own specific functionality. For instance, potassium can diffuse through potassium channels at nearly the bulk diffusion rate (i.e. the channel hardly impedes their motion), while sodium is completely blocked, an amazing feat considering the ions are nearly identical, save a minute difference in their hydration radii. Beyond maintaining homeostasis, ion channels are also responsible for propagating electric signals along axons, crucial for signaling in multicellular organisms. 
-
-			One of the holy grails in nanopores is being able to reproduce the functionality of these biological pores, that were created by millions or billions of years of evolution, in synthetic systems. The ability to do so could create a revolution in ion conducting systems, analagous to the revolution in electronics that was created by the invention of the solid-state transistor. However, the goal of ionics is not to replace wires, capacitors, and transistors with ion channels and pores; indeed, ions travel orders of magnitude slower than electrons, and therefore ionic systems are expected to act more slowly than electronic systems. Instead, integrated ionic circuits could be used for complex signaling since each ion carries its own information, and for controlling the transport of biomolecules. One needs only to look at biology for inspiration on the application of complex ion channels.
-
-	\section{Nanopore science---physics and chemistry}
-
-		The actors at play in nanopore systems include the fluid solvent that fills the pore and its exterior regions, the charged ion species, the pore surfaces themselves, the electrodes, and finally, any particles (cells, biomolecules, etc.) present in the system. In the following sections we will delve into the physics that determines the interplay between these actors. As it turns out, as we shrink a system size from the macro to nanoscale, new regimes of physics become increasingly important. Therefore, not all of the physics mentioned in the upcoming sections are applicable to all length scales; for instance, the properties that make nanopores behave more interesting than just an open space only emerge close to the nanoscale, and are irrelevant in microscale systems. We can think of four distinct length scales at which the physics, and hence the system behavior, is sufficiently differentiated so as to give that scale its own identity. These scales are the milliscale, microscale, nanoscale, and subnanoscale. For example, microscale physics is sufficiently different from nanoscale physics that one may be an expert in one of hte two, but not the other. While the actors at play in these two systems---water, ions, particles, etc.---are all the same, the observed behavior of the systems can still be quite different. To give a brief preview of what is to come, the most important physics involved in nanopore theory is fluid mechanics (to describe the forces on the solvent), electrostatics (because of the voltage boundary conditions imposed by electrodes and charged surfaces), electrokinetics (due to migration of charged species under electric fields), and statistical mechanics (to describe the ensemble behavior of the ions and diffusion). Before moving on, it is important to note that concepts in chemistry are also very important in nanopores. For instance, electrochemical theory explains the mechanism for how an ion current turns into an electron current at the electrode-liquid interface. As another example, the charges present at the surfaces in almost all surfaces in contact with a fluid are due to the chemical groups, and their charged state. In the following sections, whenever chemistry is relevant, I will mention its role in creating the entity that we then go on to describe insofar as is possible with physics alone. For example, I will acknowledge the charge of a nanopore is due to chemical groups attached to its surface, but will then proceed agnostically, treating the charges as if they were a perfect model surface-charge, uniformly distributed over the surface of the pore. Chemistry will be invoked in the main chapters of this thesis as it relates to specific aspects of the projects.
+			
+		\subsection{The equations of fluid motion}
+		
+			One of the major actors in nanopore systems is the fluid solvent, which may remain at rest or, more commonly, move in response to forces present in the system. Because the motion of the solvent couples to the motion of other actors present in the system, understanding the physical laws governing the fluid medium is crucial. For systems large compared to the size of molecules, we make the approximation that the fluid is a continuous rather than discrete medium. In reality, we know that fluids are not continuous but are composed of discrete atoms and molecules, which may make this approximation seem limiting, especially in nanopore systems For instance, one type of pore we present in this thesis can be as small as $\SI{10}{nm}$, and using the approximation that a single element is $0.1$\AA in diameter, we see that the diameter of the pore is spanned by as little as $1000$ atoms! Even at this level where we can make out individual atoms and molecules in the system, the continuum approximation still holds. In fact, the continuum approximation has been shown to accurately describe fluids all the way down to the scale of a single nanometer, and thus are valid in most systems of interest \cite{Bocquet2010}. 
+			
+			
+			
+			\subsubsection{The Navier-Stokes equations}
+				Under the continuum approximation, the equations of motion of the fluid are described by the Navier-Stokes equation. The Navier-Stokes equations are actually three coupled 2nd order non-linear partial differential equations that yield the fluid vector velocity $\vec{u}$. Despite the apparent complexity of the equations, they can be derived simply using Newton's 2nd law $\frac{d\vec{p}}{dt}=\vec{F}$ and basic conservation principles.
+				
+				Consider an integrable quantity $\phi$ that is convected in a fluid field with velocity $\vec{u}$. For a given control volume, the continuity equation relates the time rate of change of $\phi$ in the volume with the flux through the boundaries due to convection in the fluid field and the of sources and sinks that create or consume the field. The continuity equation is 
+				
+				\[ \frac{d}{dt}\int_{V}\phi dV=-\int_{A}\phi\vec{u}\cdot\hat{n}dA-\int_{V}s dV, \]
+				
+				where $dV$ is the control volume, $dA$ its bounding surfaces, $\hat{n}$ the unit normal to the surface $dA$, and $s$ are the sources and sinks present in the control volume, with the convention that sinks are positive and sources negative.
+				
+				If we consider the quantity to be the mass flux (the momentum density) $\phi=\rho \vec{u}$ and simplify the equation, we arrive at the Cauchy momentum equation:
+				
+				\begin{equation}  \label{eq:cauchymomentum} \tag{Cauchy momentum equation}
+					\begin{split}
+						\rho\frac{\partial\vec{u}}{\partial t}+\rho\vec{u}\cdot\vec{\nabla}\vec{u} &= \vec{s} \\
+						\rho\frac{D\vec{u}}{Dt} &= \vec{s}.
+					\end{split}
+				\end{equation}
+				
+				The derivative $\frac{D}{Dt}$ in the second term is known as the `material derivative', which describes the time rate of change of the velocity of a fluid parcel given that its change is time and position-dependent. Written in this way, we see that the equation for momentum continuity in the fluid leads us to a Newton's second law type expression. The term $\rho\vec{u}\cdot\vec{\nabla}\vec{u}$ is known as the convective term, and describes the transport of momentum due to motion of the flow-field itself.
+				
+				Next, we replace the sources and sinks $\vec{s}$ with physical terms. Because the quantity of interest is momentum, we recognize that the sources and sinks must be forces (force densities) in the system, which can generally be broken down into body forces, such as those due to electrostatics or gravity, and surface forces. Therefore, we replace the source/sink term with $\vec{s}=\vec{\nabla}\cdot\matr{\sigma}+\sum_{i}\vec{f}_{i}$, where $\matr{\sigma}$ is the Cauchy stress tensor and $\vec{f}_{i}$ is a body force acting on the control volume. We can further break down the Cauchy stress tensor into the sum of two separate pieces, an isotropic pressure tensor $p\matr{I}$ and the stress tensor $\matr{\tau}$ due to \textit{viscous} forces. For Newtonian fluids like water, there is a fundamental postulate that the stresses $\sigma$ are proportional to the strain rates, with proportionality constant $\eta$, the viscosity of the fluid. In this case, $\matr{\tau}=2\eta\matr{\epsilon}$, where $\epsilon$ is the strain rate tensor which describes the deformation of the fluid due to velocity gradients. When the stress tensor $\matr{\tau}$ is replaced with the strain rate tensor $\matr{\epsilon}$ via the constitutive relationship for Newtonian fluids, we finally arrive at the full Navier-Stokes equations:
+				
+				\begin{equation} \label{eq:ns} \tag{Navier-Stokes equations}
+					\rho\frac{\partial \vec{u}}{\partial t}+\rho\vec{u}\cdot\matr{\nabla}\vec{u}=-\matr{\nabla}p+\eta\matr{\nabla}^{2}\vec{u}+\sum_{i}\vec{f}_{i}.
+				\end{equation}
+				
+				Solving the Navier-Stokes equation yields the correct fluid velocity $\vec{u}$ at all points in the system. While it is a complex equation, in many systems it can be simplified and solved analytically. In small channels (the subject of this entire thesis), the inertial/convective term $\left(\vec{u}\cdot\nabla\right)\vec{u}$ is often negligible and can be dropped as long as the fluid velocity is not too great. To quantify this notion, we introduce a dimensionless parameter called the Reynolds number:
+				
+				\begin{equation} \label{eq:reynoldsnum} \tag{Reynolds number}
+					Re=\frac{\rho u L}{\eta}.
+				\end{equation}
+				
+				$L$ in the above equation is the characteristic length scale of the flow, which in pores or channels is chosen to be the diameter by convention. The Reynolds number $Re$ is essentially a ratio of the strength of inertial/convective forces to inertial forces. For high Reynolds number, convective forces dominate and we expect turbulent and chaotic flow. At low Reynolds number, inertial forces dominate and fluid motion is laminar and smooth. The Reynolds number is useful for knowing which two regimes we are in, and can provide intuition about the behavior of our systems. In microfluidic systems, we are seldom in the turbulent regime, and are often at medium to low Reynolds numbers. Nanofluidic systems are almost certainly non-inertial for reasonable external pressures.
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 
 		\begin{figure}[h]
 			\includegraphics[width=\textwidth]{scales.png}
@@ -85,54 +167,11 @@
 		
 			Because so many of the applications of interest for nanopore and microchannel studies involve biomolecule manipulation, we often work with electrolyte solutions that contain a suspension of particles in addition to the ions. The particles used are tied to the application, but often respond in the same way to forces present in teh system.
 
-		\subsection{Equations of motion for fluidic systems---Navier--Stokes equations}
 		
-			One of the major actors in nanopores systems is the fluid solvent, which may remain at rest or, more commonly, move in response to forces present in the system. Because the motion of the solvent couples to the motion of other actors present in the system, understanding the physical laws governing the fluid medium is crucial. For systems large compared to the size of molecules, we make the approximation that the fluid is a continuous rather than discrete medium. In reality, we know that fluids are not continuous but ar emade up of discrete atoms and molecules, which may make this approximation seem limiting. However, the continuum approximation has been shown to accurately describe fluids all the way down to the scale of a single nanometer, and thus are valid in most systems of interest \cite{Bocquet2010}. Under the continuum approximation, the equations of motion of the fluid are described by the Navier-Stokes equation.
-			
-			The Navier-Stokes equations are actually three coupled 2nd order non-linear partial differential equations that yield the fluid vector velocity $\vec{u}$. Despite the apparent complexity of the equations, they can be derived simply using Newton's 2nd law $\frac{d\vec{p}}{dt}=\vec{F}$ and conservation principles.
-			
-			Consider an integrable quantity $\phi$ that is convected in a fluid field with velocity $\vec{u}$. For a given control volume, the continuity equation relates the time rate of change of $\phi$ in the volume with the flux through the boundaries due to convection in the fluid field and the of sources and sinks that create or consume the field. The continuity equation is 
-			
-			\[ \frac{d}{dt}\int_{V}\phi dV=-\int_{A}\phi\vec{u}\cdot\hat{n}dA-\int_{V}s dV, \]
-			
-			where $dV$ is the control volume, $dA$ its bounding surfaces, $\hat{n}$ the unit normal to the surface $dA$, and $s$ are the sources and sinks present in the control volume, with the convention that sinks are positive and sources negative.
-			
-			If we consider the quanity to be the max flux (the momentum density) $\phi=\rho \vec{u}$ and simplify the equation, we arrive at the Cauchy momentum equation:
-			
-			\begin{equation}  \label{eq:cauchymomentum}
-				\begin{split}
-					\rho\frac{\partial\vec{u}}{\partial t}+\rho\vec{u}\cdot\vec{\nabla}\vec{u} &= \vec{s} \\
-					\rho\frac{D\vec{u}}{Dt} &= \vec{s}.
-				\end{split}
-			\end{equation}
-			
-			The derivative $\frac{D}{Dt}$ in the second term is the material derivative, which describes the time rate of change of the velocity of a fluid parcel given that its change is time and position-dependent. Written in this way, we see that the equation for momentum continuity in the fluid leads us to a Newton's second law type expression. The term $\rho\vec{u}\cdot\vec{\nabla}\vec{u}$ is known as the convective term, and describes the transport of momentum due to motion of the flow-field itself.
-			
-			Next, we replace the sources and sinks $\vec{s}$ with their physical origins. Because the quantity of interest is momentum, we recognize that the sources and sinks must be forces (force densities) in the system, which can generally be broken down into body forces, such as those due to electrostatics or gravity, and surface forces. Therefore, we replace the source/sink term with $\vec{s}=\vec{\nabla}\cdot\matr{\sigma}+\sum_{i}\vec{f}_{i}$, where $\matr{\sigma}$ is the Cauchy stress tensor and $\vec{f}_{i}$ is a body force acting on the control volume. We can further break down the Cauchy stress tensor into the sum of two separate pieces, an isotropic pressure tensor $p\matr{I}$ and the stress tensor $\matr{\tau}$ due to \textit{viscous} forces. For Newtonian fluids like water, there is a fundamental postulate that the stresses $\sigma$ are proportional to the strain rates, with proportionality constant $\eta$, the viscosity of the fluid. In this case, $\matr{\tau}=2\eta\matr{\epsilon}$, where $\epsilon$ is the strain rate tensor which describes the deformation of the fluid due to velocity gradients. When the stress tensor $\matr{\tau}$ is replaced with the strain rate tensor $\matr{\epsilon}$ via the constitutive relationship for Newtonian fluids, we finally arrive at the full Navier-Stokes equations:
-			
-			\begin{equation} \label{eq:ns}
-				\rho\frac{\partial \vec{u}}{\partial t}+\rho\vec{u}\cdot\matr{\nabla}\vec{u}=-\matr{\nabla}p+\eta\matr{\nabla}^{2}\vec{u}+\sum_{i}\vec{f}_{i}.
-			\end{equation}
-			
-			Solving the Navier-Stokes equation yields the correct fluid velocity $\vec{u}$ at all points in the system. While it is a complex equation, in many systems it can be simplified and solved analytically. For instance, in microfluidic channels gravity is often insignificant compared to other inertial and pressure forces, and is often ignored. Additionally, in small channels and with relatively small velocities, the inertial/convective term $\left(\vec{u}\cdot\nabla\right)\vec{u}$ is often negligible and can be dropped. To quantify this notion, we introduce a dimensionless parameter called the Reynolds number:
-			
-			\begin{equation} \label{eq:reynoldsnum}
-				Re=\frac{\rho u L}{\eta}.
-			\end{equation}
-			
-			$L$ in the above equation is the characteristic length scale of the flow, which in pores or channels is chosen to be the diameter by convention. The Reynolds number $Re$ is essentially a ratio of the strength of inertial/convective forces to inertial forces. For high Reynolds number, convective forces dominate and we expect turbulent and chaotic flow. At low Reynolds number, inertial forces dominate and fluid motion is laminar and smooth. The Reynolds number is useful for knowing which two regimes we are in, and can provide intuition about the behavior of our systems. In microfluidic systems, we are seldom in the turbulent regime, and are often at medium to low Reynolds numbers. Nanofluidic systems are almost certainly non-inertial for reasonable external pressures.
 			
 
 			
-		\subsection{Motion of ions in a solvent---Poisson-Nernst-Planck equation}
-		
-			While the Navier-Stokes equations of motion describe the motion of the fluid solvent, the Poisson-Nernst-Planck, or PNP equations describe the motion (flux) of ions in the solution. The flux of ions is due to the superposition of diffusion, advection in the fluid solvent (known as `streaming' current), and migration in electric fields (e.g.~ due to external voltage sources). Summing the individual contributions, the PNP equation for the flux of an ion species is
-			
-			\begin{equation} \label{eq:pnp}
-				\vec{J_{i}}=-\left[D_{i}\matr{\nabla}c_{i}-\vec{u}c_{i}+\frac{D_{i}z_{i}e}{k_{B}T}c_{i}\matr{\nabla}\phi\right],		
-			\end{equation}
-	
-			where $\vec{J_{i}}$ is the ion flux of species $i$, $D$ is the diffusion coefficient, $c$ is the ion concentration, $z$ is the ion valence, $e$ is the elementary charge, $k_{B}$ is the Boltzmann constant, $T$ is the temperature, nad $\phi$ is the electric potential. The first term in eq. \ref{eq:pnp} is the diffusion term, which essentially states that there is a flux of ions in the opposite direction of the gradient of the ion concentration. The second term is the advective term, which accounts for the ions moving with the fluid solvent. The final term is the electric migration term, which describes the motion of the ions in an electric field gradient. 
+
 			
 			
 			
@@ -208,8 +247,8 @@
 			\end{equation}
 			
 			\begin{figure}
-				%\includegraphics[width=0.5\textwidth]{EDL_Charge_Distribution.png}
-				\caption{asdf}
+				\includegraphics[width=\textwidth]{EDL_Charge_Distribution.png}
+				\caption{\textbf{Ion concentrations adjacent to a negatively charged surface according to the Debye-Huckel theory.} The plot reveals that the counterion concentration (blue) is enhanced near the wall, and decays approximately exponentially as distance from the wall increases. Oppositely, coions (red) are diminished near the wall, and rise to their bulk value with distance from the wall. The \textit{total} ion concentration at the pore surface is slightly higher than the total ion concentration in the bulk. The space charge density $\rho_{E}\propto\left[c_{+}\left(y\right)-c_{-}\left(y\right)\right]$ is non-zero near the wall, and decays to zero in the bulk.}
 				\label{fig:EDLChargeDistribution}
 			\end{figure}
 
@@ -249,7 +288,7 @@
 			
 			\begin{figure}
 				\includegraphics[width=.5\textwidth]{electroosmosis.png}
-				\caption{asdf}
+				\caption{\textbf{Plot of electroosmotic flow along an infinite plane with finite slip length}. A net ion charge at the surface experiences a force in an electric field which drags fluid along with it. The force is only present in the electrical double layer, which viscously couples to the rest of the fluid. This fluid flow profile is known as plug flow, and extends far beyond the EDL where it originates.}
 				\label{fig:electroosmosis}
 			\end{figure}
 			
@@ -265,7 +304,7 @@
 				\label{fig:Schoch2008conductance}
 			\end{figure}
 		
-			Ignoring electrical double layer effects, the conductance of an ion channel is proportional to the ion concentration in the solution; doubling the ion concentration exactly doubles the measured current. However, the presence of the electrical double layer breaks this perfect linear conductance relationship for two reasons. First, the integrated \textit{excess} ion count $\int_{0}^{EDL}=\left[\left(c_{+}+c_{-}\right)-2c_{0}\right]dy$ in the EDL layer is not guaranteed to be the same as the total ion concentration in the bulk; in fact, in most cases it is slightly higher, meaning the electrophoretic current in the EDL is slightly higher than in the bulk. Another important contribution to the measured current is the current from convection due to electroosmosis; because there is a net charge density in the fluid, electroosmosis will create a measurable ion current! In total, there are three terms that contribute to the total current measured in a channel, migration of ions in the bulk, migration of the integrated ion \textit{excess} in the EDL, and net convection of charge in the EDL due to electroosmosis. Without applying any equations, we can use what we learned about the EDL and some general logic to reason about what the current behavior should be in the limiting cases of very large ion concentration and very small ion concentration. The equation for the Debye-length is $\lambda_{D}\propto c_{0}^{-1/2}$; for very large ion concentration, the EDL should be negligible and therefore neither the effects of electroosmosis nor electrophoretic ion excess should be significant. At the other end of the scale, in the limit of nearly zero ions in the bulk we still must have charge neutrality in the pore, meaning a finite concentration of ions despite the bulk concentration being zero. In this case, the EDL fills the entire pore and the result is that the conductance is entirely due to the integrated excess and convective terms. This finite conductance at zero concentration is known as the \textit{saturation current}. Therefore, as we increase the length of the EDL we expect the conductance discrepancy, the difference in bulk conductance versus conductance due to the two surface effects, to increase. Consider a nanopore immersed in solution of two symmetric ions denoted $+$ and $-$ (symmetric means their mobilities, valencies, and bulk concentrations are equal) with electrophoretic mobility $\mu_{EP}$ and electroosmotic mobility $\mu_{EP}$. The following expression breaks down the total measured current into the three components described above:
+			Ignoring electrical double layer effects, the conductance of an ion channel is proportional to the ion concentration in the solution; doubling the ion concentration exactly doubles the measured current. However, the presence of the electrical double layer breaks this perfect linear conductance relationship for two reasons. First, the integrated \textit{excess} ion count $\int_{0}^{EDL}=\left[\left(c_{+}+c_{-}\right)-2c_{0}\right]dy$ in the EDL layer is not guaranteed to be the same as the total ion concentration in the bulk; in fact, in most cases it is slightly higher, meaning the electrophoretic current in the EDL is slightly higher than in the bulk. Another important contribution to the measured current is the current from convection due to electroosmosis; because there is a net charge density in the fluid, electroosmosis will create a measurable ion current! In total, there are three terms that contribute to the total current measured in a channel, migration of ions in the bulk, migration of the integrated ion \textit{excess} in the EDL, and net convection of charge in the EDL due to electroosmosis. Without applying any equations, we can use what we learned about the EDL and some general logic to reason about what the current behavior should be in the limiting cases of very large ion concentration and very small ion concentration. The equation for the Debye-length is $\lambda_{D}\propto c_{0}^{-1/2}$; for very large ion concentration, the EDL should be negligible and therefore neither the effects of electroosmosis nor electrophoretic ion excess should be significant. At the other end of the scale, in the limit of nearly zero ions in the bulk we still must have charge neutrality in the pore, meaning a finite concentration of ions despite the bulk concentration being zero. In this case, the EDL fills the entire pore and the result is that the conductance is entirely due to the integrated excess and convective terms. This finite conductance at zero concentration is known as the \textit{saturation current}. Therefore, as we increase the length of the EDL we expect the conductance discrepancy, the difference in bulk conductance versus conductance due to the two surface effects, to increase. The end result of all this is that the conductance is a non-linear function of ion concentration at sufficiently low ion concentration; removing ions past some point does not further reduce the conductance of the channel! Consider a nanopore immersed in solution of two symmetric ions denoted $+$ and $-$ (symmetric means their mobilities, valencies, and bulk concentrations are equal) with electrophoretic mobility $\mu_{EP}$ and electroosmotic mobility $\mu_{EP}$. The following expression breaks down the total measured current into the three components described above:
 		
 			
 			\begin{equation} \label{eq:totalconductance}
@@ -301,20 +340,7 @@
 			Figure \ref{fig:Vlassiouk2007conicaldiode} shows a conical nanopore with a bipolar charge distribution. The combination of the geometrical and charge asymmetry gives the pore a very large rectification value, and the near-zero current for one polarity of voltage is enough to consider the pore a diode.
 
 			
-			
-
-
-			
-			
-		
-			
-			
-		
-			
-			
-
-			
-			
+	
 		\subsubsection{Particle electrophoresis}
 			
 			Electrophoresis is the transport of a charged particle in the presence of an electric field. The effect of electrophoresis can be derived much in the way electroosmosis was derived, but instead of considering the fluid flow velocity at the surface of the particle to be zero, we set it equal to the electrophoretic velocity. For particles with thin electrical double layers (Debye-H\u ckel approximation) and laminar flow (Stoke's flow), the particle velocity is
@@ -330,10 +356,73 @@
 			
 			Electrophoresis is an important effect in many applications involving particles. One useful application is that particle electrophoresis through a nanopore can be used to measure the zeta potential of a particle, related to its surface chemistry and chemical adsorption. An electric field is applied across a nanopore which is immersed in electrolyte solution containing ions and charged particles. Particles travel through the pore under electrophoresis, and the dwell time can be recorded using resistive pulse sensing or optical techniques. If the geometry of the pore is known, the dwell time can be related with the particle velocity, and the electric field strength can be determined as well. In this case, equation \ref{eq:electrophoresis} can be solved for the surface potential $\phi_{0}$, which is the same as its zeta-potential.
 			
-		\subsubsection{Particle translocation}
-			Transport of particles is in general a superposition of electrophoretic and electroosmotic effects. Combining the two, the 
+		\subsubsection{Particle electrophoresis + electroosmosis}
+			Transport of particles is in general a superposition of electrophoretic and electroosmotic effects. Combining the two, the velocity of a charged particle translocating through a charged pore is 
+			
+			\begin{equation} \label{eq:particlevelocity}
+				\begin{split}
+					v=\left(\mu_{EP}+\mu_{EO}\right)E, \\
+					v=\frac{\epsilon}{\eta}\left(\zeta_{\mathrm{particle}}-\zeta_{\mathrm{pore}}\right)E
+				\end{split}
+			\end{equation}
+			
+			In general the net velocity can be positive, negative, or zero depending on the relative sizes and signs of the electrophoretic mobility.
 
 
+	\section{Nanopores}
+
+		Unlike most physics jargon, the name nanopore is entirely self-explanatory. In fact, the following is a terse (but accurate) definition of a nanopore:
+
+
+		\begin{definition} \label{def:nanopore}
+			A nanopore is a hole on the order of $\SI{1}{nm}$ in size
+		\end{definition}
+
+
+		As we will discover, this definition, while accurate, does little justice to the field of nanopore research. 
+
+		Nanopores generally belong to two classes, biological and synthetic. Because nanopores can be found in biology, many scientists are interested in studying them to gain a better understanding of their role in cellular processes. On the other hand, nanopores, both biological and synthetic, can be used in a surprisingly large variety of applications, with the total count of such applications constantly increasing. In this section we will briefly discuss the types of biological nanopores and where they are found in nature, and then move on to describing different types of synthetic nanopores. Given the loose criteria required by definition \ref{def:nanopore} for something to be considered a nanopore, listing off every type of either biological or synthetic nanopores would be impossible; instead, I seek to introduce the most relevant types, with an admitted bias towards the types of nanopores I am most familiar with and that I have worked with in my research. After discussing the various types of nanopores, I will give a summary of some of the applications in which nanopores see use. Some of these applications, for instance resistive-pulse sensing, are a major part of this dissertation and will therefore be discussed in much greater detail later on. Other applications, such as DNA sequencing, are important enough to be mentioned but not discussed in significant detail. An extensive list of references, including those not explicitly referenced in this work, will be included should the reader wish to read more on a particular topic.
+
+		\begin{figure}[h]
+			\includegraphics[width=\textwidth]{bio_synth_nanopores.png}
+			\caption{Two types of nanopores. \textbf{Left:} $\alpha$-hemolysin, a biological type of nanopore approximately $\SI{1}{nm}$ in diameter. \textbf{Right:} A silicon nitride nanopore drilled using a transmission electron microscope (TEM), approximately $\SI{10}{nm}$ in diameter.}
+		\end{figure}
+
+		\subsection{Biological nanopores}
+
+			As mentioned before, nanopores exist naturally in biology. Their most important function is to enable passage from one region to another, much like a tunnel does; however, where a tunnel permits cars, trucks, etc., the passengers in nanopore systems are water, ions, proteins, etc. Nanopores typically connect regions that are necessarily divided in order for a cell to function. Membrane-bound nanopores are structures made out of protein that are embedded in a cell's lipid bilayer that connect the outside of a cell to the inside of a cell. They serve the useful function of regulation osmotic pressure by allowing water to enter and exit the cell, and also balance voltage differences by allowing passage of important electrolytes such as sodium, potassium, and chloride. Therefore, maintaining homeostasis is one of the chief functions of these types of nanopores. These pores also enable passage of messenger molecules that enable extracellular messenging, crucial to all multicelled organisms. Like lipid bilayer pores, there are also pores in the nuclear membrane that enable transport into and out of the nucleus of a cell. These pores' chief responsibility is to allow the passage of messenger molecules in and out of the nucleus. 
+
+			The most fascinating property of nanopores is their capacity for active management of transport. For instance, some nanopores may open or close when the voltage difference across them surpasses a threshold; other types of nanopores are \textit{ion selective}, permitting passage of some types of ions while denying passage to others. \textit{Active} transport is absolutely crucial to biological systems; if all nanopores were passive holes that permitted anything to pass through, the system would equilibrate in a homogeneous, non-functional soup of maximum entropy---life simply could not exist. Fortunately for us, nanopores are active transport regulators and life goes on. Going back to our tunnel analogy, nanopores act more like regulated tunnels, for instance some with guards that permit small cars only and deny trucks, or permit passage in only one direction, etc.
+
+		\subsection{Synthetic nanopores}
+
+			Advances in nano- and microfabrication have led to an enormous number of different types of synthetic nanopores. Synthetic nanopores can be made from a variety of different types of materials, and often their geometry (shape and size), as well as their surface chemistry properties, can be tailored to introduce specific types of behavior. However, the type of material used to make the nanopore most often determines the types of geometries and chemistries that are allowed. The following is a list of common types of nanopores, with a description of the type of material they are made from, their permissable length scales, and other miscellaneous relevant facts about them.
+
+			\textbf{Monolayer pores.} The invention of graphene, a monolayer of carbon atoms, and later MoS2, opened the possibility of creating nanopores with a length of a single atom. These types of pores are created by punching through the thin monolayer, typically with an electron or ion beam. While still a very new field of study, these pores may see future use in desalination (removing electrolyte ions from water).
+
+			\textbf{Carbon nanotubes.} A carbon nanotube can be conceptually understood as a rolled up tube of one or a stack of graphene layers. Graphene is a a monolayer of carbon atoms, and therefore a carbon nanotube itself is a type of pure crystal structure. The lattice arrangement of carbon atoms permits only certain tube diameters, which itself depends on the chirality of the tube (the way the tube is rolled up). Carbon nanotubes are interesting to researchers because of the exotic behaviors they exhibit that are not present in most other types of nanopores---for instance, they exhibit frictionless transport of water, hydrogen-dominant conductance (\textit{via} the Grotthus mechanism), ion selectivity, and more. As of the submission of this dissertation, the use of CNTs as nanopore is still a new field of study, and the physical mechanism for the previously mentioned behaviors is still poorly understood. Nevertheless, the extreme confinement ($\SI{1}{nm}$ and below for small CNTs) and the atomic-level precision of their structure are believed to be responsible. Another interesting aspect of the smallest CNTs is the breakdown of mean-field physics in describing their behavior. For instance, the Navier-Stokes equations which describe fluid dynamics, breaks down at this level because the water must be considered at the molecular level; the mean-field approach is no longer valid. Because they are still new, we do not yet know the exact applications that these nanopores will see use in. However, it is likely that they could be used in desalination applications (removing ions from water), or in ionic circuits as cation selective elements.
+
+			\textbf{Silicon nitride.} Silicon nitride is a type of crystalline semiconductor that permits engineering of nanopores through several different fabrication processes. Briefly, very thin layers of silicon nitride (e.g.~$10-100$ nm) are grown, and a hole is bored through via either electron or ion beam milling. For instance, in one project of this dissertation I describe a project conducted with silicon nitride pores that were drilled via high-energy transmission electron microscope (TEM). Depending on the type of mill used (ion or electron), the size of these nanopores ranges, but the diameter is generally in the range of $1-100$ nm. One advantage of silicon nitride pores is their smooth interior geometries, as well as the native silane chemistry on the surface that permits many types of chemical modifications. These types of pores are used as ionic rectifiers (after modification), and in resistive pulse applications.
+
+			\textbf{Glass nanopipettes.} Quartz pipettes can be heated and slowly stretched, reducing the tip diameter with the possibility of reaching the nanoscale. Unlike the previously mentioned pores which all had an approximately cylindrical geometry, these nanopipettes have a conical shape. These pores have a couple advantages. First, the stretching process itself is simple and can be used to create many pores over a short amount of time. Second, the surface chemistry of the glass or quartz is amenable towards chemical modification. These pores may be used in ionic circuits, in resistive pulse sensing, or as a surface probe, by monitoring the current through the pipette as it approaches a charged surface.
+
+			\textbf{Track-etched polymer nanopores.} These types of pores are perhaps the most robust, dependable types of nanopores. Pore formation is a multistep process. First, untouched polymer membranes are irradiated by a single heavy isotope of an element such as gold and xenon, that has been accelerated to high speeds in a particle accelerator. The ion rips through the membrane, uniformly dispersing some of its kinetic energy into the surrounding polymer, and breaking the bonds in the polymer surrounding its trajectory. This location of damaged polymer bonds is known as the `damage track'. An ion detector is placed at the exit point of the membranes so that the beam can be switched off when a single ion is detected. This detection, along with a solid mask placed in front of the beam that blocks the vast majority of the ions in the beam, ensures that films that only have a single damage track can be prepared. This step, known as irradiation, must be performed off-site at a particle accelerator. After heavy ion irradiation, the membranes are immersed in an etchant solution such as NaOH or KOH. The etchant preferentially attacks the polymer in the damage track, clearing out the polymers along the track much faster than elsewhere in the membrane. Once the track has been etched out, the rest of the membrane is isotropically etched slowly by the NaOH. Pores prepared by the track-etch technique have a few advantages, including a customizable size and geometry. By putting etching solution on only one side of the membrane, it is possible to create conical pores of various aspect ratios. By applying a voltage across the pore during the etching process, the ionic current can be monitored and the etching process can be stopped at a particular current level, allowing the researcher customize the pore diameter. Another advantage of these pores is the carboxyl groups native to their surfaces, which permit many types of useful chemical modifications.
+
+			\textbf{Hybrid biological-synthetic nanopores.} Biological nanopores, such as alpha hemolysin, aerolysin, or MSPA to name a few, can be isolated from their host biological systems and inserted into synthetic systems, forming a hybrid biological-synthetic complex. In these cases, the pore is entirely biological, but the complex does not appear naturally in nature, and the pores may be used in engineering or scientific applications. To make matters even more confusing, such pores may also be genetically modified to change some of their behavior, meaning they are derived from biology but are synthesized in the lab. For instance, the company Oxford nanopore invented a genetically modified alpha hemolysin nanopore that is especially adept at differentiating between nucleotides, and is currently being used in DNA sequencing applications.
+
+		\subsection{Applications (introductions)}
+
+			So far, I have hinted at or referred to nanopore applications without getting into specifics. Just as there are too many types of nanopores to enumerate, there are too many applications of nanopores to list them all off. This is a list of some of the most important applications of nanopores.
+
+			\textbf{Analyte detection and characterization with the resistive pulse technique.} Surprisingly, nanopores may be used as a sort of particle characterizer using something called the resistive pulse technique, which works as follows. A voltage is applied across the nanopore, which induces a measurable ionic current to flow through the channel. If a particle enters the nanopore, the particle will occupy a volume that otherwise would be occupied by high-conductivity ions, increasing the pore's resistance, and decreasing the measured current. It turns out that by studying the nature of the decrease in the current, we can gather some information about the transiting particle. For instance, by counting the number of pulses in the measured ionic current, we can determine the concentration of particles in the suspension. The size of the particle can be determined by relating it to the depth of the pulse---larger particles block the current to a larger degree, and therefore create deeper resistive pulses. If the particle is at least partially driven through the channel \textit{via} electrophoresis (discussed later), then the particle's surface charge can be determined by the length of the pulse, or `dwell time' of the particle.
+
+			One advantage of resistive pulse sensing is its scale-independence, which is a result of the generality of the physics involved. For this reason, resistive pulse sensing has been used in a large number of applications. The original use of the resistive pulse technique was in performing red blood cell counts (channel size approximately $\sim\SI{100}{\mu m}$ which was achieved by Coulter in 1953; this is the reason why sometimes the resistive pulse technique is referred to as the Coulter counter priniciple, or simply the Coulter principle. Since Coulter's original design, the resistive pulse technique has been used in counting smaller specimens such as exosomes, proteins, and viruses, used to measure particle rigidity, and perhaps most importantly, in DNA sequencing. The basic idea of resistive-pulse sensing for DNA sequencing is that the four types of nucleotides have slightly different sizes, and therefore lead to four unique current blockages. DNA can be slowly threaded through a nanopore while the current is monitored, and the discrete states in the resulting time-series of the measured current yield the sequence of DNA.
+
+			\textbf{Water desalination.} Charged nanopores are slightly ion selective, meaning they preferentially allow one polarity of charge over another to pass through. If one side of a nanopore membrane is filled with electrolyte solution and a pressure is applied, water will pass through the pore, and due to the selectivity of the membrane, fewer ions will pass through than are contained in the bulk. In this way, nanopores can be used for water desalination. This mechanism of salt rejection is electrostatic, since the finite potential in the vicinity of the pore walls is responsible for screening ions. Traditional water desalination relies on reverse osmosis membranes that are completely impermeable to salts, and therefore \textit{sterically} reject ions.  In future sections we will discuss the physics involved with water desalination.
+
+			\textbf{Nanopore ionics and ionic circuits.} Ion transport is fundamentally important to all cellular life. At the most basic level, single cells maintain homeostasis with their environment by maintaining a careful balance of salt ions across their membranes. This balance is regulated by a rich variety of ion channels, each with their own specific functionality. For instance, potassium can diffuse through potassium channels at nearly the bulk diffusion rate (i.e. the channel hardly impedes their motion), while sodium is completely blocked, an amazing feat considering the ions are nearly identical, save a minute difference in their hydration radii. Beyond maintaining homeostasis, ion channels are also responsible for propagating electric signals along axons, crucial for signaling in multicellular organisms. 
+
+			One of the holy grails in nanopores is being able to reproduce the functionality of these biological pores, that were created by millions or billions of years of evolution, in synthetic systems. The ability to do so could create a revolution in ion conducting systems, analagous to the revolution in electronics that was created by the invention of the solid-state transistor. However, the goal of ionics is not to replace wires, capacitors, and transistors with ion channels and pores; indeed, ions travel orders of magnitude slower than electrons, and therefore ionic systems are expected to act more slowly than electronic systems. Instead, integrated ionic circuits could be used for complex signaling since each ion carries its own information, and for controlling the transport of biomolecules. One needs only to look at biology for inspiration on the application of complex ion channels.
 			
 
 			

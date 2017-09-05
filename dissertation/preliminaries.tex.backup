@@ -84,19 +84,19 @@
 \textbf{EDUCATION}
   
   \begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}lr}
-    \textbf{Doctor of Philosophy in Computer Science} & \textbf{2012} \\
+    \textbf{Doctor of Philosophy in Physics} & \textbf{2017} \\
     \vspace{6pt}
-    University name & \emph{City, State} \\
-    \textbf{Bachelor of Science in Computational Sciences} & \textbf{2007} \\
+    University of California, Irvine & \emph{Irvine, California} \\
+    \textbf{Bachelor of Science in Physics} & \textbf{2011} \\
     \vspace{6pt}
-    Another university name & \emph{City, State} \\
+    The Ohio State University & \emph{Columbus, Ohio} \\
   \end{tabular*}
 
 \vspace{12pt}
 \textbf{RESEARCH EXPERIENCE}
 
   \begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}lr}
-    \textbf{Graduate Research Assistant} & \textbf{2007--2012} \\
+    \textbf{Graduate Research Assistant} & \textbf{2012--2017} \\
     \vspace{6pt}
     University of California, Irvine & \emph{Irvine, California} \\
   \end{tabular*}
@@ -105,16 +105,24 @@
 \textbf{TEACHING EXPERIENCE}
 
   \begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}lr}
-    \textbf{Teaching Assistant} & \textbf{2009--2010} \\
+    \textbf{Teaching Assistant} & \textbf{2012--2016} \\
     \vspace{6pt}
-    University name & \emph{City, State} \\
+    University of California, Irvine & \emph{Irvine, California} \\
+  \end{tabular*}
+  
+   \begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}lr}
+    \textbf{Teaching Assistant} & \textbf{2012} \\
+    \vspace{6pt}
+    The Ohio State University & \emph{Columbus, Ohio} \\
   \end{tabular*}
 
 \pagebreak
 
 \textbf{REFEREED JOURNAL PUBLICATIONS}
 
-  \mypubentry{Ground-breaking article}{2012}{Journal name}
+\bibentry{Hinkle2017}
+\bibentry{Yang2016}
+\bibentry{Qiu2015}
 
 \vspace{12pt}
 \textbf{REFEREED CONFERENCE PUBLICATIONS}
@@ -125,9 +133,13 @@
 \vspace{12pt}
 \textbf{SOFTWARE}
 
-  \mysoftentry{Magical tool}{http://your.url.here/}
-  {C++ algorithm that solves TSP in polynomial time.}
-
+  \mysoftentry{nanoIV}{https://github.com/tphinkle/nanoIV}
+  {Keithley 6487 Picoammeter control GUI program. Allows measurement of current-voltage and time-series data.}
+  
+  \mysoftentry{pore stats}{https://github.com/tphinkle/pore_stats}
+  {GUI program and Python library for extracting and analyzing resistive pulse data.}
+  
+  
 }
 
 % The abstract should not be over 350 words, although that's

@@ -13,45 +13,45 @@ Database file #1: ../../LaTeX/references/references.bib
 Warning--I didn't find a database entry for "Gosset2012"
 Warning--I didn't find a database entry for "Lin2017"
 Warning--I didn't find a database entry for "DiCarlo2017"
-You've used 11 entries,
+You've used 12 entries,
             2118 wiz_defined-function locations,
-            606 strings with 5859 characters,
-and the built_in function-call counts, 3986 in all, are:
-= -- 383
-> -- 201
+            613 strings with 6150 characters,
+and the built_in function-call counts, 4476 in all, are:
+= -- 424
+> -- 244
 < -- 0
-+ -- 79
-- -- 68
-* -- 331
-:= -- 686
-add.period$ -- 35
-call.type$ -- 11
-change.case$ -- 67
++ -- 97
+- -- 84
+* -- 379
+:= -- 774
+add.period$ -- 38
+call.type$ -- 12
+change.case$ -- 78
 chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 121
-empty$ -- 299
-format.name$ -- 68
-if$ -- 810
+cite$ -- 12
+duplicate$ -- 132
+empty$ -- 324
+format.name$ -- 84
+if$ -- 902
 int.to.chr$ -- 0
-int.to.str$ -- 11
-missing$ -- 11
-newline$ -- 60
-num.names$ -- 22
-pop$ -- 43
+int.to.str$ -- 12
+missing$ -- 12
+newline$ -- 65
+num.names$ -- 24
+pop$ -- 52
 preamble$ -- 1
-purify$ -- 56
+purify$ -- 66
 quote$ -- 0
-skip$ -- 81
+skip$ -- 88
 stack$ -- 0
-substring$ -- 302
-swap$ -- 11
+substring$ -- 323
+swap$ -- 12
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 44
+type$ -- 48
 warning$ -- 0
-while$ -- 34
-width$ -- 13
-write$ -- 127
+while$ -- 37
+width$ -- 14
+write$ -- 138
 (There were 3 warnings)
